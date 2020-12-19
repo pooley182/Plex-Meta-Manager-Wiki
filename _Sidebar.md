@@ -1,3 +1,10 @@
 - [Home](Home)
 - [Configuration](Configuration)
-  - [Plex](Plex)
+  - [Plex Configuration](Plex-Configuration)
+  - [TMDb Configuration](TMDb-Configuration)
+  - [Radarr Configuration](Radarr-Configuration)
+  - [Sonarr Configuration](Sonarr-Configuration)
+  - [Tautulli Configuration](Tautulli-Configuration)
+  - [Trakt Configuration](Trakt-Configuration)
+  - [MyAnimeList Configuration](MyAnimeList-Configuration)
+  
