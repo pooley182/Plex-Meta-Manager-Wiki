@@ -1,3 +1,3 @@
 - [Home](Home)
-- [Configuration](/Configuration)
-  - [Plex](wiki/Plex)
+- [Configuration](Configuration)
+  - [Plex](Plex)
