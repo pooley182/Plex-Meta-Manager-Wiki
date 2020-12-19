@@ -26,7 +26,7 @@ plex:
 | `sync_mode` | Global Sync Mode<br><strong>Options:</strong><br>`append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection | append | :x: | :heavy_check_mark: |
 | `add_to_arr` | Global Add to Radarr/Sonarr<br><strong>boolean:</strong> true or false | false| :x: | :heavy_check_mark: |
 | `cache` | Store GUID mappings in a file next to your config<br><strong>boolean:</strong> true or false | true | :x: | :x: |
-| `cache_update_interval` | How many days before the program updates the GUID in the cache<br>integer: min 1 | 60 | :x: | :x: |
+| `cache_update_interval` | How many days before the program updates the GUID in the cache<br><strong>integer:</strong> min 1 | 60 | :x: | :x: |
 | `libraries` | Attribute to define the libraries inside of | N/A | :heavy_check_mark: | :x: |
 | `library_type` | Type of Plex Library required per library<br><strong>Options:</strong> movie or show | N/A | :heavy_check_mark: | :heavy_check_mark: |
 
