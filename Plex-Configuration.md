@@ -1,4 +1,4 @@
-A `plex` mapping in the config is required. Here's the full set of options you can set:
+A `plex` mapping in the config is required. Here's the full set of attributes you can set:
 
 ```yaml
 plex:
