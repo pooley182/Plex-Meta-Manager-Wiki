@@ -14,8 +14,8 @@ plex:
       library_type: movie                     # Type of Plex Library ('movie' or 'show')
     TV Shows:
       library_type: show
-      url: http://192.168.1.35:32400          # This is only needed if your library is on a different server from your global server 
-      token: ####################
+      url: http://192.168.1.35:32400          # This is only needed if your library is on a
+      token: ####################             # different server from your global server
 ```
 
 | Attribute | Description | Default | Required | Per Library |
