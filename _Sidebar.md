@@ -1,0 +1,2 @@
+- [Configuration](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Configuration)
+  - [Plex](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex)
