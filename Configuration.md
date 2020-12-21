@@ -13,7 +13,7 @@ The YAML mappings that can be set in the config:
 | Trakt.tv | `trakt` | :x: |
 | MyAnimeList.net | `mal` | :x: |
 
-The only required attribute is libraries which is where you set up a configuration for each Plex Library you want the program to interact with. Attributes can be set individually per library or can be inherited from the global value. A simple example is below:
+The only required attribute is `libraries` which is where you set up a configuration for each Plex Library you want the program to interact with. Using the library name as the base attribute you can set many different attributes individually per library or you can let them be inherited from the global value. A simple example of multiple libraries all using the global values is below:
 
 ```yaml
 libraries:
@@ -24,17 +24,39 @@ libraries:
   Anime:
     library_type: show
 ```
+**Note:** For this example to work, you would need to have the global `plex` attribute set up.
 
-Each library must have a different name and must have the `library_type` attribute which must be set to either `show` or `movie`. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the normal name. A simple example is below:
+The available attributes for each library are as follows
+| Name | Attribute | Allowed Values| Default | Required |
+| :-- | :-- | :-- | :-- | :--: |
+| Library Type | `library_type` | `movie` (For Movie Libraries)<br>`show` (For Show Libraries) | N/A | :heavy_check_mark: |
+| Library Name | `library_name` | Library name (Only needed when trying to use<br>multiple libraries with the same name) | Base Attribute Name | :x: |
+| Metadata Path | `metadata_path` | System Location for the Metadata YAML file | Same directory as<br>config YAML file | :x: |
+| Plex Config | `plex` | `plex` attribute details | global | :heavy_check_mark: Either here or globally |
+| Radarr Config | `radarr` | `radarr` attribute details | global | :x: |
+| Sonarr Config | `sonarr` | `sonarr` attribute details | global | :x: |
+| Tautulli Config | `tautulli` | `tautulli` attribute details | global | :x: |
+
+
+
+
+
+**Note:** Each library must have a different name. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the normal name. A simple example is below:
 
 ```yaml
 libraries:
   Movies01:
     library_name: Movies
     library_type: movie
+    plex:
+      url: http://192.168.1.12:32400
+      token: ####################
   Movies02:
     library_name: Movies
     library_type: movie
+    plex:
+      url: http://192.168.1.35:32400
+      token: ####################
   TV Shows:
     library_type: show
   Anime:
