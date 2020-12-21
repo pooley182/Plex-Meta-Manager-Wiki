@@ -1,4 +1,4 @@
-In order to connect to your Plex Library, you must define where the script can find the library. A `plex` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the plex mapping individually per library. Here's the full set of attributes you can set with a `plex` mapping:
+Configuring Plex is required in order to connect to your library. A `plex` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the `plex` mapping individually per library. Here's the full set of attributes you can set with a `plex` mapping:
 
 ```yaml
 plex:
