@@ -32,7 +32,7 @@ The available attributes for each library are as follows
 | Library Type | `library_type` | `movie` (For Movie Libraries)<br>`show` (For Show Libraries) | N/A | :heavy_check_mark: |
 | Library Name | `library_name` | Library name (Only needed when trying to use<br>multiple libraries with the same name) | Base Attribute Name | :x: |
 | Metadata Path | `metadata_path` | System Location for the Metadata YAML file | Same directory as<br>config YAML file | :x: |
-| Plex Config | `plex` | `plex` attribute details | global | :heavy_check_mark: Either here or globally |
+| Plex Config | `plex` | `plex` attribute details | global | :heavy_check_mark: Either here<br>or globally |
 | Radarr Config | `radarr` | `radarr` attribute details | global | :x: |
 | Sonarr Config | `sonarr` | `sonarr` attribute details | global | :x: |
 | Tautulli Config | `tautulli` | `tautulli` attribute details | global | :x: |
@@ -62,5 +62,7 @@ plex:
   url: http://192.168.1.12:32400
   token: ####################
 ```
+
+Movies01, TV Shows, and Anime will all use the global plex server http://192.168.1.12:32400 while the library Movies02 will use the plex server http://192.168.1.12:32400 that is defined under its `plex` attribute over the global attribute.
 
 You can find a template config file in [config/config.yml.template](config/config.yml.template)
