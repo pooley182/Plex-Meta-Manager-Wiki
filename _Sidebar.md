@@ -1,7 +1,7 @@
 - [Home](Home)
 - [Configuration](Configuration)
   - [Libraries Attributes](Libraries-Attributes)
-  - [Config Attributes](Config-Attributes)
+  - [Cache Attributes](Cache-Attributes)
   - [Plex Attributes](Plex-Attributes)
   - [TMDb Attributes](TMDb-Attributes)
   - [Radarr Attributes](Radarr-Attributes)
