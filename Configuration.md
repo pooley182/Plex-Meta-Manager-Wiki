@@ -3,8 +3,9 @@ The script utilizes a YAML config file to load information to connect to the var
 The YAML mappings that can be set in the config:
 | Name | YAML Attribute | Required |
 | :-- | :-- | :-- |
-| Plex | `plex` | :heavy_check_mark: |
-| TheMovieDb.org | `tmdb` | :x:, but recommended |
+| Libraries | `libraries` | :heavy_check_mark: |
+| Plex | `plex` | :x: |
+| TheMovieDb.org | `tmdb` | :x: |
 | Radarr | `radarr` | :x: |
 | Sonarr | `sonarr` | :x: |
 | Tautulli | `tautulli` | :x: |
