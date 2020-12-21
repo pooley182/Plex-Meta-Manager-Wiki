@@ -4,6 +4,7 @@ The YAML mappings that can be set in the config:
 | Name | YAML Attribute | Required |
 | :-- | :-- | :-- |
 | Libraries | `libraries` | :heavy_check_mark: |
+| Config | `config` | :x: |
 | Plex | `plex` | :x: |
 | TheMovieDb.org | `tmdb` | :x: |
 | Radarr | `radarr` | :x: |
