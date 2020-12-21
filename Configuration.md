@@ -63,6 +63,6 @@ plex:
   token: ####################
 ```
 
-Movies01, TV Shows, and Anime will all use the global plex server http://192.168.1.12:32400 while the library Movies02 will use the plex server http://192.168.1.12:32400 that is defined under its `plex` attribute over the global attribute.
+Movies01, TV Shows, and Anime will all use the global plex server http://192.168.1.12:32400 while the library Movies02 will use the plex server http://192.168.1.35:32400 that is defined under its `plex` attribute over the global attribute.
 
 You can find a template config file in [config/config.yml.template](config/config.yml.template)
