@@ -48,9 +48,6 @@ libraries:
   Movies01:
     library_name: Movies
     library_type: movie
-    plex:
-      url: http://192.168.1.12:32400
-      token: ####################
   Movies02:
     library_name: Movies
     library_type: movie
@@ -61,8 +58,9 @@ libraries:
     library_type: show
   Anime:
     library_type: show
+plex:
+  url: http://192.168.1.12:32400
+  token: ####################
 ```
-
-As was stated earlier you can set a number of global attributes 
 
 You can find a template config file in [config/config.yml.template](config/config.yml.template)
