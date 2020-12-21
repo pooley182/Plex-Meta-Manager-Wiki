@@ -32,10 +32,10 @@ The available attributes for each library are as follows
 | Library Type | `library_type` | `movie` (For Movie Libraries)<br>`show` (For Show Libraries) | N/A | :heavy_check_mark: |
 | Library Name | `library_name` | Library name (Only needed when trying to use multiple libraries with the same name) | Base Attribute Name | :x: |
 | Metadata Path | `metadata_path` | System Location for the Metadata YAML file | Same directory as config YAML file | :x: |
-| Plex Config | `plex` | `plex` attribute details | global | :heavy_check_mark: Either here or globally |
-| Radarr Config | `radarr` | `radarr` attribute details | global | :x: |
-| Sonarr Config | `sonarr` | `sonarr` attribute details | global | :x: |
-| Tautulli Config | `tautulli` | `tautulli` attribute details | global | :x: |
+| Plex Config | `plex` | [`plex` attribute details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | global | :heavy_check_mark: Either here or globally |
+| Radarr Config | `radarr` | [`radarr` attribute details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | global | :x: |
+| Sonarr Config | `sonarr` | [`sonarr` attribute details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | global | :x: |
+| Tautulli Config | `tautulli` | [`tautulli` attribute details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) | global | :x: |
 
 **Note:** Each library must have a different name. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the normal name. A simple example is below:
 
