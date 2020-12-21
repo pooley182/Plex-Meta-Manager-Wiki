@@ -1,4 +1,4 @@
-In order to connect to your Plex Library, you must define where the script can find the library. A `plex` attribute can be either in the root of the config file as a global attribute for all libraries or you can specify the plex attribute individually per library. The `plex` attribute has a few attributes of its own. Here's the full set of attributes you can set:
+In order to connect to your Plex Library, you must define where the script can find the library. A `plex` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the plex mapping individually per library. Here's the full set of attributes you can set with a `plex` mapping:
 
 ```yaml
 plex:
