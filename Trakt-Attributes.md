@@ -21,15 +21,15 @@ trakt:
 | Client ID | `client_id` | Trakt Application Client ID | N/A | :heavy_check_mark: |
 | Client Secret | `client_secret` | Trakt Application Client Secret | N/A | :heavy_check_mark: |
 
-* All other attrbiutes will be filled in by the script. 
+* All other attributes will be filled in by the script. 
 
-* To connecet to Trakt.tv you must create a Trakt application and supply the script the `client id` and `client secret` provided, please do the following:
-     1. [Click here to create a Trakt API application.](https://trakt.tv/oauth/applications/new)
-     2. Enter a `Name` for the application.
-     3. Enter `urn:ietf:wg:oauth:2.0:oob` for `Redirect uri`.
-     4. Click the `SAVE APP` button.
-     5. Record the `Client ID` and `Client Secret`.
+* To connect to Trakt.tv you must create a Trakt application and supply the script the `client id` and `client secret` provided, please do the following:
+1. [Click here to create a Trakt API application.](https://trakt.tv/oauth/applications/new)
+2. Enter a `Name` for the application.
+3. Enter `urn:ietf:wg:oauth:2.0:oob` for `Redirect uri`.
+4. Click the `SAVE APP` button.
+5. Record the `Client ID` and `Client Secret`.
 
-On the first run, the script will walk the user through the OAuth flow by producing a Trakt URL for the user to follow. Once authenticated at the Trakt URL, the user needs to return the code to the script. If the code is correct, the script will populate the `authorization` subattributes to use in subsequent runs.
+* On the first run, the script will walk the user through the OAuth flow by producing a Trakt URL for the user to follow. Once authenticated at the Trakt URL, the user needs to return the code to the script. If the code is correct, the script will populate the `authorization` subattributes to use in subsequent runs.
 
 For docker users, please note that the docker container runs with the `--update` option and is designed for no user interaction. To authenticate Trakt the first time, you need run the container with the `-it` flags and run `plex_auto_collections.py` without the `--update` option and walk through the OAuth flow mentioned above. Once you have the Trakt authentication data saved into the YAML, you'll be able to run the container normally.
