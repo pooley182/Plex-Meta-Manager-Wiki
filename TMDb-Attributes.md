@@ -1,5 +1,8 @@
-A `tmdb` mapping in the config is optional but highly reccomended. It is also required for Sonarr or Radarr to function. Here's the full set of attributes you can set:
+Configuring TheMovieDb.org API is optional but highly reccomended and is required for Sonarr or Radarr to function. 
 
+A `tmdb` mapping is in the root of the config file.
+
+Below is a plex mapping example and the full set of attributes:
 ```yaml
 tmdb:
   apikey: ################################
