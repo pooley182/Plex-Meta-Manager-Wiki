@@ -1,5 +1,6 @@
 - [Home](Home)
 - [Configuration File](Configuration-File)
+  - [Libraries Attributes](Libraries-Attributes)
   - [Cache Attributes](Cache-Attributes)
   - [Plex Attributes](Plex-Attributes)
   - [TMDb Attributes](TMDb-Attributes)
