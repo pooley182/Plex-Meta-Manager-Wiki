@@ -13,7 +13,7 @@ The YAML mappings that can be set in the config:
 | Trakt.tv | `trakt` | :x: |
 | MyAnimeList.net | `mal` | :x: |
 
-The only required mapping is `libraries` which is where you set up a configuration for each Plex Library you want the program to interact with. Using the library name as the base attribute you can set many different attributes individually per library or you can let them be inherited from the global value. A simple example of multiple libraries all using the global values is below:
+The only required mapping is `libraries` which is where you set up a configuration for each Plex Library you want the program to interact with. Each library is defined by the mapping name which must be the same as the library name unless a different `library_name` is specified. You can either set attributes individually per library or you can let them be inherited from the global value. A simple example of multiple libraries all using the global values is below:
 
 ```yaml
 libraries:
@@ -39,7 +39,7 @@ The available attributes for each library are as follows
 | Sonarr Mapping | `sonarr` | [`sonarr` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | global | :x: |
 | Tautulli Mapping | `tautulli` | [`tautulli` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) | global | :x: |
 
-* Each library must have a different name. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the normal name. A simple example is below:
+* Each library must have a different name. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the library map. A simple example is below:
 
     ```yaml
     libraries:
