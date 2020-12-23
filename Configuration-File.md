@@ -39,28 +39,28 @@ The available attributes for each library are as follows
 | Sonarr Mapping | `sonarr` | [`sonarr` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | global | :x: |
 | Tautulli Mapping | `tautulli` | [`tautulli` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) | global | :x: |
 
-**Note:** Each library must have a different name. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the normal name. A simple example is below:
+* Each library must have a different name. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the normal name. A simple example is below:
 
-```yaml
-libraries:
-  Movies01:
-    library_name: Movies
-    library_type: movie
-  Movies02:
-    library_name: Movies
-    library_type: movie
+    ```yaml
+    libraries:
+      Movies01:
+        library_name: Movies
+        library_type: movie
+      Movies02:
+        library_name: Movies
+        library_type: movie
+        plex:
+          url: http://192.168.1.35:32400
+          token: ####################
+      TV Shows:
+        library_type: show
+      Anime:
+        library_type: show
     plex:
-      url: http://192.168.1.35:32400
+      url: http://192.168.1.12:32400
       token: ####################
-  TV Shows:
-    library_type: show
-  Anime:
-    library_type: show
-plex:
-  url: http://192.168.1.12:32400
-  token: ####################
-```
+    ```
 
-Movies01, TV Shows, and Anime will all use the global plex server http://192.168.1.12:32400, defined using the global `plex` mapping. While the library, Movies02, will use the plex server http://192.168.1.35:32400 which is defined under its `plex` mapping over the global mapping.
+    Movies01, TV Shows, and Anime will all use the global plex server http://192.168.1.12:32400, defined using the global `plex` mapping. While the library, Movies02, will use the plex server http://192.168.1.35:32400 which is defined under its `plex` mapping over the global mapping.
 
-You can find a template config file in [config/config.yml.template](config/config.yml.template)
+* You can find a template config file in [config/config.yml.template](config/config.yml.template)
