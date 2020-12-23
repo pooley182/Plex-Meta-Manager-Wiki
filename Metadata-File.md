@@ -5,7 +5,7 @@ If the Metadata File location is not specified it will look in the same director
 There are only two mappings allowed in the Metadata File's root:
 | Name | Attribute | Description |
 | :-- | :-- | :-- |
-| Metadata | `metadata` | mapping where metadata changes go |
-| Collections | `collections` | mapping where automatic collections and collection metdata go |
+| [Metadata](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Metadata-Attributes) | `metadata` | mapping where metadata changes go |
+| [Collections](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Attributes) | `collections` | mapping where automatic collections and collection metdata go |
 
 * Either `metadata` or `collections` is required in order to run.
