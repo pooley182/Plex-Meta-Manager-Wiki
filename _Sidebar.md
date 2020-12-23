@@ -9,5 +9,5 @@
   - [Trakt Attributes](Trakt-Attributes)
   - [MyAnimeList Attributes](MyAnimeList-Attributes)
 - [Metadata File](Metadata-File)
-  - [Metadata Attributes](Metadata -Attributes)
+  - [Metadata Attributes](Metadata-Attributes)
   - [Collection Attributes](Collection-Attributes)
