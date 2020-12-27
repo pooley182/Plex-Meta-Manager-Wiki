@@ -14,7 +14,7 @@ sonarr:
 ```
 
 | Name | Attribute | Allowed Values| Default | Required |
-| :-- | :-- | :-- | :-- | :--: |
+| :-- | :-- | :-- | :--: | :--: |
 | Sonarr URL | `url` | Sonarr URL<br><strong>Example:</strong> http://192.168.1.12:32788 | N/A | :heavy_check_mark: |
 | API Token | `token` | Sonarr API Token | N/A | :heavy_check_mark: |
 | Root Folder Path | `root_folder_path` | Sonarr Root Folder Path To Use | N/A | :heavy_check_mark: |
