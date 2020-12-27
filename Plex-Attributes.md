@@ -15,7 +15,7 @@ plex:
 | :-- | :-- | :-- | :--: | :--: |
 | Server URL | `url` | Plex Server URL<br><strong>Example:</strong> http://192.168.1.12:32400 | N/A | :heavy_check_mark: |
 | Authentication Token | `token` | Plex Server Authentication Token | N/A | :heavy_check_mark: |
-| Asset Directory | `asset_directory` | System Location For Assets | Directory of Config/assets | :x: |
+| Asset Directory | `asset_directory` | System Location For Assets | [Directory containing YAML config]/assets | :x: |
 | Sync Mode | `sync_mode` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection | append | :x: |
 
 * This script can be run on a remote Plex server, but be sure that the `url` provided is publicly addressable and it's recommended to use `HTTPS`.
