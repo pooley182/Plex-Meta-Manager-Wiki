@@ -18,7 +18,7 @@ plex:
 
 The available attributes for each library are as follows
 | Name | Attribute | Allowed Values | Default | Required |
-| :-- | :-- | :-- | :-- | :--: |
+| :-- | :-- | :-- | :--: | :--: |
 | Library Type | `library_type` | `movie` (For Movie Libraries)<br>`show` (For Show Libraries) | N/A | :heavy_check_mark: |
 | Library Name | `library_name` | Library name (Only needed when trying to use multiple libraries with the same name) | Base Attribute Name | :x: |
 | Metadata Path | `metadata_path` | System Location for the Metadata YAML file | Same directory as config YAML file | :x: |
