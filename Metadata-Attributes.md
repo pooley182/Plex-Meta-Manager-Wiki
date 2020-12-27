@@ -1,7 +1,6 @@
-In order to edit the metadata of Movies or Shows you have to add it to the metadata mapping.
+In order to edit the metadata of Movies or Shows in a library, you have to add it to the metadata mapping of that library.
 
-
-Each library is defined by the mapping name which must be the same as the library name unless a different `library_name` is specified. You can either set attributes individually per library or you can let them be inherited from the global value. 
+The location of the metadata file is defined by the `metadata_path` attribute of the library in the config or when not specified it will look in the same directory as the YAML config file for a YAML metadata file named the same as the library.
 
 A simple example of multiple libraries all using the global values is below:
 ```yaml
@@ -17,37 +16,23 @@ plex:
   token: ####################
 ```
 
-The available attributes for each library are as follows
-| Name | Attribute | Allowed Values| Default | Required |
-| :-- | :-- | :-- | :-- | :--: |
-| Library Type | `library_type` | `movie` (For Movie Libraries)<br>`show` (For Show Libraries) | N/A | :heavy_check_mark: |
-| Library Name | `library_name` | Library name (Only needed when trying to use multiple libraries with the same name) | Base Attribute Name | :x: |
-| Metadata Path | `metadata_path` | System Location for the Metadata YAML file | Same directory as config YAML file | :x: |
-| Plex Mapping | `plex` | [`plex` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | global | :heavy_check_mark: Either here or globally |
-| Radarr Mapping | `radarr` | [`radarr` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | global | :x: |
-| Sonarr Mapping | `sonarr` | [`sonarr` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | global | :x: |
-| Tautulli Mapping | `tautulli` | [`tautulli` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) | global | :x: |
+The available attributes for each movie/show are as follows
+| Name | Attribute | Allowed Values | Works with Movies | Works with Shows |
+| :-- | :-- | :-- | :--: | :--: |
+| Alternative Title | `alt_title` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Original Title | `original_title` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Sort Title | `sort_title` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Year | `year` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Originally Available | `originally_available` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Rating | `rating` |  | :heavy_check_mark:| :heavy_check_mark: |
+| Content Rating | `content_rating` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Studio | `studio` | | :heavy_check_mark: | :heavy_check_mark: |
+| Tagline | `tagline` |  | :heavy_check_mark:| :heavy_check_mark: |
+| Summary | `summary` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Genre | `genre` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Genre Sync | `genre_sync` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Label | `label` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Label Sync | `label_sync` |  | :heavy_check_mark: | :heavy_check_mark: |
+| Seasons | `seasons` |  | :x: | :heavy_check_mark: |
+| Episodes | `episodes` |  | :x: | :heavy_check_mark: |
 
-* Each library must have a different name. If you want to use multiple libraries with the same name you can use the `library_name` attribute to specify the real Library Name and just have a place holder in the library map. A simple example is below:
-
-    ```yaml
-    libraries:
-      Movies01:
-        library_name: Movies
-        library_type: movie
-      Movies02:
-        library_name: Movies
-        library_type: movie
-        plex:
-          url: http://192.168.1.35:32400
-          token: ####################
-      TV Shows:
-        library_type: show
-      Anime:
-        library_type: show
-    plex:
-      url: http://192.168.1.12:32400
-      token: ####################
-    ```
-
-    Movies01, TV Shows, and Anime will all use the global plex server http://192.168.1.12:32400, defined using the global `plex` mapping. While the library, Movies02, will use the plex server http://192.168.1.35:32400 which is defined under its `plex` mapping over the global mapping.
