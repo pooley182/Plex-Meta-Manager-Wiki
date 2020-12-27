@@ -10,7 +10,7 @@ tmdb:
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
-| :-- | :-- | :-- | :-- | :--: |
+| :-- | :-- | :-- | :--: | :--: |
 | API Key | `apikey` | User TMDb API Key | N/A | :heavy_check_mark: |
 | Language | `language` | User Language | en | :x: |
 
