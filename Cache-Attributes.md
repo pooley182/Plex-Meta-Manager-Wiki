@@ -10,7 +10,7 @@ cache:
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
-| :-- | :-- | :-- | :-- | :--: |
+| :-- | :-- | :-- | :--: | :--: |
 | Cache | `cache` | Should the script store a cache<br><strong>boolean:</strong> true or false | true | :x: |
 | Cache Update Interval | `cache_update_interval` | Interval at which the cache updates each GUID<br><strong>boolean:</strong> true or false | 60 | :x: |
 
