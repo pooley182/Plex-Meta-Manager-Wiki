@@ -11,4 +11,6 @@
   - [MyAnimeList Attributes](MyAnimeList-Attributes)
 - [Metadata File](Metadata-File)
   - [Metadata Attributes](Metadata-Attributes)
+    - [Seasons Attributes](Seasons-Attributes)
+    - [Episodes Attributes](Episodes-Attributes)
   - [Collection Attributes](Collection-Attributes)
