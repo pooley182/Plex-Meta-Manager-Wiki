@@ -15,7 +15,7 @@ trakt:
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
-| :-- | :-- | :-- | :-- | :--: |
+| :-- | :-- | :-- | :--: | :--: |
 | Client ID | `client_id` | MyAnimeLit Application Client ID | N/A | :heavy_check_mark: |
 | Client Secret | `client_secret` | MyAnimeLit Application Client Secret | N/A | :heavy_check_mark: |
 
