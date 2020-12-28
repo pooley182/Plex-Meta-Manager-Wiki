@@ -29,7 +29,7 @@ The builders below are expected to have the full URL to the item or the TMDb ID 
 * [TMDb Company](#tmdb-company)
 * [TMDb Network](#tmdb-network)
 
-The builders below are expected to to have a single integer value of how many movies/shows to query. The `sync_mode: sync` option is also recommended for these builders since the lists they're based on are continuously updated.
+The builders below are expected to have a single integer value of how many movies/shows to query. The `sync_mode: sync` option is also recommended for these builders since the lists they're based on are continuously updated.
 * [TMDb Popular](#tmdb-popular)
 * [TMDb Now Playing](#tmdb-now-playing)
 * [TMDb Top Rated](#tmdb-top-rated)
