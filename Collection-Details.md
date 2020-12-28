@@ -40,7 +40,8 @@ The available collection details attributes for each collection are as follows
 | Name | Attribute | Description | Allowed Values |
 | :-- | :-- | :-- | :-- |
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attributes) | 
-| Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection<br>**Default Mode:** `append` | :heavy_check_mark: | :heavy_check_mark: |
+| Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection<br>**Default Mode:** `append` |
+| Add to Radarr/Sonarr | `add_to_arr` | Collection level `add_to_radarr`/`add_to_sonarr` toggle | **boolean:** true or false<br>**Default:** library value |
 | Sort Title<sup>1</sup> | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
 | Summary | `summary` | Used to change the collection's summary | Text to change Summary |
