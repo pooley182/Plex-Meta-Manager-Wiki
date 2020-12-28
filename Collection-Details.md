@@ -1,3 +1,40 @@
+Here is an example with multiple details being set:
+```yaml
+collections:
+  IMDb Top 250:
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250&count=25
+    sort_title: "#100"
+    sync_mode: sync
+  Reddit Top 250:
+    trakt_list: https://trakt.tv/users/jay-greene/lists/reddit-top-250-2019-edition
+    sort_title: "#101"
+    sync_mode: sync
+  Star Wars:
+    tmdb_collection: 10
+    tmdb_summary: 10
+    tmdb_poster: 10
+    tmdb_background: 10
+  Pixar:
+    studio: Pixar
+    content_rating: PG
+    url_poster: https://theposterdb.com/api/assets/29378/view?
+    url_background: https://wallpaperaccess.com/full/331622.jpg
+    summary: A collection of Pixar movies
+    collection_order: alpha
+  Robin Williams:
+    actor: Robin Williams
+    tmdb_biography: 2157
+    tmdb_profile: 2157
+    collection_mode: show_items
+    collection_order: alpha
+  Marvel Cinematic Universe:
+    tmdb_list: 7069903
+    tmdb_description: 7069903
+    tmdb_list_poster: 7069903
+  28 Days/Weeks Later:
+    tmdb_collection_details: 1565
+    name_mapping: 28 Days-Weeks Later 
+```
 
 The available collection details attributes for each collection are as follows
 | Name | Attribute | Description | Allowed Values |
