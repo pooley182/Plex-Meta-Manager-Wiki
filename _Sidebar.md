@@ -23,4 +23,5 @@
       - [Trakt Builders](Trakt-Builders)
       - [TVDb Builders](TVDb-Builders)
     - [Collection Details](Collection-Details)
+      - [Schedule Attributes](Schedule-Attributes)
     - [Collection Filters](Collection-Filters)
