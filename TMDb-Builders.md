@@ -1,4 +1,4 @@
-You can build different collections using the features of TheMovieDb.org (TMDb).
+You can build different collections using the features of [TheMovieDb.org](https://www.themoviedb.org/) (TMDb).
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
