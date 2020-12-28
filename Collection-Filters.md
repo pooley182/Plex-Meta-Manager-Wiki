@@ -4,6 +4,8 @@ You can have multiple collection filters but a movie/show must match at least on
 
 All collection filter options are listed below.
 
+### Standard Filters
+
 | Standard Filters | Description | Movie<br>Libraries | Show<br>Libraries |
 | :-- | :-- | :--: | :--: |
 | `actor` | Matches every movie/show with the specified actor | :heavy_check_mark: | :heavy_check_mark: |
@@ -22,6 +24,8 @@ All collection filter options are listed below.
 * Standard filters can have multiple values either by being a list or comma separated values
 * You can also use the `.not` at the end of any standard collection filter to do an inverse search matching everything that doesn't have the value specified. You can use `plex_all: true` to start your filter from your entire library.
 
+### Advanced Filters
+
 | Advanced Filters | Description | Movie<br>Libraries | Show<br>Libraries |
 | :-- | :-- | :--: | :--: |
 | `max_age` | Matches any movie/show whose Originally Available date is within the last specified number of days | :heavy_check_mark: | :heavy_check_mark: |
@@ -33,6 +37,8 @@ All collection filter options are listed below.
 | `originally_available.lte` | Matches any movie/show whose originally_available date is less then or equal to the specified originally_available date (Date must be in the MM/DD/YYYY Format) | :heavy_check_mark: | :heavy_check_mark: |
 
 * Advance filters can not take multiple values
+
+### Collection Filter Examples
 
 A few examples are listed below:
 
@@ -68,14 +74,14 @@ collections:
 ```yaml
 collections:
   9.0 Movies:
-    all: true
+    plex_all: true
     filters:
       rating.gte: 9
 ```
 ```yaml
 collections:
   Summer 2020 Movies:
-    all: true
+    plex_all: true
     filters:
       originally_available.gte: 5/1/2020
       originally_available.lte: 8/31/2020
@@ -83,7 +89,7 @@ collections:
 ```yaml
 collections:
   Movies Released in the Last 180 Days:
-    all: true
+    plex_all: true
     filters:
       max_age: 180
 ```
