@@ -3,23 +3,23 @@ You can build different collections using the features of TheMovieDb.org (TMDb).
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
 | [TMDb Collection](#tmdb-collection) | `tmdb_collection` | Gets every movie in the TMDb collection | :heavy_check_mark: | :x: |
-| [TMDb Collection Details] | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
-| TMDb List | `tmdb_list` | Gets every movie/show in the TMDb List | :heavy_check_mark: | :heavy_check_mark: |
-| TMDb List Details | `tmdb_list_details` | Gets every movie/show in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: |
-| TMDb Movie | `tmdb_movie` | Gets the movie specified | :heavy_check_mark: | :x: |
-| TMDb Movie Details | `tmdb_movie_details` | Gets the movie specified and updates the collection with the summary, poster, and background from the TMDb movie | :heavy_check_mark: | :x: |
-| TMDb Show | `tmdb_show` | Gets the show specified | :x: | :heavy_check_mark: |
-| TMDb Show Details | `tmdb_show_details` | Gets the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: |
-| TMDb Company | `tmdb_company` | Gets every movie from the TMDb company's movie list | :heavy_check_mark: | :x: |
-| TMDb Network | `tmdb_network` | Gets every movie/show from the TMDb network's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
-| TMDb Discover | `tmdb_discover` | Gets every movie/show based on the search parameters provided | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Collection Details](#tmdb-collection) | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
+| [TMDb List](#tmdb-list) | `tmdb_list` | Gets every movie/show in the TMDb List | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb List Details](#tmdb-list) | `tmdb_list_details` | Gets every movie/show in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Movie](#tmdb-movie) | `tmdb_movie` | Gets the movie specified | :heavy_check_mark: | :x: |
+| [TMDb Movie Details](#tmdb-movie) | `tmdb_movie_details` | Gets the movie specified and updates the collection with the summary, poster, and background from the TMDb movie | :heavy_check_mark: | :x: |
+| [TMDb Show](#tmdb-show) | `tmdb_show` | Gets the show specified | :x: | :heavy_check_mark: |
+| [TMDb Show Details](#tmdb-show) | `tmdb_show_details` | Gets the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: |
+| [TMDb Company](#tmdb-company) | `tmdb_company` | Gets every movie from the TMDb company's movie list | :heavy_check_mark: | :x: |
+| [TMDb Network](#tmdb-network) | `tmdb_network` | Gets every movie/show from the TMDb network's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Discover](#tmdb-discover) | `tmdb_discover` | Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to get every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided | :heavy_check_mark: | :heavy_check_mark: |
 | TMDb Now Playing | `tmdb_now_playing` | Gets the movies in the [TMDb Now Playing List](https://www.themoviedb.org/movie/now-playing) | :heavy_check_mark: | :x: |
 | TMDb Popular | `tmdb_popular` | Gets the movies/shows in the [TMDb Popular Movies](https://www.themoviedb.org/movie)/[TMDb Popular Shows](https://www.themoviedb.org/tv) | :heavy_check_mark: | :heavy_check_mark: |
 | TMDb Top Rated | `tmdb_top_rated` | Gets the movies/shows in the [TMDb Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[TMDb Top Rated Shows](https://www.themoviedb.org/tv/top-rated) | :heavy_check_mark: | :heavy_check_mark: |
 | TMDb Trending Daily | `tmdb_trending_daily` | Gets the movies/shows Trending Daily on TMDb | :heavy_check_mark: | :heavy_check_mark: | 
 | TMDb Trending Weekly | `tmdb_trending_weekly` | Gets the movies/shows Trending Weekly on TMDb | :heavy_check_mark: | :heavy_check_mark: | 
 
-* For tmdb_collection`, `tmdb_list`, `tmdb_movie`, `tmdb_show`, `tmdb_company`, or `tmdb_network` you can use the full URL or just type in the TMDb ID.
+* For `tmdb_collection`, `tmdb_list`, `tmdb_movie`, `tmdb_show`, `tmdb_company`, or `tmdb_network` you can use the full URL or just type in the TMDb ID.
 
 ### TMDb Collection
 Gets every movie in the TMDb collection.
@@ -124,10 +124,44 @@ collections:
 * You can specify multiple shows in `tmdb_show_details` but it will only use the first one to update the collection details.
 * Posters and background in the library's asset directory will be used over the collection details unless `tmdb_poster`/`tmdb_background` is also specified.
 
-TMDb Company
-TMDb Network
-TMDb Discover
-TMDb Now Playing
-TMDb Popular
-TMDb Top Rated
-TMDb Trending
+### TMDb Company
+Gets every movie from the TMDb company's movie list.
+
+```yaml
+collections:
+  Studio Ghibli:
+    tmdb_company: 10342
+```
+
+```yaml
+collections:
+  Studio Ghibli:
+    tmdb_company: https://www.themoviedb.org/company/10342
+```
+
+### TMDb Network
+Gets every movie/show from the TMDb network's movie/show list.
+
+```yaml
+collections:
+  CBS:
+    tmdb_network: 16
+```
+
+```yaml
+collections:
+  CBS:
+    tmdb_network: https://www.themoviedb.org/network/16
+```
+
+### TMDb Discover
+Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to get every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided
+
+
+### TMDb Now Playing
+
+### TMDb Popular
+
+### TMDb Top Rated
+
+### TMDb Trending
