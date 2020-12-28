@@ -21,13 +21,14 @@ The available collection builders attributes for each collection are as follows
 | TMDb Top Rated | `tmdb_top_rated` |
 | TMDb Trending Daily | `tmdb_trending_daily` |
 | TMDb Trending Weekly | `tmdb_trending_weekly` |
+| TVDb List | `tvdb_list` |
+| TVDb Show | `tvdb_show` |
 | IMDb List | `imdb_list` |
 | IMDb ID | `imdb_id` |
 | Tautulli | `tautulli` |
 | Trakt List | `trakt_list` |
 | Trakt Trending | `trakt_trending` |
 | Trakt Watchlist | `trakt_watchlist` |
-| TVDb Show | `tvdb_show` |
 | MyAnimeList Top All Anime | `mal_all` |
 | MyAnimeList Top Airring Anime | `mal_airing` |
 | MyAnimeList Top Upcoming Anime | `mal_upcoming` |
