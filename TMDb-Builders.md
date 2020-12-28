@@ -2,8 +2,8 @@ You can build different collections using the features of TheMovieDb.org (TMDb).
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
-| TMDb Collection | `tmdb_collection` | Gets every movie in the TMDb collection | :heavy_check_mark: | :x: |
-| TMDb Collection Details | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
+| [TMDb Collection](#tmdb-collection) | `tmdb_collection` | Gets every movie in the TMDb collection | :heavy_check_mark: | :x: |
+| [TMDb Collection Details] | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
 | TMDb List | `tmdb_list` | Gets every movie/show in the TMDb List | :heavy_check_mark: | :heavy_check_mark: |
 | TMDb List Details | `tmdb_list_details` | Gets every movie/show in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: |
 | TMDb Movie | `tmdb_movie` | Gets the movie specified | :heavy_check_mark: | :x: |
@@ -75,7 +75,7 @@ collections:
     tmdb_list_details: 10
 ```
 
-TMDb Movie
+### TMDb Movie
 Gets the movie specified.
 
 ```yaml
