@@ -1,1 +1,2 @@
 Welcome to the Plex-Meta-Manager wiki!
+The original idea for the `collections` attribute started from [deva5610](https://github.com/deva5610)'s [IMDBList2PlexCollection](https://github.com/deva5610/IMDBList2PlexCollection) which [vladimir-tutin](https://github.com/vladimir-tutin) turned into [Plex Auto Collections](https://github.com/vladimir-tutin/Plex-Auto-Collections). [mza921](https://github.com/mza921) started main
