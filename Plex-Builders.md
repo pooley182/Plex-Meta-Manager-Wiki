@@ -54,6 +54,7 @@ The search options are:
 | `writer` | Gets every movie with the specified writer | :heavy_check_mark: | :x: |
 | `writer_details_tmdb` | Gets every movie with the specified writer and updates the collection details with the TMDb Person's Profile and Biography | :heavy_check_mark: | :x: |
 
+* TMDb configuration is required to use `actor_details_tmdb`, `director_details_tmdb`, or `writer_details_tmdb`.
 * You can only use each search option once per `plex_search` but you can give the search multiple values.
 * If you want to restrict the search by multiples of the same attribute (i.e. You want every movie that is a Romance and Comedy) try using [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
