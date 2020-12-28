@@ -6,10 +6,11 @@ The location of the metadata file is defined by the `metadata_path` attribute of
 
 Each movie/show is defined by the mapping name which must be the same as the movie/show name in the library name unless an `alt_title` is specified.
 
-A simple example of multiple libraries all using the global values is below:
+An example of multiple metadata edits in a show library is below:
 ```yaml
 metadata:
   "Avatar: The Last Airbender":
+    sort_title: Avatar 01
     seasons:
       1:
         title: "Book One: Water"
@@ -17,7 +18,13 @@ metadata:
         title: "Book Two: Earth"
       3:
         title: "Book Three: Fire"
+    episodes:
+      S01E01:
+        rating: 9.1
+      S03E21:
+        summary: The Epic Series Final of Avatar The Last Airbender
   "Avatar: The Legend of Korra":
+    sort_title: Avatar 02
     alt_title: The Legend of Korra
     original_title: The Legend of Korra
     seasons:
