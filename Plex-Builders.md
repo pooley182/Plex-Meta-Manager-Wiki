@@ -6,7 +6,7 @@ You can build different collections using the features of Plex.
 | Plex Collection | `plex_collection` | Gets every movie/show in another Plex Collection | :heavy_check_mark: | :heavy_check_mark: |
 | Plex Search | `plex_search` | Gets every movie/show based on the search parameters provided | :heavy_check_mark: | :heavy_check_mark: |
 
-### Plex All
+## Plex All
 Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
 ```yaml
@@ -26,7 +26,7 @@ collections:
     plex_collection: Jurassic Park
 ```
 
- Note if you want to add multiple collections you have to use a list. Comma separated values will not work.
+If you want to add multiple collections you have to use a list. Comma separated values will not work.
 
  ```yaml
  collections:
@@ -36,10 +36,10 @@ collections:
        - The Land Before Time
  ```
 
-### Plex Search
+## Plex Search
 Gets every movie/show based on the search parameters provided. The search will return any movie/show that matches at least one term from each search option. You can run multiple searches. 
 
-The search options are:
+### Search Options
 | Search Option | Description | Movie<br>Libraries | Show<br>Libraries |
 | :-- | :-- | :--: | :--: |
 | `actor` | Gets every movie with the specified actor | :heavy_check_mark: | :x: |
@@ -112,7 +112,7 @@ collections:
       decade: 1990
 ```
 
-Note if you only want to search using a single attribute you can do so without `plex_search`.
+If you only want to search using a single attribute you can do so without `plex_search`.
 
 ```yaml
 collections:
