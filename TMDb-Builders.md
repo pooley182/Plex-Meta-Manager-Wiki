@@ -19,7 +19,7 @@ You can build different collections using the features of [TheMovieDb.org](https
 | [TMDb Trending Weekly](#tmdb-trending-weekly) | `tmdb_trending_weekly` | Gets the movies/shows in TMDb's Trending Weekly list | :heavy_check_mark: | :heavy_check_mark: | 
 | [TMDb Discover](#tmdb-discover) | `tmdb_discover` | Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to get every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided | :heavy_check_mark: | :heavy_check_mark: |
 
-### Expected Input
+## Expected Input
 
 The builders below are expected to have the full URL to the item or the TMDb ID of the item.
 * [TMDb Collection](#tmdb-collection) and [TMDb Collection Details](#tmdb-collection)
@@ -38,7 +38,7 @@ The builders below are expected to to have a single integer value of how many mo
 
 [TMDb Discover](#tmdb-discover)'s attributes are detailed [below](#tmdb-discover).
 
-### TMDb Collection
+## TMDb Collection
 Gets every movie in the TMDb collection.
 
 ```yaml
@@ -69,7 +69,7 @@ collections:
       - https://www.themoviedb.org/collection/121938
 ```
 
-### TMDb List
+## TMDb List
 Gets every movie/show in the TMDb List.
 
 ```yaml
@@ -92,7 +92,7 @@ collections:
     tmdb_list_details: 10
 ```
 
-### TMDb Movie
+## TMDb Movie
 Gets the movie specified.
 
 ```yaml
@@ -119,7 +119,7 @@ collections:
     tmdb_movie_details: 336560
 ```
 
-### TMDb Show
+## TMDb Show
 Gets the show specified.
 
 ```yaml
@@ -149,7 +149,7 @@ collections:
       - 60554
 ```
 
-### TMDb Company
+## TMDb Company
 Gets every movie from the TMDb company's movie list.
 
 ```yaml
@@ -164,7 +164,7 @@ collections:
     tmdb_company: https://www.themoviedb.org/company/10342
 ```
 
-### TMDb Network
+## TMDb Network
 Gets every movie/show from the TMDb network's movie/show list.
 
 ```yaml
@@ -179,7 +179,7 @@ collections:
     tmdb_network: https://www.themoviedb.org/network/16
 ```
 
-### TMDb Popular
+## TMDb Popular
 Gets the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list.
 
 ```yaml
@@ -189,7 +189,7 @@ collections:
     sync_mode: sync
 ```
 
-### TMDb Now Playing
+## TMDb Now Playing
 Gets the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list.
 
 ```yaml
@@ -199,7 +199,7 @@ collections:
     sync_mode: sync
 ```
 
-### TMDb Top Rated
+## TMDb Top Rated
 Gets the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list.
 
 ```yaml
@@ -209,7 +209,7 @@ collections:
     sync_mode: sync
 ```
 
-### TMDb Trending Daily
+## TMDb Trending Daily
 Gets the movies/shows in TMDb's Trending Daily list.
 
 ```yaml
@@ -219,7 +219,7 @@ collections:
     sync_mode: sync
 ```
 
-### TMDb Trending Weekly
+## TMDb Trending Weekly
 Gets the movies/shows in TMDb's Trending Weekly list.
 
 ```yaml
@@ -229,7 +229,7 @@ collections:
     sync_mode: sync
 ```
 
-### TMDb Discover
+## TMDb Discover
 Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to get every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided
 
 | Type | Description |
@@ -241,7 +241,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | Date: `MM/DD/YYYY` | Date that fits the specified format |
 | Year: `YYYY` | Year must be a 4 digit integer i.e. 1990 |
 
-#### Discover Movies Parameters
+### Discover Movies Parameters
 | Movie Parameters | Description | Type |
 | :-- | :-- | :--: |
 | `limit` | Specify how many movies you want returned by the query. (default: 100) | Integer |
@@ -275,7 +275,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `with_runtime.lte` | Filter and only include movies that have a runtime that is less than or equal to a value. | Integer |
 | `with_original_language` | Specify an ISO 639-1 string to filter results by their original language value. | String |
 
-#### Discover Shows Parameters
+### Discover Shows Parameters
 | Show Parameters | Description | Type |
 | :-- | :-- | :--: |
 | `limit` | Specify how many movies you want returned by the query. (default: 100) | Integer |
@@ -303,7 +303,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `with_original_language` | Specify an ISO 639-1 string to filter results by their original language value. | String |
 | `screened_theatrically` | Filter results to include items that have been screened theatrically. | Boolean |
 
-#### Sort Options
+### Sort Options
 | Sort Option | Movie Sort | Show Sort |
 | :-- | :--: | :--: |
 | `popularity.asc` | :heavy_check_mark: | :heavy_check_mark: |
