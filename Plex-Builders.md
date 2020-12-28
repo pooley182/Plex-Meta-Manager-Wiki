@@ -9,6 +9,8 @@ You can build different collections using the features of Plex.
 ## Plex All
 Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
+The expected input is either true or false. 
+
 ```yaml
 collections:
   9.0 Movies:
@@ -19,6 +21,8 @@ collections:
 
 ## Plex Collection
 Gets every movie/show in another Plex Collection. 
+
+The expected input is the exact name of a Collection in Plex
 
 ```yaml
 collections:
