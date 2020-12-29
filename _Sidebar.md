@@ -1,4 +1,6 @@
 - [Home](Home)
+- [Local Installation](Local-Installation)
+- [Docker Installation](Docker)
 - [Configuration File](Configuration-File)
   - [Libraries Attributes](Libraries-Attributes)
   - [Cache Attributes](Cache-Attributes)
@@ -25,3 +27,4 @@
     - [Collection Details](Collection-Details)
       - [Schedule Attribute](Schedule-Attribute)
     - [Collection Filters](Collection-Filters)
+- [Acknowledgements](Acknowledgements)
