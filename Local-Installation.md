@@ -23,8 +23,8 @@ python plex_meta_manager.py
 | [Config](#config) | `-c` or `--config` | Path to YAML config file | `config/config.yml` alongside<br>`plex_meta_manager.py` |
 | [Time to Run](#time-to-run) | `-t` or `--time` | Time to update each day<br>**Format:** HH:MM | `03:00` |
 | [Run](#run) | `-r` or `--run` | Run without the scheduler | `False` |
-| [Divider Character](#config) | `-d` or `--divider` | Character that divides the sections | `=` |
-| [Screen Width](#config) | `-w` or `--width` | Integer between 90 and 300 | `100` |
+| [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | Character that divides the sections | `=` |
+| [Screen Width](#divider-character--screen-width) | `-w` or `--width` | Integer between 90 and 300 | `100` |
 
 ## Config
 To choose the location of the YAML config file
@@ -46,9 +46,9 @@ To just run the script without having it continuously run use the --run option
 ```shell
 python plex_meta_manager.py --config-path /configs/config.yml --run
 ```
-## Screen Width & Divider Character
-To change the terminal output width or divider character use --width and --divider
+## Divider Character & Screen Width
+To change the terminal output divider character or width use --divider and --width
 
 ```shell
-python plex_meta_manager.py --width 200 --divider *
+python plex_meta_manager.py --divider * --width 200
 ```
