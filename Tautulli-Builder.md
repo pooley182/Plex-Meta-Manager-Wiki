@@ -36,5 +36,5 @@ collections:
       list_type: watched
       list_days: 30
       list_size: 10
-      list_buffer: 10
+      list_buffer: 20
 ```
