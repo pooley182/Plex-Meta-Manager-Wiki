@@ -12,11 +12,11 @@ You can build different collections using the features of [MyAnimeList.net](http
 | [MyAnimeList Most Popular Anime](#myanimelist-most-popular-anime) | `mal_popular` | Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list | :heavy_check_mark: | :heavy_check_mark: | 
 | [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime) | `mal_favorite` | Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list | :heavy_check_mark: | :heavy_check_mark: | 
 | [MyAnimeList Suggested Anime](#myanimelist-suggested-anime) | `mal_suggested` | Gets the suggested anime in by MyAnimeList for the authorized user | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list | :heavy_check_mark: | :heavy_check_mark: | 
+| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: | 
+| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: | 
 
 ## Expected Input
-The builders below are expected to have a single integer value of how many movies/shows to query. The `sync_mode: sync` option is also recommended for these builders since the lists they're based on are continuously updated.
+The builders below are expected to have a single integer value of how many movies/shows to query. 
 * [MyAnimeList Top All Anime](#myanimelist-top-all-anime)
 * [MyAnimeList Top Airing Anime](#myanimelist-top-airing-anime)
 * [MyAnimeList Top Upcoming Anime](#myanimelist-top-upcoming-anime)
@@ -28,8 +28,12 @@ The builders below are expected to have a single integer value of how many movie
 * [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime)
 * [MyAnimeList Suggested Anime](#myanimelist-suggested-anime)
 
+[MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime)'s attributes and [MyAnimeList User Anime List](#myanimelist-user-anime-list)'s attributes are detailed below.
+
+The `sync_mode: sync` option is also recommended for all MyAnimeList builders since the lists they're based on are continuously updated.
+
 ## MyAnimeList Top All Anime
-Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list
+Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list.
 
 ```yaml
 collections:
@@ -39,7 +43,7 @@ collections:
 ```
 
 ## MyAnimeList Top Airing Anime
-Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list
+Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list.
 
 ```yaml
 collections:
@@ -49,7 +53,7 @@ collections:
 ```
 
 ## MyAnimeList Top Upcoming Anime
-Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list
+Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list.
 
 ```yaml
 collections:
@@ -59,7 +63,7 @@ collections:
 ```
 
 ## MyAnimeList Top Anime TV Series
-Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list
+Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list.
 
 ```yaml
 collections:
@@ -69,58 +73,110 @@ collections:
 ```
 
 ## MyAnimeList Top Anime Movies
-## MyAnimeList Top Anime OVA Series
-## MyAnimeList Top Anime Specials
-## MyAnimeList Most Popular Anime
-## MyAnimeList Most Favorited Anime
-## MyAnimeList Suggested Anime
-## MyAnimeList User Anime List
-## MyAnimeList Seasonal Anime
-
-## Trakt List
-Gets every movie/show in the Trakt List.
-
-The expected input is a Trakt List URL.
+Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list.
 
 ```yaml
 collections:
-  Christmas:
-    trakt_list:
-      - https://trakt.tv/users/movistapp/lists/christmas-movies
-      - https://trakt.tv/users/2borno2b/lists/christmas-movies-extravanganza
-```
-```yaml
-collections:
-  Reddit Top 250:
-    trakt_list: https://trakt.tv/users/jay-greene/lists/reddit-top-250-2019-edition
-```
-
-## Trakt Trending
-Gets the movies/shows in Trakt's [Trending Movies](https://trakt.tv/movies/trending)/[Shows](https://trakt.tv/shows/trending) list.
-
-The expected input is a single integer value of how many movies/shows to query. 
-
-The `sync_mode: sync` option is also recommended since the Trakt Trending lists are continuously updated.
-
-```yaml
-collections:
-  Trakt Trending:
-    trakt_trending: 30
+  Top Anime Movies:
+    mal_movie: 20
     sync_mode: sync
 ```
 
-## Trakt Watchlist
-Gets every movie/show in a Users Watchlist.
-
-The expected input is a user's Trakt Username or `me`.
-
-The `sync_mode: sync` option is also recommended since the Trakt Watchlists are continuously updated.
+## MyAnimeList Top Anime OVA Series
+Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list.
 
 ```yaml
 collections:
-  Trakt Watchlist:
-    trakt_watchlist:
-      - me
-      - traktbuddy
+  Top Anime OVA Series:
+    mal_ova: 20
+    sync_mode: sync
+```
+
+## MyAnimeList Top Anime Specials
+Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list.
+
+```yaml
+collections:
+  Top Anime Specials:
+    mal_special: 20
+    sync_mode: sync
+```
+
+## MyAnimeList Most Popular Anime
+Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list.
+
+```yaml
+collections:
+  Most Popular Anime:
+    mal_popular: 20
+    sync_mode: sync
+```
+
+## MyAnimeList Most Favorited Anime
+Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list.
+
+```yaml
+collections:
+  Most Favorited Anime:
+    mal_favorite: 20
+    sync_mode: sync
+```
+
+## MyAnimeList Suggested Anime
+Gets the suggested anime in by MyAnimeList for the authorized user.
+
+```yaml
+collections:
+  Suggested Anime:
+    mal_suggested: 20
+    sync_mode: sync
+```
+
+## MyAnimeList User Anime List
+Gets anime in MyAnimeList User's Anime list. The different subattributes are detailed below.
+
+| Attribute | Description | Required | Default |
+| :-- | :-- | :--: | :--: |
+| `username` | A user's MyAnimeList Username or `me` for the authorized user | :heavy_check_mark: | N/A |
+| `status` | `all` (All Anime List)<br>`watching` (Currently Watching List)<br>`completed` (Completed List)<br>`on_hold` (On Hold List)<br>`dropped` (Dropped List)<br>`plan_to_watch` (Plan to Watch) | :x: | `all` |
+| `sort_by` | `score` (Sort by Score)<br>`last_updated` (Sort by Last Updated)<br>`title` (Sort by Anime Title)<br>`start_date` (Sort by Start Date) | :x: | `score` |
+| `limit` | Number of Anime to query from MyAnimeList (max: 1000) | :x: | 100 |
+
+```yaml
+collections:
+  Currently Watching Anime:
+    mal_userlist:
+      username: me
+      status: watching
+      sort_by: score
+      limit: 500
+    sync_mode: sync
+```
+
+## MyAnimeList Seasonal Anime
+Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. 
+
+| Attribute | Description | Required | Default |
+| :-- | :-- | :--: | :--: |
+| `season` | `winter` (For winter season January, February, March)<br>`spring` (For spring season April, May, June)<br>`summer` (For summer season July, August, September)<br>`fall` (For fall season October, November, December) | :x: | Current Season |
+| `year` | 4 digit integer year between 1917-Current | :x: | Current Year |
+| `sort_by` | `score` (Sort by Score)<br>`members` (Sort by Most Members) | :x: | `score` |
+| `limit` | Number of Anime to query from MyAnimeList (max: 500) | :x: | 100 |
+
+```yaml
+collections:
+  Current Anime Season:
+    mal_season:
+      sort_by: members
+      limit: 50
+    sync_mode: sync
+```
+```yaml
+collections:
+  Fall 2020 Anime:
+    mal_season:
+      season: fall
+      year: 2020
+      limit: 50
     sync_mode: sync
 ```
