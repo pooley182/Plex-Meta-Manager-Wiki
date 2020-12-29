@@ -8,7 +8,7 @@ You can build different collections using the features of [IMDb.com](https://www
 ## IMDb List
 Gets every movie/show in an IMDb List or [IMDb Search](https://www.imdb.com/search/title/)
 
-The expected input is an IMDb List URL or IMDb Search URL.
+The expected input is an IMDb List URL or IMDb Search URL. Multiple values are supported as either a list or a comma separated string.
 
 ```yaml
 collections:
@@ -24,7 +24,7 @@ collections:
 ## IMDb ID
 Gets the movie/show specified
 
-The expected input is an IMDb ID.
+The expected input is an IMDb ID. Multiple values are supported as either a list or a comma separated string.
 
 ```yaml
 collections:
