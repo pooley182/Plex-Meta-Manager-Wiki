@@ -15,11 +15,59 @@ You can build different collections using the features of [MyAnimeList.net](http
 | [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list | :heavy_check_mark: | :heavy_check_mark: | 
 | [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list | :heavy_check_mark: | :heavy_check_mark: | 
 
+## Expected Input
+The builders below are expected to have a single integer value of how many movies/shows to query. The `sync_mode: sync` option is also recommended for these builders since the lists they're based on are continuously updated.
+* [MyAnimeList Top All Anime](#myanimelist-top-all-anime)
+* [MyAnimeList Top Airing Anime](#myanimelist-top-airing-anime)
+* [MyAnimeList Top Upcoming Anime](#myanimelist-top-upcoming-anime)
+* [MyAnimeList Top Anime TV Series](#myanimelist-top-anime-tv-series)
+* [MyAnimeList Top Anime Movies](#myanimelist-top-anime-movies)
+* [MyAnimeList Top Anime OVA Series](#myanimelist-top-anime-ova-series)
+* [MyAnimeList Top Anime Specials](#myanimelist-top-anime-specials)
+* [MyAnimeList Most Popular Anime](#myanimelist-most-popular-anime)
+* [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime)
+* [MyAnimeList Suggested Anime](#myanimelist-suggested-anime)
 
 ## MyAnimeList Top All Anime
+Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list
+
+```yaml
+collections:
+  Top All Anime:
+    mal_all: 30
+    sync_mode: sync
+```
+
 ## MyAnimeList Top Airing Anime
+Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list
+
+```yaml
+collections:
+  Top Airing Anime:
+    mal_airing: 10
+    sync_mode: sync
+```
+
 ## MyAnimeList Top Upcoming Anime
+Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list
+
+```yaml
+collections:
+  Top Upcoming Anime:
+    mal_upcoming: 10
+    sync_mode: sync
+```
+
 ## MyAnimeList Top Anime TV Series
+Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list
+
+```yaml
+collections:
+  Top Anime TV Series:
+    mal_tv: 20
+    sync_mode: sync
+```
+
 ## MyAnimeList Top Anime Movies
 ## MyAnimeList Top Anime OVA Series
 ## MyAnimeList Top Anime Specials
