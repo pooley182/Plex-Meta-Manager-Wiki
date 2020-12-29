@@ -2,8 +2,6 @@ Adding a metadata backup was one of the main reasons for creating this script. I
 
 In order to edit the metadata of Movies or Shows in a library, you have to add it to the metadata mapping of that library.
 
-The location of the metadata file is defined by the `metadata_path` attribute of the library in the config or when not specified it will look in the same directory as the YAML config file for a YAML metadata file named the same as the library.
-
 Each movie/show is defined by the mapping name which must be the same as the movie/show name in the library name unless an `alt_title` is specified.
 
 An example of multiple metadata edits in a show library is below:
