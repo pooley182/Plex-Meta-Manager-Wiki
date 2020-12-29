@@ -20,7 +20,7 @@ python plex_meta_manager.py
 
 | Name | Command | Allowed Values | Default Value |
 | :-- | :-- | :-- | :-- |
-| Config | `-c` or `--config` | Path to YAML config file | `config.yml` alongside `plex_meta_manager.py` |
+| Config | `-c` or `--config` | Path to YAML config file | `config.yml` alongside<br>`plex_meta_manager.py` |
 | Time to Run | `-t` or `--time` | Time to update each day<br>**Format:** HH:MM | `03:00` |
 | Run | `-r` or `--run` | Run without the scheduler | `False` |
 | Divider Character | `-d` or `--divider` | Character that divides the sections | `=` |
