@@ -21,7 +21,7 @@ collections
     tvdb_list: https://www.thetvdb.com/lists/6957
 ```
 
-## TVDb ID
+## TVDb Show
 Gets the show specified
 
 The expected input is a TVDB Show ID.
