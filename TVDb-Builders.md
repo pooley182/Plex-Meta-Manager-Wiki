@@ -29,9 +29,7 @@ The expected input is a TVDb Show ID or TVDb Show URL.
 ```yaml
 collections:
   Star Wars (Animated Shows):
-    tvdb_show:
-      - 83268
-      - 283468
+    tvdb_show: 83268, 283468
 ```
 ```yaml
 collections:
