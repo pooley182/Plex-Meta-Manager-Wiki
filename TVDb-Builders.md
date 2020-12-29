@@ -2,8 +2,8 @@ You can build different collections using the features of [TheTVDb.com](https://
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
-| TVDb List | `tvdb_list` | Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom) | :x: | :heavy_check_mark: |
-| TVDb Show | `tvdb_show` | Gets the show specified | :x: | :heavy_check_mark: |
+| [TVDb List](#tvdb-list) | `tvdb_list` | Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom) | :x: | :heavy_check_mark: |
+| [TVDb Show](#tvdb-show) | `tvdb_show` | Gets the show specified | :x: | :heavy_check_mark: |
 
 ## TVDb List
 Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom)
