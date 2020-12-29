@@ -77,6 +77,21 @@ collections:
 ```
 ```yaml
 collections:
+  Robin Williams:
+    actor_details_tmdb: 2157
+```
+```yaml
+collections:
+  Steven Spielberg:
+    director_details_tmdb: https://www.themoviedb.org/person/488-steven-spielberg
+```
+```yaml
+collections:
+  Quentin Tarantino:
+    writer_details_tmdb: 138
+```
+```yaml
+collections:
   Pixar:
     plex_search:
       studio: Pixar
