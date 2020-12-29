@@ -9,7 +9,7 @@ You can build different collections using the features of [Trakt.tv](https://tra
 ## Trakt List
 Gets every movie/show in the Trakt List.
 
-The expected input is a Trakt List URL.
+The expected input is a Trakt List URL. Multiple values are supported as either a list or a comma separated string.
 
 ```yaml
 collections:
@@ -41,7 +41,7 @@ collections:
 ## Trakt Watchlist
 Gets every movie/show in a Users Watchlist.
 
-The expected input is a user's Trakt Username or `me`.
+The expected input is a user's Trakt Username or `me`. Multiple values are supported as either a list or a comma separated string.
 
 The `sync_mode: sync` option is also recommended since the Trakt Watchlists are continuously updated.
 
