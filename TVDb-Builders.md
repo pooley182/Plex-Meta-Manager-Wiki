@@ -24,12 +24,12 @@ collections
 ## TVDb Show
 Gets the show specified
 
-The expected input is a TVDB Show ID.
+The expected input is a TVDb Show ID or TVDb Show URL.
 
 ```yaml
 collections:
   Star Wars (Animated Shows):
     tvdb_show:
-      - 83268
+      - https://www.thetvdb.com/series/star-wars-the-clone-wars
       - 283468
 ```
