@@ -2,7 +2,8 @@ The main goal of the script is to allow a complete recreation of your library ju
 
 To do that you have to specify the metadata and collections in the Metadata File, which is required per Library and is defined in the Configuration File.
 
-If the Metadata File location is not specified it will look in the same directory as the Configuration File for a YAML file whose name matches the mapped name of the library in the Configuration File. 
+The location of the Metadata File is defined by either the `metadata_path` attribute of the library in the Configuration File or when not specified it will look in the same directory as the YAML config file for a YAML metadata file named the same as the library.
+
 
 For Example if this is your config.yml:
 
