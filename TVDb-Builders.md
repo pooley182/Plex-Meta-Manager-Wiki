@@ -30,6 +30,13 @@ The expected input is a TVDb Show ID or TVDb Show URL.
 collections:
   Star Wars (Animated Shows):
     tvdb_show:
-      - https://www.thetvdb.com/series/star-wars-the-clone-wars
+      - 83268
       - 283468
+```
+```yaml
+collections:
+  Star Wars (Animated Shows):
+    tvdb_show:
+      - https://www.thetvdb.com/series/star-wars-the-clone-wars
+      - https://www.thetvdb.com/series/star-wars-rebels
 ```
