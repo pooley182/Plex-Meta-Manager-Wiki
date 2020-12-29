@@ -21,7 +21,7 @@ You can build different collections using the features of [TheMovieDb.org](https
 
 ## Expected Input
 
-The builders below are expected to have the full URL to the item or the TMDb ID of the item.
+The builders below are expected to have the full URL to the item or the TMDb ID of the item. Multiple values are supported as either a list or a comma separated string.
 * [TMDb Collection](#tmdb-collection) and [TMDb Collection Details](#tmdb-collection)
 * [TMDb List](#tmdb-list) and [TMDb List Details](#tmdb-list)
 * [TMDb Movie](#tmdb-movie) and [TMDb Movie Details](#tmdb-movie)
