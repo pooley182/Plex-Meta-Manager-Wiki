@@ -2,9 +2,9 @@ You can build different collections using the features of Plex.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
-| [Plex All](plex-all) | `plex_all` | Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) | :heavy_check_mark: | :heavy_check_mark: |
-| [Plex Collection](plex-collection) | `plex_collection` | Gets every movie/show in another Plex Collection | :heavy_check_mark: | :heavy_check_mark: |
-| [Plex Search](plex-search) | `plex_search` | Gets every movie/show based on the search parameters provided | :heavy_check_mark: | :heavy_check_mark: |
+| [Plex All](#plex-all) | `plex_all` | Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) | :heavy_check_mark: | :heavy_check_mark: |
+| [Plex Collection](#plex-collection) | `plex_collection` | Gets every movie/show in another Plex Collection | :heavy_check_mark: | :heavy_check_mark: |
+| [Plex Search](#plex-search) | `plex_search` | Gets every movie/show based on the search parameters provided | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Plex All
 Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
