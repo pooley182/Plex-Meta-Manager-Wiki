@@ -6,7 +6,7 @@ Unlike other builder sections theres only one attribute, `tautulli`, but is has 
 
 | Attribute | Description | Required | Default |
 | :-- | :-- | :--: | :--: |
-| `list_type` | `watched` (For Most Watched Lists)<br>`popular` (For Most Popular Lists) | :heavy_check_mark: | :x: |
+| `list_type` | `watched` (For Most Watched Lists)<br>`popular` (For Most Popular Lists) | :heavy_check_mark: | N/A |
 | `list_days` | Number of Days to look back of the list | :x: | 30 |
 | `list_size` | Number of Movies/Shows to add to this list | :x: | 10 |
 | `list_buffer` | Number of extra Movies/Shows to grab in case you have multiple show/movie Libraries. | :x: | 10 |
