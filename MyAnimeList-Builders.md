@@ -137,7 +137,7 @@ Gets anime in MyAnimeList User's Anime list. The different subattributes are det
 
 | Attribute | Description | Required | Default |
 | :-- | :-- | :--: | :--: |
-| `username` | A user's MyAnimeList Username or `me` for the authorized user | :heavy_check_mark: | N/A |
+| `username` | A user's MyAnimeList Username or `@me` for the authorized user | :heavy_check_mark: | N/A |
 | `status` | `all` (All Anime List)<br>`watching` (Currently Watching List)<br>`completed` (Completed List)<br>`on_hold` (On Hold List)<br>`dropped` (Dropped List)<br>`plan_to_watch` (Plan to Watch) | :x: | `all` |
 | `sort_by` | `score` (Sort by Score)<br>`last_updated` (Sort by Last Updated)<br>`title` (Sort by Anime Title)<br>`start_date` (Sort by Start Date) | :x: | `score` |
 | `limit` | Number of Anime to query from MyAnimeList (max: 1000) | :x: | 100 |
@@ -146,7 +146,7 @@ Gets anime in MyAnimeList User's Anime list. The different subattributes are det
 collections:
   Currently Watching Anime:
     mal_userlist:
-      username: me
+      username: @me
       status: watching
       sort_by: score
       limit: 500
