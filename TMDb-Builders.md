@@ -10,8 +10,8 @@ You can build different collections using the features of [TheMovieDb.org](https
 | [TMDb Movie Details](#tmdb-movie) | `tmdb_movie_details` | Gets the movie specified and updates the collection with the summary, poster, and background from the TMDb movie | :heavy_check_mark: | :x: |
 | [TMDb Show](#tmdb-show) | `tmdb_show` | Gets the show specified | :x: | :heavy_check_mark: |
 | [TMDb Show Details](#tmdb-show) | `tmdb_show_details` | Gets the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: |
-| [TMDb Company](#tmdb-company) | `tmdb_company` | Gets every movie from the TMDb company's movie list | :heavy_check_mark: | :x: |
-| [TMDb Network](#tmdb-network) | `tmdb_network` | Gets every movie/show from the TMDb network's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Company](#tmdb-company) | `tmdb_company` | Gets every movie/show from the TMDb company's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Network](#tmdb-network) | `tmdb_network` | Gets every show from the TMDb network's show list | :x: | :heavy_check_mark: |
 | [TMDb Keyword](#tmdb-keyword) | `tmdb_keyword` | Gets every movie/show from the TMDb keyword's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Popular](#tmdb-popular) | `tmdb_popular` | Gets the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Now Playing](#tmdb-now-playing) | `tmdb_now_playing` | Gets the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list | :heavy_check_mark: | :x: |
