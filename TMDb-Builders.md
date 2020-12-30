@@ -12,6 +12,7 @@ You can build different collections using the features of [TheMovieDb.org](https
 | [TMDb Show Details](#tmdb-show) | `tmdb_show_details` | Gets the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: |
 | [TMDb Company](#tmdb-company) | `tmdb_company` | Gets every movie from the TMDb company's movie list | :heavy_check_mark: | :x: |
 | [TMDb Network](#tmdb-network) | `tmdb_network` | Gets every movie/show from the TMDb network's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Keyword](#tmdb-keyword) | `tmdb_keyword` | Gets every movie/show from the TMDb keyword's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Popular](#tmdb-popular) | `tmdb_popular` | Gets the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Now Playing](#tmdb-now-playing) | `tmdb_now_playing` | Gets the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list | :heavy_check_mark: | :x: |
 | [TMDb Top Rated](#tmdb-top-rated) | `tmdb_top_rated` | Gets the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list | :heavy_check_mark: | :heavy_check_mark: |
@@ -177,6 +178,21 @@ collections:
 collections:
   CBS:
     tmdb_network: https://www.themoviedb.org/network/16
+```
+
+## TMDb Keyword
+Gets every movie/show from the TMDb keyword's movie/show list.
+
+```yaml
+collections:
+  Marvel Cinematic Universe:
+    tmdb_keyword: 180547
+```
+
+```yaml
+collections:
+  Marvel Cinematic Universe:
+    tmdb_keyword: https://www.themoviedb.org/keyword/180547
 ```
 
 ## TMDb Popular
