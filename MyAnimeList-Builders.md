@@ -2,18 +2,19 @@ You can build different collections using the features of [MyAnimeList.net](http
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
-| [MyAnimeList Top All Anime](#myanimelist-top-all-anime) | `mal_all` | Gets every anime in MyAnimeList's [Top All Anime](https://myanimelist.net/topanime.php) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Top Airing Anime](#myanimelist-top-airing-anime) | `mal_airing` | Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Top Upcoming Anime](#myanimelist-top-upcoming-anime) | `mal_upcoming` | Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Top Anime TV Series](#myanimelist-top-anime-tv-series) | `mal_tv` | Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Top Anime Movies](#myanimelist-top-anime-movies) | `mal_movie` | Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Top Anime OVA Series](#myanimelist-top-anime-ova-series) | `mal_ova` | Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Top Anime Specials](#myanimelist-top-anime-specials) | `mal_special` | Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Most Popular Anime](#myanimelist-most-popular-anime) | `mal_popular` | Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime) | `mal_favorite` | Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Suggested Anime](#myanimelist-suggested-anime) | `mal_suggested` | Gets the suggested anime in by MyAnimeList for the authorized user | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: | 
-| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: | 
+| [MyAnimeList Top All Anime](#myanimelist-top-all-anime) | `mal_all` | Gets every anime in MyAnimeList's [Top All Anime](https://myanimelist.net/topanime.php) list | :heavy_check_mark: | :heavy_check_mark: 
+| [MyAnimeList Top Airing Anime](#myanimelist-top-airing-anime) | `mal_airing` | Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Upcoming Anime](#myanimelist-top-upcoming-anime) | `mal_upcoming` | Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime TV Series](#myanimelist-top-anime-tv-series) | `mal_tv` | Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime Movies](#myanimelist-top-anime-movies) | `mal_movie` | Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime OVA Series](#myanimelist-top-anime-ova-series) | `mal_ova` | Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime Specials](#myanimelist-top-anime-specials) | `mal_special` | Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Most Popular Anime](#myanimelist-most-popular-anime) | `mal_popular` | Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime) | `mal_favorite` | Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Suggested Anime](#myanimelist-suggested-anime) | `mal_suggested` | Gets the suggested anime in by MyAnimeList for the authorized user | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList ID](#myanimelist-id) | `mal_id` | Gets the anime specified by the MyAnimeList ID | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Expected Input
 The builders below are expected to have a single integer value of how many movies/shows to query. 
@@ -28,7 +29,7 @@ The builders below are expected to have a single integer value of how many movie
 * [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime)
 * [MyAnimeList Suggested Anime](#myanimelist-suggested-anime)
 
-[MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime)'s attributes and [MyAnimeList User Anime List](#myanimelist-user-anime-list)'s attributes are detailed below.
+The attributes of [MyAnimeList ID](#myanimelist-id), [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) and [MyAnimeList User Anime List](#myanimelist-user-anime-list) are detailed in their sections below.
 
 The `sync_mode: sync` option is also recommended for all MyAnimeList builders since the lists they're based on are continuously updated.
 
@@ -130,6 +131,15 @@ collections:
   Suggested Anime:
     mal_suggested: 20
     sync_mode: sync
+```
+
+## MyAnimeList ID
+Gets the anime specified by the MyAnimeList ID
+
+```yaml
+collections:
+  One Piece:
+    mal_id: 69, 7538, 6537, 2736, 11447, 411, 893, 1253, 1254, 2036, 2644, 4097, 6199, 8010, 8762, 8940, 11529, 14737, 14318, 5691, 11448, 4851
 ```
 
 ## MyAnimeList User Anime List
