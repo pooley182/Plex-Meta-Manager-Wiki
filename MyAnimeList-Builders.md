@@ -136,10 +136,12 @@ collections:
 ## MyAnimeList ID
 Gets the anime specified by the MyAnimeList ID
 
+The expected input is a MyAnimeList ID. Multiple values are supported as either a list or a comma separated string.
+
 ```yaml
 collections:
-  One Piece:
-    mal_id: 69, 7538, 6537, 2736, 11447, 411, 893, 1253, 1254, 2036, 2644, 4097, 6199, 8010, 8762, 8940, 11529, 14737, 14318, 5691, 11448, 4851
+  Cowboy Bebop:
+    mal_id: 23, 219
 ```
 
 ## MyAnimeList User Anime List
