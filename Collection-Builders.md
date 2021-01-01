@@ -9,4 +9,5 @@ There are multiple different sources you can build collections from listed below
 * [IMDb Builders](IMDb-Builders)
 * [Trakt Builders](Trakt-Builders)
 * [Tautulli Builder](Tautulli-Builder)
+* [AniDB Builder](AniDB-Builder)
 * [MyAnimeList Builders](MyAnimeList-Builders)
