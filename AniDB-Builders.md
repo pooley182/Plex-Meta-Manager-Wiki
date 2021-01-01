@@ -11,12 +11,39 @@ Gets the anime specified by the AniDB ID.
 
 The expected input is an AniDB ID or AniDB Anime URL. Multiple values are supported as either a list or a comma separated string.
 
+```yaml
+collections:
+  Sword Art Online Shows:
+    anidb_id: 8692, 8691, 13494
+```
+```yaml
+collections:
+  Sword Art Online Shows:
+    anidb_id: https://anidb.net/anime/8692, https://anidb.net/anime/8691, https://anidb.net/anime/13494
+```
+
 ## AniDB Relation
 Gets all anime in the relation graph of the specified AniDB ID.
 
 To see the relation graph of an anime use: `https://anidb.net/anime/<ANIDB_ID>/relation/graph` but replace `<ANIDB_ID>` with the AniDB ID you want to see the relations for.
 
 The expected input is an AniDB ID, AniDB Anime URL, or AniDB Anime Relation URL. Multiple values are supported as either a list or a comma separated string.
+
+```yaml
+collections:
+  All Sword Art Online:
+    anidb_relation: 8692
+```
+```yaml
+collections:
+  All Sword Art Online:
+    anidb_relation: https://anidb.net/anime/8692
+```
+```yaml
+collections:
+  All Sword Art Online:
+    anidb_relation: https://anidb.net/anime/8692/relation/graph
+```
 
 ## AniDB Popular
 Gets every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list.
