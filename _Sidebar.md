@@ -23,6 +23,7 @@
       - [IMDb Builders](IMDb-Builders)
       - [Trakt Builders](Trakt-Builders)
       - [Tautulli Builder](Tautulli-Builder)
+      - [AniDB Builder](AniDB-Builder)
       - [MyAnimeList Builders](MyAnimeList-Builders)
     - [Collection Details](Collection-Details)
       - [Schedule Attribute](Schedule-Attribute)
