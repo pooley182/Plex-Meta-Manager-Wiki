@@ -11,12 +11,12 @@ Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlis
 The expected input is a TVDb List or TVDb Userlist URL. Multiple values are supported as either a list or a comma separated string.
 
 ```yaml
-collections
+collections:
   Arrowverse:
     tvdb_list: https://www.thetvdb.com/lists/arrowverse
 ```
 ```yaml
-collections
+collections:
   Saved by the Bell:
     tvdb_list: https://www.thetvdb.com/lists/6957
 ```
