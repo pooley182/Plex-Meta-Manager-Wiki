@@ -1,5 +1,5 @@
 ## Development Acknowledgements
-* [JonnyWong16](https://github.com/JonnyWong16) for writing the a [IMDb Top 250](https://gist.github.com/JonnyWong16/f5b9af386ea58e19bf18c09f2681df23) collection script which served as inspiration (and for [Tautulli](https://github.com/Tautulli/Tautulli)!)
+* [JonnyWong16](https://github.com/JonnyWong16) for writing the a [IMDb Top 250](https://gist.github.com/JonnyWong16/f5b9af386ea58e19bf18c09f2681df23) collection script which served as inspiration for IMDBList2PlexCollection (and for [Tautulli](https://github.com/Tautulli/Tautulli)!)
 * [deva5610](https://github.com/deva5610) for writing [IMDBList2PlexCollection](https://github.com/deva5610/IMDBList2PlexCollection) which prompted vladimir-tutin to write the original Plex Auto Collections
 * [vladimir-tutin](https://github.com/vladimir-tutin) for writing the original [Plex Auto Collections](https://github.com/vladimir-tutin/Plex-Auto-Collections) which prompted the creation of Plex Meta Manager
 * [mza921](https://github.com/mza921) and [burkasaurusrex](https://github.com/burkasaurusrex) for updating and maintaining a [Plex Auto Collections](https://github.com/mza921/Plex-Auto-Collections) fork of the original
