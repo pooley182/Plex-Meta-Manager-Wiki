@@ -9,8 +9,10 @@ metadata:
     seasons:
       1:
         title: "Book One: Water"
+        summary: After a lapse of 100 years, the Avatar-spiritual master of the elements-has returned. And just in the nick of time. The Four Nations (Water, Earth, Fire, and Air) have become unbalanced. The Fire Nation wants to rule the world, and its first conquest will be the Northern Water Tribe. It's up to a 12-year-old Airbender named Aang to find a way to stop it. Join Aang, Katara, Sokka, Momo, and Appa as they head north on the adventure of a lifetime.
       2:
         title: "Book Two: Earth"
+        summary: 
       3:
         title: "Book Three: Fire"
 ```
