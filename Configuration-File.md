@@ -2,7 +2,7 @@ The script utilizes a YAML config file to load information to connect to the var
 
 The YAML mappings that can be set in the configuration file's root:
 | Name | YAML Attribute | Required |
-| :-- | :-- | :-- |
+| :-- | :-- | :--: |
 | [Libraries](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Libraries-Attributes) | `libraries` | :heavy_check_mark: |
 | [Cache](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Cache-Attributes) | `cache` | :x: |
 | [Plex](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | `plex` | :x: |
