@@ -1,4 +1,4 @@
-Configuring TheMovieDb.org API is optional but highly recommended and is required for TMDb based collections, Sonarr, or Radarr to function. 
+Configuring TheMovieDb.org API is required in order to run the script. 
 
 A `tmdb` mapping is in the root of the config file.
 
