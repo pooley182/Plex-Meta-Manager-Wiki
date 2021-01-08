@@ -37,3 +37,13 @@ sonarr:
 | HD - 720p/1080p | 6 |
 
 Alternatively instead of a number you can write the exact name of the profile and the script will attempt to find the Profile ID
+
+```YAML
+sonarr:
+  url: http://192.168.1.12:32789
+  token: ################################
+  quality_profile_id: HD-1080p
+  root_folder_path: S:/Shows
+  add: true
+  search: false
+```
