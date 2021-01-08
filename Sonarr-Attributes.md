@@ -25,20 +25,15 @@ sonarr:
 
 * The `token` can be found by going to `Sonarr > Settings > General > Security > API Key`
 
-* The `quality_profile_id` is the number of the desired profile. It can be found by going to `Sonarr > Settings > Profiles`. Unfortunately, there's not an explicit place to find the `id`, but you can infer it from the `Profiles` page. Each profile is numbered, starting at `1` and incrementing by one, left-to-right, top-to-bottom. For example, the default Sonarr installation comes with four profiles:
-    ```
-         1          2          3          4
-        Any         SD      HD-720p    HD-1080p
-    ```
+* The `quality_profile_id` is the number of the desired profile. The IDs of default Profiles are below and if you add a custom Quality Profile it is given the next number available.
 
-    If you were to add two more profiles, the `id` would be as follows:
+| Name | Profile ID |
+| :-- | :--: |
+| Any | 1 |
+| SD | 2 |
+| HD-720p | 3 |
+| HD-1080p | 4 |
+| Ultra-HD | 5 |
+| HD - 720p/1080p | 6 |
 
-    ```
-         1          2          3          4
-        Any         SD      HD-720p    HD-1080p
-    
-         5          6
-     Ultra-HD HD-720p/1080p
-    ```
-
-    In this example, to set any added shows to the `Ultra-HD` profile, set `quality_profile_id` to `5`. To set any added shows to `HD-1080p`, set `quality_profile_id` to `4`.
+Alternatively instead of a number you can write the exact name of the profile and the script will attempt to find the Profile ID
