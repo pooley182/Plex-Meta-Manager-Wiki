@@ -1,6 +1,6 @@
 Configuring Sonarr is optional but will allow you to send shows to a Sonarr instance when they're found missing while updating a library's collections.
 
-A `sonarr` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the `sonarr` mapping individually per library. A TMDb configuration is required to use Sonarr. 
+A `sonarr` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the `sonarr` mapping individually per library.
 
 Below is a `sonarr` mapping example and the full set of attributes:
 ```YAML
