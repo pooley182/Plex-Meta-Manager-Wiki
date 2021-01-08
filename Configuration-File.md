@@ -6,7 +6,7 @@ The YAML mappings that can be set in the configuration file's root:
 | [Libraries](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Libraries-Attributes) | `libraries` | :heavy_check_mark: |
 | [Cache](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Cache-Attributes) | `cache` | :x: |
 | [Plex](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | `plex` | :x: |
-| [TMDb](https://github.com/meisnate12/Plex-Meta-Manager/wiki/TMDb-Attributes) | `tmdb` | :x: |
+| [TMDb](https://github.com/meisnate12/Plex-Meta-Manager/wiki/TMDb-Attributes) | `tmdb` | :heavy_check_mark: |
 | [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | `radarr` | :x: |
 | [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | `sonarr` | :x: |
 | [Tautulli](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) | `tautulli` | :x: |
