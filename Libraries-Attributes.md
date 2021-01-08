@@ -1,4 +1,4 @@
-The only required configuration mapping is `libraries` which is where you set up a configuration for each Plex Library you want the program to interact with. 
+One of the two required configuration mappings is `libraries` which is where you set up a configuration for each Plex Library you want the program to interact with. 
 
 Each library is defined by the mapping name which must be the same as the library name unless a different `library_name` is specified. You can either set attributes individually per library or you can let them be inherited from the global value. 
 
