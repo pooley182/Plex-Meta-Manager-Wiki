@@ -27,19 +27,26 @@ radarr:
 
 * The `token` can be found by going to `Radarr > Settings > General > Security > API Key`
 
-* The `quality_profile_id` is the number of the desired profile. It can be found by going to `Radarr > Settings > Profiles`. Unfortunately, there's not an explicit place to find the `id`, but you can infer it from the `Profiles` page. Each profile is numbered, starting at `1` and incrementing by one, left-to-right, top-to-bottom. For example, the default Radarr installation comes with four profiles:
-    ```
-         1          2          3          4
-        Any         SD      HD-720p    HD-1080p
-    ```
-    
-    If you were to add two more profiles, the `id` would be as follows:
-    ```
-         1          2          3          4
-        Any         SD      HD-720p    HD-1080p
-    
-         5          6
-     Ultra-HD HD-720p/1080p
-    ```
-    
-    In this example, to set any added movies to the `Ultra-HD` profile, set `quality_profile_id` to `5`. To set any added movies to `HD-1080p`, set `quality_profile_id` to `4`.
+* The `quality_profile_id` is the number of the desired profile. The IDs of default Profiles are below and if you add a custom Quality Profile it is given the next number available.
+
+| Name | Profile ID |
+| :-- | :--: |
+| Any | 1 |
+| SD | 2 |
+| HD-720p | 3 |
+| HD-1080p | 4 |
+| Ultra-HD | 5 |
+| HD - 720p/1080p | 6 |
+
+Alternatively instead of a number you can write the exact name of the profile and the script will attempt to find the Profile ID
+
+```yaml
+radarr:
+  url: http://192.168.1.12:32788
+  token: ################################
+  version: v2
+  quality_profile_id: HD-1080p
+  root_folder_path: S:/Movies
+  add: true
+  search: false
+```
