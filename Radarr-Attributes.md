@@ -26,4 +26,4 @@ radarr:
 
 * The `token` can be found by going to `Radarr > Settings > General > Security > API Key`
 
-* The `quality_profile` is the exact name of the desired profile, including all spaces and capitalizations.
+* The `quality_profile` must be the exact name of the desired quality profile, including all spaces and capitalizations.
