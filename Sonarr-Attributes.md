@@ -7,7 +7,8 @@ Below is a `sonarr` mapping example and the full set of attributes:
 sonarr:
   url: http://192.168.1.12:32789
   token: ################################
-  quality_profile_id: 4
+  version: v3
+  quality_profile_id: HD-1080p
   root_folder_path: S:/Shows
   add: true
   search: false
@@ -17,33 +18,12 @@ sonarr:
 | :-- | :-- | :-- | :--: | :--: |
 | Sonarr URL | `url` | Sonarr URL<br><strong>Example:</strong> http://192.168.1.12:32788 | N/A | :heavy_check_mark: |
 | API Token | `token` | Sonarr API Token | N/A | :heavy_check_mark: |
+| Sonarr Version | `version` | `v2`: for < 0.2<br>`v3`: for > 3.0 | v2 | :x: |
 | Root Folder Path | `root_folder_path` | Sonarr Root Folder Path To Use | N/A | :heavy_check_mark: |
-| Quality Profile ID | `quality_profile_id` | Quality Profile ID To Use | N/A | :heavy_check_mark: |
+| Quality Profile | `quality_profile` | Quality Profile To Use | N/A | :heavy_check_mark: |
 | Add | `add` | Add missing shows found to Sonarr<br><strong>boolean:</strong> true or false | false | :x: |
 | Search | `search` | Search when adding missing shows to Sonarr<br><strong>boolean:</strong> true or false | false | :x: |
 
-
 * The `token` can be found by going to `Sonarr > Settings > General > Security > API Key`
 
-* The `quality_profile_id` is the number of the desired profile. The IDs of default Profiles are below and if you add a custom Quality Profile it is given the next number available.
-
-| Name | Profile ID |
-| :-- | :--: |
-| Any | 1 |
-| SD | 2 |
-| HD-720p | 3 |
-| HD-1080p | 4 |
-| Ultra-HD | 5 |
-| HD - 720p/1080p | 6 |
-
-Alternatively instead of a number you can write the exact name of the profile and the script will attempt to find the Profile ID
-
-```YAML
-sonarr:
-  url: http://192.168.1.12:32789
-  token: ################################
-  quality_profile_id: HD-1080p
-  root_folder_path: S:/Shows
-  add: true
-  search: false
-```
+* The `quality_profile` is the exact name of the desired profile, including all spaces and capitalizations.
