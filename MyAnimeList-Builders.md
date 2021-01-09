@@ -1,5 +1,7 @@
 You can build different collections using the features of [MyAnimeList.net](https://myanimelist.net/) (MyAnimeList).
 
+[Configuring MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) in the config is required for all of these lists.
+
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
 | [MyAnimeList Top All Anime](#myanimelist-top-all-anime) | `mal_all` | Gets every anime in MyAnimeList's [Top All Anime](https://myanimelist.net/topanime.php) list | :heavy_check_mark: | :heavy_check_mark: 
