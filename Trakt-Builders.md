@@ -1,4 +1,6 @@
-You can build different collections using the features of [Trakt.tv](https://trakt.tv/) (Trakt).
+You can build different collections using the features of [Trakt.tv](https://trakt.tv/) (Trakt). 
+
+[Configuring Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes) in the config is required for all of these lists.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
