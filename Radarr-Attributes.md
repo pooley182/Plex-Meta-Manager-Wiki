@@ -7,8 +7,8 @@ Below is a `radarr` mapping example and the full set of attributes:
 radarr:
   url: http://192.168.1.12:32788
   token: ################################
-  version: v2
-  quality_profile_id: 4
+  version: v3
+  quality_profile_id: HD-1080p
   root_folder_path: S:/Movies
   add: true
   search: false
@@ -20,33 +20,10 @@ radarr:
 | API Token | `token` | Radarr API Token | N/A | :heavy_check_mark: |
 | Radarr Version | `version` | `v2`: for < 0.2<br>`v3`: for > 3.0 | v2 | :x: |
 | Root Folder Path | `root_folder_path` | Radarr Root Folder Path To Use | N/A | :heavy_check_mark: |
-| Quality Profile ID | `quality_profile_id` | Quality Profile ID To Use | N/A | :heavy_check_mark: |
+| Quality Profile | `quality_profile` | Quality Profile To Use | N/A | :heavy_check_mark: |
 | Add | `add` | Add missing moives found to Radarr<br><strong>boolean:</strong> true or false | false | :x: |
 | Search | `search` | Search when adding missing movies to Radarr<br><strong>boolean:</strong> true or false | false | :x: |
 
-
 * The `token` can be found by going to `Radarr > Settings > General > Security > API Key`
 
-* The `quality_profile_id` is the number of the desired profile. The IDs of default Profiles are below and if you add a custom Quality Profile it is given the next number available.
-
-| Name | Profile ID |
-| :-- | :--: |
-| Any | 1 |
-| SD | 2 |
-| HD-720p | 3 |
-| HD-1080p | 4 |
-| Ultra-HD | 5 |
-| HD - 720p/1080p | 6 |
-
-Alternatively instead of a number you can write the exact name of the profile and the script will attempt to find the Profile ID
-
-```yaml
-radarr:
-  url: http://192.168.1.12:32788
-  token: ################################
-  version: v2
-  quality_profile_id: HD-1080p
-  root_folder_path: S:/Movies
-  add: true
-  search: false
-```
+* The `quality_profile` is the exact name of the desired profile, including all spaces and capitalizations.
