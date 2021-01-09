@@ -1,4 +1,6 @@
-You can build different collections using the features of Tautulli.
+You can build different collections using the features of [Tautulli](https://tautulli.com/).
+
+[Configuring Tautulli](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) in the config is required for all of these lists.
 
 It has watch analytics that can show the most watched or most popular Movies/Shows in each Library. 
 
