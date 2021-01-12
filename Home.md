@@ -1,11 +1,5 @@
-Welcome to the Plex Meta Manager wiki!
+Plex Meta Manager is a Python 3 script that can be continuously run using YMAL configuration files to update on a schedule the metadata of the movies, shows, and collections in your libraries as well as automatically build collections based on various methods all detailed in the wiki. Some collection examples that the script can automatically build and update daily include Plex Based Searches like actor, genre, or studio collections or Collections based on TMDb, IMDb, Trakt, TVDb, AniDB, or MyAnimeList lists and various other services. 
 
-The goal of this script is to allow for a way to automatically update metadata of the movies, shows, and collections in your libraries. The script can up
-
-Using various methods detailed in the wiki you can have a way to recreate your library and all its changes with the click of a button. 
+The script can update many metadata fields for movies, shows, collections, seasons, and episodes and can act as a backup if your plex DB goes down. It can even update metadata the plex UI can't like Season Names. If the time is put into the metadata configuration file you can have a way to recreate your library and all its metadata changes with the click of a button. 
 
 The script is designed to work with most Metadata agents including the new Plex Movie Agent, [Hama Anime Agent](https://github.com/ZeroQI/Hama.bundle), and [MyAnimeList Anime Agent](https://github.com/Fribb/MyAnimeList.bundle).
-
-
-
-The original idea for the `collections` attribute started from [deva5610](https://github.com/deva5610)'s [IMDBList2PlexCollection](https://github.com/deva5610/IMDBList2PlexCollection) which [vladimir-tutin](https://github.com/vladimir-tutin) turned into [Plex Auto Collections](https://github.com/vladimir-tutin/Plex-Auto-Collections). [mza921](https://github.com/mza921) started main
