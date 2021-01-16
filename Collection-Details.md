@@ -3,11 +3,11 @@ Here is an example with multiple details being set:
 collections:
   IMDb Top 250:
     imdb_list: https://www.imdb.com/search/title/?groups=top_250&count=25
-    sort_title: "#100"
+    sort_title: +100
     sync_mode: sync
   Reddit Top 250:
     trakt_list: https://trakt.tv/users/jay-greene/lists/reddit-top-250-2019-edition
-    sort_title: "#101"
+    sort_title: +101
     sync_mode: sync
   Star Wars:
     tmdb_collection: 10
