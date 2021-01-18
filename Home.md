@@ -14,7 +14,8 @@ The script is designed to work with most Metadata agents including the new Plex 
 
 ## Support
 
-* If you're getting an Error or have an Enhancment post in the [Issues](https://github.com/meisnate12/Plex-Meta-Manager/issues)
-* If you have a configuration question or want to see some example and user shared confiurations vist the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions)
+* 
+* If you're getting an Error or have an Enhancement post in the [Issues](https://github.com/meisnate12/Plex-Meta-Manager/issues)
+* If you have a configuration question or want to see some user shared configurations visit the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions)
 * Pull Request are welcome
 * [Buy Me a Pizza](https://www.buymeacoffee.com/meisnate12)
