@@ -4,11 +4,16 @@ You can build different collections using the features of [Tautulli](https://tau
 
 It has watch analytics that can show the most watched or most popular Movies/Shows in each Library. 
 
-Unlike other builder sections theres only one attribute, `tautulli`, but is has a few different subattributes detailed below.
+| Name | Attribute | Description | Works with Movies | Works with Shows |
+| :-- | :-- | :-- | :--: | :--: |
+| [Tautulli Popular](#tautulli-popularwatched) | `tautulli_popular` | Gets the Tautulli Most Popular List | :heavy_check_mark: | :heavy_check_mark: |
+| [Tautulli Watched](#tautulli-popularwatched) | `tautulli_watched` | Gets the Tautulli Most Watched List | :heavy_check_mark: | :heavy_check_mark: |
+
+## Tautulli Popular/Watched
+Both Tautulli Popular and Tautulli Watched have the same subattributes detailed below.
 
 | Attribute | Description | Required | Default |
 | :-- | :-- | :--: | :--: |
-| `list_type` | `watched` (For Most Watched Lists)<br>`popular` (For Most Popular Lists) | :heavy_check_mark: | N/A |
 | `list_days` | Number of Days to look back of the list | :x: | 30 |
 | `list_size` | Number of Movies/Shows to add to this list | :x: | 10 |
 | `list_buffer` | Number of extra Movies/Shows to grab in case you have multiple show/movie Libraries. | :x: | 10 |
@@ -23,9 +28,7 @@ So if your collection doesn't have as many movies/shows as your `list_size` attr
 collections:
   Most Popular Movies (30 Days):
     sync_mode: sync
-    collection_mode: show_items
-    tautulli:
-      list_type: popular
+    tautulli_popular:
       list_days: 30
       list_size: 10
 ```
@@ -33,10 +36,23 @@ collections:
 collections:
   Most Watched Movies (30 Days):
     sync_mode: sync
-    collection_mode: show_items
-    tautulli:
-      list_type: watched
+    tautulli_watched:
       list_days: 30
       list_size: 10
       list_buffer: 20
+```
+```yaml
+collections:
+  Plex Popular:
+    tautulli_popular:
+      list_days: 30
+      list_size: 20
+      list_buffer: 20
+    tautulli_watched:
+      list_days: 30
+      list_size: 20
+      list_buffer: 20
+    sync_mode: sync
+    summary: Movies Popular on Plex
+    collection_order: alpha
 ```
