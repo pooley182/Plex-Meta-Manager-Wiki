@@ -60,7 +60,7 @@ The available collection details attributes for each collection are as follows
 | File Background<sup>3</sup> | `file_background` | Used to change the collection's background to an image in the file system | Path to image in the file system |
 | Name Mapping<sup>4</sup> | `name_mapping` | Used to specify the folder name in the assests directory | Folder Name In Assets Directory |
 
-1. You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `#`.
+1. You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
 2. If no poster is specified the script will look in the library's asset directory for a folder named either the collection name or the `name_mapping` if specified and look for a poster.ext file in that folder.
 3. If no background is specified the script will look in the library's asset directory for a folder named either the collection name or the `name_mapping` if specified and look for a background.ext file in that folder.
 4. If your collection name contains characters that are not allowed in filepaths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path) but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
