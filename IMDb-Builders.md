@@ -40,7 +40,6 @@ collections:
       - https://www.imdb.com/list/ls027886673/
       - https://www.imdb.com/list/ls097998599/
     sync_mode: sync
-    summary: Christmas film is a genre that revolves around the plot involving Christmas.
     collection_order: alpha
 ```
 
@@ -52,7 +51,6 @@ You can also limit the number of movies/shows to search for by using the `limit`
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short
       limit: 50
     sync_mode: sync
-    summary: Popular Movies on IMDb
     collection_order: alpha
 ```
 
