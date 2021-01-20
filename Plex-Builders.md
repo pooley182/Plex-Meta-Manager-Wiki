@@ -61,7 +61,7 @@ collections:
       exclude_prefix: 
         - +
         - ~
-      exclude_exact: Marvel Cinematic Universe
+      exclude: Marvel Cinematic Universe
     sort_title: ~_Collectionless
     collection_order: alpha
 ```
