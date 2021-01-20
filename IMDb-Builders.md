@@ -58,7 +58,7 @@ You can also limit the number of movies/shows to search for by using the `limit`
 
 This can be used for multiple lists as seen below.
 
-``yaml
+```yaml
   Top Action:
     imdb_list:
       - url: https://www.imdb.com/search/title/?title_type=feature&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=action
