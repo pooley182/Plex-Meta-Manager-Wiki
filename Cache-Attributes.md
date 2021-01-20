@@ -3,15 +3,16 @@ Having a cache to store each Plex GUID and its accompanying IDs is highly recomm
 A `cache` mapping is in the root of the config file.
 
 Below is a `cache` mapping example and the full set of attributes:
+
 ```yaml
 cache:
   cache: true
-  cache_update_interval: 60
+  cache_expiration: 60
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
 | :-- | :-- | :-- | :--: | :--: |
 | Cache | `cache` | Should the script store a cache<br><strong>boolean:</strong> true or false | true | :x: |
-| Cache Update Interval | `cache_update_interval` | Interval at which the cache updates each GUID<br><strong>boolean:</strong> true or false | 60 | :x: |
+| Cache Expiration | `cache_expiration` | Number of days before each cache mapping expires and has to be reloaded | 60 | :x: |
 
 * The cache database file is created in the same location as your config file.
