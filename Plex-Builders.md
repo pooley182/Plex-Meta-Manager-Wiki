@@ -50,7 +50,7 @@ Alternatively, if you set the `Marvel Cinematic Universe` Collection to `Hide it
 
 To combat the problem above you set all collections to `Hide items in this collection` and create a collection and set it to `Hide collection` and put every movie that you still want to display in that collection. 
 
-With the variability of Plex Meta Manager maintaining a collection like this becomes very difficult, so in order to automate you can use `plex_collectionless`. You just have to tell it what collections to exclude or what collection prefix to exclude.
+With the variability of Plex Meta Manager maintaining a collection like this becomes very difficult, so in order to automate it you can use `plex_collectionless`. You just have to tell it what collections to exclude or what collection prefix to exclude.
 
 There are two attributes for `plex_collectionless`, `exclude_prefix` (To exclude every collection whose title or sort title starts with the prefix) and `exclude` (To exclude specific collections). At least one exclusion is required.
 
