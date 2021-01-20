@@ -48,7 +48,7 @@ For Example if you have a `Marvel Cinematic Universe` Collection set to `Show th
 
 Alternatively, if you set the `Marvel Cinematic Universe` Collection to `Hide items in this collection` then movies without a collection like `The Incredible Hulk` will be hidden from the library view. 
 
-To combat the problem above you set all collections to `Hide items in this collection` and create a collection and set it to `Hide collection` and put every movie that you still want to display in that collection. 
+To combat the problem above you set all collections to `Hide items in this collection` then create a collection set to `Hide collection` and put every movie that you still want to display in that collection. 
 
 With the variability of Plex Meta Manager maintaining a collection like this becomes very difficult, so in order to automate it you can use `plex_collectionless`. You just have to tell it what collections to exclude or what collection prefix to exclude.
 
