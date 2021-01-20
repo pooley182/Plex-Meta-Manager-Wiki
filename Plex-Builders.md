@@ -33,26 +33,40 @@ collections:
 
 If you want to add multiple collections you have to use a list. Comma separated values will not work.
 
- ```yaml
- collections:
-   Dinosaurs:
-     plex_collection:
-       - Jurassic Park
-       - The Land Before Time
- ```
+```yaml
+collections:
+  Dinosaurs:
+    plex_collection:
+      - Jurassic Park
+      - The Land Before Time
+```
 
 ## Plex Collectionless
 Gets every movie/show that is not in a collection unless the collection is in the exclusion list. This is a special collection type to help keep your library looking correct. When items in your library are in multiple collections it can mess up how they're displayed in your library. 
 
-For Example if you have a `Marvel Cinematic Universe` Collection set to `Show this collection and its items` and an `Iron Man` Collection set to `Hide items in this collection` what happens is the show overrides the hide and you end up with both collections displaying as well as the 3 Iron Man movies and if you set the `Marvel Cinematic Universe` Collection to `Hide items in this collection` then movies without a collection like `The Incredible Hulk` will be hidden from the library view. 
+For Example if you have a `Marvel Cinematic Universe` Collection set to `Show this collection and its items` and an `Iron Man` Collection set to `Hide items in this collection` what happens is the show overrides the hide and you end up with both collections displaying as well as the 3 Iron Man movies.
+
+Alternatively, if you set the `Marvel Cinematic Universe` Collection to `Hide items in this collection` then movies without a collection like `The Incredible Hulk` will be hidden from the library view. 
 
 To combat the problem above you set all collections to `Hide items in this collection` and create a collection and set it to `Hide collection` and put every movie that you still want to display in that collection. 
 
-With the variability of Plex Meta Manager maintaining a collection like this becomes very difficult, so in order to automate you can use `plex_collectionless`. You just have to tell it what collections to exclude or what collection prefix to use.
+With the variability of Plex Meta Manager maintaining a collection like this becomes very difficult, so in order to automate you can use `plex_collectionless`. You just have to tell it what collections to exclude or what collection prefix to exclude.
+
+There are two attributes for `plex_collectionless`, `exclude_prefix` (To exclude every collection whose title or sort title starts with the prefix) and `exclude` (To exclude specific collections). At least one exclusion is required.
+
+```yaml
+collections:
+  Collectionless:
+    plex_collectionless:
+      exclude_prefix: 
+        - +
+        - ~
+      exclude_exact: Marvel Cinematic Universe
+    sort_title: ~_Collectionless
+    collection_order: alpha
+```
 
 This is a known issue with Plex Collection and there is a [Feature Suggestion](https://forums.plex.tv/t/collection-display-issue/305406) detailing the issue more on their forms. 
-
-
 
 ## Plex Search
 Gets every movie/show based on the search parameters provided. The search will return any movie/show that matches at least one term from each search option. You can run multiple searches. 
