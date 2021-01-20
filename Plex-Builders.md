@@ -52,7 +52,7 @@ To combat the problem above you set all collections to `Hide items in this colle
 
 With the variability of Plex Meta Manager maintaining a collection like this becomes very difficult, so in order to automate it you can use `plex_collectionless`. You just have to tell it what collections to exclude or what collection prefix to exclude.
 
-There are two attributes for `plex_collectionless`, `exclude_prefix` (To exclude every collection whose title or sort title starts with the prefix) and `exclude` (To exclude specific collections). At least one exclusion is required.
+There are two attributes for `plex_collectionless`, `exclude` (To exclude specific collections) and `exclude_prefix` (To exclude every collection whose title or sort title starts with the prefix). At least one exclusion is required.
 
 ```yaml
 collections:
@@ -66,7 +66,8 @@ collections:
     collection_order: alpha
 ```
 
-This is a known issue with Plex Collection and there is a [Feature Suggestion](https://forums.plex.tv/t/collection-display-issue/305406) detailing the issue more on their forms. 
+* Both `exclude` and `exclude_prefix` can take multiple values as a List.
+* This is a known issue with Plex Collection and there is a [Feature Suggestion](https://forums.plex.tv/t/collection-display-issue/305406) detailing the issue more on their forms. 
 
 ## Plex Search
 Gets every movie/show based on the search parameters provided. The search will return any movie/show that matches at least one term from each search option. You can run multiple searches. 
