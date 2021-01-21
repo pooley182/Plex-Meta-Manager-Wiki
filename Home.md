@@ -6,8 +6,8 @@ This wiki should tell you everythin you need to know about the script to get it 
 
 * [Local Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation)
 * [Docker Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker)
-* [Example Configuration file](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template)
-* [Example Metadata file](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/Movies.yml.template)
+* [Example Configuration File](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template)
+* [Example Metadata File](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/Movies.yml.template)
 
 ## Support
 
