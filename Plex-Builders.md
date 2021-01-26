@@ -76,18 +76,15 @@ Gets every movie/show based on the search parameters provided. The search will r
 | Search Option | Description | Movie<br>Libraries | Show<br>Libraries |
 | :-- | :-- | :--: | :--: |
 | `actor` | Gets every movie with the specified actor | :heavy_check_mark: | :x: |
-| `actor_details_tmdb` | Gets every movie with the specified actor and updates the collection details with the TMDb Person's Profile and Biography | :heavy_check_mark: | :x: |
 | `country` | Gets every movie with the specified country | :heavy_check_mark: | :x: |
 | `decade` | Gets every movie from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
 | `director` | Gets every movie with the specified director | :heavy_check_mark: | :x: |
-| `director_details_tmdb` | Gets every movie with the specified director and updates the collection details with the TMDb Person's Profile and Biography | :heavy_check_mark: | :x: |
 | `genre` | Gets every movie/show with the specified genre | :heavy_check_mark: | :heavy_check_mark: |
+| `producer` | Gets every movie with the specified producer | :heavy_check_mark: | :x: |
 | `studio` | Gets every movie/show with the specified studio | :heavy_check_mark: | :heavy_check_mark: |
-| `year` | Gets every movie/show with the specified year (Put a `-` between two years for a range i.e. `year: 1990-1999` or end with `NOW` to go till current i.e. `year: 2000-NOW`) | :heavy_check_mark: | :heavy_check_mark: |
 | `writer` | Gets every movie with the specified writer | :heavy_check_mark: | :x: |
-| `writer_details_tmdb` | Gets every movie with the specified writer and updates the collection details with the TMDb Person's Profile and Biography | :heavy_check_mark: | :x: |
+| `year` | Gets every movie/show with the specified year (Put a `-` between two years for a range i.e. `year: 1990-1999` or end with `NOW` to go till current i.e. `year: 2000-NOW`) | :heavy_check_mark: | :heavy_check_mark: |
 
-* TMDb configuration is required to use `actor_details_tmdb`, `director_details_tmdb`, or `writer_details_tmdb`.
 * You can only use each search option once per `plex_search` but you can give the search multiple values.
 * If you want to restrict the search by multiples of the same attribute (i.e. You want every movie that is a Romance and Comedy) try using [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
