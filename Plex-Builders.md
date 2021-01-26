@@ -86,7 +86,7 @@ Gets every movie/show based on the search parameters provided. The search will r
 | `year` | Gets every movie/show with the specified year (Put a `-` between two years for a range i.e. `year: 1990-1999` or end with `NOW` to go till current i.e. `year: 2000-NOW`) | :heavy_check_mark: | :heavy_check_mark: |
 
 * You can only use each search option once per `plex_search` but you can give the search multiple values.
-* If you want to restrict the search by multiples of the same attribute (i.e. You want every movie that is a Romance and Comedy) try using [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
+* If you want to restrict the search by multiples of the same attribute (i.e. You want every movie that is a Romance and Comedy) try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
 ```yaml
 collections:
@@ -100,21 +100,6 @@ collections:
     plex_search:
       actor: Dave Chappelle
       genre: Comedy
-```
-```yaml
-collections:
-  Robin Williams:
-    actor_details_tmdb: 2157
-```
-```yaml
-collections:
-  Steven Spielberg:
-    director_details_tmdb: https://www.themoviedb.org/person/488-steven-spielberg
-```
-```yaml
-collections:
-  Quentin Tarantino:
-    writer_details_tmdb: 138
 ```
 ```yaml
 collections:
@@ -163,4 +148,28 @@ If you only want to search using a single attribute you can do so without `plex_
 collections:
   90s Movies:
     year: 1990-1999
+```
+
+If you specify TMDb Person ID's using the [Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details) `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.
+
+```yaml
+collections:
+  Robin Williams:
+    actor: tmdb
+    tmdb_person: 2157
+```
+```yaml
+collections:
+  Steven Spielberg:
+    director: tmdb
+    tmdb_person: https://www.themoviedb.org/person/488-steven-spielberg
+```
+```yaml
+collections:
+  Quentin Tarantino:
+    actor: tmdb
+    director: tmdb
+    producer: tmdb
+    writer: tmdb
+    tmdb_person: 138
 ```
