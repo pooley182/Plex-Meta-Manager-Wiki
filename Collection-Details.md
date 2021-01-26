@@ -27,6 +27,11 @@ collections:
     tmdb_profile: 2157
     collection_mode: show_items
     collection_order: alpha
+  Samuel L. Jackson:
+    actor: tmdb
+    tmdb_person: 2231
+    collection_mode: show_items
+    collection_order: alpha
   Marvel Cinematic Universe:
     tmdb_list: 7069903
     tmdb_description: 7069903
