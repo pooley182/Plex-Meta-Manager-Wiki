@@ -58,9 +58,11 @@ The available collection details attributes for each collection are as follows
 | URL Background<sup>3</sup> | `url_background` | Use to change the collection's background to a URL | URL of image publicly available on the internet |
 | TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to a TMDb Movie/Show/Collection background | TMDb Movie/Show/Collection ID | 
 | File Background<sup>3</sup> | `file_background` | Used to change the collection's background to an image in the file system | Path to image in the file system |
-| Name Mapping<sup>4</sup> | `name_mapping` | Used to specify the folder name in the assests directory | Folder Name In Assets Directory |
+| TMDb Person<sup>4</sup> | `tmdb_person` | Used to change the collection's summary and poster to a TMDb Person's biography and profile as well as allow the people specified to be used in [Plex Searches](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) | TMDb Person ID |
+| Name Mapping<sup>5</sup> | `name_mapping` | Used to specify the folder name in the assests directory | Folder Name In Assets Directory |
 
 1. You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
 2. If no poster is specified the script will look in the library's asset directory for a folder named either the collection name or the `name_mapping` if specified and look for a poster.ext file in that folder.
 3. If no background is specified the script will look in the library's asset directory for a folder named either the collection name or the `name_mapping` if specified and look for a background.ext file in that folder.
-4. If your collection name contains characters that are not allowed in filepaths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path) but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
+4. Multiple values are supported as either a list or a comma separated string.
+5. If your collection name contains characters that are not allowed in filepaths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path) but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
