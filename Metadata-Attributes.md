@@ -50,18 +50,29 @@ The available attributes for each movie/show are as follows
 | Studio | `studio` | Text to change Studio | :heavy_check_mark: | :heavy_check_mark: |
 | Tagline | `tagline` | Text to change Tagline | :heavy_check_mark:| :heavy_check_mark: |
 | Summary | `summary` | Text to change Summary | :heavy_check_mark: | :heavy_check_mark: |
-| Genre | `genre` | List or comma seprated text of each Genre | :heavy_check_mark: | :heavy_check_mark: |
+| Genre | `genre` | List or comma separated text of each Genre | :heavy_check_mark: | :heavy_check_mark: |
 | Genre Sync Mode | `genre_sync_mode` | `append`: Only Add Genres to the Item<br>`sync`: Add & Remove Genres from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
-| Label | `label` | List or comma seprated text of each Label | :heavy_check_mark: | :heavy_check_mark: |
+| Label | `label` | List or comma separated text of each Label | :heavy_check_mark: | :heavy_check_mark: |
 | Label Sync Mode | `label_sync_mode` | `append`: Only Add Labels to the Item<br>`sync`: Add & Remove Labels from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
 | Seasons | `seasons` | [`seasons` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Seasons-Attributes) | :x: | :heavy_check_mark: |
 | Episodes | `episodes` | [`episodes` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Episodes-Attributes) | :x: | :heavy_check_mark: |
 
-* If you know of another Title your movie/show might exist under, but you want it titled differently you can use `alt_title` to specifiy another title to look under and then be changed to the mapping name. For Example tmdb uses the name `The Legend of Korra`, but I want it as `Avatar: The Legend of Korra` (Which must be surrounded by quotes since it uses the character `:`):
+* If you know of another Title your movie/show might exist under, but you want it titled differently you can use `alt_title` to specify another title to look under and then be changed to the mapping name. For Example TMDb uses the name `The Legend of Korra`, but I want it as `Avatar: The Legend of Korra` (Which must be surrounded by quotes since it uses the character `:`):
     ```yaml
     metadata:
       "Avatar: The Legend of Korra":
         alt_title: The Legend of Korra
     ```
-    This would change the name of the tmdb default `The Legend of Korra` to `Avatar: The Legend of Korra` and would not mess up any subsequent runs.
-* If you have two movies/shows with the same you can use the `year` attribute to specifiy which the choose.
+    This would change the name of the TMDb default `The Legend of Korra` to `Avatar: The Legend of Korra` and would not mess up any subsequent runs.
+* If you have two movies/shows with the same you can use the `year` attribute to specify which to choose and and use `title` to give the movie/show the proper name.
+    ```yaml
+    metadata:
+      Godzilla1:
+        title: Godzilla
+        year: 1954
+        content_rating: R
+      Godzilla2:
+        title: Godzilla
+        year: 1998
+        content_rating: PG-13
+    ```
