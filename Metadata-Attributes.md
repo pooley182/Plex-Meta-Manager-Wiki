@@ -57,14 +57,7 @@ The available attributes for each movie/show are as follows
 | Seasons | `seasons` | [`seasons` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Seasons-Attributes) | :x: | :heavy_check_mark: |
 | Episodes | `episodes` | [`episodes` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Episodes-Attributes) | :x: | :heavy_check_mark: |
 
-* If you know of another Title your movie/show might exist under, but you want it titled differently you can use `alt_title` to specify another title to look under and then be changed to the mapping name. For Example TMDb uses the name `The Legend of Korra`, but I want it as `Avatar: The Legend of Korra` (Which must be surrounded by quotes since it uses the character `:`):
-    ```yaml
-    metadata:
-      "Avatar: The Legend of Korra":
-        alt_title: The Legend of Korra
-    ```
-    This would change the name of the TMDb default `The Legend of Korra` to `Avatar: The Legend of Korra` and would not mess up any subsequent runs.
-* If you have two movies/shows with the same you can use the `year` attribute to specify which to choose and and use `title` to give the movie/show the proper name.
+* YAML files cannot have two items with the same mapping name so if you have two movies/shows with the same name you would change the mapping values to whatever you want. Then use the `title` attribute to specify the real title and use the `year` attribute to specify which of the multiple movies/shows to choose.
     ```yaml
     metadata:
       Godzilla1:
@@ -76,3 +69,11 @@ The available attributes for each movie/show are as follows
         year: 1998
         content_rating: PG-13
     ```
+
+* If you know of another Title your movie/show might exist under, but you want it titled differently you can use `alt_title` to specify another title to look under and then be changed to the mapping name. For Example TMDb uses the name `The Legend of Korra`, but I want it as `Avatar: The Legend of Korra` (Which must be surrounded by quotes since it uses the character `:`):
+    ```yaml
+    metadata:
+      "Avatar: The Legend of Korra":
+        alt_title: The Legend of Korra
+    ```
+    This would change the name of the TMDb default `The Legend of Korra` to `Avatar: The Legend of Korra` and would not mess up any subsequent runs.
