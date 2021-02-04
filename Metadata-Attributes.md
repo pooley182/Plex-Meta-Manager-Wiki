@@ -39,9 +39,10 @@ metadata:
 The available attributes for each movie/show are as follows
 | Name | Attribute | Allowed Values | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
-| Title | `title` | Title if different from the mapping value useful when you have multiple movies with the same name | :heavy_check_mark: | :x: |
+| Title | `title` | Title if different from the mapping value useful when you have multiple movies with the same name | :heavy_check_mark: | :heavy_check_mark: |
 | Alternative Title | `alt_title` | Alternative title to look for | :heavy_check_mark: | :heavy_check_mark: |
 | Year | `year` | Year of movie/show for better identification | :heavy_check_mark: | :heavy_check_mark: |
+| TMDb Show ID | `tmdb_id` | TMDb Show ID to use for metadata useful for miniseries that have been compiled into a movie | :heavy_check_mark: | :x: |
 | Original Title | `original_title` | Text to change Original Title | :heavy_check_mark: | :heavy_check_mark: |
 | Sort Title | `sort_title` | Text to change Sort Title | :heavy_check_mark: | :heavy_check_mark: |
 | Originally Available | `originally_available` | Date to change Originally Available<br><strong>Format:</strong> YYYY-MM-DD  | :heavy_check_mark: | :heavy_check_mark: |
