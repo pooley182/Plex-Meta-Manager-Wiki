@@ -9,6 +9,7 @@ All collection filter options are listed below.
 | Standard Filters | Description | Movie<br>Libraries | Show<br>Libraries |
 | :-- | :-- | :--: | :--: |
 | `actor` | Matches every movie/show with the specified actor | :heavy_check_mark: | :heavy_check_mark: |
+| `collection` | Matches every movie/show with the specified plex collection | :heavy_check_mark: | :heavy_check_mark: |
 | `content_rating` | Matches every movie/show with the specified content rating | :heavy_check_mark: | :heavy_check_mark: |
 | `country` | Matches every movie with the specified country | :heavy_check_mark: | :x: |
 | `director` | Matches every movie with the specified director | :heavy_check_mark: | :x: |
@@ -19,7 +20,6 @@ All collection filter options are listed below.
 | `video_resolution` | Matches every movie with the specified video resolution | :heavy_check_mark: | :x: |
 | `audio_language` | Matches every movie with the specified audio language | :heavy_check_mark: | :x: |
 | `subtitle_language` | Matches every movie with the specified subtitle language | :heavy_check_mark: | :x: |
-| `plex_collection` | Matches every movie/show with the specified plex collection | :heavy_check_mark: | :heavy_check_mark: |
 
 * Standard filters can have multiple values either by being a list or comma separated values
 * You can also use the `.not` at the end of any standard collection filter to do an inverse search matching everything that doesn't have the value specified. You can use `plex_all: true` to start your filter from your entire library.
