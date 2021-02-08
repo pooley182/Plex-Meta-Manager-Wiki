@@ -147,7 +147,7 @@ collections:
 ```
 
 ## MyAnimeList User Anime List
-Gets anime in MyAnimeList User's Anime list. The different subattributes are detailed below.
+Gets anime in MyAnimeList User's Anime list. The different sub-attributes are detailed below.
 
 | Attribute | Description | Required | Default |
 | :-- | :-- | :--: | :--: |

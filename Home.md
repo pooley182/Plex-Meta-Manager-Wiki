@@ -1,6 +1,6 @@
 # Plex Meta Manager Wiki
 
-This wiki should tell you everythin you need to know about the script to get it working.
+This wiki should tell you everything you need to know about the script to get it working.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ This wiki should tell you everythin you need to know about the script to get it 
 
 * If you're getting an Error or have an Enhancement post in the [Issues](https://github.com/meisnate12/Plex-Meta-Manager/issues)
 * If you have a configuration question visit the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions)
-* To see user submited Metadata configuration files and you could even add your own go to the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
+* To see user submitted Metadata configuration files and you could even add your own go to the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
 * Pull Request are welcome
 * [Buy Me a Pizza](https://www.buymeacoffee.com/meisnate12)
 

@@ -38,13 +38,13 @@ collections:
     tmdb_list_poster: 7069903
   28 Days/Weeks Later:
     tmdb_collection_details: 1565
-    name_mapping: 28 Days-Weeks Later 
+    name_mapping: 28 Days-Weeks Later
 ```
 
 The available collection details attributes for each collection are as follows
 | Name | Attribute | Description | Allowed Values |
 | :-- | :-- | :-- | :-- |
-| Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) | 
+| Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection<br>**Default Mode:** `append` |
 | Add to Radarr/Sonarr | `add_to_arr` | Collection level `add_to_radarr`/`add_to_sonarr` toggle | **boolean:** true or false<br>**Default:** library value |
 | Sort Title<sup>1</sup> | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
@@ -56,15 +56,15 @@ The available collection details attributes for each collection are as follows
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
 | Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically | :heavy_check_mark: | :heavy_check_mark: |
 | URL Poster<sup>2</sup> | `url_poster` | Used to change the collection's poster to a URL | URL of image publicly available on the internet |
-| TMDb Poster<sup>2</sup> | `tmdb_poster` | Used to change the collection's poster to a TMDb Movie/Show/Collection poster | TMDb Movie/Show/Collection ID | 
-| TMDb List Poster<sup>2</sup> | `tmdb_list_poster` | Used to change the collection's poster to a TMDb List poster | TMDb List ID | 
-| TMDb Profile<sup>2</sup> | `tmdb_profile` | Used to change the collection's poster to a TMDb Person's profile | TMDb Person ID | 
+| TMDb Poster<sup>2</sup> | `tmdb_poster` | Used to change the collection's poster to a TMDb Movie/Show/Collection poster | TMDb Movie/Show/Collection ID |
+| TMDb List Poster<sup>2</sup> | `tmdb_list_poster` | Used to change the collection's poster to a TMDb List poster | TMDb List ID |
+| TMDb Profile<sup>2</sup> | `tmdb_profile` | Used to change the collection's poster to a TMDb Person's profile | TMDb Person ID |
 | File Poster<sup>2</sup> | `file_poster` | Used to change the collection's poster to an image in the file system | Path to image in the file system |
 | URL Background<sup>3</sup> | `url_background` | Use to change the collection's background to a URL | URL of image publicly available on the internet |
-| TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to a TMDb Movie/Show/Collection background | TMDb Movie/Show/Collection ID | 
+| TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to a TMDb Movie/Show/Collection background | TMDb Movie/Show/Collection ID |
 | File Background<sup>3</sup> | `file_background` | Used to change the collection's background to an image in the file system | Path to image in the file system |
 | TMDb Person<sup>4</sup> | `tmdb_person` | Used to change the collection's summary and poster to a TMDb Person's biography and profile as well as allow the people specified to be used in [Plex Searches](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) | TMDb Person ID |
-| Name Mapping<sup>5</sup> | `name_mapping` | Used to specify the folder name in the assests directory | Folder Name In Assets Directory |
+| Name Mapping<sup>5</sup> | `name_mapping` | Used to specify the folder name in the assets directory | Folder Name In Assets Directory |
 
 1. You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
 2. If no poster is specified the script will look in the library's asset directory for a folder named either the collection name or the `name_mapping` if specified and look for a poster.ext file in that folder.
