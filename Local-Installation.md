@@ -30,21 +30,21 @@ python plex_meta_manager.py
 To choose the location of the YAML config file
 
 ```shell
-python plex_meta_manager.py --config-path <path_to_config>
+python plex_meta_manager.py --config <path_to_config>
 ```
 
 ## Time to Run
 To choose the time when the script will run each day
 
 ```shell
-python plex_meta_manager.py --config-path /configs/config.yml --time 22:00
+python plex_meta_manager.py --config /configs/config.yml --time 22:00
 ```
 
 ## Run
 To just run the script without having it continuously run use the --run option
 
 ```shell
-python plex_meta_manager.py --config-path /configs/config.yml --run
+python plex_meta_manager.py --config /configs/config.yml --run
 ```
 ## Divider Character & Screen Width
 To change the terminal output divider character or width use --divider and --width
