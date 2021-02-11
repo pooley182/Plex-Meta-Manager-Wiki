@@ -4,7 +4,7 @@ A `mal` mapping is in the root of the config file.
 
 Below is a `mal` mapping example and the full set of attributes:
 ```yaml
-trakt:
+mal:
   client_id: ################################
   client_secret: ################################################################
   authorization:
@@ -21,7 +21,7 @@ trakt:
 
 * All other attributes will be filled in by the script.
 
-* To connect to MyAnimeList.net you must create a Trakt application and supply the script the `client id` and `client secret` provided, please do the following:
+* To connect to MyAnimeList.net you must create a MyAnimeList application and supply the script the `client id` and `client secret` provided, please do the following:
 1. [Click here to create a MyAnimeList API application.](https://myanimelist.net/apiconfig/create)
 2. Enter an `App Name` for the application. Ex. `Plex Meta Manager`
 3. Select `web` for `App Type`.
@@ -38,4 +38,4 @@ trakt:
 
 * On the first run, the script will walk the user through the OAuth flow by producing a MyAnimeList URL for the user to follow. After following the URL and signing into MyAnimeList.net the user must authorize the application by clicking the `Allow` button which will redirect the user to `http://localhost/`. Copy the entire URL and paste it into the scrip and if the URL is correct then the script will populate the `authorization` sub-attributes to use in subsequent runs.
 
-For docker users, please note that the docker container runs with the `--update` option and is designed for no user interaction. To authenticate Trakt the first time, you need run the container with the `-it` flags and run `plex_auto_collections.py` without the `--update` option and walk through the OAuth flow mentioned above. Once you have the Trakt authentication data saved into the YAML, you'll be able to run the container normally.
+For docker users, please note that the docker container runs with the `--update` option and is designed for no user interaction. To authenticate MyAnimeList the first time, you need run the container with the `-it` flags and run `plex_auto_collections.py` without the `--update` option and walk through the OAuth flow mentioned above. Once you have the MyAnimeList authentication data saved into the YAML, you'll be able to run the container normally.
