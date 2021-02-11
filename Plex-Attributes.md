@@ -17,6 +17,7 @@ plex:
 | Authentication Token | `token` | Plex Server Authentication Token | N/A | :heavy_check_mark: |
 | Asset Directory | `asset_directory` | System Location For Assets | [Directory containing YAML config]/assets | :x: |
 | Sync Mode | `sync_mode` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection | append | :x: |
+| Show Unmanaged Collections | `show_unmanaged_collections` | Show collections not managed by Plex Meta Manager at the end of each run<br><strong>boolean:</strong> true or false | True | :x: |
 
 * This script can be run on a remote Plex server, but be sure that the `url` provided is publicly addressable and it's recommended to use `HTTPS`.
 
