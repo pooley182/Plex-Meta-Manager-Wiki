@@ -24,7 +24,6 @@ metadata:
   "Avatar: The Legend of Korra":
     sort_title: Avatar 02
     alt_title: The Legend of Korra
-    original_title: The Legend of Korra
     seasons:
       1:
         title: "Book One: Air"
