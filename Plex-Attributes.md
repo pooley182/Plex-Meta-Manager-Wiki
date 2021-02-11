@@ -9,6 +9,7 @@ plex:
   token: ####################
   asset_directory: config/assets
   sync_mode: append
+  show_unmanaged_collections: true
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
