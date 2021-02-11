@@ -13,4 +13,4 @@ The YAML mappings that can be set in the configuration file's root:
 | [Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes) | `trakt` | :x: |
 | [MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) | `mal` | :x: |
 
-* You can find a template config file in [config/config.yml.template](config/config.yml.template)
+* You can find a template config file in [config/config.yml.template](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template)
