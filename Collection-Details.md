@@ -50,18 +50,18 @@ The available collection details attributes for each collection are as follows
 | Sort Title<sup>1</sup> | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
 | Summary | `summary` | Used to change the collection's summary | Text to change Summary |
-| TMDb Summary | `tmdb_summary` | Used to change the collection's summary to a TMDb Movie/Show/Collection summary | TMDb Movie/Show/Collection ID |
+| TMDb Summary | `tmdb_summary` | Used to change the collection's summary to a TMDb Movie/Collection summary for a movie library or a TMDb Show summary for a show library  | TMDb Movie/Show/Collection ID |
 | TMDb Description | `tmdb_description` | Used to change the collection's summary to a TMDb List Discription | TMDb List ID |
 | TMDb Biography | `tmdb_biography` | Used to change the collection's summary to a TMDb Person's biography | TMDb Person ID |
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
 | Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically | :heavy_check_mark: | :heavy_check_mark: |
 | URL Poster<sup>2</sup> | `url_poster` | Used to change the collection's poster to a URL | URL of image publicly available on the internet |
-| TMDb Poster<sup>2</sup> | `tmdb_poster` | Used to change the collection's poster to a TMDb Movie/Show/Collection poster | TMDb Movie/Show/Collection ID |
+| TMDb Poster<sup>2</sup> | `tmdb_poster` | Used to change the collection's poster to a TMDb Movie/Collection poster for a movie library or a TMDb Show poster for a show library | TMDb Movie/Show/Collection ID |
 | TMDb List Poster<sup>2</sup> | `tmdb_list_poster` | Used to change the collection's poster to a TMDb List poster | TMDb List ID |
 | TMDb Profile<sup>2</sup> | `tmdb_profile` | Used to change the collection's poster to a TMDb Person's profile | TMDb Person ID |
 | File Poster<sup>2</sup> | `file_poster` | Used to change the collection's poster to an image in the file system | Path to image in the file system |
 | URL Background<sup>3</sup> | `url_background` | Use to change the collection's background to a URL | URL of image publicly available on the internet |
-| TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to a TMDb Movie/Show/Collection background | TMDb Movie/Show/Collection ID |
+| TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to a TMDb Movie/Collection background for a movie library or a TMDb Show background for a show library | TMDb Movie/Show/Collection ID |
 | File Background<sup>3</sup> | `file_background` | Used to change the collection's background to an image in the file system | Path to image in the file system |
 | TMDb Person<sup>4</sup> | `tmdb_person` | Used to change the collection's summary and poster to a TMDb Person's biography and profile as well as allow the people specified to be used in [Plex Searches](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) | TMDb Person ID |
 | Name Mapping<sup>5</sup> | `name_mapping` | Used to specify the folder name in the assets directory | Folder Name In Assets Directory |
