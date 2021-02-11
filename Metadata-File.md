@@ -33,3 +33,4 @@ There are only two mappings allowed in the Metadata File's root:
 | [Collections](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Attributes) | `collections` | mapping where automatic collections and collection metadata go |
 
 * Either `metadata` or `collections` is required in order to run.
+* You can find a template metadata file in [config/Movies.yml.template](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/Movies.yml.template)
