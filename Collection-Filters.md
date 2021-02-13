@@ -2,7 +2,7 @@ Collection filters allow for you to filter every movie/show added to the collect
 
 You can have multiple collection filters but a movie/show must match at least one value from **each** collection filter to be added to a collection. The values for each must match what Plex has including special characters in order to match.
 
-All collection filter options are listed below.
+All collection filter options are listed below. To display collections filtered out add `show_filtered: true` to the collection.
 
 ### Standard Filters
 
@@ -24,6 +24,7 @@ All collection filter options are listed below.
 
 * Standard filters can have multiple values either by being a list or comma separated values
 * You can also use the `.not` at the end of any standard collection filter to do an inverse search matching everything that doesn't have the value specified. You can use `plex_all: true` to start your filter from your entire library.
+* Using the `original_language` filter will also filter out movies from being added to Radarr.
 
 ### Advanced Filters
 
