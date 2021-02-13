@@ -7,7 +7,6 @@ A simple example of multiple libraries all using the global values is below:
 libraries:
   Movies:
     library_type: movie
-    
   TV Shows:
     library_type: show
   Anime:
