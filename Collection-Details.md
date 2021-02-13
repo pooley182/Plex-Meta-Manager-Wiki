@@ -5,6 +5,10 @@ collections:
     imdb_list: https://www.imdb.com/search/title/?groups=top_250&count=25
     sort_title: +100
     sync_mode: sync
+    add_to_arr: true
+    show_filtered: true
+    filters:
+      original_language: en
   Reddit Top 250:
     trakt_list: https://trakt.tv/users/jay-greene/lists/reddit-top-250-2019-edition
     sort_title: +101
@@ -47,6 +51,7 @@ The available collection details attributes for each collection are as follows
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection<br>**Default Mode:** `append` |
 | Add to Radarr/Sonarr | `add_to_arr` | Collection level `add_to_radarr`/`add_to_sonarr` toggle | **boolean:** true or false<br>**Default:** library value |
+| Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle | **boolean:** true or false<br>**Default:** library value |
 | Sort Title<sup>1</sup> | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
 | Summary | `summary` | Used to change the collection's summary | Text to change Summary |
