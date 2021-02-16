@@ -13,7 +13,7 @@ docker run -it -v <PATH_TO_CONFIG>:/config:rw meisnate12/plex-meta-manager
 Example
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager:/config:rw" meisnate12/plex-meta-manager
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager
 ```
 
 
@@ -31,25 +31,25 @@ docker run -it -v "X:\Media\Plex Meta Manager:/config:rw" meisnate12/plex-meta-m
 To choose the location of the YAML config file
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager:/config:rw" meisnate12/plex-meta-manager --config <path_to_config>
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config <path_to_config>
 ```
 
 ## Time to Run
 To choose the time when the script will run each day
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --time 22:00
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --time 22:00
 ```
 
 ## Run
 To just run the script without having it continuously run use the --run option
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --run
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --run
 ```
 ## Divider Character & Screen Width
 To change the terminal output divider character or width use --divider and --width
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager:/config:rw" meisnate12/plex-meta-manager --divider * --width 200
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --divider * --width 200
 ```
