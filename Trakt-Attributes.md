@@ -32,4 +32,4 @@ trakt:
 
 * On the first run, the script will walk the user through the OAuth flow by producing a Trakt URL for the user to follow. Once authenticated at the Trakt URL, the user needs to return the code to the script. If the code is correct, the script will populate the `authorization` sub-attributes to use in subsequent runs.
 
-For docker users, please note that the docker container runs with the `--update` option and is designed for no user interaction. To authenticate Trakt the first time, you need run the container with the `-it` flags and run `plex_auto_collections.py` without the `--update` option and walk through the OAuth flow mentioned above. Once you have the Trakt authentication data saved into the YAML, you'll be able to run the container normally.
+To authenticate Trakt the first time, you need run the container with the `-it` flags in order to walk through the OAuth flow mentioned above. Once you have the Trakt authentication data saved into the YAML, you'll be able to run the container normally.
