@@ -9,7 +9,7 @@ You can build different collections using the features of [TheTVDb.com](https://
 ## TVDb List
 Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom)
 
-The expected input is a TVDb List or TVDb Userlist URL. Multiple values are supported as either a list or a comma separated string.
+The expected input is a TVDb List URL or TVDb Userlist URL. Multiple values are supported as either a list or a comma separated string.
 
 ```yaml
 collections:
