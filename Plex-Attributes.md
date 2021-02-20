@@ -11,6 +11,8 @@ plex:
   sync_mode: append
   show_unmanaged: true
   show_filtered: false
+  show_missing: true
+  save_missing: true
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
@@ -21,6 +23,8 @@ plex:
 | Sync Mode | `sync_mode` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection | append | :x: |
 | Show Unmanaged Collections | `show_unmanaged` | Show collections not managed by Plex Meta Manager at the end of each run<br>**boolean:** true or false | true | :x: |
 | Show Filtered Collections | `show_filtered` | Library Level toggle to show filtered collections<br>**boolean:** true or false | false | :x: |
+| Show Missing | `show_missing` | Library Level toggle to show movies/shows missing from collections<br>**boolean:** true or false | true | :x: |
+| Save Missing | `save_missing` | Library Level toggle to save movies/shows missing from collections to a file next to you Metadata file<br>**boolean:** true or false | true | :x: |
 
 
 * This script can be run on a remote Plex server, but be sure that the `url` provided is publicly addressable and it's recommended to use `HTTPS`.
