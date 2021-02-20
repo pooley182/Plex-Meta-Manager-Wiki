@@ -31,7 +31,7 @@ collections:
     plex_collection: Jurassic Park
 ```
 
-If you want to add multiple collections you have to use a list. Comma separated values will not work.
+If you want to add multiple collections you have to use a list. Comma-separated values will not work.
 
 ```yaml
 collections:
@@ -85,7 +85,7 @@ Gets every movie/show based on the search parameters provided. The search will r
 | `writer` | Gets every movie with the specified writer | :heavy_check_mark: | :x: |
 | `year` | Gets every movie/show with the specified year (Put a `-` between two years for a range i.e. `year: 1990-1999` or end with `NOW` to go till current i.e. `year: 2000-NOW`) | :heavy_check_mark: | :heavy_check_mark: |
 
-* You can only use each search option once per `plex_search` but multiple values are supported as either a list or a comma separated string.
+* You can only use each search option once per `plex_search` but multiple values are supported as either a list or a comma-separated string.
 * If you want to restrict the search by multiples of the same attribute (i.e. You want every movie that is a Romance and Comedy) try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
 ```yaml
