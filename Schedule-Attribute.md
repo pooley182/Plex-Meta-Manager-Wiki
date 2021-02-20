@@ -22,4 +22,4 @@ The scheduling options are:
 | Yearly | Update this collection once a year on the specified day | yearly(MM/DD) | yearly(01/30) |
 
 * Using `daily` to schedule a collection is the default when `schedule` isn't specified
-* You can have multiple scheduling options just make them a list or comma separated values
+* You can have multiple scheduling options just make them a list or comma-separated values
