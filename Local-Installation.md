@@ -24,7 +24,7 @@ python plex_meta_manager.py
 | [Time to Run](#time-to-run) | `-t` or `--time` | Time to update each day<br>**Format:** HH:MM | `03:00` |
 | [Run](#run) | `-r` or `--run` | Run without the scheduler | `False` |
 | [Run Tests](#run-tests) | `-rt`, `--tests`, or `--run-tests` | Run in debug mode with only collections that have `test: true` | `False` |
-| [Run Collections](#run-collections) | `-cl` or `--collections` | Process only specified collections (comma-separated list) | `` |
+| [Run Collections](#run-collections) | `-cl` or `--collections` | Process only specified collections (comma-separated list) | ` ` |
 | [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | Character that divides the sections | `=` |
 | [Screen Width](#divider-character--screen-width) | `-w` or `--width` | Integer between 90 and 300 | `100` |
 
