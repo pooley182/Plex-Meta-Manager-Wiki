@@ -51,9 +51,9 @@ The available attributes for each movie/show are as follows
 | Studio | `studio` | Text to change Studio | :heavy_check_mark: | :heavy_check_mark: |
 | Tagline | `tagline` | Text to change Tagline | :heavy_check_mark:| :heavy_check_mark: |
 | Summary | `summary` | Text to change Summary | :heavy_check_mark: | :heavy_check_mark: |
-| Genre | `genre` | List or comma separated text of each Genre | :heavy_check_mark: | :heavy_check_mark: |
+| Genre | `genre` | List or comma-separated text of each Genre | :heavy_check_mark: | :heavy_check_mark: |
 | Genre Sync Mode | `genre_sync_mode` | `append`: Only Add Genres to the Item<br>`sync`: Add & Remove Genres from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
-| Label | `label` | List or comma separated text of each Label | :heavy_check_mark: | :heavy_check_mark: |
+| Label | `label` | List or comma-separated text of each Label | :heavy_check_mark: | :heavy_check_mark: |
 | Label Sync Mode | `label_sync_mode` | `append`: Only Add Labels to the Item<br>`sync`: Add & Remove Labels from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
 | Seasons | `seasons` | [`seasons` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Seasons-Attributes) | :x: | :heavy_check_mark: |
 | Episodes | `episodes` | [`episodes` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Episodes-Attributes) | :x: | :heavy_check_mark: |
