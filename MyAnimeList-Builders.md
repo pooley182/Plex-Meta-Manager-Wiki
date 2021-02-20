@@ -138,7 +138,7 @@ collections:
 ## MyAnimeList ID
 Gets the anime specified by the MyAnimeList ID
 
-The expected input is a MyAnimeList ID. Multiple values are supported as either a list or a comma separated string.
+The expected input is a MyAnimeList ID. Multiple values are supported as either a list or a comma-separated string.
 
 ```yaml
 collections:
