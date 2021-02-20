@@ -20,7 +20,7 @@ Both Tautulli Popular and Tautulli Watched have the same sub-attributes detailed
 
 If you have multiple movie Libraries or multiple show Libraries Tautulli combines those in the popular/watched lists so there might not be 10 movies/shows from the library to make your `list_size`.
 
-In order to get around that you can use the `list_buffer` attribute that defaults to 10. This will get that number more movies from Tautulli but only add to the collection until the size reaches the number in `list_size`.
+In order to get around that, you can use the `list_buffer` attribute that defaults to 10. This will get that number more movies from Tautulli but only add to the collection until the size reaches the number in `list_size`.
 
 So if your collection doesn't have as many movies/shows as your `list_size` attribute increase the number in the `list_buffer` attribute.
 
