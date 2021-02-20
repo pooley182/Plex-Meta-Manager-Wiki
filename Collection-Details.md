@@ -49,11 +49,15 @@ The available collection details attributes for each collection are as follows
 | Name | Attribute | Description | Allowed Values |
 | :-- | :-- | :-- | :-- |
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
-| Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection<br>**Default Mode:** `append` |
-| Add to Radarr/Sonarr | `add_to_arr` | Collection level `add_to_radarr`/`add_to_sonarr` toggle | **boolean:** true or false<br>**Default:** library value |
-| Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle | **boolean:** true or false<br>**Default:** library value |
+| Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection<br>**Default Mode:** `append` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection |
+| Add to Radarr/Sonarr | `add_to_arr` | Collection level `add` toggle for Randar/Sonarr<br>**Default:** [Randar](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes)/[Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** true or false |
+| Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** true or false |
+| Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** true or false |
+| Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** true or false |
 | Sort Title<sup>1</sup> | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
+| Label | `label` | Used to change the collection's labels | Comma-seperated string of labels to append or sync |
+| Label Sync Mode | `label_sync_mode` | Used with `label` to change the label sync mode<br><strong>Default Mode:</strong> `append` | `append`: Only Add Labels to the Item<br>`sync`: Add & Remove Labels from the Item |
 | Summary | `summary` | Used to change the collection's summary | Text to change Summary |
 | TMDb Summary | `tmdb_summary` | Used to change the collection's summary to a TMDb Movie/Collection summary for a movie library or a TMDb Show summary for a show library  | TMDb Movie/Show/Collection ID |
 | TMDb Description | `tmdb_description` | Used to change the collection's summary to a TMDb List Discription | TMDb List ID |
