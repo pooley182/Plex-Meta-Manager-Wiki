@@ -22,7 +22,7 @@ You can build different collections using the features of [TheMovieDb.org](https
 
 ## Expected Input
 
-The builders below are expected to have the full URL to the item or the TMDb ID of the item. Multiple values are supported as either a list or a comma separated string.
+The builders below are expected to have the full URL to the item or the TMDb ID of the item. Multiple values are supported as either a list or a comma-separated string.
 * [TMDb Collection](#tmdb-collection) and [TMDb Collection Details](#tmdb-collection)
 * [TMDb List](#tmdb-list) and [TMDb List Details](#tmdb-list)
 * [TMDb Movie](#tmdb-movie) and [TMDb Movie Details](#tmdb-movie)
@@ -251,8 +251,8 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | Type | Description |
 | :-- | :-- |
 | String | Any number of alphanumeric characters |
-| Integer | Any whole number greater then zero i.e. 2, 10, 50 |
-| Number | Any number greater then zero i.e. 2.5, 7.4, 9 |
+| Integer | Any whole number greater than zero i.e. 2, 10, 50 |
+| Number | Any number greater than zero i.e. 2.5, 7.4, 9 |
 | Boolean | Must be `true` or `false` |
 | Date: `MM/DD/YYYY` | Date that fits the specified format |
 | Year: `YYYY` | Year must be a 4 digit integer i.e. 1990 |
@@ -279,13 +279,13 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `vote_count.lte` | Filter and only include movies that have a vote count that is less than or equal to the specified value. | Integer |
 | `vote_average.gte` | Filter and only include movies that have a rating that is greater or equal to the specified value. | Number |
 | `vote_average.lte` | Filter and only include movies that have a rating that is less than or equal to the specified value. | Number |
-| `with_cast` | A comma separated list of person ID's. Only include movies that have one of the ID's added as an actor. | String |
-| `with_crew` | A comma separated list of person ID's. Only include movies that have one of the ID's added as a crew member. | String |
-| `with_people` | A comma separated list of person ID's. Only include movies that have one of the ID's added as a either a actor or a crew member. | String |
-| `with_companies` | A comma separated list of production company ID's. Only include movies that have one of the ID's added as a production company. | String |
-| `with_genres` | Comma separated value of genre ids that you want to include in the results. | String |
-| `without_genres` | Comma separated value of genre ids that you want to exclude from the results. | String |
-| `with_keywords` | A comma separated list of keyword ID's. Only includes movies that have one of the ID's added as a keyword. | String |
+| `with_cast` | A comma-separated list of person ID's. Only include movies that have one of the ID's added as an actor. | String |
+| `with_crew` | A comma-separated list of person ID's. Only include movies that have one of the ID's added as a crew member. | String |
+| `with_people` | A comma-separated list of person ID's. Only include movies that have one of the ID's added as either an actor or a crew member. | String |
+| `with_companies` | A comma-separated list of production company ID's. Only include movies that have one of the ID's added as a production company. | String |
+| `with_genres` | Comma-separated value of genre ids that you want to include in the results. | String |
+| `without_genres` | Comma-separated value of genre ids that you want to exclude from the results. | String |
+| `with_keywords` | A comma-separated list of keyword ID's. Only includes movies that have one of the ID's added as a keyword. | String |
 | `without_keywords` | Exclude items with certain keywords. You can comma and pipe separate these values to create an 'AND' or 'OR' logic. | String |
 | `with_runtime.gte` | Filter and only include movies that have a runtime that is greater or equal to a value. | Integer |
 | `with_runtime.lte` | Filter and only include movies that have a runtime that is less than or equal to a value. | Integer |
@@ -294,25 +294,25 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 ### Discover Shows Parameters
 | Show Parameters | Description | Type |
 | :-- | :-- | :--: |
-| `limit` | Specify how many movies you want returned by the query. (default: 100) | Integer |
+| `limit` | Specify how many movies you want to be returned by the query. (default: 100) | Integer |
 | `language` | Specify a language to query translatable fields with. (default: en-US) | `([a-z]{2})-([A-Z]{2})` |
 | `sort_by` | Choose from one of the many available sort options. (default: `popularity.desc`) | See [sort options](#sort-options) below |
-| `air_date.gte` | Filter and only include TV shows that have a air date (by looking at all episodes) that is greater or equal to the specified value. | Date: `MM/DD/YYYY` |
-| `air_date.lte` | Filter and only include TV shows that have a air date (by looking at all episodes) that is less than or equal to the specified value. | Date: `MM/DD/YYYY` |
+| `air_date.gte` | Filter and only include TV shows that have an air date (by looking at all episodes) that is greater or equal to the specified value. | Date: `MM/DD/YYYY` |
+| `air_date.lte` | Filter and only include TV shows that have an air date (by looking at all episodes) that is less than or equal to the specified value. | Date: `MM/DD/YYYY` |
 | `first_air_date.gte` | Filter and only include TV shows that have a original air date that is greater or equal to the specified value. Can be used in conjunction with the `include_null_first_air_dates` filter if you want to include items with no air date. | Date: `MM/DD/YYYY` |
 | `first_air_date.lte` | Filter and only include TV shows that have a original air date that is less than or equal to the specified value. Can be used in conjunction with the `include_null_first_air_dates` filter if you want to include items with no air date. | Date: `MM/DD/YYYY` |
-| `first_air_date_year` | Filter and only include TV shows that have a original air date year that equal to the specified value. Can be used in conjunction with the `include_null_first_air_dates` filter if you want to include items with no air date. | Year: YYYY |
+| `first_air_date_year` | Filter and only include TV shows that have an original air date year that equal to the specified value. Can be used in conjunction with the `include_null_first_air_dates` filter if you want to include items with no air date. | Year: YYYY |
 | `include_null_first_air_dates` | Use this filter to include TV shows that don't have an air date while using any of the `first_air_date` filters. | Boolean |
 | `timezone` | Used in conjunction with the `air_date.gte/lte` filter to calculate the proper UTC offset. (default: America/New_York) | String |
 | `vote_count.gte` | Filter and only include TV that have a vote count that is greater or equal to the specified value. | Integer |
 | `vote_count.lte` | Filter and only include TV that have a vote count that is less than or equal to the specified value. | Integer |
 | `vote_average.gte` | Filter and only include TV that have a rating that is greater or equal to the specified value. | Number |
 | `vote_average.lte` | Filter and only include TV that have a rating that is less than or equal to the specified value. | Number |
-| `with_networks` | Comma separated value of network ids that you want to include in the results. | String |
-| `with_companies` | A comma separated list of production company ID's. Only include movies that have one of the ID's added as a production company. | String |
-| `with_genres` | Comma separated value of genre ids that you want to include in the results. | String |
-| `without_genres` | Comma separated value of genre ids that you want to exclude from the results. | String |
-| `with_keywords` | A comma separated list of keyword ID's. Only includes TV shows that have one of the ID's added as a keyword. | String |
+| `with_networks` | Comma-separated value of network ids that you want to include in the results. | String |
+| `with_companies` | A comma-separated list of production company ID's. Only include movies that have one of the ID's added as a production company. | String |
+| `with_genres` | Comma-separated value of genre ids that you want to include in the results. | String |
+| `without_genres` | Comma-separated value of genre ids that you want to exclude from the results. | String |
+| `with_keywords` | A comma-separated list of keyword ID's. Only includes TV shows that have one of the ID's added as a keyword. | String |
 | `without_keywords` | Exclude items with certain keywords. You can comma and pipe separate these values to create an 'AND' or 'OR' logic. | String |
 | `with_runtime.gte` | Filter and only include TV shows with an episode runtime that is greater than or equal to a value. | Integer |
 | `with_runtime.lte` | Filter and only include TV shows with an episode runtime that is less than or equal to a value. | Integer |
