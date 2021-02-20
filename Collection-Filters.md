@@ -22,7 +22,7 @@ All collection filter options are listed below. To display collections filtered 
 | `audio_language` | Matches every movie with the specified audio language | :heavy_check_mark: | :x: |
 | `subtitle_language` | Matches every movie with the specified subtitle language | :heavy_check_mark: | :x: |
 
-* Standard filters can have multiple values either by being a list or comma separated values
+* Standard filters can have multiple values either by being a list or a comma-separated string
 * You can also use the `.not` at the end of any standard collection filter to do an inverse search matching everything that doesn't have the value specified. You can use `plex_all: true` to start your filter from your entire library.
 * Using the `original_language` filter will also filter out movies from being added to Radarr.
 
