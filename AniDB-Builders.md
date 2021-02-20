@@ -9,7 +9,7 @@ You can build different collections using the features of [AniDB.net](https://an
 ## AniDB ID
 Gets the anime specified by the AniDB ID.
 
-The expected input is an AniDB ID or AniDB Anime URL. Multiple values are supported as either a list or a comma separated string.
+The expected input is an AniDB ID or AniDB Anime URL. Multiple values are supported as either a list or a comma-separated string.
 
 ```yaml
 collections:
@@ -27,7 +27,7 @@ Gets all anime in the relation graph of the specified AniDB ID.
 
 To see the relation graph of an anime use: `https://anidb.net/anime/<ANIDB_ID>/relation/graph` but replace `<ANIDB_ID>` with the AniDB ID you want to see the relations for.
 
-The expected input is an AniDB ID, AniDB Anime URL, or AniDB Anime Relation URL. Multiple values are supported as either a list or a comma separated string.
+The expected input is an AniDB ID, AniDB Anime URL, or AniDB Anime Relation URL. Multiple values are supported as either a list or a comma-separated string.
 
 ```yaml
 collections:
