@@ -23,7 +23,7 @@ This wiki should tell you everything you need to know about the script to get it
 - [Docker Installation](Docker)
 - [Configuration File](Configuration-File)
   - [Libraries Attributes](Libraries-Attributes)
-  - [Cache Attributes](Cache-Attributes)
+  - [Settings Attributes](Settings-Attributes)
   - [Plex Attributes](Plex-Attributes)
   - [TMDb Attributes](TMDb-Attributes)
   - [Radarr Attributes](Radarr-Attributes)
