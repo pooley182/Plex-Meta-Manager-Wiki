@@ -12,6 +12,7 @@ radarr:
   root_folder_path: S:/Movies
   add: true
   search: false
+  tag: pmm
 ```
 
 | Name | Attribute | Allowed Values| Default | Required |
@@ -23,6 +24,7 @@ radarr:
 | Quality Profile | `quality_profile` | Quality Profile To Use | N/A | :heavy_check_mark: |
 | Add | `add` | Add missing moives found to Radarr<br><strong>boolean:</strong> true or false | false | :x: |
 | Search | `search` | Search when adding missing movies to Radarr<br><strong>boolean:</strong> true or false | false | :x: |
+| Tag | `tag` | Add this list or comma-separated string of tags to every movie added to Radarr | ` ` | :x: |
 
 * The `token` can be found by going to `Radarr > Settings > General > Security > API Key`
 
