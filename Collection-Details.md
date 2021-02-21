@@ -51,9 +51,9 @@ The available collection details attributes for each collection are as follows
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection<br>**Default Mode:** `append` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection |
 | Add to Radarr/Sonarr | `add_to_arr` | Collection level `add` toggle for Randar/Sonarr<br>**Default:** [Randar](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes)/[Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** true or false |
-| Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** true or false |
-| Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** true or false |
-| Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** true or false |
+| Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** `true` or `false` |
+| Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** `true` or `false` |
+| Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | **boolean:** `true` or `false` |
 | Sort Title<sup>1</sup> | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
 | Label | `label` | Used to change the collection's labels | Comma-seperated string of labels to append or sync |
@@ -74,6 +74,7 @@ The available collection details attributes for each collection are as follows
 | File Background<sup>3</sup> | `file_background` | Used to change the collection's background to an image in the file system | Path to image in the file system |
 | TMDb Person<sup>4</sup> | `tmdb_person` | Used to change the collection's summary and poster to a TMDb Person's biography and profile as well as allow the people specified to be used in [Plex Searches](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) | TMDb Person ID |
 | Name Mapping<sup>5</sup> | `name_mapping` | Used to specify the folder name in the assets directory | Folder Name In Assets Directory |
+| Test Mode | `test` | Run collection when running in Test Mode if set to true<br>**Default:** false | **boolean:** `true` or `false` |
 
 1. You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
 2. If no poster is specified the script will look in the library's asset directory for a folder named either the collection name or the `name_mapping` if specified and look for a poster.ext file in that folder.
