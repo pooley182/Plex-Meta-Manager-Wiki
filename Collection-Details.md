@@ -49,6 +49,7 @@ The available collection details attributes for each collection are as follows
 | Name | Attribute | Description | Allowed Values |
 | :-- | :-- | :-- | :-- |
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
+| Template | `template` | Used to specify a template and template variables to use for this collection | [`template` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection<br>**Default Mode:** `append` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection |
 | Add to Radarr/Sonarr | `add_to_arr` | Collection level `add` toggle for Randar/Sonarr<br>**Default:** [Randar](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes)/[Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** true or false |
 | Radarr/Sonarr Tags | `arr_tag` | Collection level `tag` attribute override for Randar/Sonarr<br>**Default:** [Randar](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes)/[Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | Comma-seperated string of tags |
