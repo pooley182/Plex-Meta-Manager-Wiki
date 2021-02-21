@@ -26,10 +26,11 @@ TV Shows.yml
 Anime.yml
 ```
 
-There are only two mappings allowed in the Metadata File's root:
+There are three mappings allowed in the Metadata File's root:
 | Name | Attribute | Description |
 | :-- | :-- | :-- |
 | [Metadata](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Metadata-Attributes) | `metadata` | mapping where metadata changes go |
+| [Templates](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) | `templates` | mapping where templates for automatic collections go |
 | [Collections](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Attributes) | `collections` | mapping where automatic collections and collection metadata go |
 
 * Either `metadata` or `collections` is required in order to run.
