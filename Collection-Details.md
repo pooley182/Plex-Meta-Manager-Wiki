@@ -74,7 +74,7 @@ The available collection details attributes for each collection are as follows
 | File Background<sup>3</sup> | `file_background` | Used to change the collection's background to an image in the file system | Path to image in the file system |
 | TMDb Person<sup>4</sup> | `tmdb_person` | Used to change the collection's summary and poster to a TMDb Person's biography and profile as well as allow the people specified to be used in [Plex Searches](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) | TMDb Person ID |
 | Name Mapping<sup>5</sup> | `name_mapping` | Used to specify the folder name in the assets directory | Folder Name In Assets Directory |
-| Test Mode | `test` | Run collection when running in Test Mode if set to true<br>**Default:** false | **boolean:** `true` or `false` |
+| Test Mode | `test` | When running in Test Mode (`--run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** false | **boolean:** `true` or `false` |
 
 1. You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
 2. If no poster is specified the script will look in the library's asset directory for a folder named either the collection name or the `name_mapping` if specified and look for a poster.ext file in that folder.
