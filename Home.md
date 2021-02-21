@@ -35,6 +35,7 @@ This wiki should tell you everything you need to know about the script to get it
   - [Metadata Attributes](Metadata-Attributes)
     - [Seasons Attributes](Seasons-Attributes)
     - [Episodes Attributes](Episodes-Attributes)
+  - [Template Attributes](Template-Attributes)
   - [Collection Attributes](Collection-Attributes)
     - [Collection Builders](Collection-Builders)
       - [Plex Builders](Plex-Builders)
