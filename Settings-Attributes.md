@@ -61,5 +61,3 @@ config
 │           ├── poster.png
 │           ├── background.png
 ```
-
-Inside each Image Asset Directory 
