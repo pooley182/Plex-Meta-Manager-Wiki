@@ -15,6 +15,7 @@ This wiki should tell you everything you need to know about the script to get it
 * If you have a configuration question visit the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions)
 * To see user submitted Metadata configuration files and you could even add your own go to the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
 * Pull Request are welcome
+* If you wish to contribute to the Wiki please fork and send a pull request on the [Plex Meta Manager Wiki Repository](https://github.com/meisnate12/Plex-Meta-Manager-Wiki)
 * [Buy Me a Pizza](https://www.buymeacoffee.com/meisnate12)
 
 ## Table of Contents
