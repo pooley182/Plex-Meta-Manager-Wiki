@@ -7,12 +7,14 @@ Below is a `plex` mapping example and the full set of attributes:
 plex:
   url: http://192.168.1.12:32400
   token: ####################
+  timeout: 60
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
 | :-- | :-- | :-- | :--: | :--: |
 | Server URL | `url` | Plex Server URL<br><strong>Example:</strong> http://192.168.1.12:32400 | N/A | :heavy_check_mark: |
 | Authentication Token | `token` | Plex Server Authentication Token | N/A | :heavy_check_mark: |
+| Plex Timeout | `timeout` | Plex Server Timeout | 60 | :x: |
 
 * This script can be run on a remote Plex server, but be sure that the `url` provided is publicly addressable and it's recommended to use `HTTPS`.
 
