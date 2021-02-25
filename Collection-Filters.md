@@ -36,7 +36,7 @@ All collection filter options are listed below. To display collections filtered 
 | `rating.gte` | Matches any movie/show whose rating is greater then or equal to the specified rating | :heavy_check_mark: | :heavy_check_mark: |
 | `rating.lte` | Matches any movie/show whose rating is less then or equal to the specified rating | :heavy_check_mark: | :heavy_check_mark: |
 | `originally_available.gte` | Matches any movie/show whose originally_available date is greater then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
-| `originally_available.lte` | Matches any movie/show whose originally_available date is less then or equal to the specified originally_available date date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
+| `originally_available.lte` | Matches any movie/show whose originally_available date is less then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
 
 * Advance filters can not take multiple values
 
