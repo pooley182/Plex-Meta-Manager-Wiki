@@ -31,12 +31,18 @@ There's one attribute unique to `templates` and that's the `default` attribute. 
 Here's an example IMDB Genre template and two different ways to call it.
 ```yaml
 templates:
-  Actor:
-    actor: tmdb
-    tmdb_person: <<person>>
-    sort_title: +_<<collection_name>>
+  IMDb Genre:
+    default:
+      title: feature
+      limit: 100
+    imdb_list:
+    - url: https://www.imdb.com/search/title/?title_type=<<title>>&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=<<genre>>
+      limit: <<limit>>
+    - url: https://www.imdb.com/search/title/?title_type=<<title>>&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=<<genre>>&sort=user_rating,desc
+      limit: <<limit>>
+    sort_title: ++_<<collection_name>>
     sync_mode: sync
-    collection_order: release
+    collection_order: alpha
 collections:
   Action:
     template:
