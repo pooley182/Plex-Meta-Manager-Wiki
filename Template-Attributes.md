@@ -26,7 +26,11 @@ collections:
       person: 73457  
 ```
 
-There's one attribute unique to `templates` and that's the `default` attribute. This can set default values for template variables to be used if they're not specified in the call. 
+There are two attributes unique to `templates`, `default` and `optional`. 
+
+* `default` can set default values for template variables to be used if they're not specified in the call. 
+
+* `optional` can specify variables that if not specified on the template call will cause any attribute using one of those variables to be ignored in the template.
 
 Here's an example IMDB Genre template and two different ways to call it.
 ```yaml
