@@ -35,10 +35,15 @@ All collection filter options are listed below. To display collections filtered 
 | `year.lte` | Matches any movie/show whose year is less then or equal to the specified year | :heavy_check_mark: | :heavy_check_mark: |
 | `rating.gte` | Matches any movie/show whose rating is greater then or equal to the specified rating | :heavy_check_mark: | :heavy_check_mark: |
 | `rating.lte` | Matches any movie/show whose rating is less then or equal to the specified rating | :heavy_check_mark: | :heavy_check_mark: |
+| `tmdb_vote_count.gte` | Matches any movie/show whose TMDb vote count is greater then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
+| `tmdb_vote_count.lte` | Matches any movie/show whose TMDb vote count is less then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
+| `duration.gte` | Matches any movie/show whose duration is greater then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
+| `duration.lte` | Matches any movie/show whose duration is less then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
 | `originally_available.gte` | Matches any movie/show whose originally_available date is greater then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
 | `originally_available.lte` | Matches any movie/show whose originally_available date is less then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
 
 * Advance filters can not take multiple values
+* Using the `tmdb_vote_count.gte` or `tmdb_vote_count.lte` filter will also filter out movies from being added to Radarr.
 
 ### Collection Filter Examples
 
