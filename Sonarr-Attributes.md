@@ -12,6 +12,7 @@ sonarr:
   root_folder_path: S:/Shows
   add: true
   search: false
+  season_folder: true
   tag: pmm
 ```
 
@@ -24,6 +25,7 @@ sonarr:
 | Quality Profile | `quality_profile` | Quality Profile To Use | N/A | :heavy_check_mark: |
 | Add | `add` | Add missing shows found to Sonarr<br><strong>boolean:</strong> true or false | false | :x: |
 | Search | `search` | Search when adding missing shows to Sonarr<br><strong>boolean:</strong> true or false | false | :x: |
+| Season Folder | `season_folder` | Use the Season Folder Option when adding to Sonarr<br><strong>boolean:</strong> true or false | false | :x: |
 | Tag | `tag` | Add this list or comma-separated string of tags to every show added to Sonarr | ` ` | :x: |
 
 * The `token` can be found by going to `Sonarr > Settings > General > Security > API Key`
