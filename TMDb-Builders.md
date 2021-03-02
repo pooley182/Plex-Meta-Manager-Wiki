@@ -1,18 +1,40 @@
 You can build different collections using the features of [TheMovieDb.org](https://www.themoviedb.org/) (TMDb).
 
+## Standard TMDb Builders
+
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
 | [TMDb Collection](#tmdb-collection) | `tmdb_collection` | Gets every movie in the TMDb collection | :heavy_check_mark: | :x: |
-| [TMDb Collection Details](#tmdb-collection) | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
 | [TMDb List](#tmdb-list) | `tmdb_list` | Gets every movie/show in the TMDb List | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb List Details](#tmdb-list) | `tmdb_list_details` | Gets every movie/show in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Actor](#tmdb-actor) | `tmdb_actor` | Gets every movie/show in the TMDb Person's Actor Credits | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Crew](#tmdb-crew) | `tmdb_crew` | Gets every movie/show in the TMDb Person's Crew Credits | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Director](#tmdb-director) | `tmdb_director` | Gets every movie/show in the TMDb Person's Actor Credits | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Producer](#tmdb-producer) | `tmdb_producer` | Gets every movie/show in the TMDb Person's Producer Credits | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Writer](#tmdb-writer) | `tmdb_writer` | Gets every movie/show in the TMDb Person's Writer Credits | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Movie](#tmdb-movie) | `tmdb_movie` | Gets the movie specified | :heavy_check_mark: | :x: |
-| [TMDb Movie Details](#tmdb-movie) | `tmdb_movie_details` | Gets the movie specified and updates the collection with the summary, poster, and background from the TMDb movie | :heavy_check_mark: | :x: |
 | [TMDb Show](#tmdb-show) | `tmdb_show` | Gets the show specified | :x: | :heavy_check_mark: |
-| [TMDb Show Details](#tmdb-show) | `tmdb_show_details` | Gets the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: |
 | [TMDb Company](#tmdb-company) | `tmdb_company` | Gets every movie/show from the TMDb company's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Network](#tmdb-network) | `tmdb_network` | Gets every show from the TMDb network's show list | :x: | :heavy_check_mark: |
 | [TMDb Keyword](#tmdb-keyword) | `tmdb_keyword` | Gets every movie/show from the TMDb keyword's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
+
+## Standard TMDb Details Builders
+
+| Name | Attribute | Description | Works with Movies | Works with Shows |
+| :-- | :-- | :-- | :--: | :--: |
+| [TMDb Collection Details](#tmdb-collection) | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
+| [TMDb List Details](#tmdb-list) | `tmdb_list_details` | Gets every movie/show in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Actor Details](#tmdb-actor) | `tmdb_actor_details` | Gets every movie/show in the TMDb Person's Actor Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Crew Details](#tmdb-crew) | `tmdb_crew_details` | Gets every movie/show in the TMDb Person's Crew Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Director Details](#tmdb-director) | `tmdb_director_details` | Gets every movie/show in the TMDb Person's Actor Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Producer Details](#tmdb-producer) | `tmdb_producer_details` | Gets every movie/show in the TMDb Person's Producer Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Writer Details](#tmdb-writer) | `tmdb_writer_details` | Gets every movie/show in the TMDb Person's Writer Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Movie Details](#tmdb-movie) | `tmdb_movie_details` | Gets the movie specified and updates the collection with the summary, poster, and background from the TMDb movie | :heavy_check_mark: | :x: |
+| [TMDb Show Details](#tmdb-show) | `tmdb_show_details` | Gets the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: |
+
+## Other TMDb Builders
+
+| Name | Attribute | Description | Works with Movies | Works with Shows |
+| :-- | :-- | :-- | :--: | :--: |
 | [TMDb Popular](#tmdb-popular) | `tmdb_popular` | Gets the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Now Playing](#tmdb-now-playing) | `tmdb_now_playing` | Gets the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list | :heavy_check_mark: | :x: |
 | [TMDb Top Rated](#tmdb-top-rated) | `tmdb_top_rated` | Gets the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list | :heavy_check_mark: | :heavy_check_mark: |
@@ -25,6 +47,11 @@ You can build different collections using the features of [TheMovieDb.org](https
 The builders below are expected to have the full URL to the item or the TMDb ID of the item. Multiple values are supported as either a list or a comma-separated string.
 * [TMDb Collection](#tmdb-collection) and [TMDb Collection Details](#tmdb-collection)
 * [TMDb List](#tmdb-list) and [TMDb List Details](#tmdb-list)
+* [TMDb Actor](#tmdb-actor) and [TMDb Actor Details](#tmdb-actor)
+* [TMDb Crew](#tmdb-crew) and [TMDb Crew Details](#tmdb-crew)
+* [TMDb Director](#tmdb-director) and [TMDb Director Details](#tmdb-director)
+* [TMDb Producer](#tmdb-producer) and [TMDb Producer Details](#tmdb-producer)
+* [TMDb Writer](#tmdb-writer) and [TMDb Writer Details](#tmdb-writer)
 * [TMDb Movie](#tmdb-movie) and [TMDb Movie Details](#tmdb-movie)
 * [TMDb Show](#tmdb-show) and [TMDb Show Details](#tmdb-show)
 * [TMDb Company](#tmdb-company)
@@ -91,6 +118,121 @@ collections:
 collections:
   Top 50 Grossing Films of All Time (Worldwide):
     tmdb_list_details: 10
+```
+
+## TMDb Actor
+Gets every movie/show in the TMDb Person's Actor Credits.
+
+```yaml
+collections:
+  Robin Williams:
+    tmdb_actor: https://www.themoviedb.org/person/2157-robin-williams
+```
+```yaml
+collections:
+  Robin Williams:
+    tmdb_actor: 2157
+```
+
+* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_actor_details`.
+* You can specify multiple people in `tmdb_actor_details` but it will only use the first one to update the collection details.
+
+```yaml
+collections:
+  Robin Williams:
+    tmdb_actor_details: 2157
+```
+
+## TMDb Crew
+Gets every movie/show in the TMDb Person's Crew Credits.
+
+```yaml
+collections:
+  Quentin Tarantino:
+    tmdb_crew: https://www.themoviedb.org/person/138-quentin-tarantino
+```
+```yaml
+collections:
+  Quentin Tarantino:
+    tmdb_crew: 138
+```
+
+* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_crew_details`.
+* You can specify multiple people in `tmdb_crew_details` but it will only use the first one to update the collection details.
+
+```yaml
+collections:
+  Quentin Tarantino:
+    tmdb_crew_details: 138
+```
+
+## TMDb Director
+Gets every movie/show in the TMDb Person's Director Credits.
+
+```yaml
+collections:
+  Steven Spielberg:
+    tmdb_director: https://www.themoviedb.org/person/488-steven-spielberg
+```
+```yaml
+collections:
+  Steven Spielberg:
+    tmdb_director: 488
+```
+
+* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_director_details`.
+* You can specify multiple people in `tmdb_director_details` but it will only use the first one to update the collection details.
+
+```yaml
+collections:
+  Steven Spielberg:
+    tmdb_director_details: 488
+```
+
+## TMDb Producer
+Gets every movie/show in the TMDb Person's Producer Credits.
+
+```yaml
+collections:
+  Adam Sandler:
+    tmdb_producer: https://www.themoviedb.org/person/19292-adam-sandler
+```
+```yaml
+collections:
+  Adam Sandler:
+    tmdb_producer: 19292
+```
+
+* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_producer_details`.
+* You can specify multiple people in `tmdb_producer_details` but it will only use the first one to update the collection details.
+
+```yaml
+collections:
+  Adam Sandler:
+    tmdb_producer_details: 19292
+```
+
+## TMDb Writer
+Gets every movie/show in the TMDb Person's Writer Credits.
+
+```yaml
+collections:
+  Woody Allen:
+    tmdb_writer: https://www.themoviedb.org/person/1243-woody-allen
+```
+```yaml
+collections:
+  Woody Allen:
+    tmdb_writer: 1243
+```
+
+* You can update the collection details with the TMDb Person's biography and profile by using `tmdb_writer_details`.
+* You can specify multiple people in `tmdb_writer_details` but it will only use the first one to update the collection details.
+
+```yaml
+collections:
+  Woody Allen:
+    tmdb_writer_details: 1243
 ```
 
 ## TMDb Movie
