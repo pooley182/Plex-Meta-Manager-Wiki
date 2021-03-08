@@ -31,3 +31,5 @@ sonarr:
 * The `token` can be found by going to `Sonarr > Settings > General > Security > API Key`
 
 * The `quality_profile` must be the exact name of the desired quality profile, including all spaces and capitalizations.
+
+* You can set `add` and `tag` per collection by using the `add_to_arr` and `arr_tag` [Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details#settings-attributes)
