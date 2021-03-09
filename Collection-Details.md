@@ -94,20 +94,25 @@ All the following attributes update the summary of the collection from various s
 | Name | Attribute | Description | Allowed Values |
 | :-- | :-- | :-- | :-- |
 | Summary | `summary` | Used to change the collection's summary | Text to change Summary |
-| TMDb Summary | `tmdb_summary` | Used to change the collection's summary to a TMDb Movie/Collection summary for a movie library or a TMDb Show summary for a show library  | TMDb Movie/Show/Collection ID |
-| TMDb Description | `tmdb_description` | Used to change the collection's summary to a TMDb List Discription | TMDb List ID |
-| TMDb Biography | `tmdb_biography` | Used to change the collection's summary to a TMDb Person's biography | TMDb Person ID |
+| TMDb Summary | `tmdb_summary` | Used to change the collection's summary to the TMDb Movie/Collection summary for a movie library or the TMDb Show summary for a show library  | TMDb Movie/Show/Collection ID |
+| TMDb Description | `tmdb_description` | Used to change the collection's summary to the TMDb List Description | TMDb List ID |
+| TMDb Biography | `tmdb_biography` | Used to change the collection's summary to the TMDb Person's biography | TMDb Person ID |
+| TVDb Summary | `tvdb_summary` | Used to change the collection's summary to the TVDb Movie summary for a movie library or the TVDb Show summary for a show library  | TVDb Movie/Show ID or URL |
+| TVDb Description | `tvdb_description` | Used to change the collection's summary to the TVDb List Description | TVDb List URL |
+| Trakt Description | `trakt_description` | Used to change the collection's summary to the Trakt List Description | Trakt List URL |
+| Letterboxd Description | `letterboxd_description` | Used to change the collection's summary to the Letterboxd List Description | Letterboxd List URL |
 
 ## Poster Attributes
 All the following attributes update the poster of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
 | :-- | :-- | :-- | :-- |
-| URL Poster<sup>2</sup> | `url_poster` | Used to change the collection's poster to a URL | URL of image publicly available on the internet |
-| TMDb Poster<sup>2</sup> | `tmdb_poster` | Used to change the collection's poster to a TMDb Movie/Collection poster for a movie library or a TMDb Show poster for a show library | TMDb Movie/Show/Collection ID |
-| TMDb List Poster<sup>2</sup> | `tmdb_list_poster` | Used to change the collection's poster to a TMDb List poster | TMDb List ID |
-| TMDb Profile<sup>2</sup> | `tmdb_profile` | Used to change the collection's poster to a TMDb Person's profile | TMDb Person ID |
-| File Poster<sup>2</sup> | `file_poster` | Used to change the collection's poster to an image in the file system | Path to image in the file system |
+| URL Poster<sup>2</sup> | `url_poster` | Used to change the collection's poster to the URL | URL of image publicly available on the internet |
+| TMDb Poster<sup>2</sup> | `tmdb_poster` | Used to change the collection's poster to the TMDb Movie/Collection poster for a movie library or the TMDb Show poster for a show library | TMDb Movie/Show/Collection ID |
+| TMDb List Poster<sup>2</sup> | `tmdb_list_poster` | Used to change the collection's poster to the TMDb List poster | TMDb List ID |
+| TMDb Profile<sup>2</sup> | `tmdb_profile` | Used to change the collection's poster to the TMDb Person's profile | TMDb Person ID |
+| TVDb Poster<sup>2</sup> | `tvdb_poster` | Used to change the collection's poster to the TVDb Movie poster for a movie library or the TVDb Show poster for a show library | TVDb Movie/Show ID or URL |
+| File Poster<sup>2</sup> | `file_poster` | Used to change the collection's poster to the image in the file system | Path to image in the file system |
 
 * If no poster is specified the script will look in the library's [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) for a folder named either the collection name or the `name_mapping` if specified and look for a `poster.ext` file in that folder (replacing .ext with the image extension).
 
@@ -115,9 +120,10 @@ All the following attributes update the poster of the collection from various so
 All the following attributes update the background of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
-| :-- | :-- | :-- | :-- |
-| URL Background<sup>3</sup> | `url_background` | Use to change the collection's background to a URL | URL of image publicly available on the internet |
-| TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to a TMDb Movie/Collection background for a movie library or a TMDb Show background for a show library | TMDb Movie/Show/Collection ID |
-| File Background<sup>3</sup> | `file_background` | Used to change the collection's background to an image in the file system | Path to image in the file system |
+| :-- | :-- | :-- | :-- |a
+| URL Background<sup>3</sup> | `url_background` | Use to change the collection's background to the URL | URL of image publicly available on the internet |
+| TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to the TMDb Movie/Collection background for a movie library or the TMDb Show background for a show library | TMDb Movie/Show/Collection ID |
+| TVDb Background<sup>3</sup> | `tvdb_background` | Used to change the collection's background to the TVDb Movie background for a movie library or the TVDb Show background for a show library | TVDb Movie/Show ID or URL |
+| File Background<sup>3</sup> | `file_background` | Used to change the collection's background to the image in the file system | Path to image in the file system |
 
 * If no background is specified the script will look in the library's [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) for a folder named either the collection name or the `name_mapping` if specified and look for a `background.ext` file in that folder (replacing .ext with the image extension).

@@ -9,5 +9,6 @@ There are multiple different sources you can build collections from listed below
 * [IMDb Builders](IMDb-Builders)
 * [Trakt Builders](Trakt-Builders)
 * [Tautulli Builder](Tautulli-Builder)
+* [Letterboxd Builder](Letterboxd-Builder)
 * [AniDB Builders](AniDB-Builders)
 * [MyAnimeList Builders](MyAnimeList-Builders)

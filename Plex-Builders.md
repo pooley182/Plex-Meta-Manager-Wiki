@@ -75,6 +75,7 @@ Gets every movie/show based on the search parameters provided. The search will r
 ### Search Options
 | Search Option | Description | Movie<br>Libraries | Show<br>Libraries |
 | :-- | :-- | :--: | :--: |
+| `title` | Gets movie/show with the specified text in the title | :heavy_check_mark: | :heavy_check_mark: |
 | `actor` | Gets every movie with the specified actor | :heavy_check_mark: | :x: |
 | `country` | Gets every movie with the specified country | :heavy_check_mark: | :x: |
 | `decade` | Gets every movie from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
@@ -85,7 +86,7 @@ Gets every movie/show based on the search parameters provided. The search will r
 | `writer` | Gets every movie with the specified writer | :heavy_check_mark: | :x: |
 | `year` | Gets every movie/show with the specified year (Put a `-` between two years for a range i.e. `year: 1990-1999` or end with `NOW` to go till current i.e. `year: 2000-NOW`) | :heavy_check_mark: | :heavy_check_mark: |
 
-* You can only use each search option once per `plex_search` but multiple values are supported as either a list or a comma-separated string.
+* You can only use each search option once per `plex_search` but multiple values are supported as either a list or a comma-separated string for all attributes except `title`.
 * If you want to restrict the search by multiples of the same attribute (i.e. You want every movie that is a Romance and Comedy) try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
 ```yaml

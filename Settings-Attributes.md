@@ -41,7 +41,9 @@ After the folder has been created you can add a `poster.ext` or `background.ext`
 
 To edit the posters and backgrounds of the movies or shows inside a collection, you have to create a folder inside the collection asset folder called the same name as the folder the actual video file is stored in. 
 
-After the folder has been created you can add a `poster.ext` or `background.ext` file to update the poster or background of a movie or show  (replacing `.ext` with the image extension).
+After the folder has been created you can add a `poster.ext` or `background.ext` file to update the poster or background of a movie or show (replacing `.ext` with the image extension).
+
+If you want to update the posters of a show's seasons, inside the shows' assets folder you can add a `Season##.ext` file to update the poster of the specified season (replacing `##` with the zero padded season number and `.ext` with the image extension).
 
 Here's an example config folder structure with an assets directory.
 
@@ -49,6 +51,7 @@ Here's an example config folder structure with an assets directory.
 config
 ├── config.yml
 ├── Movies.yml
+├── TV Shows.yml
 ├── assets
 │   ├── The Lord of the Rings
 │       ├── poster.png
@@ -62,4 +65,25 @@ config
 │       ├── The Lord of the Rings The Return of the King (2003)
 │           ├── poster.png
 │           ├── background.png
+│   ├── Star Wars (Animated)
+│       ├── poster.png
+│       ├── background.png
+│       ├── Star Wars The Clone Wars
+│           ├── poster.png
+│           ├── background.png
+│           ├── Season00.png
+│           ├── Season01.png
+│           ├── Season02.png
+│           ├── Season03.png
+│           ├── Season04.png
+│           ├── Season05.png
+│           ├── Season06.png
+│           ├── Season07.png
+│       ├── Star Wars Rebels
+│           ├── poster.png
+│           ├── background.png
+│           ├── Season01.png
+│           ├── Season02.png
+│           ├── Season03.png
+│           ├── Season04.png
 ```

@@ -2,6 +2,8 @@
 
 This wiki should tell you everything you need to know about the script to get it working.
 
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=JTK3CVKF3ZHP2&item_name=Plex+Meta+Manager&currency_code=USD) 
+
 ## Getting Started
 
 * [Local Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation)
@@ -16,7 +18,6 @@ This wiki should tell you everything you need to know about the script to get it
 * To see user submitted Metadata configuration files and you could even add your own go to the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
 * Pull Request are welcome but please submit them to the develop branch
 * If you wish to contribute to the Wiki please fork and send a pull request on the [Plex Meta Manager Wiki Repository](https://github.com/meisnate12/Plex-Meta-Manager-Wiki)
-* [Buy Me a Pizza](https://www.buymeacoffee.com/meisnate12)
 
 ## Table of Contents
 - [Home](Home)
@@ -30,6 +31,7 @@ This wiki should tell you everything you need to know about the script to get it
   - [Radarr Attributes](Radarr-Attributes)
   - [Sonarr Attributes](Sonarr-Attributes)
   - [Tautulli Attributes](Tautulli-Attributes)
+  - [OMDb Attributes](OMDb-Attributes) 
   - [Trakt Attributes](Trakt-Attributes)
   - [MyAnimeList Attributes](MyAnimeList-Attributes)
 - [Metadata File](Metadata-File)
@@ -45,6 +47,7 @@ This wiki should tell you everything you need to know about the script to get it
       - [IMDb Builders](IMDb-Builders)
       - [Trakt Builders](Trakt-Builders)
       - [Tautulli Builder](Tautulli-Builder)
+      - [Letterboxd Builder](Letterboxd-Builder)
       - [AniDB Builders](AniDB-Builders)
       - [MyAnimeList Builders](MyAnimeList-Builders)
     - [Collection Details](Collection-Details)

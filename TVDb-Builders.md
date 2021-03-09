@@ -3,8 +3,11 @@ You can build different collections using the features of [TheTVDb.com](https://
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
 | [TVDb List](#tvdb-list) | `tvdb_list` | Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom) | :heavy_check_mark: | :heavy_check_mark: |
+| [TVDb List Details](#tvdb-list) | `tvdb_list_details` | Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom) and updates the collection summary with the TVDb list description | :heavy_check_mark: | :heavy_check_mark: |
 | [TVDb Show](#tvdb-show) | `tvdb_show` | Gets the series specified | :x: | :heavy_check_mark: |
+| [TVDb Show Details](#tvdb-show) | `tvdb_show_details` | Gets the series specified and updates the collection with the summary, poster, and background from the TVDb series | :x: | :heavy_check_mark: |
 | [TVDb Movie](#tvdb-movie) | `tvdb_movie` | Gets the movie specified | :heavy_check_mark: | :x: |
+| [TVDb Movie Details](#tvdb-movie) | `tvdb_movie_details` | Gets the movie specified and updates the collection with the summary, poster, and background from the TVDb movie | :heavy_check_mark: | :x: |
 
 ## TVDb List
 Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom)
@@ -20,6 +23,15 @@ collections:
 collections:
   Saved by the Bell:
     tvdb_list: https://www.thetvdb.com/lists/6957
+```
+
+* You can update the collection details with the TVDb list's description by using `tvdb_list_details`.
+* You can specify multiple lists in `tvdb_list_details` but it will only use the first one to update the collection details.
+
+```yaml
+collections:
+  Arrowverse:
+    tvdb_list_details: https://www.thetvdb.com/lists/arrowverse
 ```
 
 ## TVDb Show
@@ -40,6 +52,16 @@ collections:
       - https://www.thetvdb.com/series/star-wars-rebels
 ```
 
+* You can update the collection details with the TVDb show's summary, poster, and background by using `tvdb_show_details`.
+* You can specify multiple shows in `tvdb_show_details` but it will only use the first one to update the collection details.
+* Posters and background in the library's asset directory will be used over the collection details unless `tvdb_poster`/`tvdb_background` is also specified.
+
+```yaml
+collections:
+  Star Wars (Animated Shows):
+    tvdb_show_details: 83268, 283468
+```
+
 ## TVDb Movie
 Gets the movie specified
 
@@ -48,12 +70,25 @@ The expected input is a TVDb Movie ID or TVDb Movie URL. Multiple values are sup
 ```yaml
 collections:
   The Lord of the Rings:
-    tvdb_show: 107, 157, 74
+    tvdb_movie: 107, 157, 74
 ```
 ```yaml
 collections:
   The Lord of the Rings:
-    tvdb_show:
+    tvdb_movie:
+      - https://www.thetvdb.com/movies/the-lord-of-the-rings-the-fellowship-of-the-ring
+      - https://www.thetvdb.com/movies/the-lord-of-the-rings-the-two-towers
+      - https://www.thetvdb.com/movies/the-lord-of-the-rings-the-return-of-the-king
+```
+
+* You can update the collection details with the TVDb movie's summary, poster, and background by using `tvdb_movie_details`.
+* You can specify multiple movies in `tvdb_movie_details` but it will only use the first one to update the collection details.
+* Posters and background in the library's asset directory will be used over the collection details unless `tvdb_poster`/`tvdb_background` is also specified.
+
+```yaml
+collections:
+  The Lord of the Rings:
+    tvdb_movie_details:
       - https://www.thetvdb.com/movies/the-lord-of-the-rings-the-fellowship-of-the-ring
       - https://www.thetvdb.com/movies/the-lord-of-the-rings-the-two-towers
       - https://www.thetvdb.com/movies/the-lord-of-the-rings-the-return-of-the-king

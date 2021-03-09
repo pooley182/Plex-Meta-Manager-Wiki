@@ -10,6 +10,7 @@ The YAML mappings that can be set in the configuration file's root:
 | [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | `radarr` | :x: |
 | [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | `sonarr` | :x: |
 | [Tautulli](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) | `tautulli` | :x: |
+| [OMDb](https://github.com/meisnate12/Plex-Meta-Manager/wiki/OMDb-Attributes) | `omdb` | :x: |
 | [Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes) | `trakt` | :x: |
 | [MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) | `mal` | :x: |
 

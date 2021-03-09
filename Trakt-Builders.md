@@ -5,6 +5,7 @@ You can build different collections using the features of [Trakt.tv](https://tra
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
 | [Trakt List](#trakt-list) | `trakt_list` | Gets every movie/show in the Trakt List | :heavy_check_mark: | :heavy_check_mark: |
+| [Trakt List Details](#trakt-list) | `trakt_list_details` | Gets every movie/show in the Trakt List and updates the collection summary with the list description | :heavy_check_mark: | :heavy_check_mark: |
 | [Trakt Trending](#trakt-trending) | `trakt_trending` | Gets the movies/shows in Trakt's [Trending Movies](https://trakt.tv/movies/trending)/[Shows](https://trakt.tv/shows/trending) list | :heavy_check_mark: | :heavy_check_mark: | 
 | [Trakt Watchlist](#tmdb-watchlist) | `trakt_watchlist` | Gets every movie/show in a Users Watchlist | :heavy_check_mark: | :heavy_check_mark: |
 
@@ -24,6 +25,15 @@ collections:
 collections:
   Reddit Top 250:
     trakt_list: https://trakt.tv/users/jay-greene/lists/reddit-top-250-2019-edition
+```
+
+* You can update the collection details with the Trakt List's description by using `trakt_list_details`.
+* You can specify multiple collections in `trakt_list_details` but it will only use the first one to update the collection summary.
+
+```yaml
+collections:
+  Reddit Top 250:
+    trakt_list_details: https://trakt.tv/users/jay-greene/lists/reddit-top-250-2019-edition
 ```
 
 ## Trakt Trending
