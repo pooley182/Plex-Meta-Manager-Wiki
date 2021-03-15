@@ -49,6 +49,7 @@ This wiki should tell you everything you need to know about the script to get it
       - [Tautulli Builders](Tautulli-Builders)
       - [Letterboxd Builders](Letterboxd-Builders)
       - [AniDB Builders](AniDB-Builders)
+      - [AniList Builders](AniList-Builders)
       - [MyAnimeList Builders](MyAnimeList-Builders)
     - [Collection Details](Collection-Details)
       - [Schedule Attribute](Schedule-Attribute)

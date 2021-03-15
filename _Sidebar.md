@@ -27,6 +27,7 @@
       - [Tautulli Builders](Tautulli-Builders)
       - [Letterboxd Builders](Letterboxd-Builders)
       - [AniDB Builders](AniDB-Builders)
+      - [AniList Builders](AniList-Builders)
       - [MyAnimeList Builders](MyAnimeList-Builders)
     - [Collection Details](Collection-Details)
       - [Schedule Attribute](Schedule-Attribute)
