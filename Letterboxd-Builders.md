@@ -1,5 +1,6 @@
 You can build different collections using the lists on [Letterboxd.com](https://letterboxd.com/) (Letterboxd). 
 
+No configuration is required for these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |

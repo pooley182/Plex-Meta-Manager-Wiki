@@ -1,5 +1,7 @@
 You can build different collections using the features of [AniDB.net](https://anidb.net/) (AniDB).
 
+No configuration is required for these builders.
+
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
 | [AniDB ID](#anidb-id) | `anidb_id` | Gets the anime specified by the AniDB ID | :heavy_check_mark: | :heavy_check_mark: |

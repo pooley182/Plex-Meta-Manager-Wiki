@@ -20,6 +20,7 @@ All collection filter options are listed below. To display collections filtered 
 | `original_language` | Matches every movie with the specified original language [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)<br>Example: `original_language: en, ko` | :heavy_check_mark: | :x: |
 | `video_resolution` | Matches every movie with the specified video resolution | :heavy_check_mark: | :x: |
 | `audio_language` | Matches every movie with the specified audio language | :heavy_check_mark: | :x: |
+| `audio_track_title` | Matches every movie where any audio track contains the specified string | :heavy_check_mark: | :x: |
 | `subtitle_language` | Matches every movie with the specified subtitle language | :heavy_check_mark: | :x: |
 
 * Standard filters can have multiple values either by being a list or a comma-separated string
@@ -109,4 +110,11 @@ collections:
     filters:
       genre: Comedy
       rating.gte: 7
+```
+```yaml
+collections:
+  Movies with Commentary:
+    plex: all
+    filters:
+      audio_track_title: Commentary
 ```

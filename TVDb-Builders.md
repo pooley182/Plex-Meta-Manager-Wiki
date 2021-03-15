@@ -1,5 +1,7 @@
 You can build different collections using the features of [TheTVDb.com](https://www.thetvdb.com/) (TVDb).
 
+No configuration is required for these builders.
+
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
 | [TVDb List](#tvdb-list) | `tvdb_list` | Gets every show in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userlist](https://www.thetvdb.com/lists/custom) | :heavy_check_mark: | :heavy_check_mark: |

@@ -1,6 +1,6 @@
 You can build different collections using the features of [MyAnimeList.net](https://myanimelist.net/) (MyAnimeList).
 
-[Configuring MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) in the config is required for all of these lists.
+[Configuring MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) in the config is required for any of these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :-- | :-- | :-- | :--: | :--: |
@@ -15,8 +15,8 @@ You can build different collections using the features of [MyAnimeList.net](http
 | [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime) | `mal_favorite` | Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list | :heavy_check_mark: | :heavy_check_mark: |
 | [MyAnimeList Suggested Anime](#myanimelist-suggested-anime) | `mal_suggested` | Gets the suggested anime in by MyAnimeList for the authorized user | :heavy_check_mark: | :heavy_check_mark: |
 | [MyAnimeList ID](#myanimelist-id) | `mal_id` | Gets the anime specified by the MyAnimeList ID | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Expected Input
 The builders below are expected to have a single integer value of how many movies/shows to query. 
@@ -136,7 +136,7 @@ collections:
 ```
 
 ## MyAnimeList ID
-Gets the anime specified by the MyAnimeList ID
+Gets the anime specified by the MyAnimeList ID.
 
 The expected input is a MyAnimeList ID. Multiple values are supported as either a list or a comma-separated string.
 
@@ -174,7 +174,7 @@ Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/seaso
 | :-- | :-- | :--: | :--: |
 | `season` | `winter` (For winter season January, February, March)<br>`spring` (For spring season April, May, June)<br>`summer` (For summer season July, August, September)<br>`fall` (For fall season October, November, December) | :x: | Current Season |
 | `year` | 4 digit integer year between 1917-Current | :x: | Current Year |
-| `sort_by` | `score` (Sort by Score)<br>`members` (Sort by Most Members) | :x: | `score` |
+| `sort_by` | `members` (Sort by Most Members)<br>`score` (Sort by Score) | :x: | `members` |
 | `limit` | Number of Anime to query from MyAnimeList (max: 500) | :x: | 100 |
 
 ```yaml
