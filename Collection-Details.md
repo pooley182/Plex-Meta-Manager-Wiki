@@ -87,6 +87,7 @@ All the following attributes update various details of the collection's Metadata
 
 
 * **Sort Title:** You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
+* **Collection Order:** At this moment, Plex only allows filtering by alphabetical order or by release date, if you want Plex to allow a custom order please vote or post a comment on the Plex forum: [Topic - Plex Custom Collection Sorting](https://forums.plex.tv/t/custom-collection-sorting-machete-order/236226)
 
 ## Summary Attributes
 All the following attributes update the summary of the collection from various sources.
