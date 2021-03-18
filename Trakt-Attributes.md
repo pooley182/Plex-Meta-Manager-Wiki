@@ -17,7 +17,7 @@ trakt:
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | Client ID | `client_id` | Trakt Application Client ID | N/A | :heavy_check_mark: |
 | Client Secret | `client_secret` | Trakt Application Client Secret | N/A | :heavy_check_mark: |
 

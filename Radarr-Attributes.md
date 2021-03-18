@@ -16,7 +16,7 @@ radarr:
 ```
 
 | Name | Attribute | Allowed Values| Default | Required |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | Radarr URL | `url` | Radarr URL<br><strong>Example:</strong> http://192.168.1.12:32788 | N/A | :heavy_check_mark: |
 | API Token | `token` | Radarr API Token | N/A | :heavy_check_mark: |
 | Radarr Version | `version` | `v2`: for < 0.2<br>`v3`: for > 3.0 | v2 | :x: |

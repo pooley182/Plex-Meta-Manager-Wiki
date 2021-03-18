@@ -11,7 +11,7 @@ plex:
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | Server URL | `url` | Plex Server URL<br><strong>Example:</strong> http://192.168.1.12:32400 | N/A | :heavy_check_mark: |
 | Authentication Token | `token` | Plex Server Authentication Token | N/A | :heavy_check_mark: |
 | Plex Timeout | `timeout` | Plex Server Timeout | 60 | :x: |

@@ -16,17 +16,19 @@ To run the script in an interactive terminal run:
 python plex_meta_manager.py
 ```
 
-### Shell Commands
+### Commands
 
-| Name | Command | Allowed Values | Default Value |
-| :-- | :-- | :-- | :-- |
-| [Config](#config) | `-c` or `--config` | Path to YAML config file | `config/config.yml` alongside<br>`plex_meta_manager.py` |
-| [Time to Run](#time-to-run) | `-t` or `--time` | Time to update each day<br>**Format:** HH:MM | `03:00` |
-| [Run](#run) | `-r` or `--run` | Run without the scheduler | `False` |
-| [Run Tests](#run-tests) | `-rt`, `--tests`, or `--run-tests` | Run in debug mode with only collections that have `test: true` | `False` |
-| [Run Collections](#run-collections) | `-cl` or `--collections` | Process only specified collections (comma-separated list) | ` ` |
-| [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | Character that divides the sections | `=` |
-| [Screen Width](#divider-character--screen-width) | `-w` or `--width` | Integer between 90 and 300 | `100` |
+| Name | Shell Command | Environmental<br>Variable | Allowed Values | Default Value |
+| :--- | :--- | :--- | :--- | :--- |
+| [Config](#config) | `-c` or `--config` | `PMM_CONFIG` | Path to YAML config file | `config/config.yml` alongside<br>`plex_meta_manager.py` |
+| [Time to Run](#time-to-run) | `-t` or `--time` | `PMM_TIME` | Time to update each day<br>**Format:** HH:MM | `03:00` |
+| [Run](#run) | `-r` or `--run` | `PMM_RUN` | Run without the scheduler | `False` |
+| [Run Tests](#run-tests) | `-rt`, `--tests`, or `--run-tests` | `PMM_TEST` | Run in debug mode with only collections that have `test: true` | `False` |
+| [Run Collections](#run-collections) | `-cl` or `--collections` | `PMM_COLLECTIONS` | Process only specified collections (comma-separated list) | ` ` |
+| [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | `PMM_DIVIDER` | Character that divides the sections | `=` |
+| [Screen Width](#divider-character--screen-width) | `-w` or `--width` | `PMM_WIDTH` | Integer between 90 and 300 | `100` |
+
+* Environmental Variable values are used over Shell Command values 
 
 ## Config
 To choose the location of the YAML config file

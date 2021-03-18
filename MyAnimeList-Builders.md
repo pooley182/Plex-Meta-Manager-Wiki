@@ -3,7 +3,7 @@ You can build different collections using the features of [MyAnimeList.net](http
 [Configuring MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) in the config is required for any of these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [MyAnimeList Top All Anime](#myanimelist-top-all-anime) | `mal_all` | Gets every anime in MyAnimeList's [Top All Anime](https://myanimelist.net/topanime.php) list | :heavy_check_mark: | :heavy_check_mark: 
 | [MyAnimeList Top Airing Anime](#myanimelist-top-airing-anime) | `mal_airing` | Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list | :heavy_check_mark: | :heavy_check_mark: |
 | [MyAnimeList Top Upcoming Anime](#myanimelist-top-upcoming-anime) | `mal_upcoming` | Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list | :heavy_check_mark: | :heavy_check_mark: |
@@ -150,7 +150,7 @@ collections:
 Gets anime in MyAnimeList User's Anime list. The different sub-attributes are detailed below.
 
 | Attribute | Description | Required | Default |
-| :-- | :-- | :--: | :--: |
+| :--- | :--- | :---: | :---: |
 | `username` | A user's MyAnimeList Username or `@me` for the authorized user | :heavy_check_mark: | N/A |
 | `status` | `all` (All Anime List)<br>`watching` (Currently Watching List)<br>`completed` (Completed List)<br>`on_hold` (On Hold List)<br>`dropped` (Dropped List)<br>`plan_to_watch` (Plan to Watch) | :x: | `all` |
 | `sort_by` | `score` (Sort by Score)<br>`last_updated` (Sort by Last Updated)<br>`title` (Sort by Anime Title)<br>`start_date` (Sort by Start Date) | :x: | `score` |
@@ -171,7 +171,7 @@ collections:
 Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. 
 
 | Attribute | Description | Required | Default |
-| :-- | :-- | :--: | :--: |
+| :--- | :--- | :---: | :---: |
 | `season` | `winter` (For winter season January, February, March)<br>`spring` (For spring season April, May, June)<br>`summer` (For summer season July, August, September)<br>`fall` (For fall season October, November, December) | :x: | Current Season |
 | `year` | 4 digit integer year between 1917-Current | :x: | Current Year |
 | `sort_by` | `members` (Sort by Most Members)<br>`score` (Sort by Score) | :x: | `members` |

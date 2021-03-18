@@ -3,7 +3,7 @@ You can build different collections using the features of [TheMovieDb.org](https
 ## Standard TMDb Builders
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [TMDb Collection](#tmdb-collection) | `tmdb_collection` | Gets every movie in the TMDb collection | :heavy_check_mark: | :x: |
 | [TMDb List](#tmdb-list) | `tmdb_list` | Gets every movie/show in the TMDb List | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Actor](#tmdb-actor) | `tmdb_actor` | Gets every movie/show in the TMDb Person's Actor Credits | :heavy_check_mark: | :heavy_check_mark: |
@@ -20,7 +20,7 @@ You can build different collections using the features of [TheMovieDb.org](https
 ## Standard TMDb Details Builders
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [TMDb Collection Details](#tmdb-collection) | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
 | [TMDb List Details](#tmdb-list) | `tmdb_list_details` | Gets every movie/show in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Actor Details](#tmdb-actor) | `tmdb_actor_details` | Gets every movie/show in the TMDb Person's Actor Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
@@ -34,7 +34,7 @@ You can build different collections using the features of [TheMovieDb.org](https
 ## Other TMDb Builders
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [TMDb Popular](#tmdb-popular) | `tmdb_popular` | Gets the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list | :heavy_check_mark: | :heavy_check_mark: |
 | [TMDb Now Playing](#tmdb-now-playing) | `tmdb_now_playing` | Gets the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list | :heavy_check_mark: | :x: |
 | [TMDb Top Rated](#tmdb-top-rated) | `tmdb_top_rated` | Gets the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list | :heavy_check_mark: | :heavy_check_mark: |
@@ -391,7 +391,7 @@ collections:
 Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to get every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided
 
 | Type | Description |
-| :-- | :-- |
+| :--- | :--- |
 | String | Any number of alphanumeric characters |
 | Integer | Any whole number greater than zero i.e. 2, 10, 50 |
 | Number | Any number greater than zero i.e. 2.5, 7.4, 9 |
@@ -401,7 +401,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 
 ### Discover Movies Parameters
 | Movie Parameters | Description | Type |
-| :-- | :-- | :--: |
+| :--- | :--- | :---: |
 | `limit` | Specify how many movies you want returned by the query. (default: 100) | Integer |
 | `language` | Specify a language to query translatable fields with. (default: en-US) | `([a-z]{2})-([A-Z]{2})` |
 | `region` | Specify a [ISO 3166-1 code](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) to filter release dates. Must be uppercase. | `^[A-Z]{2}$` |
@@ -435,7 +435,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 
 ### Discover Shows Parameters
 | Show Parameters | Description | Type |
-| :-- | :-- | :--: |
+| :--- | :--- | :---: |
 | `limit` | Specify how many movies you want to be returned by the query. (default: 100) | Integer |
 | `language` | Specify a language to query translatable fields with. (default: en-US) | `([a-z]{2})-([A-Z]{2})` |
 | `sort_by` | Choose from one of the many available sort options. (default: `popularity.desc`) | See [sort options](#sort-options) below |
@@ -463,7 +463,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 
 ### Sort Options
 | Sort Option | Movie Sort | Show Sort |
-| :-- | :--: | :--: |
+| :--- | :---: | :---: |
 | `popularity.asc` | :heavy_check_mark: | :heavy_check_mark: |
 | `popularity.desc` | :heavy_check_mark: | :heavy_check_mark: |
 | `original_title.asc` | :heavy_check_mark: | :x: |

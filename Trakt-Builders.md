@@ -3,7 +3,7 @@ You can build different collections using the features of [Trakt.tv](https://tra
 [Configuring Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes) in the config is required for any of these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [Trakt List](#trakt-list) | `trakt_list` | Gets every movie/show in the Trakt List | :heavy_check_mark: | :heavy_check_mark: |
 | [Trakt List Details](#trakt-list) | `trakt_list_details` | Gets every movie/show in the Trakt List and updates the collection summary with the list description | :heavy_check_mark: | :heavy_check_mark: |
 | [Trakt Watchlist](#trakt-watchlist) | `trakt_watchlist` | Gets every movie/show in a Users Watchlist | :heavy_check_mark: | :heavy_check_mark: |

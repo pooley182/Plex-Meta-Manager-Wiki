@@ -5,7 +5,7 @@ You can build different collections using the features of [Tautulli](https://tau
 It has watch analytics that can show the most watched or most popular Movies/Shows in each Library.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [Tautulli Popular](#tautulli-popularwatched) | `tautulli_popular` | Gets the Tautulli Most Popular List | :heavy_check_mark: | :heavy_check_mark: |
 | [Tautulli Watched](#tautulli-popularwatched) | `tautulli_watched` | Gets the Tautulli Most Watched List | :heavy_check_mark: | :heavy_check_mark: |
 
@@ -13,7 +13,7 @@ It has watch analytics that can show the most watched or most popular Movies/Sho
 Both Tautulli Popular and Tautulli Watched have the same sub-attributes detailed below.
 
 | Attribute | Description | Required | Default |
-| :-- | :-- | :--: | :--: |
+| :--- | :--- | :---: | :---: |
 | `list_days` | Number of Days to look back of the list | :x: | 30 |
 | `list_size` | Number of Movies/Shows to add to this list | :x: | 10 |
 | `list_buffer` | Number of extra Movies/Shows to grab in case you have multiple show/movie Libraries. | :x: | 10 |

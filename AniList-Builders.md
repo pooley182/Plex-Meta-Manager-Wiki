@@ -3,7 +3,7 @@ You can build different collections using the features of [AniList.co](https://a
 No configuration is required for these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [AniList Top Rated Anime](#anilist-top-rated-anime) | `anilist_popular` | Gets every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList Popular Anime](#anilist-popular-anime) | `anilist_popular` | Gets every anime in AniList's [Popular Anime](https://anilist.co/search/anime?sort=POPULARITY_DESC) list | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList Seasonal Anime](#anilist-seasonal-anime) | `anilist_season` | Gets anime in AniList's Seasonal Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
@@ -43,7 +43,7 @@ collections:
 Gets anime in AniList's Seasonal Anime list the options are detailed below.. 
 
 | Attribute | Description | Required | Default |
-| :-- | :-- | :--: | :--: |
+| :--- | :--- | :---: | :---: |
 | `season` | `winter` (For winter season December, January, February)<br>`spring` (For spring season March, April, May)<br>`summer` (For summer season June, July, August)<br>`fall` (For fall season September, October, November) | :x: | Current Season |
 | `year` | 4 digit integer year between 1917-Current | :x: | Current Year |
 | `sort_by` | `score` (Sort by Score)<br>`popular` (Sort by Most Popular) | :x: | `score` |

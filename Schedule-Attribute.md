@@ -14,8 +14,9 @@ collections:
 ```
 
 The scheduling options are:
+
 | Name | Description | Format | Example |
-| :-- | :-- | :-- | :-- |
+| :--- | :--- | :--- | :--- |
 | Daily | Update this collection once a day | daily | daily  |
 | Weekly | Update this collection once a week on the specified day | weekly(Day of Week) | weekly(sunday) |
 | Monthly | Update this collection once a month on the specified day | monthly(Day of Month) | monthly(1) |

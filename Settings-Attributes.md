@@ -17,7 +17,7 @@ settings:
 ```
 
 | Name | Attribute | Allowed Values | Default | Global Level | Library Level | Collection Level |
-| :-- | :-- | :-- | :--: | :--: | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
 | Cache | `cache` | Should the script store a cache<br><strong>boolean:</strong> true or false | true | :heavy_check_mark: | :x: | :x: |
 | Cache Expiration | `cache_expiration` | Number of days before each cache mapping expires and has to be reloaded | 60 | :heavy_check_mark: | :x: | :x: |
 | [Image Asset Directory](#image-asset-directory) | `asset_directory` | System Locations For Image Assets | [Directory containing YAML config]/assets | :heavy_check_mark: | :heavy_check_mark: | :x: |

@@ -1,8 +1,9 @@
 The script utilizes a YAML config file to load information to connect to the various APIs you can connect with. 
 
 The YAML mappings that can be set in the configuration file's root:
+
 | Name | YAML Attribute | Required |
-| :-- | :-- | :--: |
+| :--- | :--- | :---: |
 | [Libraries](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Libraries-Attributes) | `libraries` | :heavy_check_mark: |
 | [Settings](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | `settings` | :x: |
 | [Plex](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | `plex` | :x: |

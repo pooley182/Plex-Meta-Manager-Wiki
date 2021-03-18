@@ -39,6 +39,6 @@ metadata:
 
 The available attributes for each season are as follows
 | Name | Attribute | Allowed Values |
-| :-- | :-- | :-- |
+| :--- | :--- | :--- |
 | Title | `title` | Text to change Title |
 | Summary | `summary` | Text to change Summary |

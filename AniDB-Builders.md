@@ -3,7 +3,7 @@ You can build different collections using the features of [AniDB.net](https://an
 No configuration is required for these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [AniDB ID](#anidb-id) | `anidb_id` | Gets the anime specified by the AniDB ID | :heavy_check_mark: | :heavy_check_mark: |
 | [AniDB Relation](#anidb-relation) | `anidb_relation` | Gets all anime in the relation graph of the specified AniDB ID | :heavy_check_mark: | :heavy_check_mark: |
 | [AniDB Popular](#anidb-popular) | `anidb_popular` | Gets every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list | :heavy_check_mark: | :heavy_check_mark: |

@@ -15,7 +15,7 @@ mal:
 ```
 
 | Name | Attribute | Allowed Values | Default | Required |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | Client ID | `client_id` | MyAnimeList Application Client ID | N/A | :heavy_check_mark: |
 | Client Secret | `client_secret` | MyAnimeList Application Client Secret | N/A | :heavy_check_mark: |
 

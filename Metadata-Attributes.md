@@ -37,8 +37,9 @@ metadata:
 ```
 
 The available attributes for each movie/show are as follows
+
 | Name | Attribute | Allowed Values | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | Title | `title` | Title if different from the mapping value useful when you have multiple movies with the same name | :heavy_check_mark: | :heavy_check_mark: |
 | Alternative Title | `alt_title` | Alternative title to look for | :heavy_check_mark: | :heavy_check_mark: |
 | Year | `year` | Year of movie/show for better identification | :heavy_check_mark: | :heavy_check_mark: |

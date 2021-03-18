@@ -57,7 +57,7 @@ The available collection details attributes for each collection are split into d
 All the following attributes serve various functions as how the collection functions inside of Plex Meta Manager.
 
 | Name | Attribute | Description | Allowed Values |
-| :-- | :-- | :-- | :-- |
+| :--- | :--- | :--- | :--- |
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
 | Template | `template` | Used to specify a template and template variables to use for this collection | [`template` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) |
 | Run Again | `run_again` | Used to try and add all the items missing from the collection to the collection again after the daily run. | **boolean:** `true` or `false` |
@@ -68,7 +68,7 @@ All the following attributes serve various functions as how the collection funct
 | Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Name Mapping | `name_mapping` | Used to specify the folder name in the [Image Assets Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) | Folder Name In Assets Directory |
-| Test Mode | `test` | When running in Test Mode (`--run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** false | **boolean:** `true` or `false` |
+| Test Mode | `test` | When running in Test Mode (`---run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** false | **boolean:** `true` or `false` |
 
 * **Name Mapping:** If your collection name contains characters that are not allowed in file paths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path) but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
 
@@ -76,7 +76,7 @@ All the following attributes serve various functions as how the collection funct
 All the following attributes update various details of the collection's Metadata.
 
 | Name | Attribute | Description | Allowed Values |
-| :-- | :-- | :-- | :-- |
+| :--- | :--- | :--- | :--- |
 | TMDb Person | `tmdb_person` | Used to change the collection's summary and poster to a TMDb Person's biography and profile as well as allow the people specified to be used in [Plex Searches](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) | TMDb Person ID (List or Comma-separated string) |
 | Sort Title | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
@@ -93,7 +93,7 @@ All the following attributes update various details of the collection's Metadata
 All the following attributes update the summary of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
-| :-- | :-- | :-- | :-- |
+| :--- | :--- | :--- | :--- |
 | Summary | `summary` | Used to change the collection's summary | Text to change Summary |
 | TMDb Summary | `tmdb_summary` | Used to change the collection's summary to the TMDb Movie/Collection summary for a movie library or the TMDb Show summary for a show library  | TMDb Movie/Show/Collection ID |
 | TMDb Description | `tmdb_description` | Used to change the collection's summary to the TMDb List Description | TMDb List ID |
@@ -107,7 +107,7 @@ All the following attributes update the summary of the collection from various s
 All the following attributes update the poster of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
-| :-- | :-- | :-- | :-- |
+| :--- | :--- | :--- | :--- |
 | URL Poster<sup>2</sup> | `url_poster` | Used to change the collection's poster to the URL | URL of image publicly available on the internet |
 | TMDb Poster<sup>2</sup> | `tmdb_poster` | Used to change the collection's poster to the TMDb Movie/Collection poster for a movie library or the TMDb Show poster for a show library | TMDb Movie/Show/Collection ID |
 | TMDb List Poster<sup>2</sup> | `tmdb_list_poster` | Used to change the collection's poster to the TMDb List poster | TMDb List ID |
@@ -121,7 +121,7 @@ All the following attributes update the poster of the collection from various so
 All the following attributes update the background of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
-| :-- | :-- | :-- | :-- |
+| :--- | :--- | :--- | :--- |
 | URL Background<sup>3</sup> | `url_background` | Use to change the collection's background to the URL | URL of image publicly available on the internet |
 | TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to the TMDb Movie/Collection background for a movie library or the TMDb Show background for a show library | TMDb Movie/Show/Collection ID |
 | TVDb Background<sup>3</sup> | `tvdb_background` | Used to change the collection's background to the TVDb Movie background for a movie library or the TVDb Show background for a show library | TVDb Movie/Show ID or URL |

@@ -7,7 +7,7 @@ All collection filter options are listed below. To display collections filtered 
 ### Standard Filters
 
 | Standard Filters | Description | Movie<br>Libraries | Show<br>Libraries |
-| :-- | :-- | :--: | :--: |
+| :--- | :--- | :---: | :---: |
 | `actor` | Matches every movie/show with the specified actor | :heavy_check_mark: | :heavy_check_mark: |
 | `collection` | Matches every movie/show with the specified plex collection | :heavy_check_mark: | :heavy_check_mark: |
 | `content_rating` | Matches every movie/show with the specified content rating | :heavy_check_mark: | :heavy_check_mark: |
@@ -30,7 +30,7 @@ All collection filter options are listed below. To display collections filtered 
 ### Advanced Filters
 
 | Advanced Filters | Description | Movie<br>Libraries | Show<br>Libraries |
-| :-- | :-- | :--: | :--: |
+| :--- | :--- | :---: | :---: |
 | `max_age` | Matches any movie/show whose Originally Available date is within the last specified number of days | :heavy_check_mark: | :heavy_check_mark: |
 | `year.gte` | Matches any movie/show whose year is greater then or equal to the specified year | :heavy_check_mark: | :heavy_check_mark: |
 | `year.lte` | Matches any movie/show whose year is less then or equal to the specified year | :heavy_check_mark: | :heavy_check_mark: |

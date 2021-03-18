@@ -1,7 +1,7 @@
 You can build different collections using the features of [IMDb.com](https://www.imdb.com/) (IMDb).
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [IMDb ID](#imdb-id) | `imdb_id` | Gets the movie/show specified | :heavy_check_mark: | :heavy_check_mark: |
 | [IMDb List](#imdb-list) | `imdb_list` | Gets every movie/show in an IMDb List or [IMDb Search](https://www.imdb.com/search/title/) | :heavy_check_mark: | :heavy_check_mark: |
 

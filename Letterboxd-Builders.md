@@ -3,7 +3,7 @@ You can build different collections using the lists on [Letterboxd.com](https://
 No configuration is required for these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [Letterboxd List](#letterboxd-list) | `letterboxd_list` | Gets every movie in the Letterboxd List | :heavy_check_mark: | :x: |
 | [Letterboxd List Details ](#letterboxd-list) | `letterboxd_list_details` | Gets every movie in the Letterboxd List and updates the collection with the description of the Letterboxd list | :heavy_check_mark: | :x: |
 
