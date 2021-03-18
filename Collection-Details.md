@@ -121,7 +121,7 @@ All the following attributes update the poster of the collection from various so
 All the following attributes update the background of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
-| :-- | :-- | :-- | :-- |a
+| :-- | :-- | :-- | :-- |
 | URL Background<sup>3</sup> | `url_background` | Use to change the collection's background to the URL | URL of image publicly available on the internet |
 | TMDb Background<sup>3</sup> | `tmdb_background` | Used to change the collection's background to the TMDb Movie/Collection background for a movie library or the TMDb Show background for a show library | TMDb Movie/Show/Collection ID |
 | TVDb Background<sup>3</sup> | `tvdb_background` | Used to change the collection's background to the TVDb Movie background for a movie library or the TVDb Show background for a show library | TVDb Movie/Show ID or URL |
