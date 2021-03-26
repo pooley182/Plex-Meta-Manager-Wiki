@@ -3,7 +3,7 @@ You can build different collections using the features of Plex.
 No configuration is required for these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
-| :-- | :-- | :-- | :--: | :--: |
+| :--- | :--- | :--- | :---: | :---: |
 | [Plex All](#plex-all) | `plex_all` | Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) | :heavy_check_mark: | :heavy_check_mark: |
 | [Plex Collection](#plex-collection) | `plex_collection` | Gets every movie/show in another Plex Collection | :heavy_check_mark: | :heavy_check_mark: |
 | [Plex Collectionless](#plex-collectionless) | `plex_collectionless` | Gets every movie/show that is not in a collection | :heavy_check_mark: | :heavy_check_mark: |
@@ -72,24 +72,71 @@ collections:
 * This is a known issue with Plex Collection and there is a [Feature Suggestion](https://forums.plex.tv/t/collection-display-issue/305406) detailing the issue more on their forms.
 
 ## Plex Search
-Gets every movie/show based on the search parameters provided. The search will return any movie/show that matches at least one term from each search option. You can run multiple searches.
+Uses Plex's [Custom Filters](https://support.plex.tv/articles/200392126-using-the-library-view/) to get every movie/show based on the search parameters provided.
+
+Any Custom Filter search made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, take a screenshot of the custom filters parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/NfH6mGFuAB) 
+
+The search will return every movie/show that matches at least one term from each search option unless you use the `.and` modifier in which case it would need to match every term.
 
 ### Search Options
-| Search Option | Description | Movie<br>Libraries | Show<br>Libraries |
-| :-- | :-- | :--: | :--: |
-| `title` | Gets movie/show with the specified text in the title | :heavy_check_mark: | :heavy_check_mark: |
-| `actor` | Gets every movie with the specified actor | :heavy_check_mark: | :x: |
-| `country` | Gets every movie with the specified country | :heavy_check_mark: | :x: |
-| `decade` | Gets every movie from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
-| `director` | Gets every movie with the specified director | :heavy_check_mark: | :x: |
-| `genre` | Gets every movie/show with the specified genre | :heavy_check_mark: | :heavy_check_mark: |
-| `producer` | Gets every movie with the specified producer | :heavy_check_mark: | :x: |
-| `studio` | Gets every movie/show with the specified studio | :heavy_check_mark: | :heavy_check_mark: |
-| `writer` | Gets every movie with the specified writer | :heavy_check_mark: | :x: |
-| `year` | Gets every movie/show with the specified year (Put a `-` between two years for a range i.e. `year: 1990-1999` or end with `NOW` to go till current i.e. `year: 2000-NOW`) | :heavy_check_mark: | :heavy_check_mark: |
 
-* You can only use each search option once per `plex_search` but multiple values are supported as either a list or a comma-separated string for all attributes except `title`.
-* If you want to restrict the search by multiples of the same attribute (i.e. You want every movie that is a Romance and Comedy) try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
+| Search Option | Description | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: |
+| `title` | Gets every movie/show with the specified text contained in the title | :heavy_check_mark: | :heavy_check_mark: |
+| `studio` | Gets every movie/show with the specified studio | :heavy_check_mark: | :heavy_check_mark: |
+| `actor` | Gets every movie/show with the specified actor | :heavy_check_mark: | :heavy_check_mark: |
+| `audio_language` | Gets every movie with the specified audio language | :heavy_check_mark: | :x: |
+| `collection` | Gets movie/show with the specified collection | :heavy_check_mark: | :heavy_check_mark: |
+| `content_rating` | Gets movie/show with the specified content rating | :heavy_check_mark: | :heavy_check_mark: |
+| `country` | Gets every movie with the specified country | :heavy_check_mark: | :x: |
+| `director` | Gets every movie/show with the specified director | :heavy_check_mark: | :heavy_check_mark: |
+| `genre` | Gets every movie/show with the specified genre | :heavy_check_mark: | :heavy_check_mark: |
+| `label` | Gets every movie/show with the specified label | :heavy_check_mark: | :heavy_check_mark: |
+| `producer` | Gets every movie/show with the specified producer | :heavy_check_mark: | :heavy_check_mark: |
+| `subtitle_language` | Gets every movie with the specified subtitle language | :heavy_check_mark: | :x: |
+| `writer` | Gets every movie/show with the specified writer | :heavy_check_mark: | :heavy_check_mark: |
+| `decade` | Gets every movie from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
+| `resolution` | Gets every movie with the specified resolution | :heavy_check_mark: | :x: |
+| `added` | Gets every movie/show added to plex before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
+| `originally_available` | Gets every movie originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
+| `duration` | Gets every movie with a duration greater/less then the specified number of minutes | :heavy_check_mark: | :x: |
+| `rating` | Gets every movie/show with a rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
+| `year` | Gets every movie/show with the specified year or greater/less then the specified year | :heavy_check_mark: | :heavy_check_mark: |
+
+### Special Options
+
+| Special Options | Description | Allowed Values | Default |
+| :--- | :--- | :--- | :---: |
+| Limit | `limit` | The number of movies/shows to search for | all |
+| Sort By | `sort_by` | The way movies/shows are sorted for limit searches.<br>`title.asc`/`title.desc` (Sort by Title)<br>`originally_available.asc`/`originally_available.desc` (Sort by Originally Available)<br>`critic_rating.asc`/`critic_rating.desc` (Sort by Critic Rating)<br>`audience_rating.asc`/`audience_rating.desc` (Sort by Audience Rating)<br>`duration.asc`/`duration.desc` (Sort by Duration)<br>`added.asc`/`added.desc` (Sort by Date Added) | `title.asc` |
+
+### Search Modifiers
+
+| Search Option | No Modifier | `.and` | `.not` | `.begins` | `.ends` | `.before` | `.after` | `.greater` | `.less` |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| `title` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `studio` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `actor` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `audio_language` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `collection` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `content_rating` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `country` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `director` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `genre` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `label` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `producer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `subtitle_language` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `writer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `decade` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `resolution` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :x: |
+| `added` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
+| `originally_available` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
+| `duration` | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
+| `rating` | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
+| `year` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
+
+* Multiple values are supported as either a list or a comma-separated string for all modifiers except `.before`, `.after`, `.greator`, and `.less`.
+* If you want to restrict the search even further try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
 ```yaml
 collections:
@@ -136,7 +183,7 @@ collections:
 collections:
   2010+ Movies:
     plex_search:
-      year: 2010-NOW
+      year.greater: 2009
 ```
 ```yaml
 collections:

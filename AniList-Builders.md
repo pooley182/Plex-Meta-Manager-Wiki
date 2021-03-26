@@ -9,7 +9,11 @@ No configuration is required for these builders.
 | [AniList Seasonal Anime](#anilist-seasonal-anime) | `anilist_season` | Gets anime in AniList's Seasonal Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList Relations](#anilist-relations) | `anilist_relations` | Gets the anime specified by the AniList ID and every relation in its relation tree except Character and Other relations | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList Studio](#anilist-studio) | `anilist_studio` | Gets all anime specified by the AniList Studio ID | :heavy_check_mark: | :heavy_check_mark: |
+| [AniList Genre](#anilist-genre) | `anilist_genre` | Gets all anime specified by the AniList Genre | :heavy_check_mark: | :heavy_check_mark: |
+| [AniList Tag](#anilist-tag) | `anilist_tag` | Gets all anime specified by the AniList Tag | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList ID](#anilist-id) | `anilist_id` | Gets the anime specified by the AniList ID | :heavy_check_mark: | :heavy_check_mark: |
+
+* To find possible genres and tags go to the [AniList Anime](https://anilist.co/search/anime) page and click the Genres dropdown to see all the genres and tags. 
 
 ## AniList Top Rated Anime
 Gets every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list.
@@ -86,6 +90,46 @@ collections:
   Studio Ghibli:
     anilist_studio: 21
 ```
+
+## AniList Genre
+Gets anime with the specified AniList Genre the options are detailed below. 
+
+| Attribute | Description | Required | Default |
+| :--- | :--- | :---: | :---: |
+| `genre` | AniList Genre to search by | :heavy_check_mark: | N/A |
+| `sort_by` | `score` (Sort by Score)<br>`popular` (Sort by Most Popular) | :x: | `score` |
+| `limit` | Number of Anime to query from AniList (use 0 for all; max: 500) | :x: | 0 |
+
+```yaml
+collections:
+  Sports Anime:
+    anilist_genre:
+      genre: Sports
+      sort_by: popular
+    sync_mode: sync
+```
+
+* To find possible genres and tags go to the [AniList Anime](https://anilist.co/search/anime) page and click the Genres dropdown to see all the genres and tags. 
+
+## AniList Tag
+Gets anime with the specified AniList Tag the options are detailed below. 
+
+| Attribute | Description | Required | Default |
+| :--- | :--- | :---: | :---: |
+| `tag` | AniList Tag to search by | :heavy_check_mark: | N/A |
+| `sort_by` | `score` (Sort by Score)<br>`popular` (Sort by Most Popular) | :x: | `score` |
+| `limit` | Number of Anime to query from AniList (use 0 for all; max: 500) | :x: | 0 |
+
+```yaml
+collections:
+  Pirates Anime:
+    anilist_tag:
+      tag: Pirates
+      sort_by: popular
+    sync_mode: sync
+```
+
+* To find possible genres and tags go to the [AniList Anime](https://anilist.co/search/anime) page and click the Genres dropdown to see all the genres and tags. 
 
 ## AniList ID
 Gets the anime specified by the AniList ID.

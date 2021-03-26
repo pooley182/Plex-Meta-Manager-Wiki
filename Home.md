@@ -13,6 +13,7 @@ This wiki should tell you everything you need to know about the script to get it
 
 ## Support
 
+* Before posting on Github about an enhancement, error, or configuration question please visit the [Plex Meta Manager Discord Server](https://discord.gg/NfH6mGFuAB) 
 * If you're getting an Error or have an Enhancement post in the [Issues](https://github.com/meisnate12/Plex-Meta-Manager/issues)
 * If you have a configuration question visit the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions)
 * To see user submitted Metadata configuration files and you could even add your own go to the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs)

@@ -56,8 +56,18 @@ The available attributes for each movie/show are as follows
 | Genre Sync Mode | `genre_sync_mode` | `append`: Only Add Genres to the Item<br>`sync`: Add & Remove Genres from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
 | Label | `label` | List or comma-separated text of each Label | :heavy_check_mark: | :heavy_check_mark: |
 | Label Sync Mode | `label_sync_mode` | `append`: Only Add Labels to the Item<br>`sync`: Add & Remove Labels from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
+| Episode Sorting | `episode_sorting` | `default`: Library default<br>`oldest`: Oldest first<br>`newest`: Newest first | :x: | :heavy_check_mark: |
+| Keep Episodes | `keep_episodes` | `all`: All episodes<br>`5_latest`: 5 latest episodes<br>`3_latest`: 3 latest episodes<br>`latest`: Latest episodes<br>`past_3`: Episodes added in the past 3 days<br>`past_7`: Episodes added in the past 7 days<br>`past_30`: Episodes added in the past 30 days | :x: | :heavy_check_mark: |
+| Delete Episodes | `delete_episodes` | `never`: Never<br>`day`: After a day<br>`week`: After a week<br>`refresh`: On next refresh | :x: | :heavy_check_mark: |
+| Season Display | `season_display` | `default`: Library default<br>`show`: Show<br>`hide`: Hide | :x: | :heavy_check_mark: |
+| Episode Ordering | `episode_ordering` | `default`: Library default<br>`tmdb_aired`*: The Movie Database (Aired)<br>`tvdb_aired`: TheTVDB (Aired)<br>`tvdb_dvd`: TheTVDB (DVD)<br>`tvdb_absolute`: TheTVDB (Absolute) | :x: | :heavy_check_mark: |
+| Metadata Language* | `metadata_language` | `default`, `ar-SA`, `ca-ES`, `cs-CZ`, `da-DK`, `de-DE`, `el-GR`, `en-AU`, `en-CA`, `en-GB`, `en-US`, `es-ES`, `es-MX`, `et-EE`, `fa-IR`, `fi-FI`, `fr-CA`, `fr-FR`, `he-IL`, `hi-IN`, `hu-HU`, `id-ID`, `it-IT`, `ja-JP`, `ko-KR`, `lt-LT`, `lv-LV`, `nb-NO`, `nl-NL`, `pl-PL`, `pt-BR`, `pt-PT`, `ro-RO`, `ru-RU`, `sk-SK`, `sv-SE`, `th-TH`, `tr-TR`, `uk-UA`, `vi-VN`, `zh-CN`, `zh-HK`, `zh-TW` | :x: | :heavy_check_mark: |
+| Use Original Title* | `use_original_title` | `default`: Library default<br>`no`: No<br>`yes`: Yes | :x: | :heavy_check_mark: |
 | Seasons | `seasons` | [`seasons` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Seasons-Attributes) | :x: | :heavy_check_mark: |
 | Episodes | `episodes` | [`episodes` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Episodes-Attributes) | :x: | :heavy_check_mark: |
+
+* \* Must be using the New Plex TV Agent 
+* Metadata Language 
 
 * YAML files cannot have two items with the same mapping name so if you have two movies/shows with the same name you would change the mapping values to whatever you want. Then use the `title` attribute to specify the real title and use the `year` attribute to specify which of the multiple movies/shows to choose.
     ```yaml
