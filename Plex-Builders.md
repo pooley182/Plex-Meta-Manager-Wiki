@@ -112,28 +112,28 @@ The search will return every movie/show that matches at least one term from each
 
 ### Search Modifiers
 
-| Search Option | No Modifier | `.and` | `.not` | `.begins` | `.ends` | `.before` | `.after` | `.greater` | `.less` |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| `title` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `studio` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `actor` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `audio_language` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `collection` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `content_rating` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `country` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `director` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `genre` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `label` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `producer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `subtitle_language` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `writer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `decade` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `resolution` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :x: |
-| `added` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
-| `originally_available` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
-| `duration` | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
-| `rating` | :x: | :x: | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
-| `year` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x: | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
+| Search Option | No Modifier | `.and` | `.not` | `.begins`/<br>`.ends` | `.before`/<br>`.after` | `.greater`/<br>`.less` |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| `title` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
+| `studio` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
+| `actor` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `audio_language` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `collection` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `content_rating` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `country` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `director` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `genre` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `label` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `producer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `subtitle_language` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `writer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `decade` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: |
+| `resolution` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: |
+| `added` | :x: | :x: | :x: | :x: | :heavy_check_mark: | :x: |
+| `originally_available` | :x: | :x: | :x: | :x: | :heavy_check_mark: | :x: |
+| `duration` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| `rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| `year` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 
 * Multiple values are supported as either a list or a comma-separated string for all modifiers except `.before`, `.after`, `.greator`, and `.less`.
 * If you want to restrict the search even further try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
