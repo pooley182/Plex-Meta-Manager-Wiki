@@ -11,9 +11,9 @@ To install a container from docker hub, you will need community applications - a
 
 | Config Type | Name | Key | Value | Container Path | Host Path | Access Mode | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Variable | Time to Run | `time` | 6:00 | N/A | N/A | N/A | Time to update each day. Format: HH:MM |
+| Variable | Time to Run | `time` | `6:00` | N/A | N/A | N/A | Time to update each day. Format: HH:MM |
 | Variable | Divider Character | `divider` | = | N/A | N/A | N/A | The character that divides the sections |
-| Variable | Screen Width | `width` | 100 | N/A | N/A | N/A | An integer between 90 and 300 |
+| Variable | Screen Width | `width` | `100` | N/A | N/A | N/A | An integer between 90 and 300 |
 | Path | Config Storage Path | N/A | N/A | `/config` | `/mnt/user/appdata/plex-meta-manager` | Read/Write | Translation from docker container path to host path |
 
 * [Image](https://i.imgur.com/2y8RPTt.png) of the above values in the unRAID WebUI.
@@ -41,7 +41,7 @@ Due to how unRAID handles docker containers, it can be a little confusing at fir
 
 4. Click the Terminal button in the upper right corner of the unRAID WebUI (`>_`)
 
-5. Run `docker exec -it plex-meta-manager1 /bin/bash`
+5. Run `docker exec -it plex-meta-manager /bin/bash`
 
 6. Run `ls` to make sure you're in the same directory as `plex_meta_manager.py`. If you don't see the script, run `cd /`
   
