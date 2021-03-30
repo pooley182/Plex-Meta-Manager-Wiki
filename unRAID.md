@@ -1,5 +1,5 @@
-Thankfully, getting Plex-Meta-Manager working on unRAID is a fairly simple task. unRaid works mostly with docker containers, so the pre-built container available on docker hub works perfectly with a little configuration.
-To install a container from docker hub, you will need community applications - a very popular plugin for unRaid servers. If you don't already have this installed, check here: https://forums.unraid.net/topic/38582-plug-in-community-applications/
+Thankfully, getting Plex-Meta-Manager working on unRAID is a fairly simple task. unRAID works mostly with docker containers, so the pre-built container available on docker hub works perfectly with a little configuration.
+To install a container from docker hub, you will need community applications - a very popular plugin for unRAID servers. If you don't already have this installed, check here: https://forums.unraid.net/topic/38582-plug-in-community-applications/
 
 ## Basic Installation
 
@@ -13,7 +13,7 @@ To install a container from docker hub, you will need community applications - a
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Variable | Time to Run | `time` | 6:00 | N/A | N/A | N/A | Time to update each day. Format: HH:MM |
 | Variable | Divider Character | `divider` | = | N/A | N/A | N/A | The character that divides the sections |
-| Variable | Screen Width | `width` | = | N/A | N/A | N/A | An integer between 90 and 300 |
+| Variable | Screen Width | `width` | 100 | N/A | N/A | N/A | An integer between 90 and 300 |
 | Path | Config Storage Path | N/A | N/A | /config | /mnt/user/appdata/plex-meta-manager | Read/Write | Translation from docker container path to host path |
 
 * [Image](https://i.imgur.com/2y8RPTt.png) of the above values in the unRAID WebUI.
