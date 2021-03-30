@@ -10,7 +10,7 @@ To install a container from docker hub, you will need community applications - a
 3. Create your [Docker values](https://github.com/meisnate12/Plex-Meta-Manager-Wiki/blob/master/Docker.md) using `Add another Path, Port, Variable, Label or Device`. Example config:
 
 | Config Type | Name | Key | Value | Container Path | Host Path | Access Mode | Description |
-| :--- | | :--- | | :--- | | :--- | | :--- | | :--- | | :--- | | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Variable | Time to Run | `time` | 6:00 | N/A | N/A | N/A | Time to update each day. Format: HH:MM |
 | Variable | Divider Character | `divider` | = | N/A | N/A | N/A | The character that divides the sections |
 | Variable | Screen Width | `width` | = | N/A | N/A | N/A | The character that divides the sections |
