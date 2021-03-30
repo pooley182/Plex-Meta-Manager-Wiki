@@ -22,8 +22,11 @@ To install a container from docker hub, you will need community applications - a
   * If you wish to enable one-time [Run](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker), add `-r` to `Post Arguments` by enabling Advanced View in the top right of unRAID.
   
 4. Hit `Apply`, and allow unRAID to download the docker container.
+
 5. Navigate to the `Docker` tab in unRAID, and stop the `plex-meta-manager` container if it has auto-started.
+
 6. Create `config.yml` and `library.yml` files as-per the [documentation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Configuration-File) in the Host Path you set (/mnt/user/appdata/plex-meta-manager in the example)
+
 7. Once finished, run the container. Voila! Logs are located in `yourhostpath/logs`.
 
 ## Advanced Installation (Trakt, MAL, and other sources that require URL authentication)
