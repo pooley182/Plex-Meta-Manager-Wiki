@@ -14,7 +14,7 @@ To install a container from docker hub, you will need community applications - a
 | Variable | Time to Run | `time` | 6:00 | N/A | N/A | N/A | Time to update each day. Format: HH:MM |
 | Variable | Divider Character | `divider` | = | N/A | N/A | N/A | The character that divides the sections |
 | Variable | Screen Width | `width` | 100 | N/A | N/A | N/A | An integer between 90 and 300 |
-| Path | Config Storage Path | N/A | N/A | /config | /mnt/user/appdata/plex-meta-manager | Read/Write | Translation from docker container path to host path |
+| Path | Config Storage Path | N/A | N/A | `/config` | `/mnt/user/appdata/plex-meta-manager` | Read/Write | Translation from docker container path to host path |
 
 * [Image](https://i.imgur.com/2y8RPTt.png) of the above values in the unRAID WebUI.
 * All other settings can be left default in unRAID.
