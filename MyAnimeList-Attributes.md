@@ -41,3 +41,7 @@ mal:
 #### OAuth Flow using Docker
 
 To authenticate MyAnimeList the first time, you need run the container with the `-it` flags in order to walk through the OAuth flow mentioned above. Once you have the MyAnimeList authentication data saved into the YAML, you'll be able to run the container normally.
+
+#### OAuth Flow using unRAID Docker
+
+Directions on how to authenticate MyAnimeList on unRAID can be found on the [unRAID Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/unRAID#advanced-installation-authenticating-trakt-or-myanimelist) page.

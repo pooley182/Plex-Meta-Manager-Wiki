@@ -7,7 +7,8 @@ This wiki should tell you everything you need to know about the script to get it
 ## Getting Started
 
 * [Local Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation)
-* [Docker Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker)
+* [Docker Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker-Installation)
+* [unRAID Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/unRAID-Installation)
 * [Example Configuration File](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template)
 * [Example Metadata File](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/Movies.yml.template)
 

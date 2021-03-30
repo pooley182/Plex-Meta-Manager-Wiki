@@ -1,5 +1,5 @@
-Thankfully, getting Plex-Meta-Manager working on unRAID is a fairly simple task. unRAID works mostly with docker containers, so the pre-built container available on docker hub works perfectly with a little configuration.
-To install a container from docker hub, you will need community applications - a very popular plugin for unRAID servers. If you don't already have this installed, check here: https://forums.unraid.net/topic/38582-plug-in-community-applications/
+Thankfully, getting Plex Meta Manager working on unRAID is a fairly simple task. unRAID works mostly with docker containers, so the pre-built container available on docker hub works perfectly with a little configuration.
+To install a container from docker hub, you will need community applications - a very popular plugin for unRAID servers. If you don't already have this installed, you can install it [here](https://forums.unraid.net/topic/38582-plug-in-community-applications/)
 
 ## Basic Installation
 
@@ -7,7 +7,7 @@ To install a container from docker hub, you will need community applications - a
 
 2. Click the download icon on the `plex meta manager` container by `meisnate12`.
 
-3. Create your [Docker values](https://github.com/meisnate12/Plex-Meta-Manager-Wiki/blob/master/Docker.md) using `Add another Path, Port, Variable, Label or Device`. Example config:
+3. Create your [Docker values](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker-Installation) using `Add another Path, Port, Variable, Label or Device`. Example config:
 
 | Config Type | Name | Key | Value | Container Path | Host Path | Access Mode | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -16,11 +16,11 @@ To install a container from docker hub, you will need community applications - a
 | Variable | Screen Width | `width` | `100` | N/A | N/A | N/A | An integer between 90 and 300 |
 | Path | Config Storage Path | N/A | N/A | `/config` | `/mnt/user/appdata/plex-meta-manager` | Read/Write | Translation from docker container path to host path |
 
-* [Image](https://i.imgur.com/2y8RPTt.png) of the above values in the unRAID WebUI.
-* All other settings can be left default in unRAID.
-  * Full list of docker values can be found here: https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker
-  * If you wish to enable one-time [Run](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker), add `-r` to `Post Arguments` by enabling Advanced View in the top right of unRAID.
-  
+  * Full list of docker values can be found on the [Docker Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker) page
+  * If you wish to enable one-time [Run](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker-Installation), add `-r` to `Post Arguments` by enabling Advanced View in the top right of unRAID.
+  * The Image below shows the above values in the unRAID WebUI.
+  ![Image](https://i.imgur.com/2y8RPTt.png)
+    
 4. Hit `Apply`, and allow unRAID to download the docker container.
 
 5. Navigate to the `Docker` tab in unRAID, and stop the `plex-meta-manager` container if it has auto-started.
@@ -29,13 +29,13 @@ To install a container from docker hub, you will need community applications - a
 
 7. Once finished, run the container. Voila! Logs are located in `yourhostpath/logs`.
 
-## Advanced Installation (Trakt, MAL, and other sources that require URL authentication)
+## Advanced Installation (Authenticating Trakt or MyAnimeList)
 
-Due to how unRAID handles docker containers, it can be a little confusing at first to enable Trakt, MyAnimeList, and other sources. At this time, these sources require you to follow through to a URL, and provide a code or link to Plex-Meta-Manager. unRAID doesn't have a built-in way to interact with the terminals of docker containers, so a workaround must be used:
+Due to how unRAID handles docker containers, it can be a little confusing at first to enable Trakt, MyAnimeList, and other sources. At this time, these sources require you to follow through to a URL, and provide a code or link to Plex Meta Manager. unRAID doesn't have a built-in way to interact with the terminals of docker containers, so a workaround must be used:
 
-1. Stop the Plex-Meta-Manager docker container if it's currently running.
+1. Stop the Plex Meta Manager docker container if it's currently running.
 
-2. Follow the instructions for your respective source such as [Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes), and add the relevant values to your `config.yml`
+2. Follow the instructions for either [Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes) or [MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes), and add the relevant values to your `config.yml`
 
 3. Edit the `Time to Run` variable to reflect a time that is NOT the current time. We don't want the script to be running right now. Set `Run` to `false` if you've chosen to add that variable. Then, start the container.
 

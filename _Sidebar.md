@@ -1,6 +1,7 @@
 - [Home](Home)
 - [Local Installation](Local-Installation)
-- [Docker Installation](Docker)
+- [Docker Installation](Docker-Installation)
+- [unRAID Installation](unRAID-Installation)
 - [Configuration File](Configuration-File)
   - [Libraries Attributes](Libraries-Attributes)
   - [Settings Attributes](Settings-Attributes)
