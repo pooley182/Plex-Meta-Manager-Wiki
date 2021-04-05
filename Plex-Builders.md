@@ -149,8 +149,8 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop 
 | `writer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | `decade` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: |
 | `resolution` | :heavy_check_mark: | :x: | :x: | :x: | :x: | :x: |
-| `added` | :x: | :x: | :x: | :x: | :heavy_check_mark: | :x: |
-| `originally_available` | :x: | :x: | :x: | :x: | :heavy_check_mark: | :x: |
+| `added` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+| `originally_available` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | `duration` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `audience_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `critic_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |

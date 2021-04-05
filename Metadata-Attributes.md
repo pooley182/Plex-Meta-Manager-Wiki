@@ -61,12 +61,12 @@ The available attributes for each movie/show are as follows
 | Delete Episodes | `delete_episodes` | `never`: Never<br>`day`: After a day<br>`week`: After a week<br>`refresh`: On next refresh | :x: | :heavy_check_mark: |
 | Season Display | `season_display` | `default`: Library default<br>`show`: Show<br>`hide`: Hide | :x: | :heavy_check_mark: |
 | Episode Ordering | `episode_ordering` | `default`: Library default<br>`tmdb_aired`*: The Movie Database (Aired)<br>`tvdb_aired`: TheTVDB (Aired)<br>`tvdb_dvd`: TheTVDB (DVD)<br>`tvdb_absolute`: TheTVDB (Absolute) | :x: | :heavy_check_mark: |
-| Metadata Language* | `metadata_language` | `default`, `ar-SA`, `ca-ES`, `cs-CZ`, `da-DK`, `de-DE`, `el-GR`, `en-AU`, `en-CA`, `en-GB`, `en-US`, `es-ES`, `es-MX`, `et-EE`, `fa-IR`, `fi-FI`, `fr-CA`, `fr-FR`, `he-IL`, `hi-IN`, `hu-HU`, `id-ID`, `it-IT`, `ja-JP`, `ko-KR`, `lt-LT`, `lv-LV`, `nb-NO`, `nl-NL`, `pl-PL`, `pt-BR`, `pt-PT`, `ro-RO`, `ru-RU`, `sk-SK`, `sv-SE`, `th-TH`, `tr-TR`, `uk-UA`, `vi-VN`, `zh-CN`, `zh-HK`, `zh-TW` | :x: | :heavy_check_mark: |
-| Use Original Title* | `use_original_title` | `default`: Library default<br>`no`: No<br>`yes`: Yes | :x: | :heavy_check_mark: |
+| Metadata Language* | `metadata_language` | `default`, `ar-SA`, `ca-ES`, `cs-CZ`, `da-DK`, `de-DE`, `el-GR`, `en-AU`, `en-CA`, `en-GB`, `en-US`, `es-ES`, `es-MX`, `et-EE`, `fa-IR`, `fi-FI`, `fr-CA`, `fr-FR`, `he-IL`, `hi-IN`, `hu-HU`, `id-ID`, `it-IT`, `ja-JP`, `ko-KR`, `lt-LT`, `lv-LV`, `nb-NO`, `nl-NL`, `pl-PL`, `pt-BR`, `pt-PT`, `ro-RO`, `ru-RU`, `sk-SK`, `sv-SE`, `th-TH`, `tr-TR`, `uk-UA`, `vi-VN`, `zh-CN`, `zh-HK`, `zh-TW` | :heavy_check_mark: | :heavy_check_mark: |
+| Use Original Title* | `use_original_title` | `default`: Library default<br>`no`: No<br>`yes`: Yes | :heavy_check_mark: | :heavy_check_mark: |
 | Seasons | `seasons` | [`seasons` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Seasons-Attributes) | :x: | :heavy_check_mark: |
 | Episodes | `episodes` | [`episodes` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Episodes-Attributes) | :x: | :heavy_check_mark: |
 
-* \* Must be using the New Plex TV Agent 
+* \* Must be using the **New Plex Movie Agent** or the **New Plex TV Agent** 
 * Metadata Language 
 
 * YAML files cannot have two items with the same mapping name so if you have two movies/shows with the same name you would change the mapping values to whatever you want. Then use the `title` attribute to specify the real title and use the `year` attribute to specify which of the multiple movies/shows to choose.

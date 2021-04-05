@@ -5,7 +5,7 @@ collections:
     imdb_list: https://www.imdb.com/search/title/?groups=top_250&count=25
     sort_title: "+100"
     sync_mode: sync
-    add_to_arr: true
+    radarr_add: true
     show_filtered: true
     filters:
       original_language: en

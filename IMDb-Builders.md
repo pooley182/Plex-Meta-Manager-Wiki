@@ -3,7 +3,7 @@ You can build different collections using the features of [IMDb.com](https://www
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :--- | :--- | :--- | :---: | :---: |
 | [IMDb ID](#imdb-id) | `imdb_id` | Gets the movie/show specified | :heavy_check_mark: | :heavy_check_mark: |
-| [IMDb List](#imdb-list) | `imdb_list` | Gets every movie/show in an IMDb List or [IMDb Search](https://www.imdb.com/search/title/) | :heavy_check_mark: | :heavy_check_mark: |
+| [IMDb List](#imdb-list) | `imdb_list` | Gets every movie/show in an IMDb List, [IMDb Keyword Search](https://www.imdb.com/search/keyword/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=7846868c-8414-4178-8f43-9ad6b2ef0baf&pf_rd_r=113PC657K74Y1A7GJ5WY&pf_rd_s=center-1&pf_rd_t=15051&pf_rd_i=moka&ref_=kw_1&sort=moviemeter,asc&mode=detail&page=1), or [IMDb Search](https://www.imdb.com/search/title/) | :heavy_check_mark: | :heavy_check_mark: |
 
 ## IMDb ID
 Gets the movie/show specified
@@ -17,7 +17,7 @@ collections:
 ```
 
 ## IMDb List
-Gets every movie/show in an IMDb List or [IMDb Search](https://www.imdb.com/search/title/)
+Gets every movie/show in an IMDb List, [IMDb Keyword Search](https://www.imdb.com/search/keyword/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=7846868c-8414-4178-8f43-9ad6b2ef0baf&pf_rd_r=113PC657K74Y1A7GJ5WY&pf_rd_s=center-1&pf_rd_t=15051&pf_rd_i=moka&ref_=kw_1&sort=moviemeter,asc&mode=detail&page=1), or [IMDb Title Search](https://www.imdb.com/search/title/)
 
 The expected input is an IMDb List URL or IMDb Search URL. Multiple values are supported as a list only a comma-separated string will not work.
 
