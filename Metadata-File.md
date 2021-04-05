@@ -17,7 +17,7 @@ libraries:
     library_type: show
 ```
 
-Then along side the config.yml it would expect to find the Metadata Files:
+Then alongside the config.yml it would expect to find the Metadata Files:
 
 ```bash
 config.yml

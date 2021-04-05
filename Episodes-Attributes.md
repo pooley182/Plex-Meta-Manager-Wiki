@@ -21,6 +21,6 @@ The available attributes for each episode are as follows
 | :--- | :--- | :--- |
 | Title | `title` | Text to change Title |
 | Sort Title | `sort_title` | Text to change Sort Title |
-| Originally Available | `originally_available` | Date to change Originally Available<br><strong>Format:</strong> YYYY-MM-DD  |
+| Originally Available | `originally_available` | Date to change Originally Available<br>**Format:** YYYY-MM-DD  |
 | Rating | `rating` | Number to change Rating |
 | Summary | `summary` | Text to change Summary |

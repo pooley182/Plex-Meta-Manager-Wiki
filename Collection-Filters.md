@@ -4,6 +4,8 @@ You can have multiple collection filters but a movie/show must match at least on
 
 All collection filter options are listed below. To display collections filtered out add `show_filtered: true` to the collection.
 
+**Filters can be very slow. Try to build your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
+
 ### Standard Filters
 
 | Standard Filters | Description | Movie<br>Libraries | Show<br>Libraries |
@@ -23,7 +25,7 @@ All collection filter options are listed below. To display collections filtered 
 | `audio_track_title` | Matches every movie where any audio track contains the specified string | :heavy_check_mark: | :x: |
 | `subtitle_language` | Matches every movie with the specified subtitle language | :heavy_check_mark: | :x: |
 
-* Standard filters can have multiple values either by being a list or a comma-separated string
+* Standard filters can have multiple values either by being a list or a comma-separated string.
 * You can also use the `.not` at the end of any standard collection filter to do an inverse search matching everything that doesn't have the value specified. You can use `plex_all: true` to start your filter from your entire library.
 * Using the `original_language` filter will also filter out movies from being added to Radarr.
 
@@ -34,8 +36,10 @@ All collection filter options are listed below. To display collections filtered 
 | `max_age` | Matches any movie/show whose Originally Available date is within the last specified number of days | :heavy_check_mark: | :heavy_check_mark: |
 | `year.gte` | Matches any movie/show whose year is greater then or equal to the specified year | :heavy_check_mark: | :heavy_check_mark: |
 | `year.lte` | Matches any movie/show whose year is less then or equal to the specified year | :heavy_check_mark: | :heavy_check_mark: |
-| `rating.gte` | Matches any movie/show whose rating is greater then or equal to the specified rating | :heavy_check_mark: | :heavy_check_mark: |
-| `rating.lte` | Matches any movie/show whose rating is less then or equal to the specified rating | :heavy_check_mark: | :heavy_check_mark: |
+| `critic_rating.gte` | Matches any movie/show whose critic rating is greater then or equal to the specified critic rating | :heavy_check_mark: | :heavy_check_mark: |
+| `critic_rating.lte` | Matches any movie/show whose critic rating is less then or equal to the specified critic rating | :heavy_check_mark: | :heavy_check_mark: |
+| `audience_rating.gte` | Matches any movie/show whose audience rating is greater then or equal to the specified audience rating | :heavy_check_mark: | :heavy_check_mark: |
+| `audience_rating.lte` | Matches any movie/show whose audience rating is less then or equal to the specified audience rating | :heavy_check_mark: | :heavy_check_mark: |
 | `tmdb_vote_count.gte` | Matches any movie/show whose TMDb vote count is greater then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
 | `tmdb_vote_count.lte` | Matches any movie/show whose TMDb vote count is less then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
 | `duration.gte` | Matches any movie/show whose duration is greater then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
@@ -43,7 +47,7 @@ All collection filter options are listed below. To display collections filtered 
 | `originally_available.gte` | Matches any movie/show whose originally_available date is greater then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
 | `originally_available.lte` | Matches any movie/show whose originally_available date is less then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
 
-* Advance filters can not take multiple values
+* Advance filters can not take multiple values.
 * Using the `tmdb_vote_count.gte` or `tmdb_vote_count.lte` filter will also filter out movies from being added to Radarr.
 
 ### Collection Filter Examples

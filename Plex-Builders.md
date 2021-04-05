@@ -33,7 +33,7 @@ collections:
     plex_collection: Jurassic Park
 ```
 
-If you want to add multiple collections you have to use a list. Comma-separated values will not work.
+You can add multiple collections by using a list. Comma-separated values will not work.
 
 ```yaml
 collections:
@@ -46,7 +46,7 @@ collections:
 ## Plex Collectionless
 Gets every movie/show that is not in a collection unless the collection is in the exclusion list. This is a special collection type to help keep your library looking correct. When items in your library are in multiple collections it can mess up how they're displayed in your library.
 
-For Example, if you have a `Marvel Cinematic Universe` Collection set to `Show this collection and its items` and an `Iron Man` Collection set to `Hide items in this collection` what happens is the show overrides the hide and you end up with both collections displaying as well as the 3 Iron Man movies.
+For Example, if you have a `Marvel Cinematic Universe` Collection set to `Show this collection and its items` and an `Iron Man` Collection set to `Hide items in this collection` what happens is the show overrides the hide and you end up with both the collections and the 3 Iron Man movies all displaying.
 
 Alternatively, if you set the `Marvel Cinematic Universe` Collection to `Hide items in this collection` then movies without a collection like `The Incredible Hulk` will be hidden from the library view.
 
@@ -74,16 +74,19 @@ collections:
 ## Plex Search
 Uses Plex's [Custom Filters](https://support.plex.tv/articles/200392126-using-the-library-view/) to get every movie/show based on the search parameters provided.
 
-Any Custom Filter search made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, take a screenshot of the custom filters parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/NfH6mGFuAB) 
+Any Custom Filter search made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, build the collection you want inside of Plex's Custom Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/NfH6mGFuAB) and I'll do my best to help you. 
 
-The search will return every movie/show that matches at least one term from each search option unless you use the `.and` modifier in which case it would need to match every term.
+The search will return every movie/show that matches at least one term from each search field unless you use the `.and` modifier in which case it would need to match every term.
 
-### Search Options
+There are three fields per search option when using Plex's Custom Filters in the Web UI. The first is what field you wish to search on, the second is which modifier to use, and the third is the actual term to search.  
 
-| Search Option | Description | Movie<br>Libraries | Show<br>Libraries |
+### Search Fields
+
+| Search Field | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
 | `title` | Gets every movie/show with the specified text contained in the title | :heavy_check_mark: | :heavy_check_mark: |
-| `studio` | Gets every movie/show with the specified studio | :heavy_check_mark: | :heavy_check_mark: |
+| `studio` | Gets every movie/show with the specified text contained in the studio | :heavy_check_mark: | :heavy_check_mark: |
+| `network` | Gets every movie/show with the specified network<br>**Only works with the New Plex TV Agent** | :x: | :heavy_check_mark: |
 | `actor` | Gets every movie/show with the specified actor | :heavy_check_mark: | :heavy_check_mark: |
 | `audio_language` | Gets every movie with the specified audio language | :heavy_check_mark: | :x: |
 | `collection` | Gets movie/show with the specified collection | :heavy_check_mark: | :heavy_check_mark: |
@@ -97,13 +100,15 @@ The search will return every movie/show that matches at least one term from each
 | `writer` | Gets every movie/show with the specified writer | :heavy_check_mark: | :heavy_check_mark: |
 | `decade` | Gets every movie from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
 | `resolution` | Gets every movie with the specified resolution | :heavy_check_mark: | :x: |
-| `added` | Gets every movie/show added to plex before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
+| `added` | Gets every movie/show added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
 | `originally_available` | Gets every movie originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
 | `duration` | Gets every movie with a duration greater/less then the specified number of minutes | :heavy_check_mark: | :x: |
 | `rating` | Gets every movie/show with a rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
+| `audience_rating` | Gets every movie/show with an audience rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
+| `critic_rating` | Gets every movie/show with a critic rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `year` | Gets every movie/show with the specified year or greater/less then the specified year | :heavy_check_mark: | :heavy_check_mark: |
 
-### Special Options
+### Special Fields
 
 | Special Options | Description | Allowed Values | Default |
 | :--- | :--- | :--- | :---: |
@@ -112,7 +117,21 @@ The search will return every movie/show that matches at least one term from each
 
 ### Search Modifiers
 
-| Search Option | No Modifier | `.and` | `.not` | `.begins`/<br>`.ends` | `.before`/<br>`.after` | `.greater`/<br>`.less` |
+Each modifier translates directly from a modifier in the Web UI's modifier drop down.
+
+| Modifier | Description | Plex Web UI Option |
+| :--- | :--- | :---: |
+| No Modifier | Matches at least one search term exactly for every field except:<br>`title` & `studio` only need to contain the search term<br>`added` & `originally_available` takes an integer and matches every item in that past many days. | `is` for most<br>`contains` for `title` & `studio`<br>`in the last` for `added` & `originally_available` |
+| `.and` | Has to match every term exactly for every field except:<br>`title` & `studio` only need to contain the search term | `is` for most<br>`contains` for `title` & `studio` |
+| `.not` | Matches every item that does not have any of the exact search terms for every field except:<br>`title` & `studio` only need to contain the search term<br>`added` & `originally_available` takes an integer and matches every item not in that past many days. | `is not` for most<br>`does not contain` for `title` & `studio`<br>`in not the last` for `added` & `originally_available` |
+| `.begins` | Matches every item that starts with at least one search term | `begins with` |
+| `.ends` | Matches every item that ends with at least one search term | `ends with` |
+| `.before` | Matches every item that is before the specified date | `is before` |
+| `.after` | Matches every item that is after the specified date | `is after` |
+| `.greater` | Matches every item that is greater than specified number | `is greater than` |
+| `.less` | Matches every item that is less than specified number | `is less than` |
+
+| Search Field | No Modifier | `.and` | `.not` | `.begins`/<br>`.ends` | `.before`/<br>`.after` | `.greater`/<br>`.less` |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | `title` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
 | `studio` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
@@ -124,6 +143,7 @@ The search will return every movie/show that matches at least one term from each
 | `director` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | `genre` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | `label` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
+| `network` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | `producer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | `subtitle_language` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | `writer` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
@@ -132,7 +152,8 @@ The search will return every movie/show that matches at least one term from each
 | `added` | :x: | :x: | :x: | :x: | :heavy_check_mark: | :x: |
 | `originally_available` | :x: | :x: | :x: | :x: | :heavy_check_mark: | :x: |
 | `duration` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| `audience_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| `critic_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `year` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 
 * Multiple values are supported as either a list or a comma-separated string for all modifiers except `.before`, `.after`, `.greator`, and `.less`.

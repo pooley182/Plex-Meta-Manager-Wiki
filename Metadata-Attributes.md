@@ -46,16 +46,16 @@ The available attributes for each movie/show are as follows
 | TMDb Show ID | `tmdb_id` | TMDb Show ID to use for metadata useful for miniseries that have been compiled into a movie | :heavy_check_mark: | :x: |
 | Original Title | `original_title` | Text to change Original Title | :heavy_check_mark: | :heavy_check_mark: |
 | Sort Title | `sort_title` | Text to change Sort Title | :heavy_check_mark: | :heavy_check_mark: |
-| Originally Available | `originally_available` | Date to change Originally Available<br><strong>Format:</strong> YYYY-MM-DD  | :heavy_check_mark: | :heavy_check_mark: |
+| Originally Available | `originally_available` | Date to change Originally Available<br>**Format:** YYYY-MM-DD  | :heavy_check_mark: | :heavy_check_mark: |
 | Rating | `rating` | Number to change Rating | :heavy_check_mark:| :heavy_check_mark: |
 | Content Rating | `content_rating` | Text to change Content Rating | :heavy_check_mark: | :heavy_check_mark: |
 | Studio | `studio` | Text to change Studio | :heavy_check_mark: | :heavy_check_mark: |
 | Tagline | `tagline` | Text to change Tagline | :heavy_check_mark:| :heavy_check_mark: |
 | Summary | `summary` | Text to change Summary | :heavy_check_mark: | :heavy_check_mark: |
 | Genre | `genre` | List or comma-separated text of each Genre | :heavy_check_mark: | :heavy_check_mark: |
-| Genre Sync Mode | `genre_sync_mode` | `append`: Only Add Genres to the Item<br>`sync`: Add & Remove Genres from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
+| Genre Sync Mode | `genre_sync_mode` | `append`: Only Add Genres to the Item<br>`sync`: Add & Remove Genres from the Item<br>**Default Mode:** `append` | :heavy_check_mark: | :heavy_check_mark: |
 | Label | `label` | List or comma-separated text of each Label | :heavy_check_mark: | :heavy_check_mark: |
-| Label Sync Mode | `label_sync_mode` | `append`: Only Add Labels to the Item<br>`sync`: Add & Remove Labels from the Item<br><strong>Default Mode:</strong> `append` | :heavy_check_mark: | :heavy_check_mark: |
+| Label Sync Mode | `label_sync_mode` | `append`: Only Add Labels to the Item<br>`sync`: Add & Remove Labels from the Item<br>**Default Mode:** `append` | :heavy_check_mark: | :heavy_check_mark: |
 | Episode Sorting | `episode_sorting` | `default`: Library default<br>`oldest`: Oldest first<br>`newest`: Newest first | :x: | :heavy_check_mark: |
 | Keep Episodes | `keep_episodes` | `all`: All episodes<br>`5_latest`: 5 latest episodes<br>`3_latest`: 3 latest episodes<br>`latest`: Latest episodes<br>`past_3`: Episodes added in the past 3 days<br>`past_7`: Episodes added in the past 7 days<br>`past_30`: Episodes added in the past 30 days | :x: | :heavy_check_mark: |
 | Delete Episodes | `delete_episodes` | `never`: Never<br>`day`: After a day<br>`week`: After a week<br>`refresh`: On next refresh | :x: | :heavy_check_mark: |

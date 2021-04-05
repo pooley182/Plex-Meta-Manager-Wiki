@@ -2,7 +2,7 @@ The script can use templates created by the user to build similar collections wi
 
 Each template is defined by the mapping name which becomes the name of the template.
 
-Inside a template, you can give it all the [Collection Builders](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Builders), [Collection Details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details), and [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) attributes that you can give collections excpect `template`. 
+Inside a template, you can give it all the [Collection Builders](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Builders), [Collection Details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details), and [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) attributes that you can give collections expect `template`. 
 
 In any attribute, you can specify template variables that will be changed when calling the template. In the text just replace the text you want to be changed with the template variable name surrounded by `<<` and `>>`. For example, I can use the person template variable like so `tmdb_person: <<person>>`. The template variable name can be whatever you want but it must match when calling the template. To use the collection mapping name as a variable use `<<collection_name>>`.
 

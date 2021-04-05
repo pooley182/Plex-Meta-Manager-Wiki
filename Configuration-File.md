@@ -1,5 +1,9 @@
 The script utilizes a YAML config file to load information to connect to the various APIs you can connect with. 
 
+By default, the script looks at `/config/config.yml` for the Configuration File unless otherwise specified.
+
+A template Configuration File can be found in the repo [config/config.yml.template](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template). 
+
 The YAML mappings that can be set in the configuration file's root:
 
 | Name | YAML Attribute | Required |

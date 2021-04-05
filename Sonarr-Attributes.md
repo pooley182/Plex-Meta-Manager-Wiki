@@ -8,28 +8,36 @@ sonarr:
   url: http://192.168.1.12:32789
   token: ################################
   version: v3
-  quality_profile: HD-1080p
-  root_folder_path: S:/Shows
   add: true
-  search: false
+  root_folder_path: S:/Shows
+  monitor: all
+  quality_profile: HD-1080p
+  language_profile: English
+  series_type: standard
   season_folder: true
   tag: pmm
+  search: false
+  cutoff_search: false
 ```
 
 | Name | Attribute | Allowed Values| Default | Required |
 | :--- | :--- | :--- | :---: | :---: |
-| Sonarr URL | `url` | Sonarr URL<br><strong>Example:</strong> http://192.168.1.12:32788 | N/A | :heavy_check_mark: |
+| Sonarr URL | `url` | Sonarr URL<br>**Example:** http://192.168.1.12:32788 | N/A | :heavy_check_mark: |
 | API Token | `token` | Sonarr API Token | N/A | :heavy_check_mark: |
 | Sonarr Version | `version` | `v2`: for < 0.2<br>`v3`: for > 3.0 | v2 | :x: |
+| Add | `add` | Add missing shows found to Sonarr<br>**boolean:** true or false | false | :x: |
 | Root Folder Path | `root_folder_path` | Sonarr Root Folder Path To Use | N/A | :heavy_check_mark: |
+| Monitor | `monitor` | `all`: Monitor all episodes except specials<br>`future`: Monitor episodes that have not aired yet<br>`missing`: Monitor episodes that do not have files or have not aired yet<br>`existing`: Monitor episodes that have files or have not aired yet<br>`pilot`: Monitor the first episode. All other episodes will be ignored<br>`first`: Monitor all episodes of the first season. All other seasons will be ignored<br>`latest`: Monitor all episodes of the latest season and future seasons<br>`none`: No episodes will be monitored | `all` | :x: |
 | Quality Profile | `quality_profile` | Quality Profile To Use | N/A | :heavy_check_mark: |
-| Add | `add` | Add missing shows found to Sonarr<br><strong>boolean:</strong> true or false | false | :x: |
-| Search | `search` | Search when adding missing shows to Sonarr<br><strong>boolean:</strong> true or false | false | :x: |
-| Season Folder | `season_folder` | Use the Season Folder Option when adding to Sonarr<br><strong>boolean:</strong> true or false | true | :x: |
+| Language Profile | `language_profile` | Language Profile To Use (v3 Only) | First Profile | :x: |
+| Series Type | `series_type` | `standard`: Episodes released with SxxEyy pattern<br>`daily`: Episodes released daily or less frequently that use year-month-day (2017-05-25)<br>`anime`: Episodes released using an absolute episode number | `standard` | :x: |
+| Season Folder | `season_folder` | Use the Season Folder Option when adding to Sonarr<br>**boolean:** true or false | true | :x: |
 | Tag | `tag` | Add this list or comma-separated string of tags to every show added to Sonarr | ` ` | :x: |
+| Search | `search` | Start search for missing episodes<br>**boolean:** true or false | false | :x: |
+| Cutoff Search | `cutoff_search` | Start search for cutoff unmet episodes<br>**boolean:** true or false | false | :x: |
 
 * The `token` can be found by going to `Sonarr > Settings > General > Security > API Key`
 
-* The `quality_profile` must be the exact name of the desired quality profile, including all spaces and capitalizations.
+* The `quality_profile` and `language_profile` must be the exact name of the desired quality profile, including all spaces and capitalization.
 
-* You can set `add` and `tag` per collection by using the `add_to_arr` and `arr_tag` [Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details#settings-attributes)
+* You can set most attributes per collection by using the [Sonarr Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details#sonarr-attributes)

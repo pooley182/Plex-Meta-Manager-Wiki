@@ -16,7 +16,7 @@ To install a container from docker hub, you will need community applications - a
 | Variable | Screen Width | `width` | `100` | N/A | N/A | N/A | An integer between 90 and 300 |
 | Path | Config Storage Path | N/A | N/A | `/config` | `/mnt/user/appdata/plex-meta-manager` | Read/Write | Translation from docker container path to host path |
 
-  * Full list of docker values can be found on the [Docker Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker) page
+  * Full list of docker values can be found on the [Docker Installation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker-Installation) page
   * If you wish to enable one-time [Run](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Docker-Installation), add `-r` to `Post Arguments` by enabling Advanced View in the top right of unRAID.
   * The Image below shows the above values in the unRAID WebUI.
   ![Image](https://i.imgur.com/2y8RPTt.png)
@@ -47,6 +47,6 @@ Due to how unRAID handles docker containers, it can be a little confusing at fir
   
 7. Run `python plex_meta_manager.py -r`, and watch as the script comes to life.
 
-8. You'll now notice, as per the [configuration doccumentation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Configuration-File) on these sources, the script will ask you to click a URL and return an input. Go ahead and do so in this terminal window.
+8. You'll now notice, as per the [configuration documentation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Configuration-File) on these sources, the script will ask you to click a URL and return an input. Go ahead and do so in this terminal window.
 
 9. Once finished, and the script succeeds in connecting to your source, press `Ctrl + C` to cancel the script - and close out of the terminal window. Go ahead and stop the docker container, restore your container settings to your original preferences (restore `Time to Run`), and start the container.

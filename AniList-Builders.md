@@ -44,7 +44,7 @@ collections:
 ```
 
 ## AniList Seasonal Anime
-Gets anime in AniList's Seasonal Anime list the options are detailed below.. 
+Gets anime in AniList's Seasonal Anime list the options are detailed below.
 
 | Attribute | Description | Required | Default |
 | :--- | :--- | :---: | :---: |
