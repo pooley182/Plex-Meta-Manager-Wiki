@@ -103,7 +103,6 @@ There are three fields per search option when using Plex's Custom Filters in the
 | `added` | Gets every movie/show added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
 | `originally_available` | Gets every movie originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
 | `duration` | Gets every movie with a duration greater/less then the specified number of minutes | :heavy_check_mark: | :x: |
-| `rating` | Gets every movie/show with a rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `audience_rating` | Gets every movie/show with an audience rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `critic_rating` | Gets every movie/show with a critic rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `year` | Gets every movie/show with the specified year or greater/less then the specified year | :heavy_check_mark: | :heavy_check_mark: |

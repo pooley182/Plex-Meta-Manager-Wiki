@@ -17,6 +17,8 @@ metadata:
 
 The available attributes for each episode are as follows
 
+### General Attributes
+
 | Name | Attribute | Allowed Values |
 | :--- | :--- | :--- |
 | Title | `title` | Text to change Title |
@@ -24,3 +26,12 @@ The available attributes for each episode are as follows
 | Originally Available | `originally_available` | Date to change Originally Available<br>**Format:** YYYY-MM-DD  |
 | Rating | `rating` | Number to change Rating |
 | Summary | `summary` | Text to change Summary |
+
+### Tag Attributes
+
+You can add `.sync` to any tag attribute to sync all tags vs just appending the new ones i.e. `writer.sync`.
+
+| Name | Attribute | Allowed Values |
+| :--- | :--- | :--- |
+| Writer | `writer` | List or comma-separated text of each Writer Tag |
+| Director | `director` | List or comma-separated text of each Director Tag |
