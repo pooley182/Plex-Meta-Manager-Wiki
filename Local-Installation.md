@@ -25,6 +25,7 @@ python plex_meta_manager.py
 | [Run](#run) | `-r` or `--run` | `PMM_RUN` | Run without the scheduler | `False` |
 | [Run Tests](#run-tests) | `-rt`, `--tests`, or `--run-tests` | `PMM_TEST` | Run in debug mode with only collections that have `test: true` | `False` |
 | [Run Collections](#run-collections) | `-cl` or `--collections` | `PMM_COLLECTIONS` | Process only specified collections (comma-separated list) | ` ` |
+| [Run Libraries](#run-libraries) | `-l` or `--libraries` | `PMM_LIBRARIES` | Process only specified libraries (comma-separated list) | ` ` |
 | [Resume Run](#resume-run) | `re` or `--resume` | `PMM_RESUME` | Run starting with the specified collection | ` ` |
 | [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | `PMM_DIVIDER` | Character that divides the sections | `=` |
 | [Screen Width](#divider-character--screen-width) | `-w` or `--width` | `PMM_WIDTH` | Integer between 90 and 300 | `100` |
@@ -64,6 +65,13 @@ To have the script run only using the collections in the comma-separated list us
 
 ```shell
 python plex_meta_manager.py --config /configs/config.yml --collections "Harry Potter, Star Wars"
+```
+
+## Run Libraries
+To have the script run only the libraries in the comma-separated list use the `--libraries` option
+
+```shell
+python plex_meta_manager.py --config /configs/config.yml --libraries "TV Shows"
 ```
 
 ## Resume Run
