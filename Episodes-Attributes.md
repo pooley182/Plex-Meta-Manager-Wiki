@@ -26,6 +26,8 @@ The available attributes for each episode are as follows
 | Originally Available | `originally_available` | Date to change Originally Available<br>**Format:** YYYY-MM-DD  |
 | Rating | `rating` | Number to change Rating |
 | Summary | `summary` | Text to change Summary |
+| URL Poster | `url_poster` | URL of image publicly available on the internet |
+| File Poster | `file_poster` | Path to image in the file system |
 
 ### Tag Attributes
 

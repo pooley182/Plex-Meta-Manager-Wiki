@@ -40,6 +40,8 @@ All collection filter options are listed below. To display collections filtered 
 | `critic_rating.lte` | Matches any movie/show whose critic rating is less then or equal to the specified critic rating | :heavy_check_mark: | :heavy_check_mark: |
 | `audience_rating.gte` | Matches any movie/show whose audience rating is greater then or equal to the specified audience rating | :heavy_check_mark: | :heavy_check_mark: |
 | `audience_rating.lte` | Matches any movie/show whose audience rating is less then or equal to the specified audience rating | :heavy_check_mark: | :heavy_check_mark: |
+| `user_rating.gte` | Matches any movie/show whose user rating is greater then or equal to the specified user rating | :heavy_check_mark: | :heavy_check_mark: |
+| `user_rating.lte` | Matches any movie/show whose user rating is less then or equal to the specified user rating | :heavy_check_mark: | :heavy_check_mark: |
 | `tmdb_vote_count.gte` | Matches any movie/show whose TMDb vote count is greater then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
 | `tmdb_vote_count.lte` | Matches any movie/show whose TMDb vote count is less then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
 | `duration.gte` | Matches any movie/show whose duration is greater then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |

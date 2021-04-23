@@ -45,7 +45,8 @@ The available attributes for each movie/show are as follows
 | Title | `title` | Title if different from the mapping value useful when you have multiple movies with the same name | :heavy_check_mark: | :heavy_check_mark: |
 | Alternative Title | `alt_title` | Alternative title to look for | :heavy_check_mark: | :heavy_check_mark: |
 | Year | `year` | Year of movie/show for better identification | :heavy_check_mark: | :heavy_check_mark: |
-| TMDb Show ID | `tmdb_id` | TMDb Show ID to use for metadata useful for miniseries that have been compiled into a movie | :heavy_check_mark: | :x: |
+| TMDb Show ID | `tmdb_show` | TMDb Show ID to use for metadata useful for miniseries that have been compiled into a movie | :heavy_check_mark: | :heavy_check_mark: |
+| TMDb Movie ID | `tmdb_movie` | TMDb Movie ID to use for metadata useful for movies that have been split into segments | :heavy_check_mark: | :heavy_check_mark: |
 | Seasons | `seasons` | [`seasons` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Seasons-Attributes) | :x: | :heavy_check_mark: |
 | Episodes | `episodes` | [`episodes` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Episodes-Attributes) | :x: | :heavy_check_mark: |
 
@@ -112,3 +113,11 @@ You can add `.sync` to any tag attribute to sync all tags vs just appending the 
 
 \* Must be using the **New Plex Movie Agent** or the **New Plex TV Agent** 
 
+## Image Attributes
+
+| Name | Attribute | Description | Allowed Values |
+| :--- | :--- | :--- | :--- |
+| URL Poster | `url_poster` | Used to change the movie/show's poster to the URL | URL of image publicly available on the internet |
+| File Poster | `file_poster` | Used to change the movie/show's poster to the image in the file system | Path to image in the file system |
+| URL Background | `url_background` | Use to change the movie/show's background to the URL | URL of image publicly available on the internet |
+| File Background | `file_background` | Used to change the movie/show's background to the image in the file system | Path to image in the file system |

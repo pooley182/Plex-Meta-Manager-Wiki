@@ -42,3 +42,5 @@ The available attributes for each season are as follows
 | :--- | :--- | :--- |
 | Title | `title` | Text to change Title |
 | Summary | `summary` | Text to change Summary |
+| URL Poster | `url_poster` | URL of image publicly available on the internet |
+| File Poster | `file_poster` | Path to image in the file system |

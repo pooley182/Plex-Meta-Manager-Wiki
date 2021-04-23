@@ -8,6 +8,8 @@ settings:
   cache: true
   cache_expiration: 60
   asset_directory: config/assets
+  asset_folders: true
+  assets_for_all: false
   sync_mode: append
   run_again_delay: 0
   show_unmanaged: true
@@ -18,9 +20,11 @@ settings:
 
 | Name | Attribute | Allowed Values | Default | Global Level | Library Level | Collection Level |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
-| Cache | `cache` | Should the script store a cache<br>**boolean:** true or false | true | :heavy_check_mark: | :x: | :x: |
+| Cache | `cache` | Create a cache database for faster processing. The cache file is created in the same location as your config file.<br>**boolean:** true or false | true | :heavy_check_mark: | :x: | :x: |
 | Cache Expiration | `cache_expiration` | Number of days before each cache mapping expires and has to be reloaded | 60 | :heavy_check_mark: | :x: | :x: |
 | [Image Asset Directory](#image-asset-directory) | `asset_directory` | System Locations For Image Assets | [Directory containing YAML config]/assets | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| Image Asset Folders | `asset_folders` | Search in assets for named folders vs named files<br>i.e. `assets/Star Wars.png` vs `assets/Star Wars/poster.png` | true | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| Image Asset For All* | `assets_for_all` | Search in assets for images for every item in your library | false | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | Sync Mode | `sync_mode` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection | append | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Run Again Delay](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details#setting-attributes) | `run_again_delay` | Number of minutes to run `run_again` collections after daily run is finished<br>**number:** 0 or greater | 0 | :heavy_check_mark: | :x: | :x: |
 | Show Unmanaged Collections | `show_unmanaged` | Show collections not managed by Plex Meta Manager at the end of each run<br>**boolean:** true or false | true | :heavy_check_mark: | :heavy_check_mark: | :x: |
@@ -28,7 +32,7 @@ settings:
 | Show Missing | `show_missing` | Library Level toggle to show movies/shows missing from collections<br>**boolean:** true or false | true | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Save Missing | `save_missing` | Library Level toggle to save movies/shows missing from collections to a file next to you Metadata file<br>**boolean:** true or false | true | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
-* The cache database file is created in the same location as your config file.
+\* The file/folder name in your assets directory must match the folder name the media is stored in. i.e. if you have `Movies/Star Wars (1977)/Star Wars (1977) [1080p].mp4` then your asset directory would look at `assets/Star Wars (1977)/poster.png` for the poster
 
 ## Image Asset Directory
 The Image Asset Directory can be used to update the posters and backgrounds of collections and the movies and shows inside them. If you want to add multiple Image Asset Directories you have to use a list. Comma-separated values will not work.
@@ -44,6 +48,8 @@ To edit the posters and backgrounds of the movies or shows inside a collection, 
 After the folder has been created you can add a `poster.ext` or `background.ext` file to update the poster or background of a movie or show (replacing `.ext` with the image extension).
 
 If you want to update the posters of a show's seasons, inside the shows' assets folder you can add a `Season##.ext` file to update the poster of the specified season (replacing `##` with the zero padded season number and `.ext` with the image extension).
+
+If you want to update the posters of a show's episodes, inside the shows' assets folder you can add a `S##E##.ext` file to update the poster of the specified episode (replacing the first `##` with the zero padded season number, the second `##` with the zero padded episode number, and `.ext` with the image extension).
 
 Here's an example config folder structure with an assets directory.
 
@@ -79,6 +85,11 @@ config
 │           ├── Season05.png
 │           ├── Season06.png
 │           ├── Season07.png
+│           ├── S07E01.png
+│           ├── S07E02.png
+│           ├── S07E03.png
+│           ├── S07E04.png
+│           ├── S07E05.png
 │       ├── Star Wars Rebels
 │           ├── poster.png
 │           ├── background.png

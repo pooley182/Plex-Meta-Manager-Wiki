@@ -13,5 +13,5 @@
 * [rholder](https://github.com/rholder) and all other contributors for [retrying](https://github.com/rholder/retrying)
 * [ZeroQI](https://github.com/ZeroQI) and all other contributors for [Absolute Series Scanner](https://github.com/ZeroQI/Absolute-Series-Scanner) and [HTTP Anidb Metadata Agent (HAMA)](https://github.com/ZeroQI/Hama.bundle)
 * [ScudLee](https://github.com/ScudLee) and all other contributors for [AniDb Anime Lists](https://github.com/Anime-Lists/anime-lists)
-* [Fribb](https://github.com/Fribb) and all other contributors for [MyAnimeList Metadata Agent](https://github.com/Fribb/MyAnimeList.bundle) and [MyAnimeList Anime Lists](https://github.com/Fribb/anime-lists)
-
+* [Fribb](https://github.com/Fribb) and all other contributors for [MyAnimeList Metadata Agent](https://github.com/Fribb/MyAnimeList.bundle)
+* [BeeeQueue](https://github.com/BeeeQueue) and all other contributors for [arm-server](https://github.com/BeeeQueue/arm-server)

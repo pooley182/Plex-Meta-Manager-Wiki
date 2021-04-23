@@ -51,6 +51,7 @@ The available collection details attributes for each collection are split into d
 * [Radarr Attributes](#radarr-attributes)
 * [Sonarr Attributes](#sonarr-attributes)
 * [Metadata Attributes](#metadata-attributes)
+* [Item Metadata Attributes](#item-metadata-attributes)
 * [Summary Attributes](#summary-attributes)
 * [Poster Attributes](#poster-attributes)
 * [Background Attributes](#background-attributes)
@@ -109,13 +110,30 @@ All the following attributes update various details of the collection's Metadata
 | TMDb Person | `tmdb_person` | Used to change the collection's summary and poster to a TMDb Person's biography and profile as well as allow the people specified to be used in [Plex Searches](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) | TMDb Person ID (List or Comma-separated string) |
 | Sort Title | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
-| Label | `label` | Used to change the collection's labels | Comma-separated string of labels to append or sync |
-| Label Sync Mode | `label_sync_mode` | Used with `label` to change the label sync mode<br>**Default Mode:** `append` | `append`: Only Add Labels to the Item<br>`sync`: Add & Remove Labels from the Item |
+| Label | `label` | Used to append new labels to the collection | Comma-separated string of labels to append |
+| Label Sync | `label.sync` | Matches the labels of the collection to the labels provided | Comma-separated string of labels to sync |
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
 | Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically | :heavy_check_mark: | :heavy_check_mark: |
 
 * **Sort Title:** You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
 * **Collection Order:** At this moment, Plex only allows filtering by alphabetical order or by release date, if you want Plex to allow a custom order please vote or post a comment on the Plex forum: [Topic - Plex Custom Collection Sorting](https://forums.plex.tv/t/custom-collection-sorting-machete-order/236226)
+
+## Item Metadata Attributes
+All the following attributes update various details of the metadata for every item in the collection.
+
+| Name | Attribute | Description | Allowed Values | Works with Movies | Works with Shows |
+| :--- | :--- | :--- | :---: | :---: |
+| Label | `item_label` | Used to append new labels to every movie/show in the collection | Comma-separated string of labels to append | :heavy_check_mark: | :heavy_check_mark: |
+| Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
+| Episode Sorting | `item_episode_sorting` | Changes the episode sorting of every show in the collection | `default`: Library default<br>`oldest`: Oldest first<br>`newest`: Newest first | :x: | :heavy_check_mark: |
+| Keep Episodes | `item_keep_episodes` | Changes the keep episodes of every show in the collection | `all`: All episodes<br>`5_latest`: 5 latest episodes<br>`3_latest`: 3 latest episodes<br>`latest`: Latest episodes<br>`past_3`: Episodes added in the past 3 days<br>`past_7`: Episodes added in the past 7 days<br>`past_30`: Episodes added in the past 30 days | :x: | :heavy_check_mark: |
+| Delete Episodes | `item_delete_episodes` | Changes the delete episodes of every show in the collection | `never`: Never<br>`day`: After a day<br>`week`: After a week<br>`refresh`: On next refresh | :x: | :heavy_check_mark: |
+| Season Display | `item_season_display` | Changes the season display of every show in the collection | `default`: Library default<br>`show`: Show<br>`hide`: Hide | :x: | :heavy_check_mark: |
+| Episode Ordering | `item_episode_ordering` | Changes the episode ordering of every show in the collection | `default`: Library default<br>`tmdb_aired`*: The Movie Database (Aired)<br>`tvdb_aired`: TheTVDB (Aired)<br>`tvdb_dvd`: TheTVDB (DVD)<br>`tvdb_absolute`: TheTVDB (Absolute) | :x: | :heavy_check_mark: |
+| Metadata Language* | `item_metadata_language` | Changes the metadata language of every movie/show in the collection | `default`, `ar-SA`, `ca-ES`, `cs-CZ`, `da-DK`, `de-DE`, `el-GR`, `en-AU`, `en-CA`, `en-GB`, `en-US`, `es-ES`, `es-MX`, `et-EE`, `fa-IR`, `fi-FI`, `fr-CA`, `fr-FR`, `he-IL`, `hi-IN`, `hu-HU`, `id-ID`, `it-IT`, `ja-JP`, `ko-KR`, `lt-LT`, `lv-LV`, `nb-NO`, `nl-NL`, `pl-PL`, `pt-BR`, `pt-PT`, `ro-RO`, `ru-RU`, `sk-SK`, `sv-SE`, `th-TH`, `tr-TR`, `uk-UA`, `vi-VN`, `zh-CN`, `zh-HK`, `zh-TW` | :heavy_check_mark: | :heavy_check_mark: |
+| Use Original Title* | `item_use_original_title` | Changes the use original title of every movie/show in the collection | `default`: Library default<br>`no`: No<br>`yes`: Yes | :heavy_check_mark: | :heavy_check_mark: |
+
+\* Must be using the **New Plex Movie Agent** or the **New Plex TV Agent** 
 
 ## Summary Attributes
 All the following attributes update the summary of the collection from various sources.

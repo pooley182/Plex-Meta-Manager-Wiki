@@ -105,6 +105,7 @@ There are three fields per search option when using Plex's Custom Filters in the
 | `duration` | Gets every movie with a duration greater/less then the specified number of minutes | :heavy_check_mark: | :x: |
 | `audience_rating` | Gets every movie/show with an audience rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `critic_rating` | Gets every movie/show with a critic rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
+| `user_rating` | Gets every movie/show with a user rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `year` | Gets every movie/show with the specified year or greater/less then the specified year | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Special Fields
@@ -153,6 +154,7 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop 
 | `duration` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `audience_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `critic_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
+| `user_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `year` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 
 * Multiple values are supported as either a list or a comma-separated string for all modifiers except `.before`, `.after`, `.greator`, and `.less`.
