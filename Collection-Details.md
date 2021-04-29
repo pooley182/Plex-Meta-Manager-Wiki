@@ -122,7 +122,7 @@ All the following attributes update various details of the collection's Metadata
 All the following attributes update various details of the metadata for every item in the collection.
 
 | Name | Attribute | Description | Allowed Values | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
+| :--- | :--- | :--- | :--- | :---: | :---: |
 | Label | `item_label` | Used to append new labels to every movie/show in the collection | Comma-separated string of labels to append | :heavy_check_mark: | :heavy_check_mark: |
 | Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
 | Episode Sorting | `item_episode_sorting` | Changes the episode sorting of every show in the collection | `default`: Library default<br>`oldest`: Oldest first<br>`newest`: Newest first | :x: | :heavy_check_mark: |
