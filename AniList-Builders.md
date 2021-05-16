@@ -4,7 +4,7 @@ No configuration is required for these builders.
 
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :--- | :--- | :--- | :---: | :---: |
-| [AniList Top Rated Anime](#anilist-top-rated-anime) | `anilist_popular` | Gets every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list | :heavy_check_mark: | :heavy_check_mark: |
+| [AniList Top Rated Anime](#anilist-top-rated-anime) | `anilist_top_rated` | Gets every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList Popular Anime](#anilist-popular-anime) | `anilist_popular` | Gets every anime in AniList's [Popular Anime](https://anilist.co/search/anime?sort=POPULARITY_DESC) list | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList Seasonal Anime](#anilist-seasonal-anime) | `anilist_season` | Gets anime in AniList's Seasonal Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
 | [AniList Relations](#anilist-relations) | `anilist_relations` | Gets the anime specified by the AniList ID and every relation in its relation tree except Character and Other relations | :heavy_check_mark: | :heavy_check_mark: |
@@ -25,7 +25,7 @@ The `sync_mode: sync` option is also recommended since the Trakt Watched lists a
 ```yaml
 collections:
   Top Rated Anime:
-    anilist_popular: 30
+    anilist_top_rated: 30
     sync_mode: sync
 ```
 

@@ -5,7 +5,6 @@ No configuration is required for these builders.
 | Name | Attribute | Description | Works with Movies | Works with Shows |
 | :--- | :--- | :--- | :---: | :---: |
 | [Plex All](#plex-all) | `plex_all` | Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) | :heavy_check_mark: | :heavy_check_mark: |
-| [Plex Collection](#plex-collection) | `plex_collection` | Gets every movie/show in another Plex Collection | :heavy_check_mark: | :heavy_check_mark: |
 | [Plex Collectionless](#plex-collectionless) | `plex_collectionless` | Gets every movie/show that is not in a collection | :heavy_check_mark: | :heavy_check_mark: |
 | [Plex Search](#plex-search) | `plex_search` | Gets every movie/show based on the search parameters provided | :heavy_check_mark: | :heavy_check_mark: |
 
@@ -22,28 +21,9 @@ collections:
       rating.gte: 9
 ```
 
-## Plex Collection
-Gets every movie/show in another Plex Collection.
-
-The expected input is the exact name of a Collection in Plex
-
-```yaml
-collections:
-  Dinosaurs:
-    plex_collection: Jurassic Park
-```
-
-You can add multiple collections by using a list. Comma-separated values will not work.
-
-```yaml
-collections:
-  Dinosaurs:
-    plex_collection:
-      - Jurassic Park
-      - The Land Before Time
-```
-
 ## Plex Collectionless
+**This is not needed if you're using [Smart Label Collections](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Smart-Builders#smart-label).**
+
 Gets every movie/show that is not in a collection unless the collection is in the exclusion list. This is a special collection type to help keep your library looking correct. When items in your library are in multiple collections it can mess up how they're displayed in your library.
 
 For Example, if you have a `Marvel Cinematic Universe` Collection set to `Show this collection and its items` and an `Iron Man` Collection set to `Hide items in this collection` what happens is the show overrides the hide and you end up with both the collections and the 3 Iron Man movies all displaying.
@@ -110,10 +90,11 @@ There are three fields per search option when using Plex's Custom Filters in the
 
 ### Special Fields
 
-| Special Options | Description | Allowed Values | Default |
+| Special Option | Attribute | Description | Default |
 | :--- | :--- | :--- | :---: |
 | Limit | `limit` | The number of movies/shows to search for | all |
 | Sort By | `sort_by` | The way movies/shows are sorted for limit searches.<br>`title.asc`/`title.desc` (Sort by Title)<br>`originally_available.asc`/`originally_available.desc` (Sort by Originally Available)<br>`critic_rating.asc`/`critic_rating.desc` (Sort by Critic Rating)<br>`audience_rating.asc`/`audience_rating.desc` (Sort by Audience Rating)<br>`duration.asc`/`duration.desc` (Sort by Duration)<br>`added.asc`/`added.desc` (Sort by Date Added) | `title.asc` |
+| Validate | `validate` | Determines if a collection will fail on a validation error<br>**Options**: `true` or `false` | `true` |
 
 ### Search Modifiers
 
@@ -128,10 +109,12 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop 
 | `.ends` | Matches every item that ends with at least one search term | `ends with` |
 | `.before` | Matches every item that is before the specified date | `is before` |
 | `.after` | Matches every item that is after the specified date | `is after` |
-| `.greater` | Matches every item that is greater than specified number | `is greater than` |
-| `.less` | Matches every item that is less than specified number | `is less than` |
+| `.gt` | Matches every item that is greater than specified number | `is greater than` |
+| `.gte` | Matches every item that is greater than or equal to the specified number | N/A |
+| `.lt` | Matches every item that is less than specified number | `is less than` |
+| `.lte` | Matches every item that is less than or equal to the specified number | N/A |
 
-| Search Field | No Modifier | `.and` | `.not` | `.begins`/<br>`.ends` | `.before`/<br>`.after` | `.greater`/<br>`.less` |
+| Search Field | No Modifier | `.and` | `.not` | `.begins`/<br>`.ends` | `.before`/<br>`.after` | `.gt`/`.gte`/<br>`.lt`/`.lte` |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | `title` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
 | `studio` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
@@ -157,7 +140,7 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop 
 | `user_rating` | :x: | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `year` | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 
-* Multiple values are supported as either a list or a comma-separated string for all modifiers except `.before`, `.after`, `.greator`, and `.less`.
+* Multiple values are supported as either a list or a comma-separated string for all modifiers except `.before`, `.after`, `.gt`, `.gte`, `.lt`, and `.lte`.
 * If you want to restrict the search even further try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
 
 ```yaml
@@ -197,15 +180,9 @@ collections:
 ```
 ```yaml
 collections:
-  90s Movies:
-    plex_search:
-      year: 1990-1999
-```
-```yaml
-collections:
   2010+ Movies:
     plex_search:
-      year.greater: 2009
+      year.gte: 2010
 ```
 ```yaml
 collections:
@@ -219,7 +196,7 @@ If you only want to search using a single attribute you can do so without `plex_
 ```yaml
 collections:
   90s Movies:
-    year: 1990-1999
+    decade: 1990
 ```
 
 If you specify TMDb Person ID's using the [Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details) `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.

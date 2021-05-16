@@ -19,6 +19,7 @@ All collection filter options are listed below. To display collections filtered 
 | `studio` | Matches every movie/show with the specified studio | :heavy_check_mark: | :heavy_check_mark: |
 | `year` | Matches every movie/show with the specified year | :heavy_check_mark: | :heavy_check_mark: |
 | `writer` | Matches every movie with the specified writer | :heavy_check_mark: | :x: |
+| `filepath` | Matches every movie/show whose filepath contains the given text | :heavy_check_mark: | :heavy_check_mark: |
 | `original_language` | Matches every movie with the specified original language [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)<br>Example: `original_language: en, ko` | :heavy_check_mark: | :x: |
 | `video_resolution` | Matches every movie with the specified video resolution | :heavy_check_mark: | :x: |
 | `audio_language` | Matches every movie with the specified audio language | :heavy_check_mark: | :x: |
