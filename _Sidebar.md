@@ -21,6 +21,7 @@
   - [Collection Attributes](Collection-Attributes)
     - [Collection Builders](Collection-Builders)
       - [Plex Builders](Plex-Builders)
+      - [Smart Builders](Smart-Builders)
       - [TMDb Builders](TMDb-Builders)
       - [TVDb Builders](TVDb-Builders)
       - [IMDb Builders](IMDb-Builders)
