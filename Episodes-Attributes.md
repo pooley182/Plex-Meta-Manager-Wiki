@@ -31,6 +31,8 @@ The available attributes for each episode are as follows
 
 ### Tag Attributes
 
+You can add `.remove` to any tag attribute to only remove those tags i.e. `writer.remove`. 
+
 You can add `.sync` to any tag attribute to sync all tags vs just appending the new ones i.e. `writer.sync`.
 
 | Name | Attribute | Allowed Values |

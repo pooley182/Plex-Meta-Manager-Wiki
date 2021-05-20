@@ -32,8 +32,11 @@ The available attributes for each library are as follows
 | :--- | :--- | :--- | :---: | :---: |
 | [Library Name](#library-name) | `library_name` | Library name (Only needed when trying to use multiple libraries with the same name) | Base Attribute Name | :x: |
 | [Metadata Path](#metadata-path) | `metadata_path` | Location for your Metadata YAML files | Same directory as config YAML file | :x: |
-| Mass Genre Update | `mass_genre_update` | Updates every movie/show in the library to the chosen site's genres<br>`tmdb`: Use TMDb for Genres<br>`omdb`: Use IMDb through OMDb for Genres | No Update | :x: |
-| Mass Genre Update | `mass_genre_update` | Updates every movie/show in the library to the chosen site's genres<br>`tmdb`: Use TMDb for Genres<br>`omdb`: Use IMDb through OMDb for Genres | No Update | :x: |
+| Mass Genre Update | `mass_genre_update` | Updates every item's genres in the library to the chosen site's genres<br>`tmdb`: Use TMDb for Genres<br>`omdb`: Use IMDb through OMDb for Genres | No Update | :x: |
+| Mass Audience Rating Update | `mass_audience_rating_update` | Updates every item's audience rating in the library to the chosen site's rating<br>`tmdb`: Use TMDb for Rating<br>`omdb`: Use IMDb through OMDb for Rating | No Update | :x: |
+| Mass Critic Rating Update | `mass_critic_rating_update` | Updates every item's critic rating in the library to the chosen site's rating<br>`tmdb`: Use TMDb for Rating<br>`omdb`: Use IMDb through OMDb for Rating | No Update | :x: |
+| Radarr Add All | `radarr_add_all` | Adds every item in the library to Radarr | No Adds | :x: |
+| Sonarr Add All | `sonarr_add_all` | Adds every item in the library to Sonarr | No Adds | :x: |
 | Settings Mapping | `settings` | [`settings` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | global | :x: |
 | Plex Mapping | `plex` | [`plex` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | global | :heavy_check_mark: Either here or globally |
 | Radarr Mapping | `radarr` | [`radarr` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | global | :x: |

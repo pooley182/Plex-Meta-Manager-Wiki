@@ -10,12 +10,12 @@ This is extremely useful because smart collections don't follow normal show/hide
 
 To have the Smart Label Collections to eliminate Plex Collectionless you have to go all in on using them. A good rule of thumb to make sure this works correctly is that every item in your library should have a max of one non-smart collection.
 
-Reach out on the [Plex Meta Manager Discord](https://discord.gg/NfH6mGFuAB) or in the [Github Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) for help if you're having any issues getting this to work properly.
+Reach out on the [Plex Meta Manager Discord](https://discord.gg/TsdpsFYqqm) or in the [Github Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) for help if you're having any issues getting this to work properly.
 
 ## Smart Filter
 Uses Plex's [Advance Filters](https://support.plex.tv/articles/201273953-collections/) to create a smart collection based on the filter parameters provided.
 
-Any Advance Filter made using the Plex UI should be able to be recreated using `smart_filter`. If you're having trouble getting `smart_filter` to work correctly, build the collection you want inside of Plex's Advance Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/NfH6mGFuAB) and I'll do my best to help you. 
+Any Advance Filter made using the Plex UI should be able to be recreated using `smart_filter`. If you're having trouble getting `smart_filter` to work correctly, build the collection you want inside of Plex's Advance Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/TsdpsFYqqm) and I'll do my best to help you. 
 
 like Plex's [Advance Filters](https://support.plex.tv/articles/201273953-collections/) you have to start each filter with either `any` or `all` as a base. You can only have one base attribute and all filter attributes must be under the base.
 
@@ -73,7 +73,8 @@ There are three fields per filter option when using Plex's Advance Filters in th
 | `writer` | Gets every item with the specified writer | :heavy_check_mark: | :heavy_check_mark: |
 | `decade` | Gets every item from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :heavy_check_mark: |
 | `resolution` | Gets every item with the specified resolution | :heavy_check_mark: | :heavy_check_mark: |
-| `added` | Gets every item added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
+| `hdr` | `true`: Gets every item with HDR<br>`false`: Gets every item without HDR | :heavy_check_mark: | :heavy_check_mark: |
+| `added` | Gets every item added to plex before/after the specified date or in the last<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
 | `episode_added` | Gets every item which has an episode added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
 | `originally_available` | Gets every item originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
 | `episode_originally_available` | Gets every item which has an episode originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
@@ -93,8 +94,8 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop-
 
 | Modifier | Description | Plex Web UI Option |
 | :--- | :--- | :---: |
-| No Modifier | Matches the search term at least one search term exactly for every field except:<br>`title` & `studio` only need to contain the search term<br>`added` & `originally_available` takes an integer and matches every item in that past many days. | `is` for most<br>`contains` for `title` & `studio`<br>`in the last` for `added` & `originally_available` |
-| `.not` | Matches every item that does not have any of the exact search terms for every field except:<br>`title` & `studio` only need to contain the search term<br>`added` & `originally_available` takes an integer and matches every item not in that past many days. | `is not` for most<br>`does not contain` for `title` & `studio`<br>`in not the last` for `added` & `originally_available` |
+| No Modifier | Matches the search term at least one search term exactly for every field except:<br>**String Fields** match every item that contains the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item in that past many days<br>**Date Fields**: `added`, `episode_added`, `originally_available`, & `episode_originally_available`| `is` for most<br>`contains` for **String Fields**<br>`in the last` for **Date Fields** |
+| `.not` | Matches every item that does not have any of the exact search terms for every field except:<br>**String Fields** match every item that does not contain the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item not in that past many days<br>**Date Fields**: `added`, `episode_added`, `originally_available`, & `episode_originally_available`| `is not` for most<br>`does not contain` for **String Fields**<br>`in not the last` for **Date Fields** |
 | `.begins` | Matches every item that starts with at least one search term | `begins with` |
 | `.ends` | Matches every item that ends with at least one search term | `ends with` |
 | `.before` | Matches every item that is before the specified date | `is before` |
@@ -123,6 +124,7 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop-
 | `writer` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
 | `decade` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | `resolution` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `hdr` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | `added` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | `episode_added` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | `originally_available` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |

@@ -87,6 +87,8 @@ The available attributes for each movie/show are as follows
 
 ### Tag Attributes
 
+You can add `.remove` to any tag attribute to only remove those tags i.e. `genre.remove`. 
+
 You can add `.sync` to any tag attribute to sync all tags vs just appending the new ones i.e. `genre.sync`.
 
 | Name | Attribute | Allowed Values | Works with Movies | Works with Shows |

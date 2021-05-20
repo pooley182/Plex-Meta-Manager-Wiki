@@ -24,9 +24,11 @@ docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex
 | [Time to Run](#time-to-run) | `-t` or `--time` | `PMM_TIME` | Time to update each day<br>**Format:** HH:MM | `03:00` |
 | [Run](#run) | `-r` or `--run` | `PMM_RUN` | Run without the scheduler | `False` |
 | [Run Tests](#run-tests) | `-rt`, `--tests`, or `--run-tests` | `PMM_TEST` | Run in debug mode with only collections that have `test: true` | `False` |
-| [Run Collections](#run-collections) | `-cl` or `--collections` | `PMM_COLLECTIONS` | Process only specified collections (comma-separated list) | ` ` |
-| [Run Libraries](#run-libraries) | `-l` or `--libraries` | `PMM_LIBRARIES` | Process only specified libraries (comma-separated list) | ` ` |
-| [Resume Run](#resume-run) | `re` or `--resume` | `PMM_RESUME` | Run starting with the specified collection | ` ` |
+| [Run Collections Only](#collections-only) | `-co` or `--collections-only` | `PMM_COLLECTIONS_ONLY` | Process only collections during the run | `False` |
+| [Run Libraries Only](#libraries-only) | `-lo` or `--libraries-only` | `PMM_LIBRARIES_ONLY` | Process everything but collections during the run | `False` |
+| [Run Collections](#run-collections) | `-rc` or `--run-collections` | `PMM_COLLECTIONS` | comma-separated list of collection names to process | All Collections |
+| [Run Libraries](#run-libraries) | `-rl` or `--run-libraries` | `PMM_LIBRARIES` | comma-separated list of library names to process | All libraries |
+| [Resume Run](#resume-run) | `re` or `--resume` | `PMM_RESUME` | Name of the Collection you want to resume the run at | ` ` |
 | [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | `PMM_DIVIDER` | Character that divides the sections | `=` |
 | [Screen Width](#divider-character--screen-width) | `-w` or `--width` | `PMM_WIDTH` | Integer between 90 and 300 | `100` |
 
@@ -60,18 +62,33 @@ To run the script in debug mode while only running collections that have `test: 
 docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --run-tests
 ```
 
-## Run Collections
-To have the script run only using the collections in the comma-separated list use the `--collections` option
+## Collections Only
+To have the script run only collections and not any library operations use the `--collections-only` option
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --collections "Harry Potter, Star Wars"
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --collections-only
+```
+
+## Libraries Only
+To have the script run only library operations and not any collections use the `--libraries-only` option
+
+```shell
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --libraries-only
+```
+
+
+## Run Collections
+To have the script run only using the collections in the comma-separated list use the `--run-collections` option
+
+```shell
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --run-collections "Harry Potter, Star Wars"
 ```
 
 ## Run Libraries
-To have the script run only the libraries in the comma-separated list use the `--libraries` option
+To have the script run only the libraries in the comma-separated list use the `--run-libraries` option
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --libraries "TV Shows"
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --run-libraries "TV Shows"
 ```
 
 ## Resume Run

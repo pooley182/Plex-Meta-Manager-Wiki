@@ -63,13 +63,14 @@ All the following attributes serve various functions as how the collection funct
 | :--- | :--- | :--- | :--- |
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
 | Template | `template` | Used to specify a template and template variables to use for this collection | [`template` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) |
-| Run Again | `run_again` | Used to try and add all the items missing from the collection to the collection again after the daily run. | **boolean:** `true` or `false` |
+| Run Again | `run_again` | Used to try and add all the items missing from the collection to the collection again after the daily run <br>**Default Mode:** `false`| **boolean:** `true` or `false` |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection<br>**Default Mode:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection |
+| Build Collection | `build_collection` | When set to false the collection won't be created but items can still be added to Radarr/Sonarr<br>**Default Mode:** `ture` | **boolean:** `true` or `false` |
 | Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Name Mapping | `name_mapping` | Used to specify the folder name in the [Image Assets Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) | Folder Name In Assets Directory |
-| Test Mode | `test` | When running in Test Mode (`---run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** false | **boolean:** `true` or `false` |
+| Test Mode | `test` | When running in Test Mode (`---run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** `false` | **boolean:** `true` or `false` |
 
 * **Name Mapping:** If your collection name contains characters that are not allowed in file paths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path), but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
 
@@ -111,6 +112,7 @@ All the following attributes update various details of the collection's Metadata
 | Sort Title | `sort_title` | Used to change the collection's sort title | Text to change Sort Title |
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
 | Label | `label` | Used to append new labels to the collection | Comma-separated string of labels to append |
+| Label Remove | `label.remove` | Used to remove existing labels from the collection | Comma-separated string of labels to remove |
 | Label Sync | `label.sync` | Matches the labels of the collection to the labels provided | Comma-separated string of labels to sync |
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
 | Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically | :heavy_check_mark: | :heavy_check_mark: |
@@ -124,6 +126,7 @@ All the following attributes update various details of the metadata for every it
 | Name | Attribute | Description | Allowed Values | Works with Movies | Works with Shows |
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | Label | `item_label` | Used to append new labels to every movie/show in the collection | Comma-separated string of labels to append | :heavy_check_mark: | :heavy_check_mark: |
+| Label Remove | `item_label.remove` | Used to remove existing labels from every movie/show in the collection | Comma-separated string of labels to remove | :heavy_check_mark: | :heavy_check_mark: |
 | Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
 | Episode Sorting | `item_episode_sorting` | Changes the episode sorting of every show in the collection | `default`: Library default<br>`oldest`: Oldest first<br>`newest`: Newest first | :x: | :heavy_check_mark: |
 | Keep Episodes | `item_keep_episodes` | Changes the keep episodes of every show in the collection | `all`: All episodes<br>`5_latest`: 5 latest episodes<br>`3_latest`: 3 latest episodes<br>`latest`: Latest episodes<br>`past_3`: Episodes added in the past 3 days<br>`past_7`: Episodes added in the past 7 days<br>`past_30`: Episodes added in the past 30 days | :x: | :heavy_check_mark: |

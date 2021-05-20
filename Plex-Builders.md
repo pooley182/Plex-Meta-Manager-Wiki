@@ -54,7 +54,7 @@ collections:
 ## Plex Search
 Uses Plex's [Custom Filters](https://support.plex.tv/articles/200392126-using-the-library-view/) to get every movie/show based on the search parameters provided.
 
-Any Custom Filter search made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, build the collection you want inside of Plex's Custom Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/NfH6mGFuAB) and I'll do my best to help you. 
+Any Custom Filter search made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, build the collection you want inside of Plex's Custom Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/TsdpsFYqqm) and I'll do my best to help you. 
 
 The search will return every movie/show that matches at least one term from each search field unless you use the `.and` modifier in which case it would need to match every term.
 
