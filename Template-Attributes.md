@@ -61,4 +61,4 @@ collections:
       genre: Comedy
 ```
 
-See the [Example Metadata File](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/Movies.yml.template) for more uses and examples.
+Check out the examples files in the [Plex Meta Manager Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/meisnate12) for more uses and examples.

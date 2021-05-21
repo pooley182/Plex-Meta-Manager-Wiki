@@ -4,6 +4,7 @@ Multiple collection builders can be used in the same collection.
 
 There are multiple different sources you can build collections from listed below
 * [Plex Builders](Plex-Builders)
+* [Smart Builders](Smart-Builders)
 * [TMDb Builders](TMDb-Builders)
 * [TVDb Builders](TVDb-Builders)
 * [IMDb Builders](IMDb-Builders)
