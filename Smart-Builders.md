@@ -65,17 +65,17 @@ There are three fields per filter option when using Plex's Advance Filters in th
 | `collection` | Gets item with the specified collection | :heavy_check_mark: | :heavy_check_mark: |
 | `content_rating` | Gets item with the specified content rating | :heavy_check_mark: | :heavy_check_mark: |
 | `country` | Gets every item with the specified country | :heavy_check_mark: | :x: |
-| `director` | Gets every item with the specified director | :heavy_check_mark: | :heavy_check_mark: |
+| `director` | Gets every item with the specified director | :heavy_check_mark: | :x: |
 | `genre` | Gets every item with the specified genre | :heavy_check_mark: | :heavy_check_mark: |
 | `label` | Gets every item with the specified label | :heavy_check_mark: | :heavy_check_mark: |
-| `producer` | Gets every item with the specified producer | :heavy_check_mark: | :heavy_check_mark: |
+| `producer` | Gets every item with the specified producer | :heavy_check_mark: | :x: |
 | `subtitle_language` | Gets every item with the specified subtitle language | :heavy_check_mark: | :heavy_check_mark: |
-| `writer` | Gets every item with the specified writer | :heavy_check_mark: | :heavy_check_mark: |
-| `decade` | Gets every item from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :heavy_check_mark: |
+| `writer` | Gets every item with the specified writer | :heavy_check_mark: | :x: |
+| `decade` | Gets every item from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
 | `resolution` | Gets every item with the specified resolution | :heavy_check_mark: | :heavy_check_mark: |
 | `hdr` | `true`: Gets every item with HDR<br>`false`: Gets every item without HDR | :heavy_check_mark: | :heavy_check_mark: |
 | `added` | Gets every item added to plex before/after the specified date or in the last<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_added` | Gets every item which has an episode added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_added` | Gets every item which has an episode added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
 | `originally_available` | Gets every item originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
 | `episode_originally_available` | Gets every item which has an episode originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
 | `duration` | Gets every item with a duration greater/less then the specified number of minutes | :heavy_check_mark: | :x: |
@@ -84,7 +84,7 @@ There are three fields per filter option when using Plex's Advance Filters in th
 | `audience_rating` | Gets every item with an audience rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `critic_rating` | Gets every item with a critic rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
 | `user_rating` | Gets every item with a user rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_user_rating` | Gets every item which has an episode with a user rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_user_rating` | Gets every item which has an episode with a user rating greater/less then the specified number | :x: | :heavy_check_mark: |
 | `year` | Gets every item with the specified year or greater/less then the specified year | :heavy_check_mark: | :heavy_check_mark: |
 | `episode_year` | Gets every item which has an episode with the specified year or greater/less then the specified year | :x: | :heavy_check_mark: |
 
