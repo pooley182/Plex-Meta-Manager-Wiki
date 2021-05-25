@@ -192,7 +192,7 @@ collections:
 ```yaml
 collections:
   Best 2010+ Movies:
-    smart_search:
+    smart_filter:
       all:
         year.gte: 2010
       sort_by: audience_rating.desc
@@ -204,7 +204,7 @@ If you specify TMDb Person ID's using the [Collection Detail](https://github.com
 ```yaml
 collections:
   Robin Williams:
-    smart_search:
+    smart_filter:
       all:
         actor: tmdb
     tmdb_person: 2157
@@ -212,7 +212,7 @@ collections:
 ```yaml
 collections:
   Steven Spielberg:
-    smart_search:
+    smart_filter:
       all:
         director: tmdb
     tmdb_person: https://www.themoviedb.org/person/488-steven-spielberg
@@ -220,7 +220,7 @@ collections:
 ```yaml
 collections:
   Quentin Tarantino:
-    smart_search:
+    smart_filter:
       any:
         actor: tmdb
         director: tmdb
