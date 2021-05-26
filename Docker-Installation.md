@@ -21,14 +21,15 @@ docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex
 | Name | Shell Command | Environmental<br>Variable | Allowed Values | Default Value |
 | :--- | :--- | :--- | :--- | :--- |
 | [Config](#config) | `-c` or `--config` | `PMM_CONFIG` | Path to YAML config file | `config/config.yml` alongside<br>`plex_meta_manager.py` |
-| [Time to Run](#time-to-run) | `-t` or `--time` | `PMM_TIME` | Time to update each day<br>**Format:** HH:MM | `03:00` |
+| [Time to Run](#time-to-run) | `-t` or `--time` | `PMM_TIME` | comma-separated list of times to update each day<br>**Format:** HH:MM | `03:00` |
 | [Run](#run) | `-r` or `--run` | `PMM_RUN` | Run without the scheduler | `False` |
 | [Run Tests](#run-tests) | `-rt`, `--tests`, or `--run-tests` | `PMM_TEST` | Run in debug mode with only collections that have `test: true` | `False` |
 | [Run Collections Only](#collections-only) | `-co` or `--collections-only` | `PMM_COLLECTIONS_ONLY` | Process only collections during the run | `False` |
 | [Run Libraries Only](#libraries-only) | `-lo` or `--libraries-only` | `PMM_LIBRARIES_ONLY` | Process everything but collections during the run | `False` |
 | [Run Collections](#run-collections) | `-rc` or `--run-collections` | `PMM_COLLECTIONS` | comma-separated list of collection names to process | All Collections |
 | [Run Libraries](#run-libraries) | `-rl` or `--run-libraries` | `PMM_LIBRARIES` | comma-separated list of library names to process | All libraries |
-| [Resume Run](#resume-run) | `re` or `--resume` | `PMM_RESUME` | Name of the Collection you want to resume the run at | ` ` |
+| [Resume Run](#resume-run) | `-re` or `--resume` | `PMM_RESUME` | Name of the Collection you want to resume the run at | ` ` |
+| [No Countdown](#no-countdown) | `-nc` or `--no-countdown` | `PMM_NO_COUNTDOWN` | Run without displaying the countdown | `False` |
 | [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | `PMM_DIVIDER` | Character that divides the sections | `=` |
 | [Screen Width](#divider-character--screen-width) | `-w` or `--width` | `PMM_WIDTH` | Integer between 90 and 300 | `100` |
 
@@ -42,10 +43,10 @@ docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex
 ```
 
 ## Time to Run
-To choose the time when the script will run each day use the `--time` option
+To choose the times when the script will run each day use a comma-separated list with the `--time` option
 
 ```shell
-docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --time 22:00
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --time 22:00,03:00
 ```
 
 ## Run
@@ -95,8 +96,16 @@ docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex
 To have the script resume a run from a specific collection use the `--resume` option
 
 ```shell
-python plex_meta_manager.py --config /configs/config.yml --resume "Star Wars"
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --resume "Star Wars"
 ```
+
+## No Countdown 
+To have the script run without displaying a countdown use the `--no-countdown` option
+
+```shell
+docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --config /configs/config.yml --no-countdown
+```
+
 
 ## Divider Character & Screen Width
 To change the terminal output divider character or width use `--divider` and `--width`

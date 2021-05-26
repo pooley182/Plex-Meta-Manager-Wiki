@@ -45,8 +45,8 @@ All collection filter options are listed below. To display collections filtered 
 | `user_rating.lte` | Matches any movie/show whose user rating is less then or equal to the specified user rating | :heavy_check_mark: | :heavy_check_mark: |
 | `tmdb_vote_count.gte` | Matches any movie/show whose TMDb vote count is greater then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
 | `tmdb_vote_count.lte` | Matches any movie/show whose TMDb vote count is less then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
-| `duration.gte` | Matches any movie/show whose duration is greater then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
-| `duration.lte` | Matches any movie/show whose duration is less then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
+| `duration.gte` | Matches any movie whose duration is greater then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
+| `duration.lte` | Matches any movie whose duration is less then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
 | `originally_available.gte` | Matches any movie/show whose originally_available date is greater then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
 | `originally_available.lte` | Matches any movie/show whose originally_available date is less then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
 
