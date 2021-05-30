@@ -73,8 +73,8 @@ No date filter can take multiple values.
 
 | Date Modifier | Description | Format |
 | :--- | :--- | :---: |
-| No Modifier | Matches every item where the date attribute<br>is in the last X days | integer number of days<br>e.g. `30` |
-| `.not` | Matches every item where the date attribute<br>is not in the last X days | integer number of days<br>e.g. `30` |
+| No Modifier | Matches every item where the date attribute<br>is in the last X days | **Format:** number of days<br>e.g. `30` |
+| `.not` | Matches every item where the date attribute<br>is not in the last X days | **Format:** number of days<br>e.g. `30` |
 | `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
 | `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
 
@@ -97,10 +97,10 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 
 | Number Modifier | Description | Format |
 | :--- | :--- | :---: |
-| `.gt` | Matches every item where the number attribute<br>is greater then the given number | number<br>e.g. `30`, `1995`, or `7.5` |
-| `.gte` | Matches every item where the number attribute<br>is greater then or equal to the given number | number<br>e.g. `30`, `1995`, or `7.5` |
-| `.lt` | Matches every item where the number attribute<br>is less then the given number | number<br>e.g. `30`, `1995`, or `7.5` |
-| `.lte` | Matches every item where the number attribute<br>is less then or equal to the given number | number<br>e.g. `30`, `1995`, or `7.5` |
+| `.gt` | Matches every item where the number attribute<br>is greater then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+| `.gte` | Matches every item where the number attribute<br>is greater then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+| `.lt` | Matches every item where the number attribute<br>is less then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+| `.lte` | Matches every item where the number attribute<br>is less then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
 
 #### Attribute
 
