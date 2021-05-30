@@ -9,15 +9,15 @@ You can use `plex_all: true` to start your filter from your entire library.
 **Filters can be very slow. Try to build or narrow your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
 
 ### String Filters
-String filters can use 4 different modifiers `None`, `.not`, `.begins`, and `.ends`.
+String filters can be used with either no modifier or with `.not`, `.begins`, or `.ends`.
 
 String filter can take multiple values **only as a list**.
 
 #### Modifier
 
-| Date Modifier | Description |
+| String Modifier | Description |
 | :--- | :--- |
-| `None` | Matches every item where the attribute contains the given string |
+| No Modifier | Matches every item where the attribute contains the given string |
 | `.not` | Matches every item where the attribute does not contain the given string |
 | `begins` | Matches every item where the attribute begins with the given string |
 | `ends` | Matches every item where the attribute ends with the given string |
@@ -32,7 +32,7 @@ String filter can take multiple values **only as a list**.
 | `audio_track_title` | Uses the audio track titles to match | :heavy_check_mark: | :x: |
 
 ### Tag Filters
-Tag filters can use 2 different modifiers `None` and `.not`.
+Tag filters can be used with either no modifier or with `.not`.
 
 String filter can take multiple values as a **list or a comma-separated string**.
 
@@ -42,12 +42,12 @@ The `original_language` filter will also filter out movies from being added to R
 
 | Date Modifier | Description |
 | :--- | :--- |
-| `None` | Matches every item where the attribute matches the given string |
+| No Modifier | Matches every item where the attribute matches the given string |
 | `.not` | Matches every item where the attribute does not match the given string |
 
 #### Attribute
 
-| Standard Filters | Description | Movie<br>Libraries | Show<br>Libraries |
+| Tag Filters | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
 | `actor` | Uses the actor tags to match | :heavy_check_mark: | :heavy_check_mark: |
 | `collection` | Uses the collection tags to match | :heavy_check_mark: | :heavy_check_mark: |
@@ -65,7 +65,7 @@ The `original_language` filter will also filter out movies from being added to R
 | `subtitle_language` | Uses the subtitle language tags to match | :heavy_check_mark: | :x: |
 
 ### Date Filters
-Date filters can use 4 different modifiers `None`, `.not`, `.before`, and `.after`.
+Date filters can be used with either no modifier or with `.not`, `.before`, or `.after`.
 
 No date filter can take multiple values.
 
@@ -73,7 +73,7 @@ No date filter can take multiple values.
 
 | Date Modifier | Description | Format |
 | :--- | :--- | :---: |
-| `None` | Matches every item where the date attribute<br>is in the last X days | integer number of days<br>e.g. `30` |
+| No Modifier | Matches every item where the date attribute<br>is in the last X days | integer number of days<br>e.g. `30` |
 | `.not` | Matches every item where the date attribute<br>is not in the last X days | integer number of days<br>e.g. `30` |
 | `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
 | `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
@@ -87,7 +87,7 @@ No date filter can take multiple values.
 | `last_played` | Uses the date last played attribute to match | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Number Filters
-Number filters can use 4 different modifiers `.gt`, `.gte`, `.lt`, and `.lte`.
+Number filters must use `.gt`, `.gte`, `.lt`, or `.lte` as a modifier.
 
 No number filter can take multiple values.
 
