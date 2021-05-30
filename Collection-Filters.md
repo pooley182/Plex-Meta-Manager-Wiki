@@ -8,12 +8,12 @@ You can use `plex_all: true` to start your filter from your entire library.
 
 **Filters can be very slow. Try to build or narrow your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
 
-### String Filters
+## String Filters
 String filters can be used with either no modifier or with `.not`, `.begins`, or `.ends`.
 
 String filter can take multiple values **only as a list**.
 
-#### Modifier
+### Modifier
 
 | String Modifier | Description |
 | :--- | :--- |
@@ -22,7 +22,7 @@ String filter can take multiple values **only as a list**.
 | `begins` | Matches every item where the attribute begins with the given string |
 | `ends` | Matches every item where the attribute ends with the given string |
 
-#### Attribute
+### Attribute
 
 | String Filter | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
@@ -31,21 +31,21 @@ String filter can take multiple values **only as a list**.
 | `filepath` | Uses the item's filepath to match | :heavy_check_mark: | :heavy_check_mark: |
 | `audio_track_title` | Uses the audio track titles to match | :heavy_check_mark: | :x: |
 
-### Tag Filters
+## Tag Filters
 Tag filters can be used with either no modifier or with `.not`.
 
 String filter can take multiple values as a **list or a comma-separated string**.
 
 The `original_language` filter will also filter out movies from being added to Radarr.
 
-#### Modifier
+### Modifier
 
 | Tag Modifier | Description |
 | :--- | :--- |
 | No Modifier | Matches every item where the attribute matches the given string |
 | `.not` | Matches every item where the attribute does not match the given string |
 
-#### Attribute
+### Attribute
 
 | Tag Filters | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
@@ -64,12 +64,12 @@ The `original_language` filter will also filter out movies from being added to R
 | `audio_language` | Uses the audio language tags to match | :heavy_check_mark: | :x: |
 | `subtitle_language` | Uses the subtitle language tags to match | :heavy_check_mark: | :x: |
 
-### Date Filters
+## Date Filters
 Date filters can be used with either no modifier or with `.not`, `.before`, or `.after`.
 
 No date filter can take multiple values.
 
-#### Modifier
+### Modifier
 
 | Date Modifier | Description | Format |
 | :--- | :--- | :---: |
@@ -78,7 +78,7 @@ No date filter can take multiple values.
 | `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
 | `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
 
-#### Attribute
+### Attribute
 
 | Date Filter | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
@@ -86,14 +86,14 @@ No date filter can take multiple values.
 | `added` | Uses the date added attribute to match | :heavy_check_mark: | :heavy_check_mark: |
 | `last_played` | Uses the date last played attribute to match | :heavy_check_mark: | :heavy_check_mark: |
 
-### Number Filters
+## Number Filters
 Number filters must use `.gt`, `.gte`, `.lt`, or `.lte` as a modifier.
 
 No number filter can take multiple values.
 
 The `tmdb_vote_count` filter will also filter out movies/shows from being added to Radarr/Sonarr.
 
-#### Modifier
+### Modifier
 
 | Number Modifier | Description | Format |
 | :--- | :--- | :---: |
@@ -102,7 +102,7 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 | `.lt` | Matches every item where the number attribute<br>is less then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
 | `.lte` | Matches every item where the number attribute<br>is less then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
 
-#### Attribute
+### Attribute
 
 | Number Filters | Description | Restrictions | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: | :--: |
@@ -114,7 +114,7 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 | `plays` | Uses the plays attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
 | `duration` | Uses the duration attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
 
-### Collection Filter Examples
+## Collection Filter Examples
 
 A few examples are listed below:
 
