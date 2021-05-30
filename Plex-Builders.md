@@ -79,7 +79,7 @@ There are a couple other attributes you can have at the top level only along wit
 | `season.asc`/`season.desc` | Sort by Season | :x: | :x: | :heavy_check_mark: | :x: |
 | `show.asc`/`show.desc` | Sort by Show | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
 | `year.asc`/`year.desc` | Sort by Year | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
-| `release.asc`/<br>`release.desc` | Sort by Originally Available | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| `release.asc`/<br>`release.desc` | Sort by Release Date (Originally Available) | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
 | `critic_rating.asc`/<br>`critic_rating.desc` | Sort by Critic Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
 | `audience_rating.asc`/<br>`audience_rating.desc` | Sort by Audience Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
 | `user_rating.asc`/<br>`user_rating.desc` | Sort by User Rating | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
