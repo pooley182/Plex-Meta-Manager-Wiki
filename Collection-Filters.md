@@ -4,54 +4,115 @@ You can have multiple collection filters but a movie/show must match at least on
 
 All collection filter options are listed below. To display collections filtered out add `show_filtered: true` to the collection.
 
-**Filters can be very slow. Try to build your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
+You can use `plex_all: true` to start your filter from your entire library.
 
-### Standard Filters
+**Filters can be very slow. Try to build or narrow your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
+
+### String Filters
+String filters can use 4 different modifiers `None`, `.not`, `.begins`, and `.ends`.
+
+String filter can take multiple values **only as a list**.
+
+#### Modifier
+
+| Date Modifier | Description |
+| :--- | :--- |
+| `None` | Matches every item where the attribute contains the given string |
+| `.not` | Matches every item where the attribute does not contain the given string |
+| `begins` | Matches every item where the attribute begins with the given string |
+| `ends` | Matches every item where the attribute ends with the given string |
+
+#### Attribute
+
+| String Filter | Description | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: |
+| `title` | Uses the title attribute to match | :heavy_check_mark: | :heavy_check_mark: |
+| `studio` | Uses the studio attribute to match | :heavy_check_mark: | :heavy_check_mark: |
+| `filepath` | Uses the item's filepath to match | :heavy_check_mark: | :heavy_check_mark: |
+| `audio_track_title` | Uses the audio track titles to match | :heavy_check_mark: | :x: |
+
+### Tag Filters
+Tag filters can use 2 different modifiers `None` and `.not`.
+
+String filter can take multiple values as a **list or a comma-separated string**.
+
+The `original_language` filter will also filter out movies from being added to Radarr.
+
+#### Modifier
+
+| Date Modifier | Description |
+| :--- | :--- |
+| `None` | Matches every item where the attribute matches the given string |
+| `.not` | Matches every item where the attribute does not match the given string |
+
+#### Attribute
 
 | Standard Filters | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
-| `actor` | Matches every movie/show with the specified actor | :heavy_check_mark: | :heavy_check_mark: |
-| `collection` | Matches every movie/show with the specified plex collection | :heavy_check_mark: | :heavy_check_mark: |
-| `content_rating` | Matches every movie/show with the specified content rating | :heavy_check_mark: | :heavy_check_mark: |
-| `country` | Matches every movie with the specified country | :heavy_check_mark: | :x: |
-| `director` | Matches every movie with the specified director | :heavy_check_mark: | :x: |
-| `genre` | Matches every movie/show with the specified genre | :heavy_check_mark: | :heavy_check_mark: |
-| `studio` | Matches every movie/show with the specified studio | :heavy_check_mark: | :heavy_check_mark: |
-| `year` | Matches every movie/show with the specified year | :heavy_check_mark: | :heavy_check_mark: |
-| `writer` | Matches every movie with the specified writer | :heavy_check_mark: | :x: |
-| `filepath` | Matches every movie/show whose filepath contains the given text | :heavy_check_mark: | :heavy_check_mark: |
-| `original_language` | Matches every movie with the specified original language [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)<br>Example: `original_language: en, ko` | :heavy_check_mark: | :x: |
-| `video_resolution` | Matches every movie with the specified video resolution | :heavy_check_mark: | :x: |
-| `audio_language` | Matches every movie with the specified audio language | :heavy_check_mark: | :x: |
-| `audio_track_title` | Matches every movie where any audio track contains the specified string | :heavy_check_mark: | :x: |
-| `subtitle_language` | Matches every movie with the specified subtitle language | :heavy_check_mark: | :x: |
+| `actor` | Uses the actor tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `collection` | Uses the collection tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `content_rating` | Uses the content rating tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `country` | Uses the country tags to match | :heavy_check_mark: | :x: |
+| `director` | Uses the director tags to match | :heavy_check_mark: | :x: |
+| `genre` | Uses the genre tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `label` | Uses the label tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `producer` | Uses the actor tags to match | :heavy_check_mark: | :x: |
+| `year` | Uses the year tag to match | :heavy_check_mark: | :heavy_check_mark: |
+| `writer` | Uses the writer tags to match | :heavy_check_mark: | :x: |
+| `original_language` | Uses TMDb original language [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to match<br>Example: `original_language: en, ko` | :heavy_check_mark: | :x: |
+| `resolution` | Uses the resolution tag to match | :heavy_check_mark: | :x: |
+| `audio_language` | Uses the audio language tags to match | :heavy_check_mark: | :x: |
+| `subtitle_language` | Uses the subtitle language tags to match | :heavy_check_mark: | :x: |
 
-* Standard filters can have multiple values either by being a list or a comma-separated string.
-* You can also use the `.not` at the end of any standard collection filter to do an inverse search matching everything that doesn't have the value specified. You can use `plex_all: true` to start your filter from your entire library.
-* Using the `original_language` filter will also filter out movies from being added to Radarr.
+### Date Filters
+Date filters can use 4 different modifiers `None`, `.not`, `.before`, and `.after`.
 
-### Advanced Filters
+No date filter can take multiple values.
 
-| Advanced Filters | Description | Movie<br>Libraries | Show<br>Libraries |
+#### Modifier
+
+| Date Modifier | Description | Format |
+| :--- | :--- | :---: |
+| `None` | Matches every item where the date attribute is in the last X days | integer number of days e.g. `30` |
+| `.not` | Matches every item where the date attribute is not in the last X days | integer number of days e.g. `30` |
+| `before` | Matches every item where the date attribute is before the given date | **Format:** MM/DD/YYYY e.g. `01/01/2000` |
+| `after` | Matches every item where the date attribute is after the given date | **Format:** MM/DD/YYYY e.g. `01/01/2000` |
+
+#### Attribute
+
+| Date Filter | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
-| `max_age` | Matches any movie/show whose Originally Available date is within the last specified number of days | :heavy_check_mark: | :heavy_check_mark: |
-| `year.gte` | Matches any movie/show whose year is greater then or equal to the specified year | :heavy_check_mark: | :heavy_check_mark: |
-| `year.lte` | Matches any movie/show whose year is less then or equal to the specified year | :heavy_check_mark: | :heavy_check_mark: |
-| `critic_rating.gte` | Matches any movie/show whose critic rating is greater then or equal to the specified critic rating | :heavy_check_mark: | :heavy_check_mark: |
-| `critic_rating.lte` | Matches any movie/show whose critic rating is less then or equal to the specified critic rating | :heavy_check_mark: | :heavy_check_mark: |
-| `audience_rating.gte` | Matches any movie/show whose audience rating is greater then or equal to the specified audience rating | :heavy_check_mark: | :heavy_check_mark: |
-| `audience_rating.lte` | Matches any movie/show whose audience rating is less then or equal to the specified audience rating | :heavy_check_mark: | :heavy_check_mark: |
-| `user_rating.gte` | Matches any movie/show whose user rating is greater then or equal to the specified user rating | :heavy_check_mark: | :heavy_check_mark: |
-| `user_rating.lte` | Matches any movie/show whose user rating is less then or equal to the specified user rating | :heavy_check_mark: | :heavy_check_mark: |
-| `tmdb_vote_count.gte` | Matches any movie/show whose TMDb vote count is greater then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
-| `tmdb_vote_count.lte` | Matches any movie/show whose TMDb vote count is less then or equal to the specified count | :heavy_check_mark: | :heavy_check_mark: |
-| `duration.gte` | Matches any movie whose duration is greater then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
-| `duration.lte` | Matches any movie whose duration is less then or equal to the specified duration in minutes | :heavy_check_mark: | :x: |
-| `originally_available.gte` | Matches any movie/show whose originally_available date is greater then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
-| `originally_available.lte` | Matches any movie/show whose originally_available date is less then or equal to the specified originally_available date<br>**Format:** MM/DD/YYYY | :heavy_check_mark: | :heavy_check_mark: |
+| `release` | Uses the release date attribute (originally available) to match | :heavy_check_mark: | :heavy_check_mark: |
+| `added` | Uses the date added attribute to match | :heavy_check_mark: | :heavy_check_mark: |
+| `last_played` | Uses the date last played attribute to match | :heavy_check_mark: | :heavy_check_mark: |
 
-* Advance filters can not take multiple values.
-* Using the `tmdb_vote_count.gte` or `tmdb_vote_count.lte` filter will also filter out movies from being added to Radarr.
+### Number Filters
+Number filters can use 4 different modifiers `.gt`, `.gte`, `.lt`, and `.lte`.
+
+No number filter can take multiple values.
+
+The `tmdb_vote_count` filter will also filter out movies/shows from being added to Radarr/Sonarr.
+
+#### Modifier
+
+| Modifier | Description | Format |
+| :--- | :--- | :---: |
+| `.gt` | Matches every item where the number attribute is greater then the given number | number e.g. `30`, `1995`, or `7.5` |
+| `.gte` | Matches every item where the number attribute is greater then or equal to the given number | number e.g. `30`, `1995`, or `7.5` |
+| `.lt` | Matches every item where the number attribute is less then the given number | number e.g. `30`, `1995`, or `7.5` |
+| `.lte` | Matches every item where the number attribute is less then or equal to the given number | number e.g. `30`, `1995`, or `7.5` |
+
+#### Attribute
+
+| Number Filters | Description | Restrictions | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: | :--: |
+| `year` | Uses the year attribute to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
+| `critic_rating` | Uses the critic rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
+| `audience_rating` | Uses the audience rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
+| `user_rating` | Uses the user rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
+| `tmdb_vote_count` | Uses the tmdb vote count to match | minimum: `1` | :heavy_check_mark: | :heavy_check_mark: |
+| `plays` | Uses the plays attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
+| `duration` | Uses the duration attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
 
 ### Collection Filter Examples
 
@@ -63,7 +124,7 @@ collections:
     genre: Documentary
     summary: A collection of 1080p Documentaries
     filters:
-      video_resolution: 1080
+      resolution: 1080
 ```
 ```yaml
 collections:
@@ -98,15 +159,15 @@ collections:
   Summer 2020 Movies:
     plex_all: true
     filters:
-      originally_available.gte: 5/1/2020
-      originally_available.lte: 8/31/2020
+      release.gte: 5/1/2020
+      release.lte: 8/31/2020
 ```
 ```yaml
 collections:
   Movies Released in the Last 180 Days:
     plex_all: true
     filters:
-      max_age: 180
+      release: 180
 ```
 ```yaml
 collections:

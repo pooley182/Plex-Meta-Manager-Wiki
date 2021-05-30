@@ -23,6 +23,8 @@ Inside the base attribute you can use any filter below or nest more `any` or `an
 
 There are a couple other attributes you can have at the top level only along with the base attribute are:
 
+### Special Attributes
+
 | Special Option | Attribute | Description | Default |
 | :--- | :--- | :--- | :---: |
 | Type | `type` | The Type of items inside this collection<br>**Options**: `movies`, `shows`, `seasons`, and `episodes` | `movies` for Movies Libraries and `shows` for Show Libraries |
@@ -30,22 +32,23 @@ There are a couple other attributes you can have at the top level only along wit
 | Sort By | `sort_by` | This will control how the filter is sorted in your library. You can use any sort options for your search type in the [Sorts Table](#sorts-table) | `random` |
 | Validate | `validate` | Determines if a collection will fail on a validation error<br>**Options**: `true` or `false` | `true` |
 
-### Sorts Table
+### Sort Options
+
 | Sorts | Description | Movies | Shows | Seasons | Episodes |
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | `title.asc`/`title.desc` | Sort by Title | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
 | `season.asc`/`season.desc` | Sort by Season | :x: | :x: | :heavy_check_mark: | :x: |
 | `show.asc`/`show.desc` | Sort by Show | :x: | :x: | :heavy_check_mark: | :heavy_check_mark: |
 | `year.asc`/`year.desc` | Sort by Year | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
-| `originally_available.asc`/`originally_available.desc` | Sort by Originally Available | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
-| `critic_rating.asc`/`critic_rating.desc` | Sort by Critic Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
-| `audience_rating.asc`/`audience_rating.desc` | Sort by Audience Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
-| `user_rating.asc`/`user_rating.desc` | Sort by User Rating | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| `content_rating.asc`/`content_rating.desc` | Sort by Content Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
+| `release.asc`/<br>`release.desc` | Sort by Originally Available | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| `critic_rating.asc`/<br>`critic_rating.desc` | Sort by Critic Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| `audience_rating.asc`/<br>`audience_rating.desc` | Sort by Audience Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| `user_rating.asc`/<br>`user_rating.desc` | Sort by User Rating | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| `content_rating.asc`/<br>`content_rating.desc` | Sort by Content Rating | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
 | `duration.asc`/`duration.desc` | Sort by Duration | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 | `plays.asc`/`plays.desc` | Sort by Number of Plays | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 | `added.asc`/`added.desc` | Sort by Date Added | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_added.asc`/`episode_added.desc` | Sort by Last Episode Date Added | :x: | :heavy_check_mark: | :x: | :x: |
+| `episode_added.asc`/<br>`episode_added.desc` | Sort by Last Episode Date Added | :x: | :heavy_check_mark: | :x: | :x: |
 | `random` | Sort by Random | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ### Filters
@@ -74,10 +77,22 @@ There are three fields per filter option when using Plex's Advance Filters in th
 | `decade` | Gets every item from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
 | `resolution` | Gets every item with the specified resolution | :heavy_check_mark: | :heavy_check_mark: |
 | `hdr` | `true`: Gets every item with HDR<br>`false`: Gets every item without HDR | :heavy_check_mark: | :heavy_check_mark: |
+| `unmatched` | `true`: Gets every unmatched item<br>`false`: Gets every matched item | :heavy_check_mark: | :x: |
+| `duplicate` | `true`: Gets every duplicate item<br>`false`: Gets every item that's not a duplicate | :heavy_check_mark: | :x: |
+| `unplayed` | `true`: Gets every unplayed item<br>`false`: Gets every played item | :heavy_check_mark: | :x: |
+| `progress` | `true`: Gets every item in progress<br>`false`: Gets every item not in progress | :heavy_check_mark: | :x: |
+| `trash` | `true`: Gets every item in the trash<br>`false`: Gets every item not in the trash | :heavy_check_mark: | :x: |
+| `unplayed_episodes` | `true`: Gets every item that has unplayed episodes<br>`false`: Gets every item that doesn't have unplayed episodes< | :x: | :heavy_check_mark: |
+| `episode_unplayed` | `true`: Gets every item that has episodes unplayed<br>`false`: Gets every item that doesn't have episodes unplayed< | :x: | :heavy_check_mark: |
+| `episode_duplicate` | `true`: Gets every item that has duplicate episodes<br>`false`: Gets every item that doesn't have duplicate episodes< | :x: | :heavy_check_mark: |
+| `episode_progress` | `true`: Gets every item that has episodes in progress<br>`false`: Gets every item that doesn't have episodes in progress< | :x: | :heavy_check_mark: |
+| `episode_unmatched` | `true`: Gets every item that has episodes unmatched<br>`false`: Gets every item that doesn't have episodes unmatched< | :x: | :heavy_check_mark: |
 | `added` | Gets every item added to plex before/after the specified date or in the last<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
 | `episode_added` | Gets every item which has an episode added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
-| `originally_available` | Gets every item originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
-| `episode_originally_available` | Gets every item which has an episode originally available before/after the specified date<br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
+| `release` | Gets every item with a Release Date (Originally Available) before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
+| `episode_air_date` | Gets every item which has an episode air date (Originally Available) before/after the specified date<br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
+| `last_played` | Gets every item last played in plex before/after the specified date or in the last<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_last_played` | Gets every item which has an episode last played in plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
 | `duration` | Gets every item with a duration greater/less then the specified number of minutes | :heavy_check_mark: | :x: |
 | `plays` | Gets every item where the number of plays is greater/less then the specified number of plays | :heavy_check_mark: | :x: |
 | `episode_plays` | Gets every item which has an episode where the number of plays is greater/less then the specified number of plays | :x: | :heavy_check_mark: |
@@ -94,8 +109,8 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop-
 
 | Modifier | Description | Plex Web UI Option |
 | :--- | :--- | :---: |
-| No Modifier | Matches the search term at least one search term exactly for every field except:<br>**String Fields** match every item that contains the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item in that past many days<br>**Date Fields**: `added`, `episode_added`, `originally_available`, & `episode_originally_available`| `is` for most<br>`contains` for **String Fields**<br>`in the last` for **Date Fields** |
-| `.not` | Matches every item that does not have any of the exact search terms for every field except:<br>**String Fields** match every item that does not contain the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item not in that past many days<br>**Date Fields**: `added`, `episode_added`, `originally_available`, & `episode_originally_available`| `is not` for most<br>`does not contain` for **String Fields**<br>`in not the last` for **Date Fields** |
+| No Modifier | Matches the search term at least one search term exactly for every field except:<br>**String Fields** match every item that contains the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item in that past many days<br>**Date Fields**: `added`, `episode_added`, `release`, & `episode_air_date`| `is` for most<br>`contains` for **String Fields**<br>`in the last` for **Date Fields** |
+| `.not` | Matches every item that does not have any of the exact search terms for every field except:<br>**String Fields** match every item that does not contain the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item not in that past many days<br>**Date Fields**: `added`, `episode_added`, `release`, & `episode_air_date`| `is not` for most<br>`does not contain` for **String Fields**<br>`in not the last` for **Date Fields** |
 | `.begins` | Matches every item that starts with at least one search term | `begins with` |
 | `.ends` | Matches every item that ends with at least one search term | `ends with` |
 | `.before` | Matches every item that is before the specified date | `is before` |
@@ -125,10 +140,22 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop-
 | `decade` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | `resolution` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | `hdr` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `unmatched` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `duplicate` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `unplayed` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `progress` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `trash` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `unplayed_episodes` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `episode_unplayed` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `episode_duplicate` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `episode_progress` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
+| `episode_unmatched` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
 | `added` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | `episode_added` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `originally_available` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `episode_originally_available` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+| `release` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+| `episode_air_date` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+| `last_played` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
+| `episode_last_played` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
 | `plays` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `episode_plays` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
 | `duration` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
@@ -139,7 +166,7 @@ Each modifier translates directly from a modifier in the Web UI's modifier drop-
 | `year` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 | `episode_year` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
 
-* Multiple values are supported as either a list or a comma-separated string for all modifiers except `.before`, `.after`, `.gt`, `.gte`, `.lt`, and `.lte`.
+* Multiple values are supported as either a list or a comma-separated string for all modifiers except `.begins`, `.ends`, `.before`, `.after`, `.gt`, `.gte`, `.lt`, and `.lte`.
 
 ```yaml
 collections:
