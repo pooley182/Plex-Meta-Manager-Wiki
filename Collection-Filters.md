@@ -40,7 +40,7 @@ The `original_language` filter will also filter out movies from being added to R
 
 #### Modifier
 
-| Date Modifier | Description |
+| Tag Modifier | Description |
 | :--- | :--- |
 | No Modifier | Matches every item where the attribute matches the given string |
 | `.not` | Matches every item where the attribute does not match the given string |
@@ -95,7 +95,7 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 
 #### Modifier
 
-| Modifier | Description | Format |
+| Number Modifier | Description | Format |
 | :--- | :--- | :---: |
 | `.gt` | Matches every item where the number attribute<br>is greater then the given number | number<br>e.g. `30`, `1995`, or `7.5` |
 | `.gte` | Matches every item where the number attribute<br>is greater then or equal to the given number | number<br>e.g. `30`, `1995`, or `7.5` |
