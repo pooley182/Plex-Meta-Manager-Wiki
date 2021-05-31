@@ -62,18 +62,18 @@ Inside the base attribute you can use any search below or nest more `any` or `an
 
 There are a couple other attributes you can have at the top level only along with the base attribute are:
 
-### Special Attributes
+## Special Attributes
 
 | Special Option | Attribute | Description | Default |
 | :--- | :--- | :--- | :---: |
 | Type | `type` | The Type of items inside this collection<br>**Options**: `movies`, `shows`, `seasons`, and `episodes` | `movies` for Movies Libraries and `shows` for Show Libraries |
-| Limit | `limit` | The max number of item for the filter | all |
-| Sort By | `sort_by` | This will control how the filter is sorted in your library. You can use any sort options for your search type in the [Sorts Table](#sorts-table) | `random` |
+| Limit | `limit` | The max number of item for the search | all |
+| Sort By | `sort_by` | This will control how the search is sorted in your library. You can use any sort options for your search type in the [Sorts Table](#sorts-table) | `random` |
 | Validate | `validate` | Determines if a collection will fail on a validation error<br>**Options**: `true` or `false` | `true` |
 
-### Sort Options
+## Sort Options
 
-| Sorts | Description | Movies | Shows | Seasons | Episodes |
+| Sort Option | Description | Movies | Shows | Seasons | Episodes |
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | `title.asc`/`title.desc` | Sort by Title | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: |
 | `season.asc`/`season.desc` | Sort by Season | :x: | :x: | :heavy_check_mark: | :x: |
@@ -90,136 +90,152 @@ There are a couple other attributes you can have at the top level only along wit
 | `episode_added.asc`/<br>`episode_added.desc` | Sort by Last Episode Date Added | :x: | :heavy_check_mark: | :x: | :x: |
 | `random` | Sort by Random | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
-### Searches
+## Searches
 
-There are three fields per filter option when using Plex's Advance Filters in the Web UI. The first is the **Filter Field** (what field you wish to filter), the second is the **Filter Modifier** (which modifier to use), and the third is the **Filter Term** (actual term to filter).  
+There are three fields per search option when using Plex's Advance Filters in the Web UI. The first is the **Attribute** (what attribute you wish to search), the second is the **Modifier** (which modifier to use), and the third is the **Term** (actual term to search).
 
-### Search Fields
+## String Searches
+String searches can be used with either no modifier or with `.not`, `.begins`, or `.ends`.
 
-| Search Field | Description | Movie<br>Libraries | Show<br>Libraries |
+String search can take multiple values **only as a list**.
+
+### String Modifiers
+
+| String Modifier | Description |
+| :--- | :--- |
+| No Modifier | Matches every item where the attribute contains the given string |
+| `.not` | Matches every item where the attribute does not contain the given string |
+| `begins` | Matches every item where the attribute begins with the given string |
+| `ends` | Matches every item where the attribute ends with the given string |
+
+### String Attributes
+
+| String Search | Description | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: |
-| `title` | Gets every item with the specified text contained in the title | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_title` | Gets every item which has an episode with the specified text contained in the title | :x: | :heavy_check_mark: |
-| `studio` | Gets every item with the specified text contained in the studio | :heavy_check_mark: | :heavy_check_mark: |
-| `network` | Gets every item with the specified network<br>**Only works with the New Plex TV Agent** | :x: | :heavy_check_mark: |
-| `actor` | Gets every item with the specified actor | :heavy_check_mark: | :heavy_check_mark: |
-| `audio_language` | Gets every item with the specified audio language | :heavy_check_mark: | :heavy_check_mark: |
-| `collection` | Gets item with the specified collection | :heavy_check_mark: | :heavy_check_mark: |
-| `content_rating` | Gets item with the specified content rating | :heavy_check_mark: | :heavy_check_mark: |
-| `country` | Gets every item with the specified country | :heavy_check_mark: | :x: |
-| `director` | Gets every item with the specified director | :heavy_check_mark: | :x: |
-| `genre` | Gets every item with the specified genre | :heavy_check_mark: | :heavy_check_mark: |
-| `label` | Gets every item with the specified label | :heavy_check_mark: | :heavy_check_mark: |
-| `producer` | Gets every item with the specified producer | :heavy_check_mark: | :x: |
-| `subtitle_language` | Gets every item with the specified subtitle language | :heavy_check_mark: | :heavy_check_mark: |
-| `writer` | Gets every item with the specified writer | :heavy_check_mark: | :x: |
-| `decade` | Gets every item from the specified year + the 9 that follow i.e. 1990 will get you 1990-1999 | :heavy_check_mark: | :x: |
-| `resolution` | Gets every item with the specified resolution | :heavy_check_mark: | :heavy_check_mark: |
-| `hdr` | `true`: Gets every item with HDR<br>`false`: Gets every item without HDR | :heavy_check_mark: | :heavy_check_mark: |
-| `unmatched` | `true`: Gets every unmatched item<br>`false`: Gets every matched item | :heavy_check_mark: | :x: |
-| `duplicate` | `true`: Gets every duplicate item<br>`false`: Gets every item that's not a duplicate | :heavy_check_mark: | :x: |
-| `unplayed` | `true`: Gets every unplayed item<br>`false`: Gets every played item | :heavy_check_mark: | :x: |
-| `progress` | `true`: Gets every item in progress<br>`false`: Gets every item not in progress | :heavy_check_mark: | :x: |
-| `trash` | `true`: Gets every item in the trash<br>`false`: Gets every item not in the trash | :heavy_check_mark: | :x: |
-| `unplayed_episodes` | `true`: Gets every item that has unplayed episodes<br>`false`: Gets every item that doesn't have unplayed episodes< | :x: | :heavy_check_mark: |
-| `episode_unplayed` | `true`: Gets every item that has episodes unplayed<br>`false`: Gets every item that doesn't have episodes unplayed< | :x: | :heavy_check_mark: |
-| `episode_duplicate` | `true`: Gets every item that has duplicate episodes<br>`false`: Gets every item that doesn't have duplicate episodes< | :x: | :heavy_check_mark: |
-| `episode_progress` | `true`: Gets every item that has episodes in progress<br>`false`: Gets every item that doesn't have episodes in progress< | :x: | :heavy_check_mark: |
-| `episode_unmatched` | `true`: Gets every item that has episodes unmatched<br>`false`: Gets every item that doesn't have episodes unmatched< | :x: | :heavy_check_mark: |
-| `added` | Gets every item added to plex before/after the specified date or in the last<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_added` | Gets every item which has an episode added to plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
-| `release` | Gets every item with a Release Date (Originally Available) before/after the specified date<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :x: |
-| `episode_air_date` | Gets every item which has an episode air date (Originally Available) before/after the specified date<br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
-| `last_played` | Gets every item last played in plex before/after the specified date or in the last<br>**Format:** YYYY-MM-DD | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_last_played` | Gets every item which has an episode last played in plex before/after the specified date or in the last <br>**Format:** YYYY-MM-DD | :x: | :heavy_check_mark: |
-| `duration` | Gets every item with a duration greater/less then the specified number of minutes | :heavy_check_mark: | :x: |
-| `plays` | Gets every item where the number of plays is greater/less then the specified number of plays | :heavy_check_mark: | :x: |
-| `episode_plays` | Gets every item which has an episode where the number of plays is greater/less then the specified number of plays | :x: | :heavy_check_mark: |
-| `audience_rating` | Gets every item with an audience rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
-| `critic_rating` | Gets every item with a critic rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
-| `user_rating` | Gets every item with a user rating greater/less then the specified number | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_user_rating` | Gets every item which has an episode with a user rating greater/less then the specified number | :x: | :heavy_check_mark: |
-| `year` | Gets every item with the specified year or greater/less then the specified year | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_year` | Gets every item which has an episode with the specified year or greater/less then the specified year | :x: | :heavy_check_mark: |
+| `title` | Uses the title attribute to match | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_title` | Uses the title attribute of the show's episodes to match | :x: | :heavy_check_mark: |
+| `studio` | Uses the studio attribute to match | :heavy_check_mark: | :heavy_check_mark: |
 
-### Search Modifiers
+## Tag Searches
+Tag searches can be used with either no modifier or with `.not` except for `decade` and `resolution` which can only be used with no modifier.
 
-Each modifier translates directly from a modifier in the Web UI's modifier drop-down.
+String search can take multiple values as a **list or a comma-separated string**.
 
-| Modifier | Description | Plex Web UI Option |
+### Tag Modifiers
+
+| Tag Modifier | Description |
+| :--- | :--- |
+| No Modifier | Matches every item where the attribute matches the given string |
+| `.not` | Matches every item where the attribute does not match the given string |
+
+### Tag Attributes
+
+| Tag Search | Description | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: |
+| `actor` | Uses the actor tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `audio_language` | Uses the audio language tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `collection` | Uses the collection tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `content_rating` | Uses the content rating tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `country` | Uses the country tags to match | :heavy_check_mark: | :x: |
+| `decade` | Uses the year tag to match the decade | :heavy_check_mark: | :x: |
+| `director` | Uses the director tags to match | :heavy_check_mark: | :x: |
+| `genre` | Uses the genre tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `label` | Uses the label tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `network` | Uses the network tags to match<br>**Only works with the New Plex TV Agent** | :x: | :heavy_check_mark: |
+| `producer` | Uses the actor tags to match | :heavy_check_mark: | :x: |
+| `resolution` | Uses the resolution tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `subtitle_language` | Uses the subtitle language tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `writer` | Uses the writer tags to match | :heavy_check_mark: | :x: |
+| `year` | Uses the year tag to match | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_year` | Uses the year tag to match | :x: | :heavy_check_mark: |
+
+## Date Searches
+Date searches can be used with either no modifier or with `.not`, `.before`, or `.after`.
+
+No date search can take multiple values.
+
+### Date Modifiers
+
+| Date Modifier | Description | Format |
 | :--- | :--- | :---: |
-| No Modifier | Matches the search term at least one search term exactly for every field except:<br>**String Fields** match every item that contains the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item in that past many days<br>**Date Fields**: `added`, `episode_added`, `release`, & `episode_air_date`| `is` for most<br>`contains` for **String Fields**<br>`in the last` for **Date Fields** |
-| `.not` | Matches every item that does not have any of the exact search terms for every field except:<br>**String Fields** match every item that does not contain the search term<br>**String Fields**: `title`, `episode_title`, & `studio`<br>**Date Fields** take an integer and match every item not in that past many days<br>**Date Fields**: `added`, `episode_added`, `release`, & `episode_air_date`| `is not` for most<br>`does not contain` for **String Fields**<br>`in not the last` for **Date Fields** |
-| `.begins` | Matches every item that starts with at least one search term | `begins with` |
-| `.ends` | Matches every item that ends with at least one search term | `ends with` |
-| `.before` | Matches every item that is before the specified date | `is before` |
-| `.after` | Matches every item that is after the specified date | `is after` |
-| `.gt` | Matches every item that is greater than specified number | `is greater than` |
-| `.gte` | Matches every item that is greater than or equal to the specified number | N/A |
-| `.lt` | Matches every item that is less than specified number | `is less than` |
-| `.lte` | Matches every item that is less than or equal to the specified number | N/A |
+| No Modifier | Matches every item where the date attribute<br>is in the last X days | **Format:** number of days<br>e.g. `30` |
+| `.not` | Matches every item where the date attribute<br>is not in the last X days | **Format:** number of days<br>e.g. `30` |
+| `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
+| `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
 
-| Search Field | No Modifier | `.not` | `.begins`/<br>`.ends` | `.before`/<br>`.after` | `.gt`/`.gte`/<br>`.lt`/`.lte` |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| `title` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
-| `episode_title` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
-| `studio` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: |
-| `actor` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `audio_language` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `collection` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `content_rating` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `country` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `director` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `genre` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `label` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `network` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `producer` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `subtitle_language` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `writer` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :x: |
-| `decade` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `resolution` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `hdr` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `unmatched` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `duplicate` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `unplayed` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `progress` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `trash` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `unplayed_episodes` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `episode_unplayed` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `episode_duplicate` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `episode_progress` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `episode_unmatched` | :heavy_check_mark: | :x: | :x: | :x: | :x: |
-| `added` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `episode_added` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `release` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `episode_air_date` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `last_played` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `episode_last_played` | :heavy_check_mark: | :heavy_check_mark: | :x: | :heavy_check_mark: | :x: |
-| `plays` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `episode_plays` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `duration` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `audience_rating` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `critic_rating` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `user_rating` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `episode_user_rating` | :x: | :x: | :x: | :x: | :heavy_check_mark: |
-| `year` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
-| `episode_year` | :heavy_check_mark: | :heavy_check_mark: | :x: | :x: | :heavy_check_mark: |
+### Date Attributes
 
-* To use Multiple values with `title`, `episode_title`, and `studio`
-* Multiple values are supported as either a list or a comma-separated string for all modifiers except `.begins`, `.ends`, `.before`, `.after`, `.gt`, `.gte`, `.lt`, and `.lte`.
-* If you want to restrict the search even further try using [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
+| Date Search | Description | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: |
+| `added` | Uses the date added attribute to match | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_added` | Uses the date added attribute of the show's episodes to match | :x: | :heavy_check_mark: |
+| `release` | Uses the release date attribute (originally available) to match | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_air_date` | Uses the air date attribute (originally available) of the show's episodes to match | :x: | :heavy_check_mark: |
+| `last_played` | Uses the date last played attribute to match | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_last_played` | Uses the date last played attribute of the show's episodes to match | :x: | :heavy_check_mark: |
+
+## Number Searches
+Number searches must use `.gt`, `.gte`, `.lt`, or `.lte` as a modifier.
+
+No number search can take multiple values.
+
+### Number Modifiers
+
+| Number Modifier | Description | Format |
+| :--- | :--- | :---: |
+| `.gt` | Matches every item where the number attribute<br>is greater then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+| `.gte` | Matches every item where the number attribute<br>is greater then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+| `.lt` | Matches every item where the number attribute<br>is less then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+| `.lte` | Matches every item where the number attribute<br>is less then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+
+### Number Attributes
+
+| Number Search | Description | Restrictions | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: | :--: |
+| `duration` | Uses the duration attribute to match using minutes | minimum: `1` | :heavy_check_mark: | :x: |
+| `plays` | Uses the plays attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
+| `episode_plays` | Uses the plays attribute of the show's episodes to match | minimum: `1` | :x: | :heavy_check_mark: |
+| `critic_rating` | Uses the critic rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
+| `audience_rating` | Uses the audience rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
+| `user_rating` | Uses the user rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_user_rating` | Uses the user rating attribute of the show's episodes to match | `0.0` - `10.0` | :x: | :heavy_check_mark: |
+| `year` | Uses the year attribute to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_year` | Uses the year attribute of the show's episodes to match | `1800` - `Current Year` | :x: | :heavy_check_mark: |
+
+## Boolean Searches
+Boolean Searches take no modifier and can only be either `true` or `false`.
+
+### Boolean Attributes
+
+| Boolean Search | Description | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: |
+| `hdr` | Is HDR | :heavy_check_mark: | :heavy_check_mark: |
+| `unmatched` | Is Unmatched | :heavy_check_mark: | :x: |
+| `duplicate` | Is Duplicate | :heavy_check_mark: | :x: |
+| `unplayed` | Is Unplayed | :heavy_check_mark: | :x: |
+| `progress` | Is In Progress | :heavy_check_mark: | :x: |
+| `trash` | Is Trashed | :heavy_check_mark: | :x: |
+| `unplayed_episodes` | Has Unplayed Episodes | :x: | :heavy_check_mark: |
+| `episode_unplayed` | Has Episodes Unplayed | :x: | :heavy_check_mark: |
+| `episode_duplicate` | Has Duplicate Episodes | :x: | :heavy_check_mark: |
+| `episode_progress` | Has Episode Progress | :x: | :heavy_check_mark: |
+| `episode_unmatched` | Has Episodes Unmatched | :x: | :heavy_check_mark: |
+
+## Smart Search Examples
+
+A few examples are listed below:
 
 ```yaml
 collections:
   Documentaries:
-    plex_filter:
+    plex_search:
       all:
         genre: Documentary
 ```
 ```yaml
 collections:
   Dave Chappelle Comedy:
-    plex_filter:
+    plex_search:
       all:
         actor: Dave Chappelle
         genre: Comedy
@@ -227,7 +243,7 @@ collections:
 ```yaml
 collections:
   Top Action Movies:
-    plex_filter:
+    plex_search:
       all:
         genre: Action
       sort_by: audience_rating.desc
@@ -236,7 +252,7 @@ collections:
 ```yaml
 collections:
   90s Movies:
-    plex_filter:
+    plex_search:
       any:
         year:
           - 1990
@@ -253,14 +269,14 @@ collections:
 ```yaml
 collections:
   90s Movies:
-    plex_filter:
+    plex_search:
       any:
         decade: 1990
 ```
 ```yaml
 collections:
   Best 2010+ Movies:
-    plex_filter:
+    plex_search:
       all:
         year.gte: 2010
       sort_by: audience_rating.desc
@@ -272,7 +288,7 @@ If you specify TMDb Person ID's using the [Collection Detail](https://github.com
 ```yaml
 collections:
   Robin Williams:
-    plex_filter:
+    plex_search:
       all:
         actor: tmdb
     tmdb_person: 2157
@@ -280,7 +296,7 @@ collections:
 ```yaml
 collections:
   Steven Spielberg:
-    plex_filter:
+    plex_search:
       all:
         director: tmdb
     tmdb_person: https://www.themoviedb.org/person/488-steven-spielberg
@@ -288,7 +304,7 @@ collections:
 ```yaml
 collections:
   Quentin Tarantino:
-    plex_filter:
+    plex_search:
       any:
         actor: tmdb
         director: tmdb

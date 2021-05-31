@@ -112,7 +112,7 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 | `user_rating` | Uses the user rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `tmdb_vote_count` | Uses the tmdb vote count to match | minimum: `1` | :heavy_check_mark: | :heavy_check_mark: |
 | `plays` | Uses the plays attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
-| `duration` | Uses the duration attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
+| `duration` | Uses the duration attribute to match using minutes | minimum: `1` | :heavy_check_mark: | :x: |
 
 ## Collection Filter Examples
 
