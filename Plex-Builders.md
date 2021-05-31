@@ -101,12 +101,12 @@ String search can take multiple values **only as a list**.
 
 ### String Modifiers
 
-| String Modifier | Description |
-| :--- | :--- |
-| No Modifier | Matches every item where the attribute contains the given string |
-| `.not` | Matches every item where the attribute does not contain the given string |
-| `begins` | Matches every item where the attribute begins with the given string |
-| `ends` | Matches every item where the attribute ends with the given string |
+| String Modifier | Description | Plex Web UI Display |
+| :--- | :--- | :---: |
+| No Modifier | Matches every item where the attribute contains the given string | `contains` |
+| `.not` | Matches every item where the attribute does not contain the given string | `does not contain` |
+| `begins` | Matches every item where the attribute begins with the given string | `begins with` |
+| `ends` | Matches every item where the attribute ends with the given string | `ends with` |
 
 ### String Attributes
 
@@ -123,10 +123,10 @@ String search can take multiple values as a **list or a comma-separated string**
 
 ### Tag Modifiers
 
-| Tag Modifier | Description |
-| :--- | :--- |
-| No Modifier | Matches every item where the attribute matches the given string |
-| `.not` | Matches every item where the attribute does not match the given string |
+| Tag Modifier | Description | Plex Web UI Display |
+| :--- | :--- | :---: |
+| No Modifier | Matches every item where the attribute matches the given string | `is` |
+| `.not` | Matches every item where the attribute does not match the given string | `is not` |
 
 ### Tag Attributes
 
@@ -156,12 +156,12 @@ No date search can take multiple values.
 
 ### Date Modifiers
 
-| Date Modifier | Description | Format |
-| :--- | :--- | :---: |
-| No Modifier | Matches every item where the date attribute<br>is in the last X days | **Format:** number of days<br>e.g. `30` |
-| `.not` | Matches every item where the date attribute<br>is not in the last X days | **Format:** number of days<br>e.g. `30` |
-| `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
-| `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
+| Date Modifier | Description | Format | Plex Web UI Display |
+| :--- | :--- | :---: | :---: |
+| No Modifier | Matches every item where the date attribute<br>is in the last X days | **Format:** number of days<br>e.g. `30` | `is in the last` |
+| `.not` | Matches every item where the date attribute<br>is not in the last X days | **Format:** number of days<br>e.g. `30` | `is not in the last` |
+| `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` | `is before` |
+| `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` | `is after` |
 
 ### Date Attributes
 
@@ -181,12 +181,12 @@ No number search can take multiple values.
 
 ### Number Modifiers
 
-| Number Modifier | Description | Format |
-| :--- | :--- | :---: |
-| `.gt` | Matches every item where the number attribute<br>is greater then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
-| `.gte` | Matches every item where the number attribute<br>is greater then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
-| `.lt` | Matches every item where the number attribute<br>is less then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
-| `.lte` | Matches every item where the number attribute<br>is less then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` |
+| Number Modifier | Description | Format | Plex Web UI Display |
+| :--- | :--- | :---: | :---: |
+| `.gt` | Matches every item where the number attribute<br>is greater then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` | `is greater than` |
+| `.gte` | Matches every item where the number attribute<br>is greater then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` | N/A |
+| `.lt` | Matches every item where the number attribute<br>is less then the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` | `is less than` |
+| `.lte` | Matches every item where the number attribute<br>is less then or equal to the given number | **Format:** number<br>e.g. `30`, `1995`, or `7.5` | N/A |
 
 ### Number Attributes
 
