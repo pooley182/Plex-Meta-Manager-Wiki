@@ -4,7 +4,7 @@
 ![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/develop?label=Number%20of%20Commits%20in%20Develop&style=plastic)
 ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/meisnate12/plex-meta-manager?label=docker&sort=semver&style=plastic)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/meisnate12/plex-meta-manager?style=plastic)
-![Discord](https://img.shields.io/discord/822460010649878528?label=Discord&style=plastic)
+[![Discord](https://img.shields.io/discord/822460010649878528?label=Discord&style=plastic)](https://discord.gg/TsdpsFYqqm)
 
 This wiki should tell you everything you need to know about the script to get it working.
 
