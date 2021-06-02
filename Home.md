@@ -1,5 +1,11 @@
 # Plex Meta Manager Wiki
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/meisnate12/Plex-Meta-Manager?style=plastic)
+![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/develop?label=Number%20of%20Commits%20in%20Develop&style=plastic)
+![Docker Image Version (latest semver)](https://img.shields.io/docker/v/meisnate12/plex-meta-manager?label=docker&sort=semver&style=plastic)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/meisnate12/plex-meta-manager?style=plastic)
+![Discord](https://img.shields.io/discord/822460010649878528?label=Discord&style=plastic)
+
 This wiki should tell you everything you need to know about the script to get it working.
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=JTK3CVKF3ZHP2&item_name=Plex+Meta+Manager&currency_code=USD) 
