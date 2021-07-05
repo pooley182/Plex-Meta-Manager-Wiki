@@ -9,7 +9,7 @@ You can use `plex_all: true` to start your filter from your entire library.
 **Filters can be very slow. Try to build or narrow your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
 
 ## String Filters
-String filters can be used with either no modifier or with `.not`, `.begins`, or `.ends`.
+String filters can be used with either no modifier or with `.not`, `.begins`, `.ends`, or `.regex`.
 
 String filter can take multiple values **only as a list**.
 
@@ -19,8 +19,9 @@ String filter can take multiple values **only as a list**.
 | :--- | :--- |
 | No Modifier | Matches every item where the attribute contains the given string |
 | `.not` | Matches every item where the attribute does not contain the given string |
-| `begins` | Matches every item where the attribute begins with the given string |
-| `ends` | Matches every item where the attribute ends with the given string |
+| `.begins` | Matches every item where the attribute begins with the given string |
+| `.ends` | Matches every item where the attribute ends with the given string |
+| `.regex` | Matches every item where the attribute matches the regex given |
 
 ### Attribute
 
@@ -65,7 +66,7 @@ The `original_language` filter will also filter out movies from being added to R
 | `subtitle_language` | Uses the subtitle language tags to match | :heavy_check_mark: | :x: |
 
 ## Date Filters
-Date filters can be used with either no modifier or with `.not`, `.before`, or `.after`.
+Date filters can be used with either no modifier or with `.not`, `.before`, `.after`, or `.regex`.
 
 No date filter can take multiple values.
 
@@ -75,8 +76,9 @@ No date filter can take multiple values.
 | :--- | :--- | :---: |
 | No Modifier | Matches every item where the date attribute<br>is in the last X days | **Format:** number of days<br>e.g. `30` |
 | `.not` | Matches every item where the date attribute<br>is not in the last X days | **Format:** number of days<br>e.g. `30` |
-| `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
-| `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
+| `.before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
+| `.after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` |
+| `.regex` | Matches every item where the attribute matches the regex given | N/A |
 
 ### Attribute
 
@@ -105,7 +107,7 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 ### Attribute
 
 | Number Filters | Description | Restrictions | Movie<br>Libraries | Show<br>Libraries |
-| :--- | :--- | :---: | :---: | :--: |
+| :--- | :--- | :---: | :---: | :---: |
 | `year` | Uses the year attribute to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
 | `critic_rating` | Uses the critic rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `audience_rating` | Uses the audience rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
@@ -113,6 +115,15 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 | `tmdb_vote_count` | Uses the tmdb vote count to match | minimum: `1` | :heavy_check_mark: | :heavy_check_mark: |
 | `plays` | Uses the plays attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
 | `duration` | Uses the duration attribute to match using minutes | minimum: `1` | :heavy_check_mark: | :x: |
+
+## Special Filters
+Special Filters each have their own set of rules for how they're used.
+
+### Attribute
+
+| Special Filters | Description | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: |
+| `history` | Uses the release date attribute (originally available) to match dates throughout history<br>`day`: Match the Day and Month to Today's Date<br>`month`: Match the Month to Today's Date<br>`1-30`: Match the Day and Month to Today's Date or `1-30` days before Today's Date  | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Collection Filter Examples
 

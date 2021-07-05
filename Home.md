@@ -7,8 +7,7 @@ This wiki should tell you everything you need to know about the script to get it
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/meisnate12/plex-meta-manager?label=docker&sort=semver&style=plastic)](https://hub.docker.com/r/meisnate12/plex-meta-manager)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/meisnate12/plex-meta-manager?style=plastic)](https://hub.docker.com/r/meisnate12/plex-meta-manager)
 [![Discord](https://img.shields.io/discord/822460010649878528?label=Discord&style=plastic)](https://discord.gg/TsdpsFYqqm)
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate?business=JTK3CVKF3ZHP2&item_name=Plex+Meta+Manager&currency_code=USD) 
+[![Donate](https://img.shields.io/badge/-Sponsor_or_Donate-blueviolet?style=plastic)](https://github.com/sponsors/meisnate12)
 
 ## Getting Started
 
@@ -58,10 +57,12 @@ This wiki should tell you everything you need to know about the script to get it
       - [Trakt Builders](Trakt-Builders)
       - [Tautulli Builders](Tautulli-Builders)
       - [Letterboxd Builders](Letterboxd-Builders)
+      - [ICheckMovies Builders](ICheckMovies-Builders)
       - [AniDB Builders](AniDB-Builders)
       - [AniList Builders](AniList-Builders)
       - [MyAnimeList Builders](MyAnimeList-Builders)
     - [Collection Details](Collection-Details)
-      - [Schedule Attribute](Schedule-Attribute)
+      - [Schedule Detail](Schedule-Detail)
+      - [Image Overlay Detail](Image-Overlay-Detail)
     - [Collection Filters](Collection-Filters)
 - [Acknowledgements](Acknowledgements)

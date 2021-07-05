@@ -60,7 +60,7 @@ There are two different options when it comes to how the program looks at the fi
 
 * Replace `.ext` with the image extension
 
-By default, the program will only look inside the Image Asset Directories for Images when it runs a collection from a Metadata File. When it does this it will look not only for the collection images, but it will also look for images of every item in the collection.
+By default, the program will only look inside the Image Asset Directories for Images when it runs a collection from a Metadata File. When it does this by default it will only look for the collection images, but you can have it look for images of every item in the collection if you add `item_assets: true` to the collection config.
 
 If you're using `asset_folders` set to true you can also nest movie/show folders inside an Image Assets Collection Folder that contains that movie/show.
 

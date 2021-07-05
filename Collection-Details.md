@@ -45,23 +45,23 @@ collections:
     name_mapping: 28 Days-Weeks Later
 ```
 
-The available collection details attributes for each collection are split into different sections
+The available collection details for each collection are split into different sections
 
-* [Settings Attributes](#setting-attributes)
-* [Radarr Attributes](#radarr-attributes)
-* [Sonarr Attributes](#sonarr-attributes)
-* [Metadata Attributes](#metadata-attributes)
-* [Item Metadata Attributes](#item-metadata-attributes)
-* [Summary Attributes](#summary-attributes)
-* [Poster Attributes](#poster-attributes)
-* [Background Attributes](#background-attributes)
+* [Settings Details](#setting-details)
+* [Radarr Details](#radarr-details)
+* [Sonarr Details](#sonarr-details)
+* [Metadata Details](#metadata-details)
+* [Item Metadata Details](#item-metadata-details)
+* [Summary Details](#summary-details)
+* [Poster Details](#poster-details)
+* [Background Details](#background-details)
 
-## Setting Attributes
+## Setting Details
 All the following attributes serve various functions as how the collection functions inside of Plex Meta Manager.
 
 | Name | Attribute | Description | Allowed Values |
 | :--- | :--- | :--- | :--- |
-| Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Attribute) |
+| Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Detail) |
 | Template | `template` | Used to specify a template and template variables to use for this collection | [`template` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) |
 | Run Again | `run_again` | Used to try and add all the items missing from the collection to the collection again after the daily run <br>**Default Mode:** `false`| **boolean:** `true` or `false` |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection<br>**Default Mode:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection |
@@ -70,11 +70,11 @@ All the following attributes serve various functions as how the collection funct
 | Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Name Mapping | `name_mapping` | Used to specify the folder name in the [Image Assets Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) | Folder Name In Assets Directory |
-| Test Mode | `test` | When running in Test Mode (`---run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** `false` | **boolean:** `true` or `false` |
+| Test Mode | `test` | When running in Test Mode (`--run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** `false` | **boolean:** `true` or `false` |
 
 * **Name Mapping:** If your collection name contains characters that are not allowed in file paths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path), but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
 
-## Radarr Attributes
+## Radarr Details
 All the following attributes can override the global [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) attributes.
 
 | Name | Attribute | Description | Allowed Values |
@@ -86,8 +86,11 @@ All the following attributes can override the global [Radarr](https://github.com
 | Radarr Quality Profile | `radarr_quality` | Collection level `quality_profile` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | Radarr Quality Profile |
 | Radarr Tag | `radarr_tag` | Collection level `tag` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | List or comma-separated string of tags |
 | Radarr Search | `radarr_search` | Collection level `search` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | **boolean:** `true` or `false` |
+| Item Radarr Tag | `item_radarr_tag` | Used to append a tag in Radarr for every movie in the collection | List or comma-separated string of tags |
+| Item Radarr Tag Remove | `item_radarr_tag.remove` | Used to remove existing tags in Radarr for every movie in the collection | List or comma-separated string of tags |
+| Item Radarr Tag Sync | `item_radarr_tag.sync` | Matches the tags in Radarr for every movie in the collection with the provided tags | List or comma-separated string of tags |
 
-## Sonarr Attributes
+## Sonarr Details
 All the following attributes can override the global [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) attributes.
 
 | Name | Attribute | Description | Allowed Values |
@@ -102,8 +105,11 @@ All the following attributes can override the global [Sonarr](https://github.com
 | Sonarr Tag | `sonarr_tag` | Collection level `tag` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | List or comma-separated string of tags |
 | Sonarr Search | `sonarr_search` | Collection level `search` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** `true` or `false` |
 | Sonarr Cutoff Search | `sonarr_cutoff_search` | Collection level `cutoff_search` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** `true` or `false` |
+| Item Sonarr Tag | `item_sonarr_tag` | Used to append a tag in Sonarr for every series in the collection | List or comma-separated string of tags |
+| Item Sonarr Tag Remove | `item_sonarr_tag.remove` | Used to remove existing tags in Sonarr for every series in the collection | List or comma-separated string of tags |
+| Item Sonarr Tag Sync | `item_sonarr_tag.sync` | Matches the tags in Sonarr for every series in the collection with the provided tags | List or comma-separated string of tags |
 
-## Metadata Attributes
+## Metadata Details
 All the following attributes update various details of the collection's Metadata.
 
 | Name | Attribute | Description | Allowed Values |
@@ -116,11 +122,14 @@ All the following attributes update various details of the collection's Metadata
 | Label Sync | `label.sync` | Matches the labels of the collection to the labels provided | Comma-separated string of labels to sync |
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
 | Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically | :heavy_check_mark: | :heavy_check_mark: |
+| Visible on Library | `visible_library` | Used to change collection visible on Library | `true`: Visible<br>`false`: Not Visible |
+| Visible on Home | `visible_home` | Used to change collection visible on Home | `true`: Visible<br>`false`: Not Visible |
+| Visible on Shared | `visible_shared` | Used to change collection visible on Shared Users' Home | `true`: Visible<br>`false`: Not Visible |
 
 * **Sort Title:** You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
 * **Collection Order:** At this moment, Plex only allows filtering by alphabetical order or by release date, if you want Plex to allow a custom order please vote or post a comment on the Plex forum: [Topic - Plex Custom Collection Sorting](https://forums.plex.tv/t/custom-collection-sorting-machete-order/236226)
 
-## Item Metadata Attributes
+## Item Metadata Details
 All the following attributes update various details of the metadata for every item in the collection.
 
 | Name | Attribute | Description | Allowed Values | Works with Movies | Works with Shows |
@@ -128,6 +137,8 @@ All the following attributes update various details of the metadata for every it
 | Label | `item_label` | Used to append new labels to every movie/show in the collection | Comma-separated string of labels to append | :heavy_check_mark: | :heavy_check_mark: |
 | Label Remove | `item_label.remove` | Used to remove existing labels from every movie/show in the collection | Comma-separated string of labels to remove | :heavy_check_mark: | :heavy_check_mark: |
 | Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
+| Image Overlay | `item_overlay` | Adds and overlay image to the poster of every movie/show in the collection | [`item_overlay` details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Overlay-Attribute) | :heavy_check_mark: | :heavy_check_mark: |
+| Check For Assets | `item_assets` | Checks your assets folders for assets of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
 | Episode Sorting | `item_episode_sorting` | Changes the episode sorting of every show in the collection | `default`: Library default<br>`oldest`: Oldest first<br>`newest`: Newest first | :x: | :heavy_check_mark: |
 | Keep Episodes | `item_keep_episodes` | Changes the keep episodes of every show in the collection | `all`: All episodes<br>`5_latest`: 5 latest episodes<br>`3_latest`: 3 latest episodes<br>`latest`: Latest episodes<br>`past_3`: Episodes added in the past 3 days<br>`past_7`: Episodes added in the past 7 days<br>`past_30`: Episodes added in the past 30 days | :x: | :heavy_check_mark: |
 | Delete Episodes | `item_delete_episodes` | Changes the delete episodes of every show in the collection | `never`: Never<br>`day`: After a day<br>`week`: After a week<br>`refresh`: On next refresh | :x: | :heavy_check_mark: |
@@ -138,7 +149,7 @@ All the following attributes update various details of the metadata for every it
 
 \* Must be using the **New Plex Movie Agent** or the **New Plex TV Agent** 
 
-## Summary Attributes
+## Summary Details
 All the following attributes update the summary of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
@@ -152,7 +163,7 @@ All the following attributes update the summary of the collection from various s
 | Trakt Description | `trakt_description` | Used to change the collection's summary to the Trakt List Description | Trakt List URL |
 | Letterboxd Description | `letterboxd_description` | Used to change the collection's summary to the Letterboxd List Description | Letterboxd List URL |
 
-## Poster Attributes
+## Poster Details
 All the following attributes update the poster of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |
@@ -166,7 +177,7 @@ All the following attributes update the poster of the collection from various so
 
 * If no poster is specified the script will look in the library's [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) for a folder named either the collection name or the `name_mapping` if specified and look for a `poster.ext` file in that folder (replacing .ext with the image extension).
 
-## Background Attributes
+## Background Details
 All the following attributes update the background of the collection from various sources.
 
 | Name | Attribute | Description | Allowed Values |

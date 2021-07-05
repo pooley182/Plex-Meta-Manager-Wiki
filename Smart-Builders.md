@@ -66,8 +66,8 @@ String filter can take multiple values **only as a list**.
 | :--- | :--- | :---: |
 | No Modifier | Matches every item where the attribute contains the given string | `contains` |
 | `.not` | Matches every item where the attribute does not contain the given string | `does not contain` |
-| `begins` | Matches every item where the attribute begins with the given string | `begins with` |
-| `ends` | Matches every item where the attribute ends with the given string | `ends with` |
+| `.begins` | Matches every item where the attribute begins with the given string | `begins with` |
+| `.ends` | Matches every item where the attribute ends with the given string | `ends with` |
 
 ### String Attributes
 
@@ -121,8 +121,8 @@ No date filter can take multiple values.
 | :--- | :--- | :---: | :---: |
 | No Modifier | Matches every item where the date attribute<br>is in the last X days | **Format:** number of days<br>e.g. `30` | `is in the last` |
 | `.not` | Matches every item where the date attribute<br>is not in the last X days | **Format:** number of days<br>e.g. `30` | `is not in the last` |
-| `before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` | `is before` |
-| `after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` | `is after` |
+| `.before` | Matches every item where the date attribute<br>is before the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` | `is before` |
+| `.after` | Matches every item where the date attribute<br>is after the given date | **Format:** MM/DD/YYYY<br>e.g. `01/01/2000` | `is after` |
 
 ### Date Attributes
 

@@ -4,6 +4,7 @@
 * [vladimir-tutin](https://github.com/vladimir-tutin) for writing the original [Plex Auto Collections](https://github.com/vladimir-tutin/Plex-Auto-Collections) which prompted the creation of Plex Meta Manager
 * [mza921](https://github.com/mza921) and [burkasaurusrex](https://github.com/burkasaurusrex) for updating and maintaining a [Plex Auto Collections](https://github.com/mza921/Plex-Auto-Collections) fork of the original
 * [bearlikelion](https://github.com/bearlikelion) for writing [popularplex](https://github.com/bearlikelion/popularplex) which served as inspiration for Tautulli support
+* [jkirkcaldy](https://github.com/jkirkcaldy) for writing [plex-utills](https://github.com/jkirkcaldy/plex-utills) which served as inspiration for Image Overlay
 
 ## Dependency Acknowledgements
 * [pkkid](https://github.com/pkkid) and all other contributors for [python-plexapi](https://github.com/pkkid/python-plexapi)
