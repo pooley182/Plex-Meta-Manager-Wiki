@@ -1,4 +1,3 @@
-
 In order to add an overlay to a set of items you must add `item_overlay: OVERLAY_NAME` to the collection config, where `OVERLAY_NAME` matches the exact name of a folder in your `overlays` directory.
 
 Your `overlays` directory must be inside your config folder structured like below:
@@ -40,6 +39,8 @@ config
 ### Examples Collection Configs
 
 #### 4K Overlay Only 
+
+![4K Overlay](https://raw.githubusercontent.com/wiki/meisnate12/Plex-Meta-Manager/overlay.png)
 
 Add a 4K overlay to all 4K Movies
 
