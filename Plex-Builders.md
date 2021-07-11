@@ -16,7 +16,7 @@ The expected input is either true or false.
 ```yaml
 collections:
   9.0 Movies:
-    all: true
+    plex_all: true
     filters:
       rating.gte: 9
 ```
