@@ -170,8 +170,8 @@ collections:
   Summer 2020 Movies:
     plex_all: true
     filters:
-      release.gte: 5/1/2020
-      release.lte: 8/31/2020
+      release.after: 5/1/2020
+      release.before: 8/31/2020
 ```
 ```yaml
 collections:
