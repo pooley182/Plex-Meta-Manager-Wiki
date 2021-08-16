@@ -17,6 +17,7 @@ You can build different collections using the features of [MyAnimeList.net](http
 | [MyAnimeList ID](#myanimelist-id) | `mal_id` | Gets the anime specified by the MyAnimeList ID | :heavy_check_mark: | :heavy_check_mark: |
 | [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
 | [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Genre](#myanimelist-genre) | `mal_genre` | Gets anime genre in MyAnimeList's [Genre Search](https://myanimelist.net/anime.php) list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Expected Input
 The builders below are expected to have a single integer value of how many movies/shows to query. 
@@ -192,5 +193,22 @@ collections:
       season: fall
       year: 2020
       limit: 50
+    sync_mode: sync
+```
+
+## MyAnimeList Genre
+Gets anime in MyAnimeList's [Search](https://myanimelist.net/anime.php) list the options are detailed below. 
+
+| Attribute | Description | Required | Default |
+| :--- | :--- | :---: | :---: |
+| `genre_id` | `genre_id` is the genre ID when you select a genre on [Search Anime](https://myanimelist.net/anime.php)<br>(For example `https://myanimelist.net/anime/genre/1/Action` the `genre_id` is `1`) | :heavy_check_mark: | N/A |
+| `sort_by` | `members` (Sort by Most Members)<br>`score` (Sort by Score) | :x: | `members` |
+| `limit` | Number of Anime to query from MyAnimeList (max: 500) | :x: | 100 |
+
+```yaml
+collections:
+  Sports Anime:
+    mal_genre:
+      genre_id: 30
     sync_mode: sync
 ```
