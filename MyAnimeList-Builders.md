@@ -201,7 +201,7 @@ Gets anime in MyAnimeList's [Search](https://myanimelist.net/anime.php) list the
 
 | Attribute | Description | Required | Default |
 | :--- | :--- | :---: | :---: |
-| `genre_id` | `genre_id` is the genre ID when you select a genre on [Search Anime](https://myanimelist.net/anime.php) (For example `https://myanimelist.net/anime/genre/1/Action` the `genre_id` is `1`) | :heavy_check_mark: | Current Season |
+| `genre_id` | `genre_id` is the genre ID when you select a genre on [Search Anime](https://myanimelist.net/anime.php)<br>(For example `https://myanimelist.net/anime/genre/1/Action` the `genre_id` is `1`) | :heavy_check_mark: | N/A |
 | `sort_by` | `members` (Sort by Most Members)<br>`score` (Sort by Score) | :x: | `members` |
 | `limit` | Number of Anime to query from MyAnimeList (max: 500) | :x: | 100 |
 
