@@ -119,7 +119,7 @@ String search can take multiple values **only as a list**.
 ## Tag Searches
 Tag searches can be used with either no modifier or with `.not` except for `decade` and `resolution` which can only be used with no modifier.
 
-String search can take multiple values as a **list or a comma-separated string**.
+Tag search can take multiple values as a **list or a comma-separated string**.
 
 ### Tag Modifiers
 

@@ -26,6 +26,7 @@ sonarr:
 | API Token | `token` | Sonarr API Token | N/A | :heavy_check_mark: |
 | Sonarr Version | `version` | `v2`: for < 0.2<br>`v3`: for > 3.0 | v2 | :x: |
 | Add | `add` | Add missing shows found to Sonarr<br>**boolean:** true or false | false | :x: |
+| Add Existing | `add_existing` | Add shows existing in this collection to Sonarr<br>**boolean:** true or false | false | :x: |
 | Root Folder Path | `root_folder_path` | Sonarr Root Folder Path To Use | N/A | :heavy_check_mark: |
 | Monitor | `monitor` | `all`: Monitor all episodes except specials<br>`future`: Monitor episodes that have not aired yet<br>`missing`: Monitor episodes that do not have files or have not aired yet<br>`existing`: Monitor episodes that have files or have not aired yet<br>`pilot`: Monitor the first episode. All other episodes will be ignored<br>`first`: Monitor all episodes of the first season. All other seasons will be ignored<br>`latest`: Monitor all episodes of the latest season and future seasons<br>`none`: No episodes will be monitored | `all` | :x: |
 | Quality Profile | `quality_profile` | Quality Profile To Use | N/A | :heavy_check_mark: |

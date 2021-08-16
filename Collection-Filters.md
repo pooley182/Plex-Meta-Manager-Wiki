@@ -11,7 +11,7 @@ You can use `plex_all: true` to start your filter from your entire library.
 ## String Filters
 String filters can be used with either no modifier or with `.not`, `.begins`, `.ends`, or `.regex`.
 
-String filter can take multiple values **only as a list**.
+String filters can take multiple values **only as a list**.
 
 ### Modifier
 
@@ -35,7 +35,7 @@ String filter can take multiple values **only as a list**.
 ## Tag Filters
 Tag filters can be used with either no modifier or with `.not`.
 
-String filter can take multiple values as a **list or a comma-separated string**.
+Tag filters can take multiple values as a **list or a comma-separated string**.
 
 The `original_language` filter will also filter out movies from being added to Radarr.
 
@@ -68,7 +68,9 @@ The `original_language` filter will also filter out movies from being added to R
 ## Date Filters
 Date filters can be used with either no modifier or with `.not`, `.before`, `.after`, or `.regex`.
 
-No date filter can take multiple values.
+Date filters can **NOT** take multiple values.
+
+The `first_episode_aired` and `last_episode_aired` filters will also filter out movies/shows from being added to Radarr/Sonarr.
 
 ### Modifier
 
@@ -87,13 +89,15 @@ No date filter can take multiple values.
 | `release` | Uses the release date attribute (originally available) to match | :heavy_check_mark: | :heavy_check_mark: |
 | `added` | Uses the date added attribute to match | :heavy_check_mark: | :heavy_check_mark: |
 | `last_played` | Uses the date last played attribute to match | :heavy_check_mark: | :heavy_check_mark: |
+| `first_episode_aired` | Uses the first episode aired date to match | :x: | :heavy_check_mark: |
+| `last_episode_aired` | Uses the last episode aired date to match | :x: | :heavy_check_mark: |
 
 ## Number Filters
 Number filters must use `.gt`, `.gte`, `.lt`, or `.lte` as a modifier.
 
-No number filter can take multiple values.
+Number filters can **NOT** take multiple values.
 
-The `tmdb_vote_count` filter will also filter out movies/shows from being added to Radarr/Sonarr.
+The `tmdb_vote_count` and `tmdb_year` filters will also filter out movies/shows from being added to Radarr/Sonarr.
 
 ### Modifier
 
@@ -109,6 +113,7 @@ The `tmdb_vote_count` filter will also filter out movies/shows from being added 
 | Number Filters | Description | Restrictions | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: | :---: |
 | `year` | Uses the year attribute to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
+| `tmdb_year` | Uses the year on TMDb to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
 | `critic_rating` | Uses the critic rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `audience_rating` | Uses the audience rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `user_rating` | Uses the user rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |

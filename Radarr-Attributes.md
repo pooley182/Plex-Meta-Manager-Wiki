@@ -23,6 +23,7 @@ radarr:
 | API Token | `token` | Radarr API Token | N/A | :heavy_check_mark: |
 | Radarr Version | `version` | `v2`: for < 0.2<br>`v3`: for > 3.0 | `v2` | :x: |
 | Add | `add` | Add missing movies found to Radarr<br>**boolean:** true or false | false | :x: |
+| Add Existing | `add_existing` | Add movie existing in this collection to Radarr<br>**boolean:** true or false | false | :x: |
 | Root Folder Path | `root_folder_path` | Radarr Root Folder Path To Use | N/A | :heavy_check_mark: |
 | Monitor | `monitor` | Monitor the added movie | true | :x: |
 | Availability | `availability` | Minimum Availability of the Movie<br>**Options:** `announced`, `cinemas`, `released`, `db` | `announced` | :heavy_check_mark: |

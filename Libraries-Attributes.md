@@ -34,9 +34,10 @@ The available attributes for each library are as follows
 | :--- | :--- | :--- | :---: | :---: |
 | [Library Name](#library-name) | `library_name` | Library name (Only needed when trying to use multiple libraries with the same name) | Base Attribute Name | :x: |
 | [Metadata Path](#metadata-path) | `metadata_path` | Location for your Metadata YAML files | Same directory as config YAML file | :x: |
-| Mass Genre Update | `mass_genre_update` | Updates every item's genres in the library to the chosen site's genres<br>`tmdb`: Use TMDb for Genres<br>`omdb`: Use IMDb through OMDb for Genres | No Update | :x: |
+| Mass Genre Update | `mass_genre_update` | Updates every item's genres in the library to the chosen site's genres<br>`tmdb`: Use TMDb for Genres<br>`tvdb`: Use TVDb for Genres<br>`omdb`: Use IMDb through OMDb for Genres | No Update | :x: |
 | Mass Audience Rating Update | `mass_audience_rating_update` | Updates every item's audience rating in the library to the chosen site's rating<br>`tmdb`: Use TMDb for Rating<br>`omdb`: Use IMDb through OMDb for Rating | No Update | :x: |
 | Mass Critic Rating Update | `mass_critic_rating_update` | Updates every item's critic rating in the library to the chosen site's rating<br>`tmdb`: Use TMDb for Rating<br>`omdb`: Use IMDb through OMDb for Rating | No Update | :x: |
+| Mass Trakt Rating Update | `mass_trakt_rating_update` | Updates every movie/show's user rating in the library to match your custom rating on Trakt if there is one<br>`true` or `false` | `false` | :x: |
 | Split Duplicates | `split_duplicates` | Splits all duplicate movies/shows found in this library<br>`true` or `false` | `false` | :x: |
 | Radarr Add All | `radarr_add_all` | Adds every item in the library to Radarr | No Adds | :x: |
 | Sonarr Add All | `sonarr_add_all` | Adds every item in the library to Sonarr | No Adds | :x: |
@@ -78,12 +79,19 @@ By default, when `metadata_path` is missing the script will look in your config 
 libraries:
   Movies:
 ```
-To use a Metadata File online add `file` under metadata set to the system path of the yaml file.
+To use a local Metadata File add `file` under metadata set to the system path of the yaml file.
 ```yaml
 libraries:
   Movies:
     metadata_path: 
       file: /config/My Movies.yml
+```
+To use all yaml files in a particular folder add `folder` under metadata set to the system path of the folder containing the yaml files.
+```yaml
+libraries:
+  Movies:
+    metadata_path: 
+      folder: /config/Movie Configs/
 ```
 To use a Metadata File online add `url` under metadata set to the url of the yaml file.
 ```yaml

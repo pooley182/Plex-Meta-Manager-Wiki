@@ -65,7 +65,9 @@ All the following attributes serve various functions as how the collection funct
 | Template | `template` | Used to specify a template and template variables to use for this collection | [`template` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) |
 | Run Again | `run_again` | Used to try and add all the items missing from the collection to the collection again after the daily run <br>**Default Mode:** `false`| **boolean:** `true` or `false` |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection<br>**Default Mode:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection |
+| Validate Builders | `validate_builders` | When set to false the collection will not fail if one builder fails<br>**Default Mode:** `true` | **boolean:** `true` or `false` |
 | Build Collection | `build_collection` | When set to false the collection won't be created but items can still be added to Radarr/Sonarr<br>**Default Mode:** `true` | **boolean:** `true` or `false` |
+| Missing Only Released | `missing_only_released` | Collection Level `missing_only_released` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
@@ -80,15 +82,16 @@ All the following attributes can override the global [Radarr](https://github.com
 | Name | Attribute | Description | Allowed Values |
 | :--- | :--- | :--- | :--- |
 | Radarr Add | `radarr_add` | Collection level `add` toggle for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | **boolean:** `true` or `false` |
+| Radarr Add Existing | `radarr_add_existing` | Collection level `add_existing` toggle for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | **boolean:** `true` or `false` |
 | Radarr Root Folder | `radarr_folder` | Collection level `root_folder_path` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | Folder Path |
 | Radarr Monitor | `radarr_monitor` | Collection level `monitor` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | **boolean:** `true` or `false` |
 | Radarr Availability | `radarr_availability` | Collection level `availability` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | `announced`, `cinemas`, `released`, `db` |
 | Radarr Quality Profile | `radarr_quality` | Collection level `quality_profile` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | Radarr Quality Profile |
 | Radarr Tag | `radarr_tag` | Collection level `tag` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | List or comma-separated string of tags |
 | Radarr Search | `radarr_search` | Collection level `search` attribute override for Radarr<br>**Default:** [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) library value | **boolean:** `true` or `false` |
-| Item Radarr Tag | `item_radarr_tag` | Used to append a tag in Radarr for every movie in the collection | List or comma-separated string of tags |
-| Item Radarr Tag Remove | `item_radarr_tag.remove` | Used to remove existing tags in Radarr for every movie in the collection | List or comma-separated string of tags |
-| Item Radarr Tag Sync | `item_radarr_tag.sync` | Matches the tags in Radarr for every movie in the collection with the provided tags | List or comma-separated string of tags |
+| Item Radarr Tag | `item_radarr_tag` | Used to append a tag in Radarr for every movie found by the builders that's in Radarr | List or comma-separated string of tags |
+| Item Radarr Tag Remove | `item_radarr_tag.remove` | Used to remove existing tags in Radarr for every movie found by the builders that's in Radarr | List or comma-separated string of tags |
+| Item Radarr Tag Sync | `item_radarr_tag.sync` | Matches the tags in Radarr for every movie found by the builders that's in Radarr with the provided tags | List or comma-separated string of tags |
 
 ## Sonarr Details
 All the following attributes can override the global [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) attributes.
@@ -96,6 +99,7 @@ All the following attributes can override the global [Sonarr](https://github.com
 | Name | Attribute | Description | Allowed Values |
 | :--- | :--- | :--- | :--- |
 | Sonarr Add | `sonarr_add` | Collection level `add` toggle for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** `true` or `false` |
+| Sonarr Add Existing | `sonarr_add_existing` | Collection level `add_existing` toggle for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** `true` or `false` |
 | Sonarr Root Folder | `sonarr_folder` | Collection level `root_folder_path` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | Folder Path |
 | Sonarr Monitor | `sonarr_monitor` | Collection level `monitor` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | `all`, `future`, `missing`, `existing`, `pilot`, `first`, `latest`, `none` |
 | Sonarr Quality Profile | `sonarr_quality` | Collection level `quality_profile` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | Sonarr Quality Profile |
@@ -105,9 +109,9 @@ All the following attributes can override the global [Sonarr](https://github.com
 | Sonarr Tag | `sonarr_tag` | Collection level `tag` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | List or comma-separated string of tags |
 | Sonarr Search | `sonarr_search` | Collection level `search` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** `true` or `false` |
 | Sonarr Cutoff Search | `sonarr_cutoff_search` | Collection level `cutoff_search` attribute override for Sonarr<br>**Default:** [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) library value | **boolean:** `true` or `false` |
-| Item Sonarr Tag | `item_sonarr_tag` | Used to append a tag in Sonarr for every series in the collection | List or comma-separated string of tags |
-| Item Sonarr Tag Remove | `item_sonarr_tag.remove` | Used to remove existing tags in Sonarr for every series in the collection | List or comma-separated string of tags |
-| Item Sonarr Tag Sync | `item_sonarr_tag.sync` | Matches the tags in Sonarr for every series in the collection with the provided tags | List or comma-separated string of tags |
+| Item Sonarr Tag | `item_sonarr_tag` | Used to append a tag in Sonarr for every series found by the builders that's in Sonarr | List or comma-separated string of tags |
+| Item Sonarr Tag Remove | `item_sonarr_tag.remove` | Used to remove existing tags in Sonarr for every series found by the builders that's in Sonarr | List or comma-separated string of tags |
+| Item Sonarr Tag Sync | `item_sonarr_tag.sync` | Matches the tags in Sonarr for every series found by the builders that's in Sonarr with the provided tags | List or comma-separated string of tags |
 
 ## Metadata Details
 All the following attributes update various details of the collection's Metadata.
@@ -121,13 +125,13 @@ All the following attributes update various details of the collection's Metadata
 | Label Remove | `label.remove` | Used to remove existing labels from the collection | Comma-separated string of labels to remove |
 | Label Sync | `label.sync` | Matches the labels of the collection to the labels provided | Comma-separated string of labels to sync |
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
-| Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically | :heavy_check_mark: | :heavy_check_mark: |
+| Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically<br>`custom`: Order Collection Via the Builder Order | :heavy_check_mark: | :heavy_check_mark: |
 | Visible on Library | `visible_library` | Used to change collection visible on Library | `true`: Visible<br>`false`: Not Visible |
 | Visible on Home | `visible_home` | Used to change collection visible on Home | `true`: Visible<br>`false`: Not Visible |
 | Visible on Shared | `visible_shared` | Used to change collection visible on Shared Users' Home | `true`: Visible<br>`false`: Not Visible |
 
 * **Sort Title:** You can use `sort_title` to "promote" certain collections to the top of a library by creating a sort title starting with a `+` or "demote" certain collections to the bottom of a library by creating a sort title starting with a `~`.
-* **Collection Order:** At this moment, Plex only allows filtering by alphabetical order or by release date, if you want Plex to allow a custom order please vote or post a comment on the Plex forum: [Topic - Plex Custom Collection Sorting](https://forums.plex.tv/t/custom-collection-sorting-machete-order/236226)
+* **Custom Collection Order:** When using `collection_order: custom` you can only have a single builder in the collection.
 
 ## Item Metadata Details
 All the following attributes update various details of the metadata for every item in the collection.

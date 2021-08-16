@@ -30,6 +30,7 @@ python plex_meta_manager.py
 | [Run Libraries](#run-libraries) | `-rl` or `--run-libraries` | `PMM_LIBRARIES` | comma-separated list of library names to process | All libraries |
 | [Resume Run](#resume-run) | `-re` or `--resume` | `PMM_RESUME` | Name of the Collection you want to resume the run at | ` ` |
 | [No Countdown](#no-countdown) | `-nc` or `--no-countdown` | `PMM_NO_COUNTDOWN` | Run without displaying the countdown | `False` |
+| [No Missing](#no-missing) | `-nm` or `--no-missing` | `PMM_NO_MISSING` | Run without any of the missing movie/show functions | `False` |
 | [Divider Character](#divider-character--screen-width) | `-d` or `--divider` | `PMM_DIVIDER` | Character that divides the sections | `=` |
 | [Screen Width](#divider-character--screen-width) | `-w` or `--width` | `PMM_WIDTH` | Integer between 90 and 300 | `100` |
 
@@ -103,6 +104,13 @@ To have the script run without displaying a countdown use the `--no-countdown` o
 
 ```shell
 python plex_meta_manager.py --config /configs/config.yml --no-countdown
+```
+
+## No Missing 
+To have the script run without any of the missing movie/show functions use the `--no-missing` option
+
+```shell
+python plex_meta_manager.py --config /configs/config.yml --no-missing
 ```
 
 ## Divider Character & Screen Width
