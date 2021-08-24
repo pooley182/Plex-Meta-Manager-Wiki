@@ -126,6 +126,7 @@ All the following attributes update various details of the collection's Metadata
 | Label Sync | `label.sync` | Matches the labels of the collection to the labels provided | Comma-separated string of labels to sync |
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
 | Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically<br>`custom`: Order Collection Via the Builder Order | :heavy_check_mark: | :heavy_check_mark: |
+| Collection Level | `collection_level` | Used to make episode or season collections from `plex_search` or `trakt_list` Builders | `season`: Collection contains seasons<br>`episode`: Collection contains episodes }
 | Visible on Library | `visible_library` | Used to change collection visible on Library | `true`: Visible<br>`false`: Not Visible |
 | Visible on Home | `visible_home` | Used to change collection visible on Home | `true`: Visible<br>`false`: Not Visible |
 | Visible on Shared | `visible_shared` | Used to change collection visible on Shared Users' Home | `true`: Visible<br>`false`: Not Visible |

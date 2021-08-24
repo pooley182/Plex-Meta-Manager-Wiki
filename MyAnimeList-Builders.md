@@ -17,7 +17,8 @@ You can build different collections using the features of [MyAnimeList.net](http
 | [MyAnimeList ID](#myanimelist-id) | `mal_id` | Gets the anime specified by the MyAnimeList ID | :heavy_check_mark: | :heavy_check_mark: |
 | [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
 | [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Genre](#myanimelist-genre) | `mal_genre` | Gets anime genre in MyAnimeList's [Genre Search](https://myanimelist.net/anime.php) list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Genre](#myanimelist-genre) | `mal_genre` | Gets every anime tagged with the specified genre id. Genre options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Studio](#myanimelist-studio) | `mal_studio` | Gets every anime tagged with the specified studio/producer/licensor id. Studio options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Expected Input
 The builders below are expected to have a single integer value of how many movies/shows to query. 
@@ -32,12 +33,12 @@ The builders below are expected to have a single integer value of how many movie
 * [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime)
 * [MyAnimeList Suggested Anime](#myanimelist-suggested-anime)
 
-The attributes of [MyAnimeList ID](#myanimelist-id), [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) and [MyAnimeList User Anime List](#myanimelist-user-anime-list) are detailed in their sections below.
+The attributes of [MyAnimeList ID](#myanimelist-id), [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime), [MyAnimeList User Anime List](#myanimelist-user-anime-list), [MyAnimeList Genre](#myanimelist-genre), and [MyAnimeList Studio](#myanimelist-studio) are detailed in their sections below.
 
 The `sync_mode: sync` option is also recommended for all MyAnimeList builders since the lists they're based on are continuously updated.
 
 ## MyAnimeList Top All Anime
-Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list.
+Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -47,7 +48,7 @@ collections:
 ```
 
 ## MyAnimeList Top Airing Anime
-Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list.
+Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -57,7 +58,7 @@ collections:
 ```
 
 ## MyAnimeList Top Upcoming Anime
-Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list.
+Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -67,7 +68,7 @@ collections:
 ```
 
 ## MyAnimeList Top Anime TV Series
-Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list.
+Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -77,7 +78,7 @@ collections:
 ```
 
 ## MyAnimeList Top Anime Movies
-Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list.
+Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -87,7 +88,7 @@ collections:
 ```
 
 ## MyAnimeList Top Anime OVA Series
-Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list.
+Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -97,7 +98,7 @@ collections:
 ```
 
 ## MyAnimeList Top Anime Specials
-Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list.
+Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -107,7 +108,7 @@ collections:
 ```
 
 ## MyAnimeList Most Popular Anime
-Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list.
+Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -117,7 +118,7 @@ collections:
 ```
 
 ## MyAnimeList Most Favorited Anime
-Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list.
+Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list. (Maximum: 500)
 
 ```yaml
 collections:
@@ -127,7 +128,7 @@ collections:
 ```
 
 ## MyAnimeList Suggested Anime
-Gets the suggested anime in by MyAnimeList for the authorized user.
+Gets the suggested anime in by MyAnimeList for the authorized user. (Maximum: 100)
 
 ```yaml
 collections:
@@ -196,19 +197,42 @@ collections:
     sync_mode: sync
 ```
 
-## MyAnimeList Genre
-Gets anime in MyAnimeList's [Search](https://myanimelist.net/anime.php) list the options are detailed below. 
+## MyAnimeList Genre 
+Gets every anime tagged with the specified genre ID sorted by members the options are detailed below.
+
+* Genre options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) Page.
+* To find the ID click on a Genre in the link above and there should be a number in the URL that's the `gerne_id`.
+* For example if the url is `https://myanimelist.net/anime/genre/1/Action` the `genre_id` would be `1`.
 
 | Attribute | Description | Required | Default |
 | :--- | :--- | :---: | :---: |
-| `genre_id` | `genre_id` is the genre ID when you select a genre on [Search Anime](https://myanimelist.net/anime.php)<br>(For example `https://myanimelist.net/anime/genre/1/Action` the `genre_id` is `1`) | :heavy_check_mark: | N/A |
-| `sort_by` | `members` (Sort by Most Members)<br>`score` (Sort by Score) | :x: | `members` |
-| `limit` | Number of Anime to query from MyAnimeList (max: 500) | :x: | 100 |
+| `genre_id` | The ID of Genre from MyAnimeList | :heavy_check_mark: | N/A |
+| `limit` | Number of Anime to query from MyAnimeList | :x: | 0 (All) |
 
 ```yaml
 collections:
   Sports Anime:
     mal_genre:
       genre_id: 30
+    sync_mode: sync
+```
+
+## MyAnimeList Studio 
+Gets every anime tagged with the specified studio/producer/licensor ID sorted by members the options are detailed below.
+
+* Studio options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) Page.
+* To find the ID click on a Studio in the link above and there should be a number in the URL that's the `studio_id`.
+* For example if the url is `https://myanimelist.net/anime/producer/4/Bones` the `studio_id` would be `4`.
+
+| Attribute | Description | Required | Default |
+| :--- | :--- | :---: | :---: |
+| `studio_id` | The ID of Studio/Producer/Licensor from MyAnimeList | :heavy_check_mark: | N/A |
+| `limit` | Number of Anime to query from MyAnimeList | :x: | 0 (All) |
+
+```yaml
+collections:
+  Bones Studio Anime:
+    mal_studio:
+      studio_id: 4
     sync_mode: sync
 ```

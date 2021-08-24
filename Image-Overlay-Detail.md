@@ -12,7 +12,8 @@ config
 * `OVERLAY_NAME` is the folder contacting your `overlay.png` and its name is what you give `item_overlay` to refer to this specific overlay.
 * `overlay.png` is the overlay file with the banner. You can create you're own with this [PSD](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/overlays.psd). The font can be found [here](https://www.dafontfree.net/freefonts-eurostile-extended-f123859.htm).
 * An item can only be in one overlay search so make sure you exclude other searches when using multiple overlays.
-* Posters will be backed up in the overlay director and if an item is removed from the search the original poster should be added back. 
+* Posters will be backed up in the overlay director and if an item is removed from the search the original poster should be added back.
+* `revert_overlay` can be added to an overlay collection configuration to revert all movies changed by that overlay back to their original posters. 
 
 ### Example Folder Structure
 
@@ -81,5 +82,58 @@ collections:
     filters:
       resolution.not: 4K
     item_overlay: HDR
+    build_collection: false
+```
+
+#### 4K, HDR, Dolby Overlays
+
+Here's an example of how you could add `4K`, `4K-HDR`, `4K-Dolby`, `Dolby`, and `HDR` overlays
+
+**Note: This only works is your filenames have a tag in them for Dolby files as Plex cannot detect dolby yet**
+
+
+```yaml
+collections:
+  4K:
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: false
+    filters:
+      filepath.not: DoVi
+    item_overlay: 4K
+    build_collection: false
+  4K-HDR:
+    plex_search:
+      all:
+        resolution: 4K
+        hdr: true
+    filters:
+      filepath.not: DoVi
+    item_overlay: 4K-HDR
+    build_collection: false
+  4K-Dolby:
+    plex_search:
+      all:
+        resolution: 4K
+    filters:
+      filepath: DoVi
+    item_overlay: 4K-Dolby
+    build_collection: false
+  HDR:
+    plex_search:
+      all:
+        hdr: true
+    filters:
+      filepath.not: DoVi
+      resolution.not: 4K
+    item_overlay: HDR
+    build_collection: false
+  Dolby:
+    plex_all: true
+    filters:
+      filepath: DoVi
+      resolution.not: 4K
+    item_overlay: Dolby
     build_collection: false
 ```
