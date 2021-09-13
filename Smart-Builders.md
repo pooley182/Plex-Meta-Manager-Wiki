@@ -19,7 +19,7 @@ Any Advance Filter made using the Plex UI should be able to be recreated using `
 
 like Plex's [Advance Filters](https://support.plex.tv/articles/201273953-collections/) you have to start each filter with either `any` or `all` as a base. You can only have one base attribute and all filter attributes must be under the base.
 
-Inside the base attribute you can use any filter below or nest more `any` or `and`. You can have as many nested `any` or `and` next to each other as you want. If using multiple `any` or `and` you will have to do so in the form of a list.  
+Inside the base attribute you can use any filter below or nest more `any` or `all`. You can have as many nested `any` or `all` next to each other as you want. If using multiple `any` or `all` you will have to do so in the form of a list.  
 
 There are a couple other attributes you can have at the top level only along with the base attribute are:
 
@@ -56,7 +56,7 @@ There are a couple other attributes you can have at the top level only along wit
 There are three fields per filter option when using Plex's Advance Filters in the Web UI. The first is the **Attribute** (what attribute you wish to filter), the second is the **Modifier** (which modifier to use), and the third is the **Term** (actual term to filter).
 
 ## String Filters
-String filters can be used with either no modifier or with `.not`, `.begins`, or `.ends`.
+String filters can be used with either no modifier or with `.not`, `.is`, `.isnot`, `.begins`, or `.ends`.
 
 String filter can take multiple values **only as a list**.
 
@@ -66,6 +66,8 @@ String filter can take multiple values **only as a list**.
 | :--- | :--- | :---: |
 | No Modifier | Matches every item where the attribute contains the given string | `contains` |
 | `.not` | Matches every item where the attribute does not contain the given string | `does not contain` |
+| `.is` | Matches every item where the attribute exactly matches the given string | `is` |
+| `.isnot` | Matches every item where the attribute does not exactly match the given string | `is not` |
 | `.begins` | Matches every item where the attribute begins with the given string | `begins with` |
 | `.ends` | Matches every item where the attribute ends with the given string | `ends with` |
 
@@ -154,7 +156,7 @@ No number filter can take multiple values.
 | Number Filter | Description | Restrictions | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: | :--: |
 | `duration` | Uses the duration attribute to match using minutes | minimum: `1` | :heavy_check_mark: | :x: |
-| `plays` | Uses the plays attribute to match | minimum: `1` | :heavy_check_mark: | :x: |
+| `plays` | Uses the plays attribute to match | minimum: `1` | :heavy_check_mark: | :heavy_check_mark: |
 | `episode_plays` | Uses the plays attribute of the show's episodes to match | minimum: `1` | :x: | :heavy_check_mark: |
 | `critic_rating` | Uses the critic rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `audience_rating` | Uses the audience rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
@@ -175,7 +177,7 @@ Boolean Filters take no modifier and can only be either `true` or `false`.
 | `duplicate` | Is Duplicate | :heavy_check_mark: | :x: |
 | `unplayed` | Is Unplayed | :heavy_check_mark: | :x: |
 | `progress` | Is In Progress | :heavy_check_mark: | :x: |
-| `trash` | Is Trashed | :heavy_check_mark: | :x: |
+| `trash` | Is Trashed | :heavy_check_mark: | :heavy_check_mark: |
 | `unplayed_episodes` | Has Unplayed Episodes | :x: | :heavy_check_mark: |
 | `episode_unplayed` | Has Episodes Unplayed | :x: | :heavy_check_mark: |
 | `episode_duplicate` | Has Duplicate Episodes | :x: | :heavy_check_mark: |
