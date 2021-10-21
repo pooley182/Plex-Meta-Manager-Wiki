@@ -147,7 +147,7 @@ That will create the virtual environment, and then you need to activate it:
       + CategoryInfo          : SecurityError: (:) [], PSSecurityException
       + FullyQualifiedErrorId : UnauthorizedAccess
   ```
-  That shows you skipped the saecond step above under installing Python for Windows.
+  That shows you skipped the second step above under installing Python for Windows.
 
   You will need to take care of that before moving on.
 
