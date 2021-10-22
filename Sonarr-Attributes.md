@@ -7,7 +7,6 @@ Below is a `sonarr` mapping example and the full set of attributes:
 sonarr:
   url: http://192.168.1.12:32789
   token: ################################
-  version: v3
   add: true
   root_folder_path: S:/Shows
   monitor: all
@@ -24,7 +23,6 @@ sonarr:
 | :--- | :--- | :--- | :---: | :---: |
 | Sonarr URL | `url` | Sonarr URL<br>**Example:** http://192.168.1.12:32788 | N/A | :heavy_check_mark: |
 | API Token | `token` | Sonarr API Token | N/A | :heavy_check_mark: |
-| Sonarr Version | `version` | `v2`: for < 0.2<br>`v3`: for > 3.0 | v2 | :x: |
 | Add | `add` | Add missing shows found to Sonarr<br>**boolean:** true or false | false | :x: |
 | Add Existing | `add_existing` | Add shows existing in this collection to Sonarr<br>**boolean:** true or false | false | :x: |
 | Root Folder Path | `root_folder_path` | Sonarr Root Folder Path To Use | N/A | :heavy_check_mark: |

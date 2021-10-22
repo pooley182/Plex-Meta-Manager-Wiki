@@ -29,6 +29,7 @@ This wiki should tell you everything you need to know about the script to get it
 ## Table of Contents
 - [Home](Home)
 - [Local Installation](Local-Installation)
+  - [Local Walkthrough](Walkthrough-Local)
 - [Docker Installation](Docker-Installation)
 - [unRAID Installation](unRAID-Installation)
 - [Configuration File](Configuration-File)

@@ -9,7 +9,7 @@ You can use `plex_all: true` to start your filter from your entire library.
 **Filters can be very slow. Try to build or narrow your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
 
 ## String Filters
-String filters can be used with either no modifier or with `.not`, `.begins`, `.ends`, or `.regex`.
+String filters can be used with either no modifier or with `.not`, `.is`, `.isnot`, `.begins`, `.ends`, or `.regex`.
 
 String filters can take multiple values **only as a list**.
 
@@ -19,6 +19,8 @@ String filters can take multiple values **only as a list**.
 | :--- | :--- |
 | No Modifier | Matches every item where the attribute contains the given string |
 | `.not` | Matches every item where the attribute does not contain the given string |
+| `.is` | Matches every item where the attribute exactly matches the given string |
+| `.isnot` | Matches every item where the attribute does not exactly match the given string |
 | `.begins` | Matches every item where the attribute begins with the given string |
 | `.ends` | Matches every item where the attribute ends with the given string |
 | `.regex` | Matches every item where the attribute matches the regex given |
