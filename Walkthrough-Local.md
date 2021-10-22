@@ -18,6 +18,8 @@ That’s a command you’re going to type or paste into your terminal (OSX or Li
 IMPORTANT NOTE:
 This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path walkthrough, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
 
+I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
+
 ### Installing Python.
 
 <details>
@@ -89,8 +91,27 @@ cd ~
 git clone https://github.com/meisnate12/Plex-Meta-Manager
 ```
 
-
 Later on you can move it elsewhere if you want, but for now put it there.  This will ensure that everything to follow works just like it says here.  Presumably you’re reading this because the other docs are unclear to you.  Don’t make unilateral changes to my assumptions while doing this.
+
+<details>
+  <summary>Why use git instead of downloading the release ZIP?</summary>
+  <br />
+
+  Retrieving the code with `git` makes updating simpler.  When you want to update to the newest version, you can go into this directory and type:
+
+  ```
+  git pull
+  ```
+  
+  No need to download a new ZIP, uncompress it, etc.
+
+  Also, if you are asked to [or want to] switch to the latest develop code, you can do so with:
+
+  ```
+  git checkout develop
+  ```
+  
+</details>
 
 Move into that directory:
 
@@ -147,7 +168,7 @@ That will create the virtual environment, and then you need to activate it:
       + CategoryInfo          : SecurityError: (:) [], PSSecurityException
       + FullyQualifiedErrorId : UnauthorizedAccess
   ```
-  That shows you skipped the second step above under installing Python for Windows.
+  You apparently skipped the "enable scripts in Powershell" step above under installing Python for Windows.
 
   You will need to take care of that before moving on.
 
@@ -155,7 +176,7 @@ That will create the virtual environment, and then you need to activate it:
 
 An advantage of doing this in a venv is that in the event something goes wrong, you can delete that pmm-venv directory and do the setup again.
 
-**IMPORTANT: In the future, when you want to run the script, you will need to do this "acitvation" step every time.**
+**IMPORTANT: In the future, when you want to run the script, you will need to do this "activation" step every time.  Not the venv creation, just the activation**
 
 ### Installing requirements
 
@@ -338,7 +359,8 @@ I’ve removed some of the lines for space, but have left the important bits:
 ...
 |                                            Starting Run|
 ...
-| Locating config...|
+| Locating config...
+|
 | Using /Users/mroche/Plex-Meta-Manager/config/config.yml as config
 ...
 | Connecting to TMDb...
@@ -409,17 +431,21 @@ First, create and open the metadata file:
 <details>
   <summary>OS X/Linux</summary>
   <br />
+  
   ```
-  nano "config\Movies Are Swell.yml"
+  nano "config\Main Movies.yml"
   ```
+
 </details>
 
 <details>
   <summary>Windows</summary>
   <br />
+  
   ```
-  notepad "config\Movies Are Swell.yml"
+  notepad "config\Main Movies.yml"
   ```
+
 </details>
 
 [of course, that should be the file name you just entered in config.yml, if you changed it from the default]
