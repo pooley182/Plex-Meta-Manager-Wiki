@@ -1,5 +1,6 @@
 - [Home](Home)
 - [Local Installation](Local-Installation)
+  - [Local Walkthrough](Walkthrough-Local)
 - [Docker Installation](Docker-Installation)
 - [unRAID Installation](unRAID-Installation)
 - [Configuration File](Configuration-File)
