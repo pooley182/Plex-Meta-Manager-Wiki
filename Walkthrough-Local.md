@@ -53,6 +53,8 @@ I am assuming you do not have any of these tools already installed.  When writin
 
 </details>
 
+---
+
 ### Installing git
 
 <details>
@@ -81,6 +83,8 @@ I am assuming you do not have any of these tools already installed.  When writin
   ![](https://i.ibb.co/vsL4fDG/Screen-Shot-2021-10-21-at-12-08-39-PM.png)
 
 </details>
+
+---
 
 ### Retrieving the Plex-Meta-Manager code
 
@@ -113,11 +117,15 @@ Later on you can move it elsewhere if you want, but for now put it there.  This 
   
 </details>
 
-Move into that directory:
+---
+
+Now move into that directory:
 
 ```
 cd ~/Plex-Meta-Manager
 ```
+
+**NOTE: The rest of this walkthrough assumes you are staying in this directory.**
 
 ### Setting up a virtual environment
 
@@ -139,8 +147,15 @@ This walkthrough is going to use a "virtual environment", since that provides a 
   ```
   python -m venv pmm-venv
   ```
+
+  If you see:
+  ```
+  Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Manage App Execution Aliases.
+  ```
+  that indicates that you didn't check the “Add to path” checkbox when you installed Python.  "Repair" your Python install and check "add python to environment variables".
 </details>
 
+---
 
 That will create the virtual environment, and then you need to activate it:
 <details>
@@ -173,6 +188,8 @@ That will create the virtual environment, and then you need to activate it:
   You will need to take care of that before moving on.
 
 </details>
+
+---
 
 An advantage of doing this in a venv is that in the event something goes wrong, you can delete that pmm-venv directory and do the setup again.
 
@@ -240,11 +257,11 @@ There are a bunch of other services you *can* configure in the config file, but 
 
 Note that if you already have an API key, you can use that one.  You don’t need another.
 
-Go to https://www.themoviedb.org/.  Log into your account [or create one if you don’t have one already], then go to “Settings” under your account menu:
+Go to https://www.themoviedb.org/.  Log into your account [or create one if you don’t have one already], then go to “Settings” under your account menu.
 
-In the menu on the left, select “API”
+In the sidebar menu on the left, select “API”.
 
-Then click to generate a new API key under "Request an API Key".
+Click to generate a new API key under "Request an API Key".  If there is already one there, copy it and go to the next step.
 
 There will be a form to fill out; the answers are arbitrary.  The URL can be your personal website, or probably even google.com or the like.
 
@@ -254,7 +271,7 @@ Copy that value, you’ll need it for the config file.
 
 #### Getting a Plex URL and Token
 
-The Plex URL is whatever URL you’d use from this machine to connect directly to your Plex server [i.e. NOT app.plex.tv].
+The Plex URL is whatever URL you’d use **from this machine** to connect directly to your Plex server [i.e. NOT app.plex.tv].
 
 As with the TMDB API Key, if you already have a Plex Token, you can use that one.
 
@@ -289,18 +306,20 @@ First, make a copy of the template, then open the copy in an editor:
 
 </details>
 
-Scroll down a bit and update the three bits you just collected; Plex URL, Plex Token, and TMDB API Key.
+---
+
+Scroll down a bit and update the three things you just collected; Plex URL, Plex Token, and TMDB API Key.
 
 ```
 plex:                                           # Can be individually specified per library as well
-  url: http://bing.bang.boing                <<< PLEX URL
-  token: XXXXXXXXXXXXXXXXXXXX                <<< PLEX TOKEN
+  url: http://bing.bang.boing                <<< ENTER YOUR PLEX URL
+  token: XXXXXXXXXXXXXXXXXXXX                <<< ENTER YOUR PLEX TOKEN
   timeout: 180
   clean_bundles: false
   empty_trash: false
   optimize: false
 tmdb:
-  apikey: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   <<< TMDB API
+  apikey: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   <<< ENTER YOUR TMDB API
   language: en
 ```
 
@@ -550,7 +569,7 @@ deactivate
 
 ### I want to use this in a context where I can't be manually activating/deactivating the virtual environment [scheduled. etc]
 
-All you need do is point to the python executable inside the virtual env.  IN our example, that means that if your scheduled job normally would be:
+All you need do is point to the python executable inside the virtual env.  In our example, that means that if your scheduled job normally would be:
 ```
 cd /Users/mroche/Plex-Meta-Manager
 python plex-meta-manager.py -r
