@@ -61,10 +61,13 @@ All the following attributes serve various functions as how the collection funct
 
 | Name | Attribute | Description | Allowed Values |
 | :--- | :--- | :--- | :--- |
+| Collection Name | `collection_name` | Used to specify the name off the collection in Plex as different then the mapping name. | Any String |
 | Schedule | `schedule` | Used to schedule this collection | [`schedule` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Detail) |
 | Template | `template` | Used to specify a template and template variables to use for this collection | [`template` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) |
 | Run Again | `run_again` | Used to try and add all the items missing from the collection to the collection again after the daily run <br>**Default Mode:** `false`| **boolean:** `true` or `false` |
 | Sync Mode | `sync_mode` | Used to change how collection builders sync with this collection<br>**Default Mode:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection |
+| Collection Minimum | `collection_minimum` | Minimum items that must be found to add to a collection.<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | number greater then 0 |
+| Delete Below Minimum | `delete_below_minimum` | Delete existing collection if below the minimum.<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Validate Builders | `validate_builders` | When set to false the collection will not fail if one builder fails<br>**Default Mode:** `true` | **boolean:** `true` or `false` |
 | Build Collection | `build_collection` | When set to false the collection won't be created but items can still be added to Radarr/Sonarr<br>**Default Mode:** `true` | **boolean:** `true` or `false` |
 | Missing Only Released | `missing_only_released` | Collection Level `missing_only_released` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |

@@ -27,6 +27,8 @@ settings:
 | Image Assets For All* | `assets_for_all` | Search in assets for images for every item in your library | false | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | Create Asset Folders | `create_asset_folders` | When using `assets_for_all` if this is set to true PMM will create the Movie/Shows Folder for assets to be placed in | false | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | Sync Mode | `sync_mode` | `append`: Only Add Items to the Collection<br>`sync`: Add & Remove Items from the Collection | append | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Collection Minimum | `collection_minimum` | Minimum items that must be found to add to a collection. | 1 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Delete Below Minimum | `delete_below_minimum` | Delete existing collection if below the minimum.<br>**boolean:** true or false | false | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Run Again Delay](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details#setting-attributes) | `run_again_delay` | Number of minutes to run `run_again` collections after daily run is finished<br>**number:** 0 or greater | 0 | :heavy_check_mark: | :x: | :x: |
 | Missing Only Released | `missing_only_released` | Library Level toggle to filter missing items from a collection that have yet to be released.<br>**boolean:** true or false | false | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | Show Unmanaged Collections | `show_unmanaged` | Show collections not managed by Plex Meta Manager at the end of each run<br>**boolean:** true or false | true | :heavy_check_mark: | :heavy_check_mark: | :x: |
