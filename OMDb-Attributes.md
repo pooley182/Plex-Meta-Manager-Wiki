@@ -1,4 +1,4 @@
-Configuring OMDb API is optional but can allow you to mass edit metadata using IMDb.
+Configuring [OMDb](https://www.omdbapi.com/) is optional but can allow you to mass edit metadata using IMDb.
 
 A `omdb` mapping is in the root of the config file.
 

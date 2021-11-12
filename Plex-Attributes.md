@@ -1,4 +1,4 @@
-Configuring Plex is required in order to connect to your libraries. 
+Configuring [Plex](https://www.plex.tv/) is required in order to connect to your libraries. 
 
 A `plex` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the `plex` mapping individually per library. 
 

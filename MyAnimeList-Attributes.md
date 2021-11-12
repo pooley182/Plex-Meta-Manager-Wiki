@@ -1,4 +1,4 @@
-Configuring MyAnimeList.net API is optional but is required for MyAnimeList based collections to function.
+Configuring [MyAnimeList](https://myanimelist.net/) is optional but is required for MyAnimeList based collections to function.
 
 A `mal` mapping is in the root of the config file.
 

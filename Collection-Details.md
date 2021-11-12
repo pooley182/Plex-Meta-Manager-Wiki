@@ -74,8 +74,11 @@ All the following attributes serve various functions as how the collection funct
 | Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
-| Name Mapping | `name_mapping` | Used to specify the folder name in the [Image Assets Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) | Folder Name In Assets Directory |
+| Name Mapping | `name_mapping` | Used to specify the folder name in the [Image Assets Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Asset-Directory) | Folder Name In Assets Directory |
 | Test Mode | `test` | When running in Test Mode (`--run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** `false` | **boolean:** `true` or `false` |
+| Collection Creation Webhooks | `collection_creation_webhooks` | Used to specify a collection creation webhook for just this collection | List of webhooks |
+| Collection Addition Webhooks | `collection_addition_webhooks` | Used to specify a collection addition webhook for just this collection | List of webhooks |
+| Collection Removal Webhooks | `collection_removal_webhooks` | Used to specify a collection removal webhook for just this collection | List of webhooks |
 
 * **Name Mapping:** If your collection name contains characters that are not allowed in file paths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path), but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
 
@@ -147,6 +150,7 @@ All the following attributes update various details of the metadata for every it
 | Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
 | Image Overlay | `item_overlay` | Adds and overlay image to the poster of every movie/show in the collection | [`item_overlay` details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Overlay-Attribute) | :heavy_check_mark: | :heavy_check_mark: |
 | Check For Assets | `item_assets` | Checks your assets folders for assets of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
+| Refresh Item | `item_refresh` | Refreshes the metadata of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
 | Episode Sorting | `item_episode_sorting` | Changes the episode sorting of every show in the collection | `default`: Library default<br>`oldest`: Oldest first<br>`newest`: Newest first | :x: | :heavy_check_mark: |
 | Keep Episodes | `item_keep_episodes` | Changes the keep episodes of every show in the collection | `all`: All episodes<br>`5_latest`: 5 latest episodes<br>`3_latest`: 3 latest episodes<br>`latest`: Latest episodes<br>`past_3`: Episodes added in the past 3 days<br>`past_7`: Episodes added in the past 7 days<br>`past_30`: Episodes added in the past 30 days | :x: | :heavy_check_mark: |
 | Delete Episodes | `item_delete_episodes` | Changes the delete episodes of every show in the collection | `never`: Never<br>`day`: After a day<br>`week`: After a week<br>`refresh`: On next refresh | :x: | :heavy_check_mark: |
@@ -183,7 +187,7 @@ All the following attributes update the poster of the collection from various so
 | TVDb Poster<sup>2</sup> | `tvdb_poster` | Used to change the collection's poster to the TVDb Movie poster for a movie library or the TVDb Show poster for a show library | TVDb Movie/Show ID or URL |
 | File Poster<sup>2</sup> | `file_poster` | Used to change the collection's poster to the image in the file system | Path to image in the file system |
 
-* If no poster is specified the script will look in the library's [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) for a folder named either the collection name or the `name_mapping` if specified and look for a `poster.ext` file in that folder (replacing .ext with the image extension).
+* If no poster is specified the script will look in the library's [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Asset-Directory) for a folder named either the collection name or the `name_mapping` if specified and look for a `poster.ext` file in that folder (replacing .ext with the image extension).
 
 ## Background Details
 All the following attributes update the background of the collection from various sources.
@@ -195,4 +199,4 @@ All the following attributes update the background of the collection from variou
 | TVDb Background<sup>3</sup> | `tvdb_background` | Used to change the collection's background to the TVDb Movie background for a movie library or the TVDb Show background for a show library | TVDb Movie/Show ID or URL |
 | File Background<sup>3</sup> | `file_background` | Used to change the collection's background to the image in the file system | Path to image in the file system |
 
-* If no background is specified the script will look in the library's [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#image-asset-directory) for a folder named either the collection name or the `name_mapping` if specified and look for a `background.ext` file in that folder (replacing .ext with the image extension).
+* If no background is specified the script will look in the library's [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Asset-Directory) for a folder named either the collection name or the `name_mapping` if specified and look for a `background.ext` file in that folder (replacing .ext with the image extension).

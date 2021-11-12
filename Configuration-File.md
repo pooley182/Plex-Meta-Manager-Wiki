@@ -18,5 +18,6 @@ The YAML mappings that can be set in the configuration file's root:
 | [OMDb](https://github.com/meisnate12/Plex-Meta-Manager/wiki/OMDb-Attributes) | `omdb` | :x: |
 | [Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes) | `trakt` | :x: |
 | [MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) | `mal` | :x: |
+| [Webhooks](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Webhooks-Attributes) | `webhooks` | :x: |
 
 * You can find a template config file in [config/config.yml.template](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template)

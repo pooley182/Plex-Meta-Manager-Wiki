@@ -1,4 +1,4 @@
-Configuring Radarr is optional but will allow you to send movies to a Radarr instance when they're found missing while updating a library's collections. 
+Configuring [Radarr](https://radarr.video/) is optional but will allow you to send movies to a Radarr instance when they're found missing while updating a library's collections. 
 
 A `radarr` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the `radarr` mapping individually per library.
 

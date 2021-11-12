@@ -1,4 +1,4 @@
-Configuring Tautulli API is optional but can allow you to create Collections based on Tautulli's Watch Statistics.
+Configuring [Tautulli](https://tautulli.com/) is optional but can allow you to create Collections based on Tautulli's Watch Statistics.
 
 A `tautulli` mapping can be either in the root of the config file as global mapping for all libraries or you can specify the `tautulli` mapping individually per library.
 

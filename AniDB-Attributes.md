@@ -1,4 +1,4 @@
-Configuring [AniDB.net](https://anidb.net/) is optional but can allow you to access mature content with AniDB Builders.
+Configuring [AniDB](https://anidb.net/) is optional but can allow you to access mature content with AniDB Builders.
 
 **All AniDB Builders still work without this, they will just not have mature content**
 
