@@ -42,6 +42,8 @@ Due to how unRAID handles docker containers, it can be a little confusing at fir
 4. Click the Terminal button in the upper right corner of the unRAID WebUI (`>_`)
 
 5. Run `docker exec -it plex-meta-manager /bin/bash`
+   
+   Note: this name is case-sensitive.  If this gives you an error like "Error: No such container: plex-meta-manager"; check the container config to see if you've named it something like "Plex-Meta-Manager",  If that's the case, change the name in the command to match your container.
 
 6. Run `ls` to make sure you're in the same directory as `plex_meta_manager.py`. If you don't see the script, run `cd /`
   
