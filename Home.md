@@ -31,6 +31,7 @@ This wiki should tell you everything you need to know about the script to get it
 - [Local Installation](Local-Installation)
   - [Local Walkthrough](Walkthrough-Local)
 - [Docker Installation](Docker-Installation)
+  - [Docker Walkthrough](Walkthrough-Docker)
 - [unRAID Installation](unRAID-Installation)
 - [Configuration File](Configuration-File)
   - [Libraries Attributes](Libraries-Attributes)
