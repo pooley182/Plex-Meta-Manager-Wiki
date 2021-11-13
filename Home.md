@@ -39,7 +39,7 @@ This wiki should tell you everything you need to know about the script to get it
     - [Operations Attributes](Operations-Attributes)
   - [Settings Attributes](Settings-Attributes)
     - [Image Asset Directory](Image-Asset-Directory)
-  - [Webhook Attributes](Webhook-Attributes)
+  - [Webhooks Attributes](Webhooks-Attributes)
   - [Plex Attributes](Plex-Attributes)
   - [TMDb Attributes](TMDb-Attributes)
   - [Tautulli Attributes](Tautulli-Attributes)
