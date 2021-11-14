@@ -25,6 +25,7 @@ You can build different collections using the features of [Trakt.tv](https://tra
 | [Trakt Collected Monthly](#trakt-collected) | `trakt_collected_monthly` | Gets the movies/shows in Trakt's Monthly Collected [Movies](https://trakt.tv/movies/collected/monthly)/[Shows](https://trakt.tv/shows/collected/monthly) list | :heavy_check_mark: | :heavy_check_mark: | 
 | [Trakt Collected Yearly](#trakt-collected) | `trakt_collected_yearly` | Gets the movies/shows in Trakt's Yearly Collected [Movies](https://trakt.tv/movies/collected/yearly)/[Shows](https://trakt.tv/shows/collected/yearly) list | :heavy_check_mark: | :heavy_check_mark: | 
 | [Trakt Collected All-Time](#trakt-collected) | `trakt_collected_all` | Gets the movies/shows in Trakt's All-Time Collected [Movies](https://trakt.tv/movies/collected/all)/[Shows](https://trakt.tv/shows/collected/all) list | :heavy_check_mark: | :heavy_check_mark: | 
+| [Trakt Box Office](#trakt-box-office) | `trakt_boxoffice` | Gets the 10 movies in Trakt's Top Box Office [Movies](https://trakt.tv/movies/boxoffice) list | :heavy_check_mark: | :x: | 
 
 ## Trakt List
 Gets every movie/show in the Trakt List.
@@ -176,5 +177,19 @@ The `sync_mode: sync` option is also recommended since the Trakt Collected lists
 collections:
   Trakt Collected:
     trakt_collected_weekly: 30
+    sync_mode: sync
+```
+
+## Trakt Box Office
+Gets the 10 movies in Trakt's Top Box Office [Movies](https://trakt.tv/movies/boxoffice) list.
+
+The expected input is true. 
+
+The `sync_mode: sync` option is also recommended since the Trakt Box Office list is continuously updated.
+
+```yaml
+collections:
+  Trakt Collected:
+    trakt_boxoffice: true
     sync_mode: sync
 ```
