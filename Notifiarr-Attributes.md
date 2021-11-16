@@ -21,5 +21,5 @@ webhooks:
   run_end: notifiarr
   collection_creation: notifiarr 
   collection_addition: notifiarr
-  collection_removing: notifiarr
+  collection_removal: notifiarr
 ```
