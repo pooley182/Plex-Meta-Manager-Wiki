@@ -14,14 +14,14 @@ webhooks:
   collection_removal:
 ```
 
-| Name | Attribute | Description | Global | Library | Collection |
-| :--- | :--- | :--- | :---: | :---: | :---: |
-| [Error](#error-notifications) | `error` |  | :heavy_check_mark: | :heavy_check_mark: | :x: |
-| [Run Start](#run-start-notifications) | `run_start` |  | :heavy_check_mark: | :x: | :x: |
-| [Run End](#run-end-notifications) | `run_end` |  | :heavy_check_mark: | :x: | :x: |
-| [Collection Creation](#collection-notifications) | `collection_creation` |  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [Collection Addition](#collection-notifications) | `collection_addition` |  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [Collection Removal](#collection-notifications) | `collection_removal` |  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Global | Library | Collection |
+| :--- | :--- | :---: | :---: | :---: |
+| [Error](#error-notifications) | `error` | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [Run Start](#run-start-notifications) | `run_start` | :heavy_check_mark: | :x: | :x: |
+| [Run End](#run-end-notifications) | `run_end` | :heavy_check_mark: | :x: | :x: |
+| [Collection Creation](#collection-notifications) | `collection_creation` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Collection Addition](#collection-notifications) | `collection_addition` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Collection Removal](#collection-notifications) | `collection_removal` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 * Each Attribute can be either a webhook url as a string or a comma-separated list of webhooks urls.
 * To send notifications to [Notifiarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Notifiarr-Attributes) just add `notifiarr` to a webhook instead of the webhook url.

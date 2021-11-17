@@ -1,8 +1,23 @@
 The Image Asset Directories can be used to update the posters and backgrounds of collections, movies, shows, seasons, and episodes. 
 
+You can specify your asset folders under the `settings` attribute `asset_directory`.
+
 To use multiple Image Asset Directories you have to use a list. Comma-separated values will not work. By default, the program will look in the same folder as you config.yml for a folder called assets.
 
-There are two different options when it comes to how the program looks at the files inside you Asset Directories. These can be toggled between by using `asset_folders`.
+## How assets are run
+
+Assets are searched for only at specific times. 
+
+1. Collection assets are searched for whenever that collection is run.
+2. Item assets for items in a collection are searched for whenever that collection is run and has `item_assets: true` as a Collection Detail.
+3. Item assets and Unmanaged Collections assets are searched for whenever the `assets_for_all` Library Operation is active.
+4. Item assets will be searched for any item that has an overlay applied to it.
+
+* If you want to silence the `Asset Warning: No poster or background found in an assets folder for 'TITLE'` you can use the `show_missing_assets` attribute under `settings`
+
+## Asset Naming
+
+The table below shows the asset folder path structures that will be searched for. There are two different options when it comes to how the program looks at the files inside you Asset Directories. These can be toggled between by using the `asset_folders` attribute under `settings`.
 
 | Image Type | Image Path With Folders<br>`asset_folders: true` | Image Path Without Folder<br>`asset_folders: false` |
 | :--- | :--- | :--- |
@@ -15,20 +30,16 @@ There are two different options when it comes to how the program looks at the fi
 * For **Collections** replace `ASSET_NAME` with the mapping name used with the collection unless `system_name` is specified, which you would then use what's specified in `system_name`.
 
 * For **Movies** replace `ASSET_NAME` with the exact name of the folder the video file is stored in.
-
+  * i.e. if you have `Movies/Star Wars (1977)/Star Wars (1977) [1080p].mp4` then your asset directory would look at either `assets/Star Wars (1977)/poster.png` or `assets/Star Wars (1977).png` for the poster. 
 * For **Shows**, **Seasons**, and **Episodes** replace `ASSET_NAME` with the exact name of the folder for the show as a whole.
-
+  * i.e. if you have `Shows/Game of Thrones/Season 1/Game of Thrones - S01E01.mp4` then your asset directory would look at either `assets/Game of Thrones/poster.png` or `assets/Game of Thrones.png` for the poster.
 * For **Seasons** replace `##` with the zero padded season number (00 for specials)
 
 * For **Episodes** replacing the first `##` with the zero padded season number (00 for specials), the second `##` with the zero padded episode number
 
 * Replace `.ext` with the image extension
 
-By default, the program will only look inside the Image Asset Directories for Images when it runs a collection from a Metadata File. When it does this by default it will only look for the collection images, but you can have it look for images of every item in the collection if you add `item_assets: true` to the collection config.
-
-If you're using `asset_folders` set to true you can also nest movie/show folders inside an Image Assets Collection Folder that contains that movie/show.
-
-You can set `assets_for_all` to true to have the program, after your run, check the Image Asset Directories for Images of every item in your library. 
+* When `asset_folders` is set to true you can also nest movie/show folders inside other folders.
 
 Here's an example config folder structure with an assets directory with `asset_folders` set to true and false.
 
