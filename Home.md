@@ -3,11 +3,12 @@
 This wiki should tell you everything you need to know about the script to get it working.
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/meisnate12/Plex-Meta-Manager?style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/releases)
-[![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/develop?label=Number%20of%20Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop)
+[![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/meisnate12/plex-meta-manager/latest/develop?label=Commits%20in%20Develop&style=plastic)](https://github.com/meisnate12/Plex-Meta-Manager/tree/develop)
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/meisnate12/plex-meta-manager?label=docker&sort=semver&style=plastic)](https://hub.docker.com/r/meisnate12/plex-meta-manager)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/meisnate12/plex-meta-manager?style=plastic)](https://hub.docker.com/r/meisnate12/plex-meta-manager)
+[![Docker Pulls](https://img.shields.io/docker/pulls/meisnate12/plex-meta-manager?style=plastic)](https://hub.docker.com/r/meisnate12/plex-meta-manager)
 [![Discord](https://img.shields.io/discord/822460010649878528?label=Discord&style=plastic)](https://discord.gg/TsdpsFYqqm)
-[![Donate](https://img.shields.io/badge/-Sponsor_or_Donate-blueviolet?style=plastic)](https://github.com/sponsors/meisnate12)
+[![Sponsor or Donate](https://img.shields.io/badge/-Sponsor_or_Donate-blueviolet?style=plastic)](https://github.com/sponsors/meisnate12)
 
 ## Getting Started
 
@@ -35,15 +36,19 @@ This wiki should tell you everything you need to know about the script to get it
 - [unRAID Installation](unRAID-Installation)
 - [Configuration File](Configuration-File)
   - [Libraries Attributes](Libraries-Attributes)
+    - [Operations Attributes](Operations-Attributes)
   - [Settings Attributes](Settings-Attributes)
+    - [Image Asset Directory](Image-Asset-Directory)
+  - [Webhooks Attributes](Webhooks-Attributes)
   - [Plex Attributes](Plex-Attributes)
   - [TMDb Attributes](TMDb-Attributes)
-  - [Radarr Attributes](Radarr-Attributes)
-  - [Sonarr Attributes](Sonarr-Attributes)
   - [Tautulli Attributes](Tautulli-Attributes)
   - [OMDb Attributes](OMDb-Attributes) 
-  - [Trakt Attributes](Trakt-Attributes)
+  - [Notifiarr Attributes](Notifiarr-Attributes) 
   - [AniDB Attributes](AniDB-Attributes)
+  - [Radarr Attributes](Radarr-Attributes)
+  - [Sonarr Attributes](Sonarr-Attributes)
+  - [Trakt Attributes](Trakt-Attributes)
   - [MyAnimeList Attributes](MyAnimeList-Attributes)
 - [Metadata File](Metadata-File)
   - [Metadata Attributes](Metadata-Attributes)

@@ -1,4 +1,4 @@
-Configuring TheMovieDb.org API is required in order to run the script. 
+Configuring [TheMovieDb](https://www.themoviedb.org/) is required in order to run the script. 
 
 A `tmdb` mapping is in the root of the config file.
 

@@ -2,7 +2,7 @@ One of the two required configuration mappings is `libraries` which is where you
 
 Each library is defined by the mapping name which must be the same as the library name unless a different `library_name` is specified. You can either set attributes individually per library or you can let them be inherited from the global value. 
 
-A simple example of multiple libraries all using the global values is below:
+An advance example of multiple libraries with some using the global values and some having their own values is below:
 ```yaml
 libraries:
   Movies:
@@ -12,9 +12,19 @@ libraries:
       - git: meisnate12/Studios
       - git: meisnate12/IMDBGenres
       - git: meisnate12/People
-    mass_critic_rating_update: tmdb
-    split_duplicates: true
+    operations:
+      mass_critic_rating_update: tmdb
+      split_duplicates: true
   TV Shows:
+    metadata_path:
+      - file: config/TV Shows.yml
+      - git: meisnate12/ShowCharts
+      - git: meisnate12/Networks
+  TV Shows On Second Plex:
+    library_name: TV Shows
+    plex:
+      url: http://192.168.1.98:32400
+      token: ####################
     metadata_path:
       - file: config/TV Shows.yml
       - git: meisnate12/ShowCharts
@@ -23,9 +33,26 @@ libraries:
     metadata_path:
       - file: config/Anime.yml
       - git: meisnate12/AnimeCharts
+    radarr:
+      url: http://192.168.1.45:7878
+      token: ################################
+      root_folder_path: S:/Anime
+    settings:
+      asset_directory:
+        config/assets/anime
 plex:
   url: http://192.168.1.12:32400
   token: ####################
+radarr:
+  url: http://192.168.1.12:7878
+  token: ################################
+  add: true
+  root_folder_path: S:/Movies
+  monitor: true
+  availability: announced
+  quality_profile: HD-1080p
+  tag: pmm
+  search: false
 ```
 
 The available attributes for each library are as follows
@@ -34,13 +61,7 @@ The available attributes for each library are as follows
 | :--- | :--- | :--- | :---: | :---: |
 | [Library Name](#library-name) | `library_name` | Library name (Only needed when trying to use multiple libraries with the same name) | Base Attribute Name | :x: |
 | [Metadata Path](#metadata-path) | `metadata_path` | Location for your Metadata YAML files | Same directory as config YAML file | :x: |
-| Mass Genre Update | `mass_genre_update` | Updates every item's genres in the library to the chosen site's genres<br>`tmdb`: Use TMDb for Genres<br>`tvdb`: Use TVDb for Genres<br>`omdb`: Use IMDb through OMDb for Genres | No Update | :x: |
-| Mass Audience Rating Update | `mass_audience_rating_update` | Updates every item's audience rating in the library to the chosen site's rating<br>`tmdb`: Use TMDb for Rating<br>`omdb`: Use IMDb through OMDb for Rating | No Update | :x: |
-| Mass Critic Rating Update | `mass_critic_rating_update` | Updates every item's critic rating in the library to the chosen site's rating<br>`tmdb`: Use TMDb for Rating<br>`omdb`: Use IMDb through OMDb for Rating | No Update | :x: |
-| Mass Trakt Rating Update | `mass_trakt_rating_update` | Updates every movie/show's user rating in the library to match your custom rating on Trakt if there is one<br>`true` or `false` | `false` | :x: |
-| Split Duplicates | `split_duplicates` | Splits all duplicate movies/shows found in this library<br>`true` or `false` | `false` | :x: |
-| Radarr Add All | `radarr_add_all` | Adds every item in the library to Radarr | No Adds | :x: |
-| Sonarr Add All | `sonarr_add_all` | Adds every item in the library to Sonarr | No Adds | :x: |
+| Operations Mapping | `operations` | [`operations` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Operations-Attributes) | N/A | :x: |
 | Settings Mapping | `settings` | [`settings` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | global | :x: |
 | Plex Mapping | `plex` | [`plex` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | global | :heavy_check_mark: Either here or globally |
 | Radarr Mapping | `radarr` | [`radarr` mapping details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | global | :x: |

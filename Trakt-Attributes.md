@@ -1,4 +1,4 @@
-Configuring Trakt.tv API is optional but is required for Trakt based collections to function. 
+Configuring [Trakt.tv](https://trakt.tv/) is optional but is required for Trakt based collections to function. 
 
 A `trakt` mapping is in the root of the config file.
 
