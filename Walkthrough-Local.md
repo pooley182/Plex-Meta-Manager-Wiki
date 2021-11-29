@@ -7,13 +7,13 @@ This article will walk you through getting Plex-Meta-Manager [PMM] set up and ru
 
 ## Prerequisites.
 
-Anywhere you see
+Nearly anywhere you see
 
 ```
 something like this
 ```
 
-That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).
+That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In some cases it's displaying *output* from a command you've typed, but the difference should be apparent in context.
 
 IMPORTANT NOTE:
 This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path walkthrough, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
@@ -21,6 +21,9 @@ This walkthrough is going to be pretty pedantic.  I’m assuming you’re readin
 I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
 
 ### Installing Python.
+
+NOTE:
+You need to use Python 3.9, not Python 3.10.  There's one specific requirement that has not yet been updated for Python 3.10, and if you use Python 3.10 the requirements step will fail with a non-obvious error.
 
 <details>
   <summary>Linux</summary>
@@ -585,3 +588,62 @@ On Windows that path is:
 cd C:\Users\mroche\Plex-Meta-Manager
 pmm-venv\Scripts\python.exe plex-meta-manager.py -r
 ```
+
+### I want to update to the latest version of the code
+
+<details>
+  <summary>OS X/Linux</summary>
+  <br />
+
+  ```
+  cd /Users/mroche/Plex-Meta-Manager
+  git pull
+  source pmm-venv/bin/activate
+  python -m pip install -r requirements.txt
+  ```
+</details>
+
+<details>
+  <summary>Windows</summary>
+  <br />
+
+  ```
+  cd C:\Users\mroche\Plex-Meta-Manager
+  git pull
+  .\pmm-venv\Scripts\activate
+  python -m pip install -r requirements.txt
+  ```
+</details>
+
+You're set to go.
+
+### I want to use the develop branch
+
+<details>
+  <summary>OS X/Linux</summary>
+  <br />
+
+  ```
+  cd /Users/mroche/Plex-Meta-Manager
+  git checkout develop
+  source pmm-venv/bin/activate
+  python -m pip install -r requirements.txt
+  ```
+</details>
+
+<details>
+  <summary>Windows</summary>
+  <br />
+
+  ```
+  cd C:\Users\mroche\Plex-Meta-Manager
+  git checkout develop
+  .\pmm-venv\Scripts\activate
+  python -m pip install -r requirements.txt
+  ```
+</details>
+
+You can switch back to the `master` branch by changing `develop` to `master`.
+
+The reinstall of requirements every time is probably overkill, but it's harmless and ensures that you always get any new versions or requirements.
+
