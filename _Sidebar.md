@@ -36,6 +36,7 @@
       - [Tautulli Builders](Tautulli-Builders)
       - [Letterboxd Builders](Letterboxd-Builders)
       - [ICheckMovies Builders](ICheckMovies-Builders)
+      - [FlixPatrol Builders](FlixPatrol-Builders)
       - [StevenLu Builders](StevenLu-Builders)
       - [AniDB Builders](AniDB-Builders)
       - [AniList Builders](AniList-Builders)

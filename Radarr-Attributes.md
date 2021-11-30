@@ -14,6 +14,8 @@ radarr:
   quality_profile: HD-1080p
   tag: pmm
   search: false
+  radarr_path: /media
+  plex_path: /share/CACHEDEV1_DATA/Multimedia
 ```
 
 | Name | Attribute | Allowed Values| Default | Required |
@@ -28,6 +30,8 @@ radarr:
 | Quality Profile | `quality_profile` | Quality Profile To Use | N/A | :x: |
 | Tag | `tag` | Add this list or comma-separated string of tags to every movie added to Radarr | ` ` | :x: |
 | Search | `search` | Search when adding missing movies to Radarr<br>**boolean:** true or false | false | :x: |
+| Plex Path | `plex_path` | When using `add_existing` or `radarr_add_all` Convert this part of the path to `radarr_path` | ` ` | :x: |
+| Radarr Path | `radarr_path` | When using `add_existing` or `radarr_add_all` Convert the `plex_path` part of the path to this | ` ` | :x: |
 
 * The `token` can be found by going to `Radarr > Settings > General > Security > API Key`
 

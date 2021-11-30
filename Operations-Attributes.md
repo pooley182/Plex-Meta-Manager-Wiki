@@ -27,3 +27,6 @@ The available operations attributes for each library are as follows
 | Split Duplicates | `split_duplicates` | Splits all duplicate movies/shows found in this library | `true` or `false` |
 | Radarr Add All | `radarr_add_all` | Adds every item in the library to Radarr | `true` or `false` |
 | Sonarr Add All | `sonarr_add_all` | Adds every item in the library to Sonarr | `true` or `false` |
+
+* When using `radarr_add_all` or `sonarr_add_all` the existing paths in plex will be used as the root folder of each item.
+* If the paths in Plex are not the same as your Radarr/Sonarr paths you can use the `plex_path` and `radarr_path`/`sonarr_path` [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes)/[Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) details to convert the paths

@@ -17,6 +17,8 @@ sonarr:
   tag: pmm
   search: false
   cutoff_search: false
+  sonarr_path: /media
+  plex_path: /share/CACHEDEV1_DATA/Multimedia
 ```
 
 | Name | Attribute | Allowed Values| Default | Required |
@@ -34,6 +36,8 @@ sonarr:
 | Tag | `tag` | Add this list or comma-separated string of tags to every show added to Sonarr | ` ` | :x: |
 | Search | `search` | Start search for missing episodes<br>**boolean:** true or false | false | :x: |
 | Cutoff Search | `cutoff_search` | Start search for cutoff unmet episodes<br>**boolean:** true or false | false | :x: |
+| Plex Path | `plex_path` | When using `add_existing` or `sonarr_add_all` Convert this part of the path to `sonarr_path` | ` ` | :x: |
+| Sonarr Path | `sonarr_path` | When using `add_existing` or `sonarr_add_all` Convert the `plex_path` part of the path to this | ` ` | :x: |
 
 * The `token` can be found by going to `Sonarr > Settings > General > Security > API Key`
 

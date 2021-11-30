@@ -148,6 +148,9 @@ All the following attributes update various details of the metadata for every it
 | Label | `item_label` | Used to append new labels to every movie/show in the collection | Comma-separated string of labels to append | :heavy_check_mark: | :heavy_check_mark: |
 | Label Remove | `item_label.remove` | Used to remove existing labels from every movie/show in the collection | Comma-separated string of labels to remove | :heavy_check_mark: | :heavy_check_mark: |
 | Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
+| Lock Posters | `item_lock_poster` | Locks the poster of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
+| Lock Backgrounds | `item_lock_background` | Locks the background of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
+| Lock Titles | `item_lock_title` | Locks the title of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
 | Image Overlay | `item_overlay` | Adds and overlay image to the poster of every movie/show in the collection | [`item_overlay` details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Overlay-Attribute) | :heavy_check_mark: | :heavy_check_mark: |
 | Check For Assets | `item_assets` | Checks your assets folders for assets of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
 | Refresh Item | `item_refresh` | Refreshes the metadata of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |

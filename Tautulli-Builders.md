@@ -15,6 +15,7 @@ Both Tautulli Popular and Tautulli Watched have the same sub-attributes detailed
 | Attribute | Description | Required | Default |
 | :--- | :--- | :---: | :---: |
 | `list_days` | Number of Days to look back of the list | :x: | 30 |
+| `list_minimum` | Minimum Number of Users Watching/Plays to add to the list | :x: | 30 |
 | `list_size` | Number of Movies/Shows to add to this list | :x: | 10 |
 | `list_buffer` | Number of extra Movies/Shows to grab in case you have multiple show/movie Libraries. | :x: | 10 |
 

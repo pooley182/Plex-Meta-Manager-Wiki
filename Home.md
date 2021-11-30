@@ -18,6 +18,12 @@ This wiki should tell you everything you need to know about the script to get it
 3. After that you can start updating Metadata and building automatic Collections by creating a [Metadata File](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Metadata-File) for each Library you want to interact with.
 4. Explore the [Wiki](https://github.com/meisnate12/Plex-Meta-Manager/wiki) to see all the different Collection Builders that can be used to create collections. 
 
+## IBRACORP Video Walkthrough
+
+[IBRACORP](https://ibracorp.io/) made a video walkthough for installing Plex Meta Manager on Unraid. While you might not be using Unraid the video goes over many key accepts of Plex Meta Manager and can be a great place to start learning how to use the script.
+
+[![Plex Meta Manager](https://img.youtube.com/vi/dF69MNoot3w/0.jpg)](https://www.youtube.com/watch?v=dF69MNoot3w "Plex Meta Manager")
+
 ## Support
 
 * Before posting on Github about an enhancement, error, or configuration question please visit the [Plex Meta Manager Discord Server](https://discord.gg/TsdpsFYqqm).
@@ -66,6 +72,7 @@ This wiki should tell you everything you need to know about the script to get it
       - [Tautulli Builders](Tautulli-Builders)
       - [Letterboxd Builders](Letterboxd-Builders)
       - [ICheckMovies Builders](ICheckMovies-Builders)
+      - [FlixPatrol Builders](FlixPatrol-Builders)
       - [StevenLu Builders](StevenLu-Builders)
       - [AniDB Builders](AniDB-Builders)
       - [AniList Builders](AniList-Builders)

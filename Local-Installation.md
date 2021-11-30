@@ -1,4 +1,4 @@
-Testing has been done only on Python 3.7 and 3.8 on Linux and Windows. Dependencies must be installed by running:
+Testing has been done only on Python 3.6, 3.7, 3.8, and 3.9 on Linux and Windows. Dependencies must be installed by running:
 
 ```shell
 pip install -r requirements.txt

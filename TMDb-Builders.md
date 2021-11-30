@@ -411,11 +411,13 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `certification.lte` | Filter and only include movies that have a certification that is less than or equal to the specified value. | String |
 | `certification.gte` | Filter and only include movies that have a certification that is greater than or equal to the specified value. | String |
 | `include_adult` | A filter and include or exclude adult movies. | Boolean |
+| `include_video` | A filter and include or exclude videos. | Boolean |
 | `primary_release_year` | A filter to limit the results to a specific primary release year. | Year: YYYY |
 | `primary_release_date.gte` | Filter and only include movies that have a primary release date that is greater or equal to the specified value. | Date: `MM/DD/YYYY` |
 | `primary_release_date.lte` | Filter and only include movies that have a primary release date that is less than or equal to the specified value. | Date: `MM/DD/YYYY` |
 | `release_date.gte` | Filter and only include movies that have a release date (looking at all release dates) that is greater or equal to the specified value. | Date: `MM/DD/YYYY` |
 | `release_date.lte` | Filter and only include movies that have a release date (looking at all release dates) that is less than or equal to the specified value. | Date: `MM/DD/YYYY` |
+| `with_release_type` | Specify a comma (AND) or pipe (OR) separated value to filter release types by. (1: Premiere, 2: Theatrical (limited), 3: Theatrical, 4: Digital, 5: Physical, 6: TV) | String |
 | `year` | A filter to limit the results to a specific year (looking at all release dates). | Year: YYYY |
 | `vote_count.gte` | Filter and only include movies that have a vote count that is greater or equal to the specified value. | Integer |
 | `vote_count.lte` | Filter and only include movies that have a vote count that is less than or equal to the specified value. | Integer |
@@ -425,6 +427,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `with_crew` | A comma-separated list of person ID's. Only include movies that have one of the ID's added as a crew member. | String |
 | `with_people` | A comma-separated list of person ID's. Only include movies that have one of the ID's added as either an actor or a crew member. | String |
 | `with_companies` | A comma-separated list of production company ID's. Only include movies that have one of the ID's added as a production company. | String |
+| `without_companies` | Filter the results to exclude the specific production companies you specify here. AND / OR filters are supported. | String |
 | `with_genres` | Comma-separated value of genre ids that you want to include in the results. | String |
 | `without_genres` | Comma-separated value of genre ids that you want to exclude from the results. | String |
 | `with_keywords` | A comma-separated list of keyword ID's. Only includes movies that have one of the ID's added as a keyword. | String |
@@ -432,6 +435,9 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `with_runtime.gte` | Filter and only include movies that have a runtime that is greater or equal to a value. | Integer |
 | `with_runtime.lte` | Filter and only include movies that have a runtime that is less than or equal to a value. | Integer |
 | `with_original_language` | Specify an ISO 639-1 string to filter results by their original language value. | String |
+| `with_watch_providers` | A comma or pipe separated list of watch provider ID's. Combine this filter with `watch_region` in order to filter your results by a specific watch provider in a specific region. | String |
+| `watch_region` | An [ISO 3166-1 code](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). Combine this filter with `with_watch_providers` in order to filter your results by a specific watch provider in a specific region. | String |
+| `with_watch_monetization_types` | In combination with `watch_region`, you can filter by monetization type. | `flatrate`, `free`, `ads`, `rent`, `buy` |
 
 ### Discover Shows Parameters
 | Show Parameters | Description | Type |
@@ -452,6 +458,7 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `vote_average.lte` | Filter and only include TV that have a rating that is less than or equal to the specified value. | Number |
 | `with_networks` | Comma-separated value of network ids that you want to include in the results. | String |
 | `with_companies` | A comma-separated list of production company ID's. Only include movies that have one of the ID's added as a production company. | String |
+| `without_companies` | Filter the results to exclude the specific production companies you specify here. AND / OR filters are supported. | String |
 | `with_genres` | Comma-separated value of genre ids that you want to include in the results. | String |
 | `without_genres` | Comma-separated value of genre ids that you want to exclude from the results. | String |
 | `with_keywords` | A comma-separated list of keyword ID's. Only includes TV shows that have one of the ID's added as a keyword. | String |
@@ -460,6 +467,11 @@ Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/disco
 | `with_runtime.lte` | Filter and only include TV shows with an episode runtime that is less than or equal to a value. | Integer |
 | `with_original_language` | Specify an ISO 639-1 string to filter results by their original language value. | String |
 | `screened_theatrically` | Filter results to include items that have been screened theatrically. | Boolean |
+| `with_watch_providers` | A comma or pipe separated list of watch provider ID's. Combine this filter with `watch_region` in order to filter your results by a specific watch provider in a specific region. | String |
+| `watch_region` | An [ISO 3166-1 code](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). Combine this filter with `with_watch_providers` in order to filter your results by a specific watch provider in a specific region. | String |
+| `with_watch_monetization_types` | In combination with `watch_region`, you can filter by monetization type. | `flatrate`, `free`, `ads`, `rent`, `buy` |
+| `with_status` | Filter TV shows by their status. | `0`: Returning Series, `1`: Planned, `2`: In Production, `3`: Ended, `4`: Cancelled, `5`: Pilot) | 
+| `with_type` | Filter TV shows by their type. | `0`: Documentary, `1`: News, `2`: Miniseries, `3`: Reality, `4`: Scripted, `5`: Show, `6`: Video) |
 
 ### Sort Options
 | Sort Option | Movie Sort | Show Sort |

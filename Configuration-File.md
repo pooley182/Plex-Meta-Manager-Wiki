@@ -10,14 +10,16 @@ The YAML mappings that can be set in the configuration file's root:
 | :--- | :--- | :---: |
 | [Libraries](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Libraries-Attributes) | `libraries` | :heavy_check_mark: |
 | [Settings](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | `settings` | :x: |
+| [Webhooks](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Webhooks-Attributes) | `webhooks` | :x: |
 | [Plex](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | `plex` | :x: |
 | [TMDb](https://github.com/meisnate12/Plex-Meta-Manager/wiki/TMDb-Attributes) | `tmdb` | :heavy_check_mark: |
-| [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | `radarr` | :x: |
-| [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | `sonarr` | :x: |
 | [Tautulli](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) | `tautulli` | :x: |
 | [OMDb](https://github.com/meisnate12/Plex-Meta-Manager/wiki/OMDb-Attributes) | `omdb` | :x: |
+| [Notifiarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Notifiarr-Attributes) | `notifiarr` | :x: |
+| [AniDB](https://github.com/meisnate12/Plex-Meta-Manager/wiki/AniDB-Attributes) | `anidb` | :x: |
+| [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) | `radarr` | :x: |
+| [Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) | `sonarr` | :x: |
 | [Trakt](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Trakt-Attributes) | `trakt` | :x: |
 | [MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) | `mal` | :x: |
-| [Webhooks](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Webhooks-Attributes) | `webhooks` | :x: |
 
 * You can find a template config file in [config/config.yml.template](https://github.com/meisnate12/Plex-Meta-Manager/blob/master/config/config.yml.template)
