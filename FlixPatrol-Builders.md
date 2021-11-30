@@ -38,7 +38,7 @@ Gets every movie/show from FlixPatrol's Popular [Movies](https://flixpatrol.com/
 
 | Attribute | Description | Options | Required | Default |
 | :--- | :--- | :---: | :---: | :---: |
-| `source` | Source to filter on. | `movie_db`, `facebook`, `google`, `twitter`, `twitter_trends`, `instagram`, `instagram_trends`, `youtube`, `imdb`, `letterboxd`, `rotten_tomatoes`, `tmdb`, `trakt` | :x: | `movie_db` |
+| `source` | Source to filter on. | `movie_db`, `facebook`, `google`, `twitter`, `twitter_trends`, `instagram`, `instagram_trends`, `youtube`, `imdb`, `letterboxd`, `rotten_tomatoes`, `tmdb`, `trakt` | :heavy_check_mark: | :x: |
 | `time_window` | Time window to filter on. | `today`, `yesterday`,`this_week`, `last_week`, `this_month`, `last_month`, `this_year`, `last_year`  | :x: | `today` |
 | `limit` | Number of items to return. | Integer greater then 0 | :x: | 10 |
 
@@ -58,7 +58,7 @@ Gets every movie/show from [FlixPatrol's Demographics Lists](https://flixpatrol.
 
 | Attribute | Description | Options | Required | Default |
 | :--- | :--- | :---: | :---: | :---: |
-| `generation` | Generation to filter on. | `all`, `boomers`, `x`, `y`, `z` | :x: | `all` |
+| `generation` | Generation to filter on. | `all`, `boomers`, `x`, `y`, `z` | :heavy_check_mark: | :x: |
 | `gender` | Gender to filter on. | `all`, `men`, `women` | :x: | `all` |
 | `location` | Location to filter on. | `world`, `brazil`, `canada`, `france`, `germany`, `india`, `mexico`,  `united_kingdom`, `united_states` | :x: | `world` |
 | `limit` | Number of items to return. | Integer greater then 0 | :x: | 10 |
