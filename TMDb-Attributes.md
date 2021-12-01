@@ -14,4 +14,4 @@ tmdb:
 | API Key | `apikey` | User TMDb API Key | N/A | :heavy_check_mark: |
 | Language | `language` | User Language | en | :x: |
 
-* If you do not have an API key please refer to this [guide](https://developers.themoviedb.org/3/getting-started/introduction).
+* Plex-Meta-Manager supports the V3 API key. If you do not have an API key please refer to this [guide](https://developers.themoviedb.org/3/getting-started/introduction).
