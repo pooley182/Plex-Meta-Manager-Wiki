@@ -26,9 +26,11 @@ collections:
       person: 73457  
 ```
 
-There are two attributes unique to `templates`, `default` and `optional`. 
+There are three attributes unique to `templates`, `default`, `optional`, and `move_collection_prefix`. 
 * `default` can set default values for template variables to be used if they're not specified in the call. 
 * `optional` can specify variables that if not specified on the template call will cause any attribute using one of those variables to be ignored in the template.
+* `move_collection_prefix` can be given a list or comma-separated string of prefixes to move to the end of the collection name for sorting.
+    i.e. If you have `move_collection_prefix: The` and a collection is called `The Avengers` then `<<collection_name>>` is replaced with `Avengers, The` instead of `The Avengers` for that collection.
 
 Here's an example IMDB Genre template and two different ways to call it.
 ```yaml
@@ -37,12 +39,15 @@ templates:
     default:
       title: feature
       limit: 100
+    optional:
+      - poster_id
     imdb_list:
     - url: https://www.imdb.com/search/title/?title_type=<<title>>&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=<<genre>>
       limit: <<limit>>
     - url: https://www.imdb.com/search/title/?title_type=<<title>>&release_date=1990-01-01,&user_rating=5.0,10.0&num_votes=100000,&genres=<<genre>>&sort=user_rating,desc
       limit: <<limit>>
     sort_title: ++_<<collection_name>>
+    url_poster: https://theposterdb.com/api/assets/<<poster_id>>
     sync_mode: sync
     collection_order: alpha
 collections:
@@ -52,7 +57,7 @@ collections:
       genre: action
     summary: Action film is a genre wherein physical action takes precedence in the storytelling. The film will often have continuous motion and action including physical stunts, chases, fights, battles, and races. The story usually revolves around a hero that has a goal, but is facing incredible odds to obtain it.
   Comedy:
-    template: {name: IMDb Genre, genre: comedy}
+    template: {name: IMDb Genre, genre: comedy, poster_id: 69200}
     summary: Comedy is a genre of film that uses humor as a driving force. The aim of a comedy film is to illicit laughter from the audience through entertaining stories and characters. Although the comedy film may take on some serious material, most have a happy ending. Comedy film has the tendency to become a hybrid sub-genre because humor can be incorporated into many other genres. Comedies are more likely than other films to fall back on the success and popularity of an individual star.
   Romantic Comedy:
     template: {name: IMDb Genre, genre: "romance,comedy", limit: 200}

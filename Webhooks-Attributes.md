@@ -9,9 +9,7 @@ webhooks:
   error: https://www.myspecialdomain.com/pmm
   run_start:
   run_end:
-  collection_creation:
-  collection_addition:
-  collection_removal:
+  collection_changes:
 ```
 
 | Name | Attribute | Global | Library | Collection |
@@ -19,9 +17,7 @@ webhooks:
 | [Error](#error-notifications) | `error` | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Run Start](#run-start-notifications) | `run_start` | :heavy_check_mark: | :x: | :x: |
 | [Run End](#run-end-notifications) | `run_end` | :heavy_check_mark: | :x: | :x: |
-| [Collection Creation](#collection-notifications) | `collection_creation` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [Collection Addition](#collection-notifications) | `collection_addition` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [Collection Removal](#collection-notifications) | `collection_removal` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Collection Changes](#collection-notifications) | `collection_changes` | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 * Each Attribute can be either a webhook url as a string or a comma-separated list of webhooks urls.
 * To send notifications to [Notifiarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Notifiarr-Attributes) just add `notifiarr` to a webhook instead of the webhook url.
@@ -30,38 +26,27 @@ webhooks:
 
 The Error notification will be sent whenever an error occurs. The payload that is sent is different Depending on which level the error occurs.
 
-#### JSON Payload
-
-<table>
-  <tr>
-    <th>Global</th>
-    <th>Library</th>
-    <th>Collection</th>
-  </tr>
-  <tr>
-    <td>
+#### Global JSON Payload
 
 ```yaml
 {
-  "error": str,     // Error Message
-  "critical": bool  // Critical Error
+  "error": str,         // Error Message
+  "critical": bool      // Critical Error
 }
 ```
 
-</td>
-    <td>
+#### Library JSON Payload
 
 ```yaml
 {
-  "error": str,        // Error Message
-  "critical": bool,    // Critical Error
-  "server_name": str,  // Server Name
-  "library_name": str  // Library Name
+  "error": str,         // Error Message
+  "critical": bool,     // Critical Error
+  "server_name": str,   // Server Name
+  "library_name": str   // Library Name
 }
 ```
 
-</td>
-    <td>
+#### Collection JSON Payload
 
 ```yaml
 {
@@ -73,10 +58,6 @@ The Error notification will be sent whenever an error occurs. The payload that i
 }
 ```
 
-</td>
-  </tr>
-</table> 
-
 ## Run Start Notifications
 
 The Run Start notification will be sent at the beginning of every run.
@@ -85,7 +66,7 @@ The Run Start notification will be sent at the beginning of every run.
 
 ```yaml
 {
-  "start_time": str,            // Time Run is started Format "HH:MM"
+  "start_time": str,            // Time Run is started Format "YY-mm-dd HH:MM:SS"
 }
 ```
 
@@ -97,7 +78,8 @@ The Run End notification will be sent at the end of every run with statistics.
 
 ```yaml
 {
-  "start_time": str,            // Time Run is started Format "YY-mm-ddTHH:MM:SSZ"
+  "start_time": str,            // Time Run started Format "YY-mm-dd HH:MM:SS"
+  "end_time": str,              // Time Run ended Format "YY-mm-dd HH:MM:SS"
   "run_time": str,              // Time Run took to complete Format "HH:MM"
   "collections_created": int,   // Number of Collections Created
   "collections_modified": int,  // Number of Collections Modified
@@ -111,23 +93,22 @@ The Run End notification will be sent at the end of every run with statistics.
 
 ## Collection Notifications
 
-The Collection Notification will be sent after each collection, containing the following payload.
+The Collection Notification will be sent after each collection containing the following payload if the collection has been created, has new items, or has had items removed.
 
 #### JSON Payload
 
 ```yaml
 {
-  "start_time": str,            // Time Run is started Format "YY-mm-ddTHH:MM:SSZ"
+  "server_name": str,           // Server Name
   "library_name": str,          // Library Name
   "type": str,                  // Will be either "movie" or "show"
   "collection": str,            // Collection Name
   "created": bool,              // Was the Collection Created on this run
   "poster": str,                // Base64 Encoded Collection Poster
   "background": str,            // Base64 Encoded Collection Background
-  "additions": [int],           // List of TMDb IDs (type=movie) or TVDb IDs (type=show) added to the colleciton
-  "removals": [int]             // List of TMDb IDs (type=movie) or TVDb IDs (type=show) removed from the colleciton
+  "additions": [int],           // List of TMDb/TVDb IDs added to the colleciton
+  "removals": [int]             // List of TMDb/TVDb IDs removed from the colleciton
 }
 ```
 
-* `additions` is only in the payload when `collection_addition` is used.
-* `removals` is only in the payload when `collection_removing` is used.
+* TMDb IDs are sent if the `type` is `movie` and TVDb IDs are sent if the type is `show`

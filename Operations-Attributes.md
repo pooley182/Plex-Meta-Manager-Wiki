@@ -27,6 +27,87 @@ The available operations attributes for each library are as follows
 | Split Duplicates | `split_duplicates` | Splits all duplicate movies/shows found in this library | `true` or `false` |
 | Radarr Add All | `radarr_add_all` | Adds every item in the library to Radarr | `true` or `false` |
 | Sonarr Add All | `sonarr_add_all` | Adds every item in the library to Sonarr | `true` or `false` |
+| [TMDb Collections](#tmdb-collections) | `tmdb_collections` | Builds Collections for every movie in your library based on TMDb Collections | [`tmdb_collections` mapping details](#tmdb-collections) |
+| [Genre Mapper](#genre-mapper) | `genre_mapper` |Will check every item in your library and changed mapped genres | [`genre_mapper` mapping details](#genre-mapper) |
 
 * When using `radarr_add_all` or `sonarr_add_all` the existing paths in plex will be used as the root folder of each item.
 * If the paths in Plex are not the same as your Radarr/Sonarr paths you can use the `plex_path` and `radarr_path`/`sonarr_path` [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes)/[Sonarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Sonarr-Attributes) details to convert the paths
+
+## TMDb Collections
+This operation will scan every movie in your library and create collections based on a `template` for those collections.
+
+To run the most basic way you can just leave `tmdb_collections` Blank like so:
+
+```yaml
+library:
+  Movies:
+    operations:
+      tmdb_collections:
+```
+
+This will run all collections found with the template that simply has `tmdb_collection_details: <<collection_id>>` in it.
+
+To change the template for more complex runs you can use the `template` attribute to define the template that is used for the operation like so:
+
+```yaml
+library:
+  Movies:
+    operations:
+      tmdb_collections:
+        template:
+          tmdb_collection_details: <<collection_id>>
+          collection_order: release
+```
+
+* Remember if you define your own template you need to use the `<<collection_id>>` still to make the collection
+
+There are two other attributes that can be used under `tmdb_collections`
+
+* `exclude_ids`: list or comma separate list of TMDb Collection IDs to ignore 
+* `remove_suffix`: Removes the suffix given from the TMDb Collection names. i.e. `Star Wars Collection` -> `Star Wars`
+
+```yaml
+library:
+  Movies:
+    operations:
+      tmdb_collections:
+        exclude_ids:
+          - 10
+        remove_suffix: Collection
+        template:
+          tmdb_collection_details: <<collection_id>>
+          collection_order: release
+```
+
+* If the Collection is defined in another Metadata file (i.e. you define your own `Star Wars` Collection) then it will not run under `tmdb_collections` as long as the collection names match.
+
+## Genre Mapper
+You can use the `genre_mapper` operation to map genres in your library.
+
+Each attribute under `genre_mapper` is a separate mapping and has two parts. 
+* The key (`Action` in the example below) is what the genres will end up as.
+* The value( `Action/Adventure, Action & Adventure` in the example below) is what genres you want mapped to the key.
+
+So this example will change go through every item in your library and change the genre `Action/Adventure` or `Action & Adventure` to `Action` and `Romantic Comedy` to `Comedy`.
+
+```yaml
+library:
+  Movies:
+    operations:
+      genre_mapper:
+        Action: Action/Adventure, Action & Adventure
+        Comedy: Romantic Comedy
+```
+
+you can also use a list:
+
+```yaml
+library:
+  Movies:
+    operations:
+      genre_mapper:
+        Action: 
+         - Action/Adventure
+         - Action & Adventure
+        Comedy: Romantic Comedy
+```

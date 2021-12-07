@@ -129,7 +129,7 @@ All the following attributes update various details of the collection's Metadata
 | Content Rating | `content_rating` | Used to change the collection's content rating | Text to change Content Rating |
 | Label | `label` | Used to append new labels to the collection | Comma-separated string of labels to append |
 | Label Remove | `label.remove` | Used to remove existing labels from the collection | Comma-separated string of labels to remove |
-| Label Sync | `label.sync` | Matches the labels of the collection to the labels provided | Comma-separated string of labels to sync |
+| Label Sync | `label.sync` | Matches the labels of the collection to the labels provided (Leave blank to remove all labels) | Comma-separated string of labels to sync |
 | Collection Mode | `collection_mode` | Used to change the Collection Mode | `default`: Library default<br>`hide`: Hide Collection<br>`hide_items`: Hide Items in this Collection<br>`show_items`: Show this Collection and its Items |
 | Collection Order | `collection_order` | Used to change the Collection Order | `release`: Order Collection by Release Dates<br>`alpha`: Order Collection Alphabetically<br>`custom`: Order Collection Via the Builder Order | :heavy_check_mark: | :heavy_check_mark: |
 | Collection Level | `collection_level` | Used to make episode or season collections from `plex_search` or `trakt_list` Builders | `season`: Collection contains seasons<br>`episode`: Collection contains episodes }
@@ -147,7 +147,7 @@ All the following attributes update various details of the metadata for every it
 | :--- | :--- | :--- | :--- | :---: | :---: |
 | Label | `item_label` | Used to append new labels to every movie/show in the collection | Comma-separated string of labels to append | :heavy_check_mark: | :heavy_check_mark: |
 | Label Remove | `item_label.remove` | Used to remove existing labels from every movie/show in the collection | Comma-separated string of labels to remove | :heavy_check_mark: | :heavy_check_mark: |
-| Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
+| Label Sync | `item_label.sync` | Matches the labels of every movie/show in the collection to the labels provided (Leave blank to remove all labels) | Comma-separated string of labels to sync | :heavy_check_mark: | :heavy_check_mark: |
 | Lock Posters | `item_lock_poster` | Locks the poster of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
 | Lock Backgrounds | `item_lock_background` | Locks the background of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |
 | Lock Titles | `item_lock_title` | Locks the title of every movie/show in the collection | `true` or `false`<br>**Default:** false | :heavy_check_mark: | :heavy_check_mark: |

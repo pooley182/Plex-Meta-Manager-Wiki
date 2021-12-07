@@ -22,7 +22,9 @@ The scheduling options are:
 | Weekly | Update this collection once a week on the specified day | weekly(Day of Week) | weekly(sunday) |
 | Monthly | Update this collection once a month on the specified day | monthly(Day of Month) | monthly(1) |
 | Yearly | Update this collection once a year on the specified day | yearly(MM/DD) | yearly(01/30) |
+| Range | Updates this collection whenever the date is within the range | range(MM/DD-MM/DD) | range(12/01-12/31) |
 
 * Using `daily` to schedule a collection is the default when `schedule` isn't specified
 * You can run the script multiple times per day but using the `--time` command line argument detailed on the [Local Installation Page](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#time-to-run).
 * You can have multiple scheduling options just make them a list or comma-separated values
+* You can use the `delete_not_scheduled` setting to delete Collections that are skipped due to not being scheduled.

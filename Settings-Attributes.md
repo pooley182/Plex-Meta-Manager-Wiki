@@ -13,8 +13,10 @@ settings:
   sync_mode: append
   collection_minimum: 1
   delete_below_minimum: true
+  delete_not_scheduled: false
   run_again_delay: 2
   missing_only_released: false
+  only_filter_missing: false
   show_unmanaged: true
   show_filtered: false
   show_missing: true
@@ -33,14 +35,16 @@ settings:
 | [Sync Mode](#sync-mode) | `sync_mode` | `append` or `sync`<br>**default: append** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Collection Minimum](#collection-minimum) | `collection_minimum` | **integer**<br>**default: 1** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Delete Below Minimum](#delete-below-minimum) | `delete_below_minimum` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [Run Again Delay](run-again-delay) | `run_again_delay` | **integer**<br>**default: 0** | :heavy_check_mark: | :x: | :x: |
+| [Delete Not Scheduled](#delete-not-scheduled ) | `delete_not_scheduled ` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Run Again Delay](#run-again-delay) | `run_again_delay` | **integer**<br>**default: 0** | :heavy_check_mark: | :x: | :x: |
 | [Missing Only Released](#missing-only-released) | `missing_only_released` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Only Filter Missing](#only-filter-missing) | `only_filter_missing` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Show Unmanaged Collections](#show-unmanaged-collections) | `show_unmanaged` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :x: |
-| [Show Filtered Collections](#show-filtered-collections) | `show_filtered` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Show Filtered](#show-filtered) | `show_filtered` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Show Missing](#show-missing) | `show_missing` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Show Missing Assets](#show-missing-assets) | `show_missing_assets` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Save Missing](#save-missing) | `save_missing` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| [TVDb Language](#tvdb-language) | `tvdb_language` | [ISO 639-2 Language Code](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) or Blank for original Language<br>**default:**  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [TVDb Language](#tvdb-language) | `tvdb_language` | [ISO 639-2 Language Code](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) or Blank for original Language<br>**default:**  | :heavy_check_mark: | :x: | :x: |
 
 ## Cache
 
@@ -63,20 +67,24 @@ Minimum number of items that must be found in order to update a collection.
 ## Delete Below Minimum
 When a collection is run it will be deleted if it is below the minimum specified by `collection_minimum`.
 
+## Delete Not Scheduled
+When a collection is skipped due to it not being scheduled delete it.
+
 ## Run Again Delay
 Number of minutes to run `run_again` collections after daily run is finished.
 
 A collection is a `run_again` collection if it has the `run_again` [Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details#setting-details) attribute set to true.
 
-
-
 ## Missing Only Released
 Library Level toggle to filter missing items from a collection that has yet to be released.
+
+## Only Filter Missing
+Library Level toggle to only filter missing items from a collection.
 
 ## Show Unmanaged Collections
 Show collections not managed by Plex Meta Manager at the end of each run.
 
-## Show Filtered Collections
+## Show Filtered
 Library Level toggle to show items filtered from collections.
 
 ## Show Missing
