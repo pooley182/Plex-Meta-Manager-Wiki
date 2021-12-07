@@ -11,7 +11,7 @@ tmdb:
 
 | Name | Attribute | Allowed Values | Default | Required |
 | :--- | :--- | :--- | :---: | :---: |
-| API Key | `apikey` | User TMDb API Key | N/A | :heavy_check_mark: |
+| TMDb V3 API Key | `apikey` | User TMDb V3 API Key | N/A | :heavy_check_mark: |
 | Language | `language` | User Language | en | :x: |
 
-* Plex-Meta-Manager supports the V3 API key. If you do not have an API key please refer to this [guide](https://developers.themoviedb.org/3/getting-started/introduction).
+If you do not have a TMDb V3 API key please refer to this [guide](https://developers.themoviedb.org/3/getting-started/introduction).
