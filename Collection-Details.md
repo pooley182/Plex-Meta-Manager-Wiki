@@ -70,10 +70,13 @@ All the following attributes serve various functions as how the collection funct
 | Delete Below Minimum | `delete_below_minimum` | Delete existing collection if below the minimum.<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Validate Builders | `validate_builders` | When set to false the collection will not fail if one builder fails<br>**Default Mode:** `true` | **boolean:** `true` or `false` |
 | Build Collection | `build_collection` | When set to false the collection won't be created but items can still be added to Radarr/Sonarr<br>**Default Mode:** `true` | **boolean:** `true` or `false` |
+| Server Pre-Roll | `server_preroll` | Used to set the `Movie pre-roll video` Text box in Plex under Settings -> Extras | Any String |
 | Missing Only Released | `missing_only_released` | Collection Level `missing_only_released` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Show Filtered Collections | `show_filtered` | Collection level `show_filtered` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Show Missing Collections | `show_missing` | Collection level `show_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
 | Save Missing Collections | `save_missing` | Collection level `save_missing` toggle<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | **boolean:** `true` or `false` |
+| Ignore IDs | `ignore_ids` | Collection level `ignore_ids` which is combined with the library and global `ignore_ids`<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | List or comma-separated String of TMDb/TVDb IDs |
+| Ignore IMDb IDs | `ignore_imdb_ids` | Collection level `ignore_imdb_ids` which is combined with the library and global `ignore_imdb_ids`<br>**Default:** [settings library value](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | List or comma-separated String of IMDb IDs |
 | Name Mapping | `name_mapping` | Used to specify the folder name in the [Image Assets Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Asset-Directory) | Folder Name In Assets Directory |
 | Test Mode | `test` | When running in Test Mode (`--run-tests` [option](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Local-Installation#run-tests)) only collections with `test: true` will be run<br>**Default:** `false` | **boolean:** `true` or `false` |
 | Collection Creation Webhooks | `collection_creation_webhooks` | Used to specify a collection creation webhook for just this collection | List of webhooks |
@@ -81,6 +84,7 @@ All the following attributes serve various functions as how the collection funct
 | Collection Removal Webhooks | `collection_removal_webhooks` | Used to specify a collection removal webhook for just this collection | List of webhooks |
 
 * **Name Mapping:** If your collection name contains characters that are not allowed in file paths (i.e. for windows `<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*` cannot be in the file path), but you want them in your collection name you can use the `name_mapping` attribute to specific this collection's name in the file system.
+* **Server Pre-Roll:** You can run this with a [schedule](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Schedule-Detail) to change the pre-rolls automatically.
 
 ## Radarr Details
 All the following attributes can override the global [Radarr](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Radarr-Attributes) attributes.

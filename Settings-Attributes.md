@@ -32,6 +32,7 @@ settings:
 | [Image Asset Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Asset-Directory) | `asset_directory` | **list of paths**<br>**default: [Directory containing YAML config]/assets** | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Image Asset Folders](#image-asset-folders) | `asset_folders` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Create Asset Folders](#create-asset-folders) | `create_asset_folders` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [Show Missing Season Assets](#show-missing-season-assets) | `show_missing_season_assets` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Sync Mode](#sync-mode) | `sync_mode` | `append` or `sync`<br>**default: append** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Collection Minimum](#collection-minimum) | `collection_minimum` | **integer**<br>**default: 1** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Delete Below Minimum](#delete-below-minimum) | `delete_below_minimum` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -45,6 +46,8 @@ settings:
 | [Show Missing Assets](#show-missing-assets) | `show_missing_assets` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Save Missing](#save-missing) | `save_missing` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [TVDb Language](#tvdb-language) | `tvdb_language` | [ISO 639-2 Language Code](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) or Blank for original Language<br>**default:**  | :heavy_check_mark: | :x: | :x: |
+| [Ignore IDs](#ignore-ids) | `ignore_ids` | List or comma-separated String of TMDb/TVDb IDs | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
+| [Ignore IMDb IDs](#ignore-imdb-ids) | `ignore_imdb_ids` | List or comma-separated String of IMDb IDs | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 
 ## Cache
 
@@ -57,6 +60,9 @@ When searching [Image Asset Directories](https://github.com/meisnate12/Plex-Meta
 
 ## Create Asset Folders
 When using the `assets_for_all` [Library Operation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Operations-Attributes) folders will be created for each Item in your library for assets to be placed in.
+
+## Show Missing Season Assets
+When searching for assets for a show if a Season poster is found then this will display all other missing Season posters.
 
 ## Sync Mode
 Set the default `sync_mode`. It can be either `append` when you want to add only and `sync` when you want to add and remove from collections.
@@ -100,3 +106,9 @@ Library Level toggle to save items missing from collections to a filein the same
 Use an [ISO 639-2 Language Code](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) to specify the language to query TVDb in.
 
 If no language is specified or the specified language is not found then the original language is used.
+
+## Ignore IDs
+List or comma-separated String of TMDb/TVDb IDs to ignore in all collections
+
+## Ignore IMDb IDs
+List or comma-separated String of IMDb IDs to ignore in all collections
