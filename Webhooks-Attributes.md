@@ -104,6 +104,7 @@ The Collection Notification will be sent after each collection containing the fo
   "type": str,                  // Will be either "movie" or "show"
   "collection": str,            // Collection Name
   "created": bool,              // Was the Collection Created on this run
+  "deleted": bool,              // Was the Collection Deleted on this run
   "poster": str,                // Base64 Encoded Collection Poster
   "background": str,            // Base64 Encoded Collection Background
   "additions": [int],           // List of TMDb/TVDb IDs added to the colleciton
