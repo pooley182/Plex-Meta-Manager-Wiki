@@ -10,6 +10,7 @@ settings:
   asset_directory: config/assets
   asset_folders: true
   create_asset_folders: false
+  show_missing_season_assets: false
   sync_mode: append
   collection_minimum: 1
   delete_below_minimum: true
@@ -23,6 +24,8 @@ settings:
   show_missing_assets: true
   save_missing: true
   tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
 ```
 
 | Name | Attribute | Allowed Values | Global Level | Library Level | Collection Level |
