@@ -107,8 +107,14 @@ The Collection Notification will be sent after each collection containing the fo
   "deleted": bool,              // Was the Collection Deleted on this run
   "poster": str,                // Base64 Encoded Collection Poster
   "background": str,            // Base64 Encoded Collection Background
-  "additions": [int],           // List of TMDb/TVDb IDs added to the colleciton
-  "removals": [int]             // List of TMDb/TVDb IDs removed from the colleciton
+  "additions": [
+    "title": str,               // Title of addition
+    "id": int                   // TMDB/TVDB ID of addition
+  ],
+  "removals": [
+    "title": str,               // Title of removal
+    "id": int                   // TMDB/TVDB ID of removal
+  ],
 }
 ```
 

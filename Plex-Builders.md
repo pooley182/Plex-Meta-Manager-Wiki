@@ -223,7 +223,7 @@ Boolean Searches take no modifier and can only be either `true` or `false`.
 | `episode_progress` | Has Episode Progress | :x: | :heavy_check_mark: |
 | `episode_unmatched` | Has Episodes Unmatched | :x: | :heavy_check_mark: |
 
-## Smart Search Examples
+## Plex Search Examples
 
 A few examples are listed below:
 
