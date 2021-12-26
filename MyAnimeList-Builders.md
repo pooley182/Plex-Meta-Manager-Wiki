@@ -201,7 +201,7 @@ collections:
 Gets every anime tagged with the specified genre ID sorted by members the options are detailed below.
 
 * Genre options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) Page.
-* To find the ID click on a Genre in the link above and there should be a number in the URL that's the `gerne_id`.
+* To find the ID click on a Genre in the link above and there should be a number in the URL that's the `genre_id`.
 * For example if the url is `https://myanimelist.net/anime/genre/1/Action` the `genre_id` would be `1`.
 
 | Attribute | Description | Required | Default |

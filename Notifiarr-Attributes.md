@@ -19,7 +19,5 @@ webhooks:
   error: notifiarr
   run_start: notifiarr
   run_end: notifiarr
-  collection_creation: notifiarr 
-  collection_addition: notifiarr
-  collection_removal: notifiarr
+  collection_changes: notifiarr
 ```
