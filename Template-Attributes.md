@@ -1,8 +1,8 @@
-The script can use templates created by the user to build similar collections with ease.
+The script can use templates created by the user to build similar collections/playlists with ease.
 
 Each template is defined by the mapping name which becomes the name of the template.
 
-Inside a template, you can give it all the [Collection Builders](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Builders), [Collection Details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details), and [Collection Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) attributes that you can give collections expect `template`. 
+Inside a template, you can give it all the [Builders](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Builders), [Details](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Details), and [Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Filters) attributes that you can give collections/playlists expect `template`. 
 
 In any attribute, you can specify template variables that will be changed when calling the template. In the text just replace the text you want to be changed with the template variable name surrounded by `<<` and `>>`. For example, I can use the person template variable like so `tmdb_person: <<person>>`. The template variable name can be whatever you want but it must match when calling the template. To use the collection mapping name as a variable use `<<collection_name>>`.
 
@@ -26,11 +26,11 @@ collections:
       person: 73457  
 ```
 
-There are three attributes unique to `templates`, `default`, `optional`, and `move_collection_prefix`. 
+There are three attributes unique to `templates`, `default`, `optional`, and `move_prefix`. 
 * `default` can set default values for template variables to be used if they're not specified in the call. 
 * `optional` can specify variables that if not specified on the template call will cause any attribute using one of those variables to be ignored in the template.
-* `move_collection_prefix` can be given a list or comma-separated string of prefixes to move to the end of the collection name for sorting.
-    i.e. If you have `move_collection_prefix: The` and a collection is called `The Avengers` then `<<collection_name>>` is replaced with `Avengers, The` instead of `The Avengers` for that collection.
+* `move_prefix` can be given a list or comma-separated string of prefixes to move to the end of the collection/playlist name for sorting.
+    i.e. If you have `move_prefix: The` and a collection is called `The Avengers` then `<<collection_name>>` is replaced with `Avengers, The` instead of `The Avengers` for that collection.
 
 Here's an example IMDB Genre template and two different ways to call it.
 ```yaml

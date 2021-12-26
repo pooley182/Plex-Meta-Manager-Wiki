@@ -1,13 +1,13 @@
-You can build different collections using the features of [Tautulli](https://tautulli.com/).
+You can find items in your Plex using the features of [Tautulli](https://tautulli.com/).
 
 [Configuring Tautulli](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Tautulli-Attributes) in the config is required for any of these builders.
 
 It has watch analytics that can show the most watched or most popular Movies/Shows in each Library.
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [Tautulli Popular](#tautulli-popularwatched) | `tautulli_popular` | Gets the Tautulli Most Popular List | :heavy_check_mark: | :heavy_check_mark: |
-| [Tautulli Watched](#tautulli-popularwatched) | `tautulli_watched` | Gets the Tautulli Most Watched List | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Custom Sort | Works with Playlists |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| [Tautulli Popular](#tautulli-popularwatched) | `tautulli_popular` | Gets the Tautulli Most Popular List | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Tautulli Watched](#tautulli-popularwatched) | `tautulli_watched` | Gets the Tautulli Most Watched List | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Tautulli Popular/Watched
 Both Tautulli Popular and Tautulli Watched have the same sub-attributes detailed below.
@@ -25,10 +25,13 @@ In order to get around that, you can use the `list_buffer` attribute that defaul
 
 So if your collection doesn't have as many movies/shows as your `list_size` attribute increase the number in the `list_buffer` attribute.
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Most Popular Movies (30 Days):
     sync_mode: sync
+    collection_order: custom
     tautulli_popular:
       list_days: 30
       list_size: 10
@@ -37,6 +40,7 @@ collections:
 collections:
   Most Watched Movies (30 Days):
     sync_mode: sync
+    collection_order: custom
     tautulli_watched:
       list_days: 30
       list_size: 10
@@ -56,4 +60,15 @@ collections:
     sync_mode: sync
     summary: Movies Popular on Plex
     collection_order: alpha
+```
+```yaml
+playlists:
+  Plex Popular:
+    libraries: Movies
+    tautulli_popular:
+      list_days: 30
+      list_size: 20
+      list_buffer: 20
+    sync_mode: sync
+    summary: Movies Popular on Plex
 ```

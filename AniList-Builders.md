@@ -1,61 +1,64 @@
-You can build different collections using the features of [AniList.co](https://anilist.co/) (AniList).
+You can find anime using the features of [AniList.co](https://anilist.co/) (AniList).
 
 No configuration is required for these builders.
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [AniList Top Rated Anime](#anilist-top-rated-anime) | `anilist_top_rated` | Gets every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list | :heavy_check_mark: | :heavy_check_mark: |
-| [AniList Popular Anime](#anilist-popular-anime) | `anilist_popular` | Gets every anime in AniList's [Popular Anime](https://anilist.co/search/anime/popular) list | :heavy_check_mark: | :heavy_check_mark: |
-| [AniList Trending Anime](#anilist-trending-anime) | `anilist_trending` | Gets every anime in AniList's [Trending Anime](https://anilist.co/search/anime/trending) list | :heavy_check_mark: | :heavy_check_mark: |
-| [AniList Relations](#anilist-relations) | `anilist_relations` | Gets the anime specified by the AniList ID and every relation in its relation tree except Character and Other relations | :heavy_check_mark: | :heavy_check_mark: |
-| [AniList Studio](#anilist-studio) | `anilist_studio` | Gets all anime specified by the AniList Studio ID | :heavy_check_mark: | :heavy_check_mark: |
-| [AniList ID](#anilist-id) | `anilist_id` | Gets the anime specified by the AniList ID | :heavy_check_mark: | :heavy_check_mark: |
-| [AniList Search](#anilist-search) | `anilist_search` | Gets the anime specified by the AniList search parameters provided | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [AniList Top Rated Anime](#anilist-top-rated-anime) | `anilist_top_rated` | Finds every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [AniList Popular Anime](#anilist-popular-anime) | `anilist_popular` | Finds every anime in AniList's [Popular Anime](https://anilist.co/search/anime/popular) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [AniList Trending Anime](#anilist-trending-anime) | `anilist_trending` | Finds every anime in AniList's [Trending Anime](https://anilist.co/search/anime/trending) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [AniList Relations](#anilist-relations) | `anilist_relations` | Finds the anime specified by the AniList ID and every relation in its relation tree except Character and Other relations | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [AniList Studio](#anilist-studio) | `anilist_studio` | Finds all anime specified by the AniList Studio ID | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [AniList ID](#anilist-id) | `anilist_id` | Finds the anime specified by the AniList ID | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [AniList Search](#anilist-search) | `anilist_search` | Finds the anime specified by the AniList search parameters provided | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## AniList Top Rated Anime
-Gets every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list.
+Finds every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime?sort=SCORE_DESC) list.
 
 The expected input is a single integer value of how many movies/shows to query. 
 
-The `sync_mode: sync` option is also recommended since the list is continuously updated.
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
   Top Rated Anime:
     anilist_top_rated: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## AniList Popular Anime
-Gets every anime in AniList's [Popular Anime](https://anilist.co/search/anime/popular) list.
+Finds every anime in AniList's [Popular Anime](https://anilist.co/search/anime/popular) list.
 
 The expected input is a single integer value of how many movies/shows to query. 
 
-The `sync_mode: sync` option is also recommended since the list is continuously updated.
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
   Popular Anime:
     anilist_popular: 10
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## AniList Trending Anime
-Gets every anime in AniList's [Trending Anime](https://anilist.co/search/anime/trending) list.
+Finds every anime in AniList's [Trending Anime](https://anilist.co/search/anime/trending) list.
 
 The expected input is a single integer value of how many movies/shows to query. 
 
-The `sync_mode: sync` option is also recommended since the list is continuously updated.
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
   Trending Anime:
     anilist_trending: 10
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## AniList Relations
-Gets the anime specified by the AniList ID and every relation in its relation tree except Character and Other relations.
+Finds the anime specified by the AniList ID and every relation in its relation tree except Character and Other relations.
 
 The expected input is an AniList ID. Multiple values are supported as either a list or a comma-separated string.
 
@@ -66,7 +69,7 @@ collections:
 ```
 
 ## AniList Studio
-Gets all anime specified by the AniList Studio ID.
+Finds all anime specified by the AniList Studio ID.
 
 The expected input is an AniList ID. Multiple values are supported as either a list or a comma-separated string.
 
@@ -77,7 +80,7 @@ collections:
 ```
 
 ## AniList ID
-Gets the anime specified by the AniList ID.
+Finds the anime specified by the AniList ID.
 
 The expected input is an AniList ID. Multiple values are supported as either a list or a comma-separated string.
 
@@ -88,9 +91,11 @@ collections:
 ```
 
 ## AniList Search
-Gets the anime specified by the AniList Search the options are detailed below. 
+Finds the anime specified by the AniList Search the options are detailed below. 
 
 There are three fields per search option when using AniList's Search just like Plex's Advance Filters in the Web UI. The first is the **Attribute** (what attribute you wish to search), the second is the **Modifier** (which modifier to use), and the third is the **Term** (actual term to search).
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ## Special Attributes
 Special attributes do not support any modifiers.
@@ -180,6 +185,7 @@ collections:
       season:
       year:
       sort_by: popular
+    collection_order: custom
     sync_mode: sync
 ```
 ```yaml
@@ -188,6 +194,7 @@ collections:
     anilist_search:
       season: fall
       year: 2020
+    collection_order: custom
     sync_mode: sync
 ```
 ```yaml
@@ -196,6 +203,7 @@ collections:
     anilist_search:
       tag: Pirates
       sort_by: popular
+    collection_order: custom
     sync_mode: sync
 ```
 ```yaml
@@ -205,5 +213,6 @@ collections:
       genre: Sports
       limit: 20
       sort_by: popular
+    collection_order: custom
     sync_mode: sync
 ```

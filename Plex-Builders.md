@@ -1,15 +1,15 @@
-You can build different collections using the features of Plex.
+This builder finds its items by using the features of Plex.
 
 No configuration is required for these builders.
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [Plex All](#plex-all) | `plex_all` | Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters) | :heavy_check_mark: | :heavy_check_mark: |
-| [Plex Collectionless](#plex-collectionless) | `plex_collectionless` | Gets every movie/show that is not in a collection | :heavy_check_mark: | :heavy_check_mark: |
-| [Plex Search](#plex-search) | `plex_search` | Gets every movie/show based on the search parameters provided | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [Plex All](#plex-all) | `plex_all` | Gets every movie/show in your library. Useful with [Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Filters) | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [Plex Collectionless](#plex-collectionless) | `plex_collectionless` | Gets every movie/show that is not in a collection | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [Plex Search](#plex-search) | `plex_search` | Gets every movie/show based on the search parameters provided | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Plex All
-Gets every movie/show in your library. Useful with [collection filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Filters).
+Finds every item in your library. Useful with [Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Filters).
 
 The expected input is either true or false.
 
@@ -24,7 +24,7 @@ collections:
 ## Plex Collectionless
 **This is not needed if you're using [Smart Label Collections](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Smart-Builders#smart-label).**
 
-Gets every movie/show that is not in a collection unless the collection is in the exclusion list. This is a special collection type to help keep your library looking correct. When items in your library are in multiple collections it can mess up how they're displayed in your library.
+Finds every item that is not in a collection unless the collection is in the exclusion list. This is a special collection type to help keep your library looking correct. When items in your library are in multiple collections it can mess up how they're displayed in your library.
 
 For Example, if you have a `Marvel Cinematic Universe` Collection set to `Show this collection and its items` and an `Iron Man` Collection set to `Hide items in this collection` what happens is the show overrides the hide and you end up with both the collections and the 3 Iron Man movies all displaying.
 
@@ -52,7 +52,7 @@ collections:
 * This is a known issue with Plex Collection and there is a [Feature Suggestion](https://forums.plex.tv/t/collection-display-issue/305406) detailing the issue more on their forms.
 
 ## Plex Search
-Uses Plex's [Advance Filters](https://support.plex.tv/articles/201273953-collections/) to add all items to a collection based on the search parameters provided.
+Uses Plex's [Advance Filters](https://support.plex.tv/articles/201273953-collections/) to find all items based on the search parameters provided.
 
 Any Advance Filter made using the Plex UI should be able to be recreated using `plex_search`. If you're having trouble getting `plex_search` to work correctly, build the collection you want inside of Plex's Advance Filters and take a screenshot of the parameters in the Plex UI and post it in either the [Discussions](https://github.com/meisnate12/Plex-Meta-Manager/discussions) or on [Discord](https://discord.gg/TsdpsFYqqm) and I'll do my best to help you. 
 
@@ -66,10 +66,10 @@ There are a couple other attributes you can have at the top level only along wit
 
 | Special Option | Attribute | Description | Default |
 | :--- | :--- | :--- | :---: |
-| Type | `type` | The Type of items inside this collection<br>**Options**: `movies`, `shows`, `seasons`, and `episodes` | `movies` for Movies Libraries and `shows` for Show Libraries |
+| Type | `type` | The Type of items inside this collection/playlist<br>**Options**: `movies`, `shows`, `seasons`, and `episodes` | `movies` for Movies Libraries and `shows` for Show Libraries |
 | Limit | `limit` | The max number of item for the search | all |
 | Sort By | `sort_by` | This will control how the search is sorted in your library. You can use any sort options for your search type in the [Sorts Table](#sorts-table) | `random` |
-| Validate | `validate` | Determines if a collection will fail on a validation error<br>**Options**: `true` or `false` | `true` |
+| Validate | `validate` | Determines if a collection/playlist will fail on a validation error<br>**Options**: `true` or `false` | `true` |
 
 ## Sort Options
 
@@ -245,6 +245,7 @@ collections:
 ```yaml
 collections:
   Top Action Movies:
+    collection_order: custom
     plex_search:
       all:
         genre: Action
@@ -278,6 +279,7 @@ collections:
 ```yaml
 collections:
   Best 2010+ Movies:
+    collection_order: custom
     plex_search:
       all:
         year.gte: 2010
@@ -285,7 +287,23 @@ collections:
       limit: 20
 ```
 
-If you specify TMDb Person ID's using the [Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details) `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.
+Here's an example of an episode collection using `plex_search`.
+
+```yaml
+ collections:
+   Top 100 Simpsons Episodes:
+     collection_order: custom
+     collection_level: episode
+     plex_search:
+       type: episodes
+       sort_by: audience_rating.desc
+       limit: 100
+       all:
+         title.ends: "Simpsons"
+     summary: A collection of the highest rated simpsons epsodes.
+```
+
+If you specify TMDb Person ID's using the Detail `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.
 
 ```yaml
 collections:

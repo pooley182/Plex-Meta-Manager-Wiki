@@ -9,6 +9,7 @@ The YAML mappings that can be set in the configuration file's root:
 | Name | YAML Attribute | Required |
 | :--- | :--- | :---: |
 | [Libraries](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Libraries-Attributes) | `libraries` | :heavy_check_mark: |
+| [Playlist Files](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Playlist-Files-Attributes) | `playlist_files` | :x: |
 | [Settings](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes) | `settings` | :x: |
 | [Webhooks](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Webhooks-Attributes) | `webhooks` | :x: |
 | [Plex](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes) | `plex` | :x: |

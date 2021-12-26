@@ -1,16 +1,16 @@
-You can build different collections using the features of [AniDB.net](https://anidb.net/) (AniDB).
+You can find anime using the features of [AniDB.net](https://anidb.net/) (AniDB).
 
 No configuration is required for these builders.
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [AniDB ID](#anidb-id) | `anidb_id` | Gets the anime specified by the AniDB ID | :heavy_check_mark: | :heavy_check_mark: |
-| [AniDB Relation](#anidb-relation) | `anidb_relation` | Gets all anime in the relation graph of the specified AniDB ID | :heavy_check_mark: | :heavy_check_mark: |
-| [AniDB Popular](#anidb-popular) | `anidb_popular` | Gets every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list | :heavy_check_mark: | :heavy_check_mark: |
-| [AniDB Tags](#anidb-tags) | `anidb_tags` | Gets every anime in a AniDB Tag | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [AniDB ID](#anidb-id) | `anidb_id` | Finds the anime specified by the AniDB ID | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [AniDB Relation](#anidb-relation) | `anidb_relation` | Finds all anime in the relation graph of the specified AniDB ID | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [AniDB Popular](#anidb-popular) | `anidb_popular` | Finds every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [AniDB Tags](#anidb-tags) | `anidb_tags` | Finds every anime in a AniDB Tag | :heavy_check_mark: | :heavy_check_mark: | :x: |
 
 ## AniDB ID
-Gets the anime specified by the AniDB ID.
+Finds the anime specified by the AniDB ID.
 
 The expected input is an AniDB ID or AniDB Anime URL. Multiple values are supported as either a list or a comma-separated string.
 
@@ -26,7 +26,7 @@ collections:
 ```
 
 ## AniDB Relation
-Gets all anime in the relation graph of the specified AniDB ID.
+Finds all anime in the relation graph of the specified AniDB ID.
 
 To see the relation graph of an anime use: `https://anidb.net/anime/<ANIDB_ID>/relation/graph` but replace `<ANIDB_ID>` with the AniDB ID you want to see the relations for.
 
@@ -49,22 +49,22 @@ collections:
 ```
 
 ## AniDB Popular
-Gets every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list.
+Finds every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list.
 
 The expected input is a single integer value of how much anime to query with a max of 30.
 
-The `sync_mode: sync` option is also recommended since the Trakt Trending lists are continuously updated.
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
   AniDB Popular:
     anidb_popular: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
-
 ## AniDB Tag
-Gets anime with the specified AniDB Tag the options are detailed below. 
+Finds anime with the specified AniDB Tag the options are detailed below. 
 
 | Attribute | Description | Required | Default |
 | :--- | :--- | :---: | :---: |

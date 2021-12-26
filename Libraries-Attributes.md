@@ -121,7 +121,7 @@ libraries:
     metadata_path:
       url: http://somesite.com/metadata_file.yml
 ```
-To use a Metadata File from the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository add `git` under metadata set to the oath in the repository.
+To use a Metadata File from the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository add `git` under metadata set to the path in the repository.
 ```yaml
 libraries:
   Movies:

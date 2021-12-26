@@ -39,7 +39,9 @@ The table below shows the asset folder path structures that will be searched for
 
 * Replace `.ext` with the image extension
 
-* When `asset_folders` is set to true you can also nest movie/show folders inside other folders.
+* When `asset_folders` is set to true you can also nest movie/show folders inside other folders, but you must specify how deep you want to search because the more levels to search the longer it takes.
+
+* You can specify how deep you want to scan by using the `asset_depth` [Setting Attribute](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#asset-depth).
 
 Here's an example config folder structure with an assets directory with `asset_folders` set to true and false.
 

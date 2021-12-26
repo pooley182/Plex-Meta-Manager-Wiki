@@ -1,12 +1,12 @@
-Collection filters allow for you to filter every movie/show added to the collection from every collection builder using the `filters` attribute. 
+Filters allow for you to filter every item added to the collection/playlist from every builder using the `filters` attribute. 
 
-You can have multiple collection filters but a movie/show must match at least one value from **each** collection filter to be added to a collection. The values for each must match what Plex has including special characters in order to match.
+You can have multiple filters but an item must match at least one value from **each** filter to be added to a collection/playlist. The values for each must match what Plex has including special characters in order to match.
 
-All collection filter options are listed below. To display collections filtered out add `show_filtered: true` to the collection.
+All filter options are listed below. To display items filtered out add `show_filtered: true` to the collection.
 
-You can use `plex_all: true` to start your filter from your entire library.
+You can use the `plex_all: true` builder to filter from your entire library.
 
-**Filters can be very slow. Try to build or narrow your collection using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
+**Filters can be very slow. Try to build or narrow your items using [Plex Search](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Builders#plex-search) if possible.** 
 
 ## String Filters
 String filters can be used with either no modifier or with `.not`, `.is`, `.isnot`, `.begins`, `.ends`, or `.regex`.
@@ -66,6 +66,16 @@ The `original_language` filter will also filter out movies from being added to R
 | `resolution` | Uses the resolution tag to match | :heavy_check_mark: | :x: |
 | `audio_language` | Uses the audio language tags to match | :heavy_check_mark: | :x: |
 | `subtitle_language` | Uses the subtitle language tags to match | :heavy_check_mark: | :x: |
+
+## Boolean Filters
+Boolean Filters have no modifiers.
+
+### Attribute
+
+| Boolean Filter | Description | Movie<br>Libraries | Show<br>Libraries |
+| :--- | :--- | :---: | :---: |
+| `has_collection` | Matches every item that has or does not have a collection | :heavy_check_mark: | :heavy_check_mark: |
+| `has_overlay` | Matches every item that has or does not have an overlay | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Date Filters
 Date filters can be used with either no modifier or with `.not`, `.before`, `.after`, or `.regex`.

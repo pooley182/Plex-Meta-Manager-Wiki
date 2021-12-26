@@ -40,3 +40,5 @@ radarr:
 * The `quality_profile` must be the exact name of the desired quality profile, including all spaces and capitalization.
 
 * You can set most attributes per collection by using the [Radarr Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details#radarr-attributes)
+
+![Radarr Details](https://raw.githubusercontent.com/wiki/meisnate12/Plex-Meta-Manager/radarr1.png)

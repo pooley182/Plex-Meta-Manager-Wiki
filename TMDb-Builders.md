@@ -1,46 +1,46 @@
-You can build different collections using the features of [TheMovieDb.org](https://www.themoviedb.org/) (TMDb).
+You can find items using the features of [TheMovieDb.org](https://www.themoviedb.org/) (TMDb).
 
 ## Standard TMDb Builders
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [TMDb Collection](#tmdb-collection) | `tmdb_collection` | Gets every movie in the TMDb collection | :heavy_check_mark: | :x: |
-| [TMDb List](#tmdb-list) | `tmdb_list` | Gets every movie/show in the TMDb List | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Actor](#tmdb-actor) | `tmdb_actor` | Gets every movie/show in the TMDb Person's Actor Credits | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Crew](#tmdb-crew) | `tmdb_crew` | Gets every movie/show in the TMDb Person's Crew Credits | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Director](#tmdb-director) | `tmdb_director` | Gets every movie/show in the TMDb Person's Actor Credits | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Producer](#tmdb-producer) | `tmdb_producer` | Gets every movie/show in the TMDb Person's Producer Credits | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Writer](#tmdb-writer) | `tmdb_writer` | Gets every movie/show in the TMDb Person's Writer Credits | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Movie](#tmdb-movie) | `tmdb_movie` | Gets the movie specified | :heavy_check_mark: | :x: |
-| [TMDb Show](#tmdb-show) | `tmdb_show` | Gets the show specified | :x: | :heavy_check_mark: |
-| [TMDb Company](#tmdb-company) | `tmdb_company` | Gets every movie/show from the TMDb company's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Network](#tmdb-network) | `tmdb_network` | Gets every show from the TMDb network's show list | :x: | :heavy_check_mark: |
-| [TMDb Keyword](#tmdb-keyword) | `tmdb_keyword` | Gets every movie/show from the TMDb keyword's movie/show list | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [TMDb Collection](#tmdb-collection) | `tmdb_collection` | Finds every item in the TMDb collection | :heavy_check_mark: | :x: | :x: |
+| [TMDb List](#tmdb-list) | `tmdb_list` | Finds every item in the TMDb List | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Actor](#tmdb-actor) | `tmdb_actor` | Finds every item in the TMDb Person's Actor Credits | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Crew](#tmdb-crew) | `tmdb_crew` | Finds every item in the TMDb Person's Crew Credits | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Director](#tmdb-director) | `tmdb_director` | Finds every item in the TMDb Person's Actor Credits | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Producer](#tmdb-producer) | `tmdb_producer` | Finds every item in the TMDb Person's Producer Credits | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Writer](#tmdb-writer) | `tmdb_writer` | Finds every item in the TMDb Person's Writer Credits | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Movie](#tmdb-movie) | `tmdb_movie` | Finds the movie specified | :heavy_check_mark: | :x: | :x: |
+| [TMDb Show](#tmdb-show) | `tmdb_show` | Finds the show specified | :x: | :heavy_check_mark: | :x: |
+| [TMDb Company](#tmdb-company) | `tmdb_company` | Finds every item from the TMDb company's movie/show list | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Network](#tmdb-network) | `tmdb_network` | Finds every item from the TMDb network's show list | :x: | :heavy_check_mark: | :x: |
+| [TMDb Keyword](#tmdb-keyword) | `tmdb_keyword` | Finds every item from the TMDb keyword's movie/show list | :heavy_check_mark: | :heavy_check_mark: | :x: |
 
 ## Standard TMDb Details Builders
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [TMDb Collection Details](#tmdb-collection) | `tmdb_collection_details` | Gets every movie in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: |
-| [TMDb List Details](#tmdb-list) | `tmdb_list_details` | Gets every movie/show in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Actor Details](#tmdb-actor) | `tmdb_actor_details` | Gets every movie/show in the TMDb Person's Actor Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Crew Details](#tmdb-crew) | `tmdb_crew_details` | Gets every movie/show in the TMDb Person's Crew Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Director Details](#tmdb-director) | `tmdb_director_details` | Gets every movie/show in the TMDb Person's Actor Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Producer Details](#tmdb-producer) | `tmdb_producer_details` | Gets every movie/show in the TMDb Person's Producer Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Writer Details](#tmdb-writer) | `tmdb_writer_details` | Gets every movie/show in the TMDb Person's Writer Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Movie Details](#tmdb-movie) | `tmdb_movie_details` | Gets the movie specified and updates the collection with the summary, poster, and background from the TMDb movie | :heavy_check_mark: | :x: |
-| [TMDb Show Details](#tmdb-show) | `tmdb_show_details` | Gets the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [TMDb Collection Details](#tmdb-collection) | `tmdb_collection_details` | Finds every item in the TMDb collection and updates the collection with the summary, poster, and background from the TMDb collection | :heavy_check_mark: | :x: | :x: |
+| [TMDb List Details](#tmdb-list) | `tmdb_list_details` | Finds every item in the TMDb List and updates the collection with the description of the TMDb list | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Actor Details](#tmdb-actor) | `tmdb_actor_details` | Finds every item in the TMDb Person's Actor Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Crew Details](#tmdb-crew) | `tmdb_crew_details` | Finds every item in the TMDb Person's Crew Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Director Details](#tmdb-director) | `tmdb_director_details` | Finds every item in the TMDb Person's Actor Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Producer Details](#tmdb-producer) | `tmdb_producer_details` | Finds every item in the TMDb Person's Producer Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Writer Details](#tmdb-writer) | `tmdb_writer_details` | Finds every item in the TMDb Person's Writer Credits with the biography and profile from the TMDb person | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [TMDb Movie Details](#tmdb-movie) | `tmdb_movie_details` | Finds the movie specified and updates the collection with the summary, poster, and background from the TMDb movie | :heavy_check_mark: | :x: | :x: |
+| [TMDb Show Details](#tmdb-show) | `tmdb_show_details` | Finds the show specified and updates the collection with the summary, poster, and background from the TMDb show | :x: | :heavy_check_mark: | :x: |
 
 ## Other TMDb Builders
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [TMDb Popular](#tmdb-popular) | `tmdb_popular` | Gets the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Now Playing](#tmdb-now-playing) | `tmdb_now_playing` | Gets the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list | :heavy_check_mark: | :x: |
-| [TMDb Top Rated](#tmdb-top-rated) | `tmdb_top_rated` | Gets the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list | :heavy_check_mark: | :heavy_check_mark: |
-| [TMDb Trending Daily](#tmdb-trending-daily) | `tmdb_trending_daily` | Gets the movies/shows in TMDb's Trending Daily list | :heavy_check_mark: | :heavy_check_mark: | 
-| [TMDb Trending Weekly](#tmdb-trending-weekly) | `tmdb_trending_weekly` | Gets the movies/shows in TMDb's Trending Weekly list | :heavy_check_mark: | :heavy_check_mark: | 
-| [TMDb Discover](#tmdb-discover) | `tmdb_discover` | Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to get every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [TMDb Popular](#tmdb-popular) | `tmdb_popular` | Finds the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Now Playing](#tmdb-now-playing) | `tmdb_now_playing` | Finds the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list | :heavy_check_mark: | :x: | :heavy_check_mark: |
+| [TMDb Top Rated](#tmdb-top-rated) | `tmdb_top_rated` | Finds the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [TMDb Trending Daily](#tmdb-trending-daily) | `tmdb_trending_daily` | Finds the movies/shows in TMDb's Trending Daily list | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
+| [TMDb Trending Weekly](#tmdb-trending-weekly) | `tmdb_trending_weekly` | Finds the movies/shows in TMDb's Trending Weekly list | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
+| [TMDb Discover](#tmdb-discover) | `tmdb_discover` | Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to find every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Expected Input
 
@@ -57,7 +57,7 @@ The builders below are expected to have the full URL to the item or the TMDb ID 
 * [TMDb Company](#tmdb-company)
 * [TMDb Network](#tmdb-network)
 
-The builders below are expected to have a single integer value of how many movies/shows to query. The `sync_mode: sync` option is also recommended for these builders since the lists they're based on are continuously updated.
+The builders below are expected to have a single integer value of how many movies/shows to query.
 * [TMDb Popular](#tmdb-popular)
 * [TMDb Now Playing](#tmdb-now-playing)
 * [TMDb Top Rated](#tmdb-top-rated)
@@ -67,7 +67,7 @@ The builders below are expected to have a single integer value of how many movie
 [TMDb Discover](#tmdb-discover)'s attributes are detailed [below](#tmdb-discover).
 
 ## TMDb Collection
-Gets every movie in the TMDb collection.
+Finds every item in the TMDb collection.
 
 ```yaml
 collections:
@@ -98,17 +98,23 @@ collections:
 ```
 
 ## TMDb List
-Gets every movie/show in the TMDb List.
+Finds every item in the TMDb List.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
   Top 50 Grossing Films of All Time (Worldwide):
     tmdb_list: https://www.themoviedb.org/list/10
+    collection_order: custom
+    sync_mode: sync
 ```
 ```yaml
 collections:
   Top 50 Grossing Films of All Time (Worldwide):
     tmdb_list: 10
+    collection_order: custom
+    sync_mode: sync
 ```
 
 * You can update the collection details with the TMDb list's description by using `tmdb_list_details`.
@@ -121,7 +127,7 @@ collections:
 ```
 
 ## TMDb Actor
-Gets every movie/show in the TMDb Person's Actor Credits.
+Finds every item in the TMDb Person's Actor Credits.
 
 ```yaml
 collections:
@@ -144,7 +150,7 @@ collections:
 ```
 
 ## TMDb Crew
-Gets every movie/show in the TMDb Person's Crew Credits.
+Finds every item in the TMDb Person's Crew Credits.
 
 ```yaml
 collections:
@@ -167,7 +173,7 @@ collections:
 ```
 
 ## TMDb Director
-Gets every movie/show in the TMDb Person's Director Credits.
+Finds every item in the TMDb Person's Director Credits.
 
 ```yaml
 collections:
@@ -190,7 +196,7 @@ collections:
 ```
 
 ## TMDb Producer
-Gets every movie/show in the TMDb Person's Producer Credits.
+Finds every item in the TMDb Person's Producer Credits.
 
 ```yaml
 collections:
@@ -213,7 +219,7 @@ collections:
 ```
 
 ## TMDb Writer
-Gets every movie/show in the TMDb Person's Writer Credits.
+Finds every item in the TMDb Person's Writer Credits.
 
 ```yaml
 collections:
@@ -236,7 +242,7 @@ collections:
 ```
 
 ## TMDb Movie
-Gets the movie specified.
+Finds the movie specified.
 
 ```yaml
 collections:
@@ -263,7 +269,7 @@ collections:
 ```
 
 ## TMDb Show
-Gets the show specified.
+Finds the show specified.
 
 ```yaml
 collections:
@@ -293,7 +299,7 @@ collections:
 ```
 
 ## TMDb Company
-Gets every movie from the TMDb company's movie list.
+Finds every movie from the TMDb company's movie list.
 
 ```yaml
 collections:
@@ -308,7 +314,7 @@ collections:
 ```
 
 ## TMDb Network
-Gets every movie/show from the TMDb network's movie/show list.
+Finds every item from the TMDb network's movie/show list.
 
 ```yaml
 collections:
@@ -323,7 +329,7 @@ collections:
 ```
 
 ## TMDb Keyword
-Gets every movie/show from the TMDb keyword's movie/show list.
+Finds every item from the TMDb keyword's movie/show list.
 
 ```yaml
 collections:
@@ -338,57 +344,74 @@ collections:
 ```
 
 ## TMDb Popular
-Gets the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list.
+Finds the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/movie)/[Popular Shows](https://www.themoviedb.org/tv) list.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
   TMDb Popular:
     tmdb_popular: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## TMDb Now Playing
-Gets the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list.
+Finds the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-playing) list.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
   TMDb Now Playing:
     tmdb_now_playing: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## TMDb Top Rated
-Gets the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list.
+Finds the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/movie/top-rated)/[Top Rated Shows](https://www.themoviedb.org/tv/top-rated) list.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
   TMDb Top Rated:
     tmdb_top_rated: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## TMDb Trending Daily
-Gets the movies/shows in TMDb's Trending Daily list.
+Finds the movies/shows in TMDb's Trending Daily list.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
   TMDb Daily Trending:
     tmdb_trending_daily: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## TMDb Trending Weekly
-Gets the movies/shows in TMDb's Trending Weekly list.
+Finds the movies/shows in TMDb's Trending Weekly list.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
   TMDb Weekly Trending:
     tmdb_trending_weekly: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## TMDb Discover
-Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to get every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided
+Uses [TMDb's Discover Search](https://www.themoviedb.org/documentation/api/discover) to find every movie/show based on the [movie search parameters](https://developers.themoviedb.org/3/discover/movie-discover) or [show search parameters](https://developers.themoviedb.org/3/discover/tv-discover) provided
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
 
 | Type | Description |
 | :--- | :--- |
@@ -503,12 +526,16 @@ collections:
 ```yaml
 collections:
   Popular Movies:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       sort_by: popularity.desc
 ```
 ```yaml
 collections:
   Highest Rated R Movies:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       certification_country: US
       certification: R
@@ -517,6 +544,8 @@ collections:
 ```yaml
 collections:
   Most Popular Kids Movies:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       certification_country: US
       certification.lte: G
@@ -525,6 +554,8 @@ collections:
 ```yaml
 collections:
   Highest Rated Movies From 2010:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       primary_release_year: 2010
       sort_by: vote_average.desc
@@ -532,6 +563,8 @@ collections:
 ```yaml
 collections:
   Best Dramas From 2014:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       with_genres: 18
       primary_release_year: 2014
@@ -540,6 +573,8 @@ collections:
 ```yaml
 collections:
   Highest Rated Science Fiction Movies with Tom Cruise:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       with_genres: 878
       with_cast: 500
@@ -548,6 +583,8 @@ collections:
 ```yaml
 collections:
   Highest Grossing Comedy Movies with Will Ferrell:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       with_genres: 35
       with_cast: 23659
@@ -556,6 +593,8 @@ collections:
 ```yaml
 collections:
   Top Rated Movies with Brad Pitt and Edward Norton:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       with_people: 287,819
       sort_by: vote_average.desc
@@ -563,6 +602,8 @@ collections:
 ```yaml
 collections:
   Popular Movies with David Fincher and Rooney Mara:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       with_people: 108916,7467
       sort_by: popularity.desc
@@ -570,6 +611,8 @@ collections:
 ```yaml
 collections:
   Top Rated Dramas:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       with_genres: 18
       sort_by: vote_average.desc
@@ -578,6 +621,8 @@ collections:
 ```yaml
 collections:
   Highest Grossing R Movies with Liam Neeson:
+    collection_order: custom
+    sync_mode: sync
     tmdb_discover:
       certification_country: US
       certification: R

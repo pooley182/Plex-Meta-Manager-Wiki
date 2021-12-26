@@ -1,18 +1,20 @@
-You can build different collections using the features of [FlixPatrol.com](https://flixpatrol.com/) (FlixPatrol).
+You can find items using the features of [FlixPatrol.com](https://flixpatrol.com/) (FlixPatrol).
 
 No configuration is required for this builder.
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [FlixPatrol Top](#flixpatrol-top-platform) | `flixpatrol_top` | Gets every movie/show from [FlixPatrol's Top Platform Lists](https://flixpatrol.com/top10/) based on the attributes provided. | :heavy_check_mark: | :heavy_check_mark: |
-| [FlixPatrol Popular](#flixpatrol-popular) | `flixpatrol_popular` | Gets every movie/show from FlixPatrol's Popular [Movies](https://flixpatrol.com/popular/movies/)/[Shows](https://flixpatrol.com/popular/tv-shows/) Lists based on the attributes provided. | :heavy_check_mark: | :heavy_check_mark: |
-| [FlixPatrol Demographics](#flixpatrol-demographics) | `flixpatrol_demographics` | Gets every movie/show from [FlixPatrol's Demographics Lists](https://flixpatrol.com/demographics/) based on the attributes provided. | :heavy_check_mark: | :heavy_check_mark: |
-| [FlixPatrol URL](#flixpatrol-url) | `flixpatrol_url` | Gets every movie/show found at a FlixPatrol URL. | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [FlixPatrol Top](#flixpatrol-top-platform) | `flixpatrol_top` | Finds every item from [FlixPatrol's Top Platform Lists](https://flixpatrol.com/top10/) based on the attributes provided. | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [FlixPatrol Popular](#flixpatrol-popular) | `flixpatrol_popular` | Finds every movie/show from FlixPatrol's Popular [Movies](https://flixpatrol.com/popular/movies/)/[Shows](https://flixpatrol.com/popular/tv-shows/) Lists based on the attributes provided. | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [FlixPatrol Demographics](#flixpatrol-demographics) | `flixpatrol_demographics` | Finds every item from [FlixPatrol's Demographics Lists](https://flixpatrol.com/demographics/) based on the attributes provided. | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [FlixPatrol URL](#flixpatrol-url) | `flixpatrol_url` | Finds every item found at a FlixPatrol URL. | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## FlixPatrol Top Platform
-Gets every movie/show from [FlixPatrol's Top Platform Lists](https://flixpatrol.com/top10/) based on the attributes provided.
+Finds every item from [FlixPatrol's Top Platform Lists](https://flixpatrol.com/top10/) based on the attributes provided.
 
-### Top Platform Attribute
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
+### Top Platform Attributes
 
 | Attribute | Description | Options | Required | Default |
 | :--- | :--- | :---: | :---: | :---: |
@@ -29,12 +31,16 @@ collections:
       location: united_states
       time_window: this_month
       limit: 20
+    collection_order: custom
+    sync_mode: sync
 ```
 
 ## FlixPatrol Popular
-Gets every movie/show from FlixPatrol's Popular [Movies](https://flixpatrol.com/popular/movies/)/[Shows](https://flixpatrol.com/popular/tv-shows/) Lists based on the attributes provided.
+Dinds every movie/show from FlixPatrol's Popular [Movies](https://flixpatrol.com/popular/movies/)/[Shows](https://flixpatrol.com/popular/tv-shows/) Lists based on the attributes provided.
 
-### Popular Attribute
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
+### Popular Attributes
 
 | Attribute | Description | Options | Required | Default |
 | :--- | :--- | :---: | :---: | :---: |
@@ -49,10 +55,14 @@ collections:
       source: instagram
       time_window: all
       limit: 20
+    collection_order: custom
+    sync_mode: sync
 ```
 
 ## FlixPatrol Demographics
-Gets every movie/show from [FlixPatrol's Demographics Lists](https://flixpatrol.com/demographics/) based on the attributes provided.
+Finds every item from [FlixPatrol's Demographics Lists](https://flixpatrol.com/demographics/) based on the attributes provided.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ### Demographics Attribute
 
@@ -71,17 +81,27 @@ collections:
       gender: men
       location: united_states 
       limit: 20
+    collection_order: custom
+    sync_mode: sync
 ```
 
 ## FlixPatrol URL
-Gets every movie/show found at a FlixPatrol URL.
+Finds every item found at a FlixPatrol URL.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
   US Netflix Monthly:
     flixpatrol_url: https://flixpatrol.com/top10/netflix/united-states/2021-11/full/
+    collection_order: custom
+    sync_mode: sync
   Instagram Monthly Popular:
     flicpatrol_url: https://flixpatrol.com/popular/movies/instagram/all-time/
+    collection_order: custom
+    sync_mode: sync
   Gen X Male US Demographic:
     flicpatrol_url: https://flixpatrol.com/demographics/generation-x/men/united-states/
+    collection_order: custom
+    sync_mode: sync
 ```

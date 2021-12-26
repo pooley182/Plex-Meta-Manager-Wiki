@@ -1,4 +1,4 @@
-Using Plex Meta Manager you can create Smart Collections in two different ways.
+Smart Builders allow Plex Meta Manager to create Smart Collections in two different ways.
 
 
 ## Smart Label
@@ -246,7 +246,7 @@ collections:
       limit: 20
 ```
 
-If you specify TMDb Person ID's using the [Collection Detail](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Collection-Details) `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.
+If you specify TMDb Person ID's using the Detail `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.
 
 ```yaml
 collections:

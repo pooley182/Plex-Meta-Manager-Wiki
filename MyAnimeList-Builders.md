@@ -1,24 +1,24 @@
-You can build different collections using the features of [MyAnimeList.net](https://myanimelist.net/) (MyAnimeList).
+You can find anime using the features of [MyAnimeList.net](https://myanimelist.net/) (MyAnimeList).
 
 [Configuring MyAnimeList](https://github.com/meisnate12/Plex-Meta-Manager/wiki/MyAnimeList-Attributes) in the config is required for any of these builders.
 
-| Name | Attribute | Description | Works with Movies | Works with Shows |
-| :--- | :--- | :--- | :---: | :---: |
-| [MyAnimeList Top All Anime](#myanimelist-top-all-anime) | `mal_all` | Gets every anime in MyAnimeList's [Top All Anime](https://myanimelist.net/topanime.php) list | :heavy_check_mark: | :heavy_check_mark: 
-| [MyAnimeList Top Airing Anime](#myanimelist-top-airing-anime) | `mal_airing` | Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Top Upcoming Anime](#myanimelist-top-upcoming-anime) | `mal_upcoming` | Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Top Anime TV Series](#myanimelist-top-anime-tv-series) | `mal_tv` | Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Top Anime Movies](#myanimelist-top-anime-movies) | `mal_movie` | Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Top Anime OVA Series](#myanimelist-top-anime-ova-series) | `mal_ova` | Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Top Anime Specials](#myanimelist-top-anime-specials) | `mal_special` | Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Most Popular Anime](#myanimelist-most-popular-anime) | `mal_popular` | Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime) | `mal_favorite` | Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Suggested Anime](#myanimelist-suggested-anime) | `mal_suggested` | Gets the suggested anime in by MyAnimeList for the authorized user | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList ID](#myanimelist-id) | `mal_id` | Gets the anime specified by the MyAnimeList ID | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Gets anime in MyAnimeList User's Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Genre](#myanimelist-genre) | `mal_genre` | Gets every anime tagged with the specified genre id. Genre options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) | :heavy_check_mark: | :heavy_check_mark: |
-| [MyAnimeList Studio](#myanimelist-studio) | `mal_studio` | Gets every anime tagged with the specified studio/producer/licensor id. Studio options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) | :heavy_check_mark: | :heavy_check_mark: |
+| Name | Attribute | Description | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| [MyAnimeList Top All Anime](#myanimelist-top-all-anime) | `mal_all` | Finds every anime in MyAnimeList's [Top All Anime](https://myanimelist.net/topanime.php) list | :heavy_check_mark: | :heavy_check_mark: :heavy_check_mark: | 
+| [MyAnimeList Top Airing Anime](#myanimelist-top-airing-anime) | `mal_airing` | Finds every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Upcoming Anime](#myanimelist-top-upcoming-anime) | `mal_upcoming` | Finds every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime TV Series](#myanimelist-top-anime-tv-series) | `mal_tv` | Finds every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime Movies](#myanimelist-top-anime-movies) | `mal_movie` | Finds every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime OVA Series](#myanimelist-top-anime-ova-series) | `mal_ova` | Finds every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Top Anime Specials](#myanimelist-top-anime-specials) | `mal_special` | Finds every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Most Popular Anime](#myanimelist-most-popular-anime) | `mal_popular` | Finds every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Most Favorited Anime](#myanimelist-most-favorited-anime) | `mal_favorite` | Finds every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Suggested Anime](#myanimelist-suggested-anime) | `mal_suggested` | Finds the suggested anime in by MyAnimeList for the authorized user | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList ID](#myanimelist-id) | `mal_id` | Finds the anime specified by the MyAnimeList ID | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [MyAnimeList User Anime List](#myanimelist-user-anime-list) | `mal_userlist` | Finds anime in MyAnimeList User's Anime list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime) | `mal_season` | Finds anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Genre](#myanimelist-genre) | `mal_genre` | Finds every anime tagged with the specified genre id. Genre options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [MyAnimeList Studio](#myanimelist-studio) | `mal_studio` | Finds every anime tagged with the specified studio/producer/licensor id. Studio options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Expected Input
 The builders below are expected to have a single integer value of how many movies/shows to query. 
@@ -35,105 +35,134 @@ The builders below are expected to have a single integer value of how many movie
 
 The attributes of [MyAnimeList ID](#myanimelist-id), [MyAnimeList Seasonal Anime](#myanimelist-seasonal-anime), [MyAnimeList User Anime List](#myanimelist-user-anime-list), [MyAnimeList Genre](#myanimelist-genre), and [MyAnimeList Studio](#myanimelist-studio) are detailed in their sections below.
 
-The `sync_mode: sync` option is also recommended for all MyAnimeList builders since the lists they're based on are continuously updated.
 
 ## MyAnimeList Top All Anime
 Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list. (Maximum: 500)
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
   Top All Anime:
     mal_all: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Top Airing Anime
 Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/topanime.php?type=airing) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Top Airing Anime:
     mal_airing: 10
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Top Upcoming Anime
 Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/topanime.php?type=upcoming) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Top Upcoming Anime:
     mal_upcoming: 10
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Top Anime TV Series
 Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/topanime.php?type=tv) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Top Anime TV Series:
     mal_tv: 20
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Top Anime Movies
 Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/topanime.php?type=movie) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Top Anime Movies:
     mal_movie: 20
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Top Anime OVA Series
 Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net/topanime.php?type=ova) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Top Anime OVA Series:
     mal_ova: 20
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Top Anime Specials
 Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/topanime.php?type=special) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Top Anime Specials:
     mal_special: 20
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Most Popular Anime
 Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/topanime.php?type=bypopularity) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Most Popular Anime:
     mal_popular: 20
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Most Favorited Anime
 Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net/topanime.php?type=favorite) list. (Maximum: 500)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Most Favorited Anime:
     mal_favorite: 20
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Suggested Anime
 Gets the suggested anime in by MyAnimeList for the authorized user. (Maximum: 100)
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 ```yaml
 collections:
   Suggested Anime:
     mal_suggested: 20
+    collection_order: custom
     sync_mode: sync
 ```
 
@@ -151,6 +180,8 @@ collections:
 ## MyAnimeList User Anime List
 Gets anime in MyAnimeList User's Anime list. The different sub-attributes are detailed below.
 
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+
 | Attribute | Description | Required | Default |
 | :--- | :--- | :---: | :---: |
 | `username` | A user's MyAnimeList Username or `@me` for the authorized user | :heavy_check_mark: | N/A |
@@ -166,11 +197,14 @@ collections:
       status: watching
       sort_by: score
       limit: 500
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Seasonal Anime
 Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. 
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 | Attribute | Description | Required | Default |
 | :--- | :--- | :---: | :---: |
@@ -185,6 +219,7 @@ collections:
     mal_season:
       sort_by: members
       limit: 50
+    collection_order: custom
     sync_mode: sync
 ```
 ```yaml
@@ -194,11 +229,14 @@ collections:
       season: fall
       year: 2020
       limit: 50
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Genre 
 Gets every anime tagged with the specified genre ID sorted by members the options are detailed below.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 * Genre options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) Page.
 * To find the ID click on a Genre in the link above and there should be a number in the URL that's the `genre_id`.
@@ -214,11 +252,14 @@ collections:
   Sports Anime:
     mal_genre:
       genre_id: 30
+    collection_order: custom
     sync_mode: sync
 ```
 
 ## MyAnimeList Studio 
 Gets every anime tagged with the specified studio/producer/licensor ID sorted by members the options are detailed below.
+
+The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 
 * Studio options can be found on [MyAnimeList's Search](https://myanimelist.net/anime.php) Page.
 * To find the ID click on a Studio in the link above and there should be a number in the URL that's the `studio_id`.
@@ -234,5 +275,6 @@ collections:
   Bones Studio Anime:
     mal_studio:
       studio_id: 4
+    collection_order: custom
     sync_mode: sync
 ```

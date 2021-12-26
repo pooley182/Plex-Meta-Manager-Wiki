@@ -9,7 +9,9 @@ settings:
   cache_expiration: 60
   asset_directory: config/assets
   asset_folders: true
+  asset_depth: 0
   create_asset_folders: false
+  dimensional_asset_rename: false
   show_missing_season_assets: false
   sync_mode: append
   collection_minimum: 1
@@ -20,6 +22,7 @@ settings:
   only_filter_missing: false
   show_unmanaged: true
   show_filtered: false
+  show_options: false
   show_missing: true
   show_missing_assets: true
   save_missing: true
@@ -34,7 +37,9 @@ settings:
 | [Cache Expiration](#cache) | `cache_expiration` | **integer**<br>**default: 60** | :heavy_check_mark: | :x: | :x: |
 | [Image Asset Directory](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Asset-Directory) | `asset_directory` | **list of paths**<br>**default: [Directory containing YAML config]/assets** | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Image Asset Folders](#image-asset-folders) | `asset_folders` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [Asset Depth](#asset-depth) | `asset_depth` | **integer**<br>**default: 0** | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Create Asset Folders](#create-asset-folders) | `create_asset_folders` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :x: |
+| [Dimensional Asset Rename](#dimensional-asset-rename) | `dimensional_asset_rename` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Show Missing Season Assets](#show-missing-season-assets) | `show_missing_season_assets` | **boolean:** true or false<br>**default: false** | :heavy_check_mark: | :heavy_check_mark: | :x: |
 | [Sync Mode](#sync-mode) | `sync_mode` | `append` or `sync`<br>**default: append** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [Collection Minimum](#collection-minimum) | `collection_minimum` | **integer**<br>**default: 1** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
@@ -53,7 +58,6 @@ settings:
 | [Ignore IMDb IDs](#ignore-imdb-ids) | `ignore_imdb_ids` | List or comma-separated String of IMDb IDs | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
 
 ## Cache
-
 Will use a cached database for faster processing. The cache file is created in the same location as your config file.
 
 You can change the number of `cache_expiration` to set the number of days before each cache mapping expires and has to be reloaded
@@ -61,8 +65,14 @@ You can change the number of `cache_expiration` to set the number of days before
 ## Image Asset Folders
 When searching [Image Asset Directories](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Image-Asset-Directory) search for named folders vs named files<br>i.e. `assets/Star Wars.png` vs `assets/Star Wars/poster.png`.
 
+## Asset Depth
+When using `asset_folders` this determines how many folder levels deep you want to search for an item.
+
 ## Create Asset Folders
 When using the `assets_for_all` [Library Operation](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Operations-Attributes) folders will be created for each Item in your library for assets to be placed in.
+
+## Dimensional Asset Rename
+When using `asset_folders` this will scan the folder for image files and rename the first image found that has a height greater than its width to `poster.ext` as long as an asset poster was not found and the first image found that has a width greater than its height to `background.ext` as long as an asset background was not found.
 
 ## Show Missing Season Assets
 When searching for assets for a show if a Season poster is found then this will display all other missing Season posters.
