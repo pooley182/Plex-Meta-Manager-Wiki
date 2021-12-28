@@ -31,7 +31,7 @@ settings:
   ignore_imdb_ids:
 ```
 
-| Name | Attribute | Allowed Values | Global Level | Library Level | Collection Level |
+| Name | Attribute | Allowed Values | Global Level | Library Level | Collection/Playlist Level |
 | :--- | :--- | :--- | :---: | :---: | :---: |
 | [Cache](#cache) | `cache` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :x: | :x: |
 | [Cache Expiration](#cache) | `cache_expiration` | **integer**<br>**default: 60** | :heavy_check_mark: | :x: | :x: |
@@ -55,7 +55,8 @@ settings:
 | [Save Missing](#save-missing) | `save_missing` | **boolean:** true or false<br>**default: true** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | [TVDb Language](#tvdb-language) | `tvdb_language` | [ISO 639-2 Language Code](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) or Blank for original Language<br>**default:**  | :heavy_check_mark: | :x: | :x: |
 | [Ignore IDs](#ignore-ids) | `ignore_ids` | List or comma-separated String of TMDb/TVDb IDs | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
-| [Ignore IMDb IDs](#ignore-imdb-ids) | `ignore_imdb_ids` | List or comma-separated String of IMDb IDs | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | 
+| [Ignore IMDb IDs](#ignore-imdb-ids) | `ignore_imdb_ids` | List or comma-separated String of IMDb IDs | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| [Playlist Sync to User](#playlist-sync-to-user) | `playlist_sync_to_user` | `all` or List or comma-separated String of Users to sync the playlist to.<br>**default: `all`** | :heavy_check_mark: | :x: | :heavy_check_mark: |
 
 ## Cache
 Will use a cached database for faster processing. The cache file is created in the same location as your config file.
@@ -125,3 +126,6 @@ List or comma-separated String of TMDb/TVDb IDs to ignore in all collections
 
 ## Ignore IMDb IDs
 List or comma-separated String of IMDb IDs to ignore in all collections
+
+## Playlist Sync to User
+`all` or List or comma-separated String of Users to sync the playlist to. Defaults to `all`.

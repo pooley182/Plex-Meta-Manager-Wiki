@@ -24,7 +24,7 @@ There are two mappings allowed in the Playlist File's root:
 | Name | Attribute | Description |
 | :--- | :--- | :--- |
 | [Templates](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Template-Attributes) | `templates` | mapping where templates for automatic collections go |
-| [Playlists](#playlist-mapping-additional-requirements) | `playlists` | mapping where automatic playlists and playlist metadata go |
+| [Playlists](#additional-playlist-attributes) | `playlists` | mapping where automatic playlists and playlist metadata go |
 
 * `playlists` is required in order to run the Playlist File.
 * You can find example Playlist Files in the [Plex Meta Manager Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs)
@@ -62,17 +62,22 @@ There are three types of attributes in a collection/playlist
 
 3. **[Filters](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Filters):** attributes that filters items added to all Builders
 
-## Playlist Mapping Additional Requirements
+## Additional Playlist Attributes
 
 Each playlist operation requires the `libraries` attribute. Which is how the script knows which libraries to search for items in. 
 
-The names can either be a list or comma-separated string of names that match the mapping names defined in your Configuration File. 
+The names can either be a list or comma-separated string of names that match the mapping names defined in your Configuration File.
+
+Each playlist can also be given the `sync_to_user` which will overrider the global [`playlist_sync_to_user` Setting](https://github.com/meisnate12/Plex-Meta-Manager/wiki/Settings-Attributes#playlist-sync-to-user). 
+
+The values can either be `all` or a list or comma-separated string of users you want the playlist synced to in addition to yourself. To Sync a playlist to only yourself leave `sync_to_user` blank. 
 
 ```yaml
 plalists:
   Marvel Cinematic Universe:
     sync_mode: sync
     libraries: Movies, TV Shows
+    sync_to_user: all
     trakt_list: https://trakt.tv/users/donxy/lists/marvel-cinematic-universe?sort=rank,asc
     summary: Marvel Cinematic Universe In Chronological Order
 ```
