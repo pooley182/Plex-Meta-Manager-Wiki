@@ -128,4 +128,4 @@ List or comma-separated String of TMDb/TVDb IDs to ignore in all collections
 List or comma-separated String of IMDb IDs to ignore in all collections
 
 ## Playlist Sync to User
-`all` or List or comma-separated String of Users to sync the playlist to. Defaults to `all`.
+`all` or List or comma-separated String of Users to sync the playlist to in addition to yourself. To Sync a playlist to only yourself leave `sync_to_user` blank. Defaults to `all`.

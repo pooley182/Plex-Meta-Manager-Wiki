@@ -201,8 +201,8 @@ No number search can take multiple values.
 | `audience_rating` | Uses the audience rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `user_rating` | Uses the user rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `episode_user_rating` | Uses the user rating attribute of the show's episodes to match | `0.0` - `10.0` | :x: | :heavy_check_mark: |
-| `year` | Uses the year attribute to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
-| `episode_year` | Uses the year attribute of the show's episodes to match | `1800` - `Current Year` | :x: | :heavy_check_mark: |
+| `year` | Uses the year attribute to match | minimum: `1` | :heavy_check_mark: | :heavy_check_mark: |
+| `episode_year` | Uses the year attribute of the show's episodes to match | minimum: `1` | :x: | :heavy_check_mark: |
 
 ## Boolean Searches
 Boolean Searches take no modifier and can only be either `true` or `false`.

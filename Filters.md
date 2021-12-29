@@ -55,6 +55,7 @@ The `original_language` filter will also filter out movies from being added to R
 | `actor` | Uses the actor tags to match | :heavy_check_mark: | :heavy_check_mark: |
 | `collection` | Uses the collection tags to match | :heavy_check_mark: | :heavy_check_mark: |
 | `content_rating` | Uses the content rating tags to match | :heavy_check_mark: | :heavy_check_mark: |
+| `network` | Uses the network tags to match | :x: | :heavy_check_mark: |
 | `country` | Uses the country tags to match | :heavy_check_mark: | :x: |
 | `director` | Uses the director tags to match | :heavy_check_mark: | :x: |
 | `genre` | Uses the genre tags to match | :heavy_check_mark: | :heavy_check_mark: |
@@ -62,7 +63,7 @@ The `original_language` filter will also filter out movies from being added to R
 | `producer` | Uses the actor tags to match | :heavy_check_mark: | :x: |
 | `year` | Uses the year tag to match | :heavy_check_mark: | :heavy_check_mark: |
 | `writer` | Uses the writer tags to match | :heavy_check_mark: | :x: |
-| `original_language` | Uses TMDb original language [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to match<br>Example: `original_language: en, ko` | :heavy_check_mark: | :x: |
+| `original_language` | Uses TMDb original language [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) to match<br>Example: `original_language: en, ko` | :heavy_check_mark: | :heavy_check_mark: |
 | `resolution` | Uses the resolution tag to match | :heavy_check_mark: | :x: |
 | `audio_language` | Uses the audio language tags to match | :heavy_check_mark: | :x: |
 | `subtitle_language` | Uses the subtitle language tags to match | :heavy_check_mark: | :x: |
@@ -124,8 +125,8 @@ The `tmdb_vote_count` and `tmdb_year` filters will also filter out movies/shows 
 
 | Number Filters | Description | Restrictions | Movie<br>Libraries | Show<br>Libraries |
 | :--- | :--- | :---: | :---: | :---: |
-| `year` | Uses the year attribute to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
-| `tmdb_year` | Uses the year on TMDb to match | `1800` - `Current Year` | :heavy_check_mark: | :heavy_check_mark: |
+| `year` | Uses the year attribute to match | minimum: `1` | :heavy_check_mark: | :heavy_check_mark: |
+| `tmdb_year` | Uses the year on TMDb to match | minimum: `1` | :heavy_check_mark: | :heavy_check_mark: |
 | `critic_rating` | Uses the critic rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `audience_rating` | Uses the audience rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
 | `user_rating` | Uses the user rating attribute to match | `0.0` - `10.0` | :heavy_check_mark: | :heavy_check_mark: |
