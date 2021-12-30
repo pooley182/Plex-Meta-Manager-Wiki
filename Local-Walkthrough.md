@@ -1,6 +1,6 @@
 This article will walk you through getting Plex-Meta-Manager [PMM] set up and running.  It will cover:
 
-1. Retrieving the PMM code 
+1. Retrieving the PMM code
 2. Installing requirements
 3. Setting up the initial config file
 4. Setting up a metadata file and creating a couple sample collections.
@@ -40,6 +40,12 @@ You need to use Python 3.9, not Python 3.10.  There's one specific requirement t
 <details>
   <summary>OS X</summary>
   <br />
+  First let's check if it's installed already:
+
+  ```
+  python3 --version
+  ```
+  If this doesn't return a version number, you'll need to get Python 3 installed.
 
   Follow the instructions here: [Installing Python 3 on Mac OS X](https://docs.python-guide.org/starting/install3/osx/)
 </details>
@@ -63,6 +69,13 @@ You need to use Python 3.9, not Python 3.10.  There's one specific requirement t
 <details>
   <summary>Linux</summary>
   <br />
+  First let's check if it's installed already:
+
+  ```
+  git --version
+  ```
+
+  If this doesn't return a version number, you'll need to get git installed.
 
   The git install is discussed here: [Download for Linux and Unix](https://git-scm.com/download/linux)
 
@@ -70,6 +83,14 @@ You need to use Python 3.9, not Python 3.10.  There's one specific requirement t
 <details>
   <summary>OS X</summary>
   <br />
+
+  First let's check if it's installed already:
+
+  ```
+  git --version
+  ```
+
+  If this doesn't return a version number, you'll need to get git installed.
 
   The git install is discussed here: [Git - Downloading Package](https://git-scm.com/download/mac)
 
@@ -82,7 +103,7 @@ You need to use Python 3.9, not Python 3.10.  There's one specific requirement t
   Download the installer from [here](https://git-scm.com/download/windows)
 
   Run the install; you can probably just accept the defaults and click through except for the step that asks you to choose an editor; you probably want to choose something other than the default there:
-  
+
   ![](https://i.ibb.co/vsL4fDG/Screen-Shot-2021-10-21-at-12-08-39-PM.png)
 
 </details>
@@ -109,7 +130,7 @@ Later on you can move it elsewhere if you want, but for now put it there.  This 
   ```
   git pull
   ```
-  
+
   No need to download a new ZIP, uncompress it, etc.
 
   Also, if you are asked to [or want to] switch to the latest develop code, you can do so with:
@@ -117,7 +138,7 @@ Later on you can move it elsewhere if you want, but for now put it there.  This 
   ```
   git checkout develop
   ```
-  
+
 </details>
 
 ---
@@ -208,9 +229,9 @@ These support libraries are called “requirements”, and they are defined in t
 python -m pip install -r requirements.txt
 ```
 
-Note that now you can type `python` instead of `python3` [if you used the latter before]; that's another benefit of the virtual environment; the default Python in here is Python 3.
+Note that now you can type `python` instead of `python3` [if you used the latter before]; that's another benefit of the virtual environment; the default Python in here is Python 3 and you no longer have to call it specifically.
 
-You should see something like this [I’ve removed a few lines for space, and the specific versions may have changed since this was captured]: 
+You should see something like this [I’ve removed a few lines for space, and the specific versions may have changed since this was captured]:
 
 ```
 Collecting PlexAPI==4.7.0
@@ -332,19 +353,15 @@ Now scroll up and look at the top section:
 libraries:                                      # Library mappings must have a colon (:) placed after them
   Movies:
     metadata_path:
-      - file: config/Movies.yml                 # You have to create this file the other are online
+      - file: config/Movies.yml                 # You have to create this file the other is online
       - git: meisnate12/MovieCharts
-      - git: meisnate12/Studios
-      - git: meisnate12/IMDBGenres
-      - git: meisnate12/People
   TV Shows:
     metadata_path:
-      - file: config/TV Shows.yml               # You have to create this file the other are online
+      - file: config/TV Shows.yml               # You have to create this file the other is online
       - git: meisnate12/ShowCharts
-      - git: meisnate12/Networks
   Anime:
     metadata_path:
-      - file: config/Anime.yml                  # You have to create this file the other are online
+      - file: config/Anime.yml                  # You have to create this file the other is online
       - git: meisnate12/AnimeCharts
 ```
 
@@ -359,9 +376,6 @@ libraries:                                      # Library mappings must have a c
     metadata_path:
       - file: config/Movies.yml                 # You have to create this file the other are online
       - git: meisnate12/MovieCharts
-      - git: meisnate12/Studios
-      - git: meisnate12/IMDBGenres
-      - git: meisnate12/People
 ```
 
 
@@ -398,7 +412,7 @@ I’ve removed some of the lines for space, but have left the important bits:
 
 You can see there that PMM found its config file, was able to connect to TMDB, was able to connect to Plex, and then failed trying to read the “Movies-HIDDEN” library, which of course doesn’t exist.
 
-Open the config file again and fix the name of the Movies library to reflect your Plex.  Also fix the name of the config file to match the library.  Then delete all those lines that start with “git”.  Those are all sets of collections, and we just want to create a few as examples.  
+Open the config file again and fix the name of the Movies library to reflect your Plex.  Also fix the name of the config file to match the library.  Then delete any lines that start with “git”.  Those are all sets of collections, and we just want to create a few as examples.
 
 My Movies library is called “Main Movies", so mine looks like this:
 
@@ -453,7 +467,7 @@ First, create and open the metadata file:
 <details>
   <summary>OS X/Linux</summary>
   <br />
-  
+
   ```
   nano "config\Main Movies.yml"
   ```
@@ -463,7 +477,7 @@ First, create and open the metadata file:
 <details>
   <summary>Windows</summary>
   <br />
-  
+
   ```
   notepad "config\Main Movies.yml"
   ```
@@ -568,7 +582,7 @@ When you are done, deactivate the virtual environment:
 deactivate
 ```
 
-## Advanced Topics 
+## Advanced Topics
 
 ### I want to use this in a context where I can't be manually activating/deactivating the virtual environment [scheduled. etc]
 

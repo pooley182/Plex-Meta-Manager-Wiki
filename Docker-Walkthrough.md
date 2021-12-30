@@ -74,6 +74,15 @@ Config Error: config not found at //config
 
 That error means you don’t have a config file, but we know that most everything is in place to run the image.
 
+### What's a Docker container?
+
+This is a very limited description, but imagine two things:
+
+1. A set of instructions for building and setting up a computer so it's ready to run MS Word
+2. The computer built from those instructions.
+
+A Docker *image* is rather like the instructions, and a Docker *container* is rather like the computer built from those instructions.  [It's a bit more nuanced than that, but that's a useful model].
+
 ### Setting up a volume map
 
 PMM, inside that Docker container, can only see other things *inside the container*.  We want to add our own files for config and metadata, so we need to set something up that lets PMM see files we create *outside* the container.  This is called a "volume map".
@@ -172,7 +181,7 @@ First, make a copy of the template, then open the copy in an editor:
   <summary>Windows</summary>
   <br />
 
-  Download the file `https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template` using a web browser or whatever means and save it in this directory as `config.yml` 
+  Download the file `https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template` using a web browser or whatever means and save it in this directory as `config.yml`
 
   ```
   notepad config.yml
@@ -204,19 +213,15 @@ Now scroll up and look at the top section:
 libraries:                                      # Library mappings must have a colon (:) placed after them
   Movies:
     metadata_path:
-      - file: config/Movies.yml                 # You have to create this file the other are online
+      - file: config/Movies.yml                 # You have to create this file the other is online
       - git: meisnate12/MovieCharts
-      - git: meisnate12/Studios
-      - git: meisnate12/IMDBGenres
-      - git: meisnate12/People
   TV Shows:
     metadata_path:
-      - file: config/TV Shows.yml               # You have to create this file the other are online
+      - file: config/TV Shows.yml               # You have to create this file the other is online
       - git: meisnate12/ShowCharts
-      - git: meisnate12/Networks
   Anime:
     metadata_path:
-      - file: config/Anime.yml                  # You have to create this file the other are online
+      - file: config/Anime.yml                  # You have to create this file the other is online
       - git: meisnate12/AnimeCharts
 ```
 
@@ -231,9 +236,6 @@ libraries:                                      # Library mappings must have a c
     metadata_path:
       - file: config/Movies.yml                 # You have to create this file the other are online
       - git: meisnate12/MovieCharts
-      - git: meisnate12/Studios
-      - git: meisnate12/IMDBGenres
-      - git: meisnate12/People
 ```
 
 
@@ -273,7 +275,7 @@ I’ve removed some of the lines for space, but have left the important bits:
 
 You can see there that PMM found its config file, was able to connect to TMDB, was able to connect to Plex, and then failed trying to read the “Movies-HIDDEN” library, which of course doesn’t exist.
 
-Open the config file again and fix the name of the Movies library to reflect your Plex.  Also fix the name of the config file to match the library.  Then delete all those lines that start with “git”.  Those are all sets of collections, and we just want to create a few as examples.  
+Open the config file again and fix the name of the Movies library to reflect your Plex.  Also fix the name of the config file to match the library.  Then delete any lines that start with “git”.  Those are all sets of collections, and we just want to create a few as examples.
 
 My Movies library is called “Main Movies", so mine looks like this:
 
@@ -328,7 +330,7 @@ First, create and open the metadata file:
 <details>
   <summary>OS X/Linux</summary>
   <br />
-  
+
   ```
   nano "Main Movies.yml"
   ```
@@ -338,7 +340,7 @@ First, create and open the metadata file:
 <details>
   <summary>Windows</summary>
   <br />
-  
+
   ```
   notepad "Main Movies.yml"
   ```
