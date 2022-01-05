@@ -479,7 +479,7 @@ The `sync_mode: sync` and `collection_order: custom` Details are recommended sin
 | `vote_count.lte` | Filter and only include TV that have a vote count that is less than or equal to the specified value. | Integer |
 | `vote_average.gte` | Filter and only include TV that have a rating that is greater or equal to the specified value. | Number |
 | `vote_average.lte` | Filter and only include TV that have a rating that is less than or equal to the specified value. | Number |
-| `with_networks` | Comma-separated value of network ids that you want to include in the results. | String |
+| `with_networks` | Pipe-separated value of network ids that you want to include in the results. | String |
 | `with_companies` | A comma-separated list of production company ID's. Only include movies that have one of the ID's added as a production company. | String |
 | `without_companies` | Filter the results to exclude the specific production companies you specify here. AND / OR filters are supported. | String |
 | `with_genres` | Comma-separated value of genre ids that you want to include in the results. | String |
